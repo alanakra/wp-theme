@@ -1,0 +1,12 @@
+debug.log
+wp-admin
+wp-content/languages
+wp-content/plugins
+wp-content/upgrade
+wp-content/uploads
+wp-content/themes/myportfolio/fonts/
+wp-content/themes/twentynineteen
+wp-content/themes/twentyseventeen
+wp-content/themes/twentytwenty
+wp-includes
+wp-settings.php
