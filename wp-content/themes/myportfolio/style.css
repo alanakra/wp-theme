@@ -9,6 +9,7 @@
 @import 'accueil.css';
 @import 'travaux.css';
 @import 'projets.css';
+@import 'apropos.css';
 
 *, *::after, *::before{
  box-sizing: border-box;
