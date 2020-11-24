@@ -6,7 +6,6 @@
  <?php wp_head() ?>
  <meta charset="<?php bloginfo( 'charset' ); ?>">
  <title><?php wp_title( 'Alan Akra', '|' ); ?></title>
- <!-- <link rel="stylesheet" href="<?php //echo esc_url( get_stylesheet_uri() ); ?>" type="text/css" /> -->
 </head>
 <body <?php body_class(); ?>>
  
