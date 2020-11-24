@@ -5,11 +5,11 @@
  *  Description: The theme who i created for my portfolio
  */
 
-@import 'fonts-family.css';
-@import 'accueil.css';
-@import 'travaux.css';
-@import 'projets.css';
-@import 'apropos.css';
+@import 'assets/css/fonts-family.css';
+@import 'assets/css/accueil.css';
+@import 'assets/css/travaux.css';
+@import 'assets/css/projets.css';
+@import 'assets/css/apropos.css';
 
 *, *::after, *::before{
  box-sizing: border-box;

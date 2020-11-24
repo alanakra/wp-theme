@@ -1,0 +1,38 @@
+.supertitre{
+ text-align: center;
+ margin-top: 25vh;
+}
+
+.titre-page{
+ font-size: 6rem;
+}
+
+.accroche-first{
+ font-family: 'Carlito';
+ font-size: 2.5rem;
+}
+
+.accroche{
+ font-family: 'Akrobat';
+ font-size: 1.875rem;
+}
+
+.know-more{
+ display: flex;
+ justify-content: center;
+ font-size: 2rem;
+ font-weight: bold;
+}
+
+.know-more>a::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 1px;
+ background-color: #fff;
+ transform-origin: right;
+ transform: scaleX(0);
+ transition: transform .5s ease;
+}
