@@ -37,6 +37,8 @@ function add_specific_style(){
 }
 
 function add_home_script(){
-    $script_url = get_theme_file_uri('assets/script/home.js');
-    wp_enqueue_script('home_script', esc_url( $script_url), array(), null, 'all');
+    if(is_front_page()){
+        $script_url = get_theme_file_uri('assets/script/home.js');
+        wp_enqueue_script('home_script', esc_url( $script_url), array(), null, 'all');
+    }
 }
