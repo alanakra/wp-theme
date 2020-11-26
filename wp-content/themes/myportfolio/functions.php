@@ -5,6 +5,7 @@ add_theme_support( 'title-tag' );
 add_action('wp_enqueue_scripts','add_global_style');
 add_action('wp_enqueue_scripts','add_specific_style');
 add_action('wp_enqueue_scripts','add_script');
+add_action( 'init', 'create_custom_post_type' );
 
 function add_global_style(){
     $stylesheet_url = get_theme_file_uri('assets/css/style.css');
@@ -49,4 +50,21 @@ function add_script(){
         $script_url2 = get_theme_file_uri('assets/script/scriptProjets.js');
         wp_enqueue_script('project_script', esc_url( $script_url2), array(), null, 'all');
     }
+}
+
+function create_custom_post_type() {
+
+    register_post_type( 'projets',
+    array(
+    'labels' => array(
+    'name' => __( 'Projets' ),
+    'singular_name' => __( 'Projet' ),
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'rewrite' => array('slug' => 'projets'),
+    'menu_icon' => 'dashicons-edit', 
+    'menu_position' => 6,
+    )
+    );
 }
