@@ -54,15 +54,15 @@ function add_script(){
 
 function create_custom_post_type() {
 
-    register_post_type( 'projets',
+    register_post_type( 'projects',
     array(
     'labels' => array(
-    'name' => __( 'Projets' ),
-    'singular_name' => __( 'Projet' ),
+    'name' => __( 'Projects' ),
+    'singular_name' => __( 'Project' ),
     ),
     'public' => true,
     'has_archive' => true,
-    'rewrite' => array('slug' => 'projets'),
+    'rewrite' => array('slug' => 'projects'),
     'menu_icon' => 'dashicons-edit', 
     'menu_position' => 6,
     )
