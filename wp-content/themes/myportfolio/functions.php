@@ -13,7 +13,7 @@ function add_global_style(){
 }
 
 function add_specific_style(){
-    if(is_front_page()){
+    if(is_front_page() || is_404()){
         $stylesheet_url = get_theme_file_uri('assets/css/accueil.css');
         wp_enqueue_style('home_style', esc_url( $stylesheet_url), array(), null, 'all');
     }
@@ -54,17 +54,42 @@ function add_script(){
 
 function create_custom_post_type() {
 
-    register_post_type( 'projects',
-    array(
-    'labels' => array(
-    'name' => __( 'Projects' ),
-    'singular_name' => __( 'Project' ),
-    ),
-    'public' => true,
-    'has_archive' => true,
-    'rewrite' => array('slug' => 'projects'),
-    'menu_icon' => 'dashicons-edit', 
-    'menu_position' => 6,
-    )
-    );
+	$labels = array(
+		'name' => __( 'Projects' ),
+        'singular_name' => __( 'Project' ),
+        'description' => __('My projects'),
+        'singular_name' => __( 'Project' ),
+
+		'all_items'           => __( 'All my projects'),
+		'view_item'           => __( 'See this project'),
+		'add_new_item'        => __( 'Add new project'),
+		'add_new'             => __( 'Add new'),
+		'edit_item'           => __( 'Edit this project'),
+		'update_item'         => __( 'Modify the project'),
+		'search_items'        => __( 'Search project'),
+		'not_found'           => __( 'Project not found'),
+		'not_found_in_trash'  => __( 'Project not found in the bin'),
+        'menu_position' => 6,
+	);
+	
+	
+	$args = array(
+		'label'               => __( 'Projects'),
+		'description'         => __( 'All about projects'),
+        'labels'              => $labels,
+        
+        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+        
+        'taxonomies' => array('post_tag'),
+        'menu_icon' => 'dashicons-edit', 
+		'show_in_rest' => true,
+		'hierarchical'        => false,
+		'public'              => true,
+		'has_archive'         => true,
+		'rewrite'			  => array( 'slug' => 'projects'),
+
+	);
+	
+	register_post_type( 'projects', $args );
+
 }
