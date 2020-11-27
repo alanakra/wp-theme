@@ -8,7 +8,7 @@ add_action('wp_enqueue_scripts','add_script');
 add_action( 'init', 'create_custom_post_type' );
 
 function add_global_style(){
-    $stylesheet_url = get_theme_file_uri('assets/css/style.css');
+    $stylesheet_url = get_theme_file_uri('./style.css');
     wp_enqueue_style('global_style', esc_url( $stylesheet_url), array(), null, 'all');
 }
 
