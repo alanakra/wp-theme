@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<p><?php the_ID(); ?></p>
 <h1 class="titre-page">Mes archives de projets</h1>
   <p class="definition">Portfolio (nom masculin) \pɔʁt.fo.ljo\ :<br>
     Dossier personnel dans lequel les acquis de formation et d'expérience d'une personne sont définis et démontrés.</p>
