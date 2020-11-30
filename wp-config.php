@@ -98,3 +98,7 @@ if ( ! defined( 'ABSPATH' ) )
 
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
 require_once( ABSPATH . 'wp-settings.php' );
+
+@ini_set( 'upload_max_size' , '12M' );
+@ini_set( 'post_max_size', '13M');
+@ini_set( 'memory_limit', '15M' );
