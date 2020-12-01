@@ -4,10 +4,13 @@
   <nav>
     <div class="nav-name">
     </div>
-
-    <div class="nav-menu">
-      <?php wp_nav_menu('portfolio-menu') ?>
-    </div>
+      <?php wp_nav_menu(
+        $args = array(
+        'menu' => 'portfolio-menu',
+        'menu_class' => 'nav-menu'
+      ) ) 
+      ?>
+    
   </nav>
 
   <div class="supertitre">
