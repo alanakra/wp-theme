@@ -1,0 +1,57 @@
+.discuss{
+ font-family: 'Carlito';
+ font-size: 1.25rem;
+}
+
+.container-contact{
+ display: flex;
+ justify-content: space-around;
+}
+
+.block{
+ text-align: center;
+}
+
+.container-tel p{
+ letter-spacing: 0.066em;
+}
+
+.block{
+ display: flex;
+ flex-direction: column;
+}
+
+.block p{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ flex-grow: 1;
+}
+
+.block img{
+ height: 75px;
+ transition: all 0.8s ease;
+}
+
+.block img:hover{
+ transform: scale(1.05);
+}
+
+@media(max-width:720px){
+ .container-contact{
+  flex-direction: column;
+  text-align: center;
+ }
+
+ .container-mail{
+  margin-top: 1.25rem;
+ }
+
+ .container-linkedin{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+ }
+ 
+ .container-tel{
+  margin-bottom: 1.25rem;
+ }
+
+}

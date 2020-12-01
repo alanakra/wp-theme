@@ -30,7 +30,12 @@ function add_specific_style(){
 
     if(is_page('a-propos')){
         $stylesheet_url = get_theme_file_uri('assets/css/apropos.css');
-        wp_enqueue_style('projets_style', esc_url( $stylesheet_url), array(), null, 'all');
+        wp_enqueue_style('page_style', esc_url( $stylesheet_url), array(), null, 'all');
+    }
+
+    if(is_page('contact')){
+        $stylesheet_url = get_theme_file_uri('assets/css/contact.css');
+        wp_enqueue_style('contact_style', esc_url( $stylesheet_url), array(), null, 'all');
     }
 
     $stylesheetFont_url = get_theme_file_uri('assets/css/fonts-family.css');
