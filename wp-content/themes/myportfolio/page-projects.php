@@ -1,8 +1,7 @@
 <?php get_header()
-
-/*
-Template Name: Project page
-*/
+/**
+ * Template Name: Projects
+ */
 ?>
 
 <?php
