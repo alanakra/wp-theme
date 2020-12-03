@@ -102,5 +102,39 @@ function create_custom_post_type() {
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page();
+	acf_add_options_sub_page('Header');
+	acf_add_options_sub_page('Footer');
 	
+	acf_add_options_page(array(
+        'page_title' => 'Theme Options',
+        'menu_title' => __('My Options'),
+        'menu_slug' => 'my-options',
+    ));
+
+	acf_add_options_page(array(
+        'page_title' => 'Header',
+        'menu_title' => __('Header'),
+        'menu_slug' => 'them-options-header',
+        'capability' => 'edit_posts',
+        'position' => false,
+        'icon_url' => false
+    ));
+
+	acf_add_options_page(array(
+        'page_title' => 'Footer',
+        'menu_title' => __('Footer'),
+        'menu_slug' => 'them-options-footer',
+        'capability' => 'edit_posts',
+        'position' => false,
+        'icon_url' => false
+    ));
+
+	acf_add_options_page(array(
+        'page_title' => 'Post Settings',
+        'menu_title' => __('Post Settings'),
+        'menu_slug' => 'post-settings',
+        'capability' => 'edit_posts',
+        'position' => false,
+        'icon_url' => false
+    ));
 }
