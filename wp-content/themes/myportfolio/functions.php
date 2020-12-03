@@ -6,7 +6,6 @@ add_action('wp_enqueue_scripts','add_global_style');
 add_action('wp_enqueue_scripts','add_specific_style');
 add_action('wp_enqueue_scripts','add_script');
 add_action( 'init', 'create_custom_post_type' );
-// add_action('acf/init', 'my_acf_init');
 
 function add_global_style(){
     $stylesheet_url = get_theme_file_uri('./style.css');
@@ -99,22 +98,3 @@ function create_custom_post_type() {
 	register_post_type( 'projects', $args );
 
 }
-
-
-// TODO: Fix the bug to create pages
-// function my_acf_init() {
-	
-// 	// check function exists
-// 	if( function_exists('acf_register_block') ) {
-		
-// 		// register a testimonial block
-// 		acf_register_block(array(
-// 			'Name'				=> 'homepage',
-// 			'title'				=> __('homepage'),
-// 			'description'		=> __('A custom block for homepage'),
-// 			'render_callback'	=> 'my_acf_block_render_callback',
-// 			'category'			=> 'formatting',
-// 			'keywords'			=> array( 'testimonial', 'quote' ),
-// 		));
-// 	}
-// }
