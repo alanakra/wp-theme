@@ -40,7 +40,7 @@ get_header();
  }
 ?>
 <?php if(get_field('know_more')): ?>
-  <a class="know-more" href="<?php the_field('know_more') ?>">En savoir plus</h2>
+  <a class="know-more" href="<?php the_field('know_more') ?>">En savoir plus</a>
 <?php endif; ?>
 </div>
 
