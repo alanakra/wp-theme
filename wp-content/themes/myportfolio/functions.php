@@ -105,8 +105,15 @@ function create_custom_post_type() {
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page();
-	acf_add_options_sub_page('Header');
-	acf_add_options_sub_page('Footer');
+	acf_add_options_sub_page(array(
+        'page_title' => 'Header',
+        'menu_title' => __('Header'),
+    ));
+
+	acf_add_options_sub_page(array(
+        'page_title' => 'Footer',
+        'menu_title' => __('Footer'),
+    ));
 	
 	acf_add_options_page(array(
         'page_title' => 'Theme Options',
