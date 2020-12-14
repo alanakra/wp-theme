@@ -18,5 +18,6 @@
   </div>
   <?php endwhile; endif; ?>
 
+  <?php the_field('wysiwyg') ?>
 <?php get_footer(); ?>
 
