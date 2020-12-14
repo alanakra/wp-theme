@@ -45,36 +45,39 @@ get_header();
 </div>
 
 <?php 
-$image = get_field('picture');
-if( !empty( $image ) ): ?>
-    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-<?php endif; ?>
+  $infoFooter = get_field('info_picture');
+  if($infoFooter):
+?>
+    <img src="<?php echo $infoFooter['info_picture_footer']['url']; ?>" alt="<?php echo esc_attr($infoFooter['legend']); ?>"/>
+<?php
+ endif;
+?>
 
 
 <?php
 
-// Load value.
-$iframe = get_field('oembed');
+// // Load value.
+// $iframe = get_field('oembed');
 
-// Use preg_match to find iframe src.
-preg_match('/src="(.+?)"/', $iframe, $matches);
-$src = $matches[1];
+// // Use preg_match to find iframe src.
+// preg_match('/src="(.+?)"/', $iframe, $matches);
+// $src = $matches[1];
 
-// Add extra parameters to src and replcae HTML.
-$params = array(
-    'controls'  => 0,
-    'hd'        => 1,
-    'autohide'  => 1
-);
-$new_src = add_query_arg($params, $src);
-$iframe = str_replace($src, $new_src, $iframe);
+// // Add extra parameters to src and replcae HTML.
+// $params = array(
+//     'controls'  => 0,
+//     'hd'        => 1,
+//     'autohide'  => 1
+// );
+// $new_src = add_query_arg($params, $src);
+// $iframe = str_replace($src, $new_src, $iframe);
 
-// Add extra attributes to iframe HTML.
-$attributes = 'frameborder="0"';
-$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+// // Add extra attributes to iframe HTML.
+// $attributes = 'frameborder="0"';
+// $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 
-// Display customized HTML.
-echo $iframe;
+// // Display customized HTML.
+// echo $iframe;
 ?>
 
 <?php get_footer() ?>

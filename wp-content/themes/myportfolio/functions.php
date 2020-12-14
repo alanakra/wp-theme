@@ -114,13 +114,6 @@ if( function_exists('acf_add_options_page') ) {
         'page_title' => 'Footer',
         'menu_title' => __('Footer'),
     ));
-	
-	acf_add_options_page(array(
-        'page_title' => 'Theme Options',
-        'menu_title' => __('My Options'),
-        'menu_slug' => 'my-options',
-        'icon_url' => 'dashicons-welcome-comments'
-    ));
 
 	acf_add_options_page(array(
         'page_title' => 'Post Settings',
