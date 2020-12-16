@@ -18,6 +18,19 @@
   </div>
   <?php endwhile; endif; ?>
 
-  <?php the_field('wysiwyg') ?>
+<!-- Only for ACF test page -->
+  <?php 
+$images = get_field('gallery');
+if( $images ): ?>
+    <ul style="list-style: none; display:flex">
+        <?php foreach( $images as $image ): ?>
+            <li>
+                     <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <p><?php echo esc_html($image['caption']); ?></p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
 <?php get_footer(); ?>
 

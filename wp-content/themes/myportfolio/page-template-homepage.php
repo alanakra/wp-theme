@@ -22,7 +22,7 @@ get_header();
         $skill = array();
    
        // Loop through rows.
-       while( have_rows('description_list') ) : the_row();
+       while( have_rows($list_name) ) : the_row();
            // Load sub field value.
            $sub_value = get_sub_field('quality');
            // Do something...
