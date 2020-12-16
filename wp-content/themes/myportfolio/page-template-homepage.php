@@ -12,13 +12,13 @@ get_header();
 <?php endif; ?>
 
 <?php if(get_field('content')): ?>
-  <h2 class="accroche"><?php the_field('content') ?> <?php showSkill() ?></h2>
+  <h2 class="accroche"><?php the_field('content') ?> <?php showSkill('description_list') ?> <?php showSkill('description_list_2') ?></h2>
 <?php endif; ?>
 
 <?php
- function showSkill(){
+ function showSkill($list_name){
    //Check rows exists.
-   if( have_rows('description_list') ):
+   if( have_rows($list_name) ):
         $skill = array();
    
        // Loop through rows.
@@ -39,18 +39,20 @@ get_header();
    endif;
  }
 ?>
+
+
 <?php if(get_field('know_more')): ?>
   <a class="know-more" href="<?php the_field('know_more') ?>">En savoir plus</a>
 <?php endif; ?>
 </div>
 
 <?php 
-  $infoFooter = get_field('info_picture');
-  if($infoFooter):
+  // $infoFooter = get_field('info_picture');
+  // if($infoFooter):
 ?>
-    <img src="<?php echo $infoFooter['info_picture_footer']['url']; ?>" alt="<?php echo esc_attr($infoFooter['legend']); ?>"/>
+    <!-- <img src="<?php //echo $infoFooter['info_picture_footer']['url']; ?>" alt="<?php //echo esc_attr($infoFooter['legend']); ?>"/> -->
 <?php
- endif;
+//  endif;
 ?>
  
 <?php get_footer() ?>
