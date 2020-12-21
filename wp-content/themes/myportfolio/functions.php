@@ -125,3 +125,19 @@ if( function_exists('acf_add_options_page') ) {
         'icon_url' => false
     ));
 }
+
+// Add Gutenberg blocks with ACF
+
+if(function_exists('acf_register_block_type')){
+    add_action('acf/init', 'register_acf_block_types');
+}
+
+function register_acf_block_types(){
+    acf_register_block_type( array(
+        'name' => 'project block',
+        'title' => __('project block'),
+        'render_template' => 'blocks/project_block/project_block.php',
+        'description' => __('Un custom block project'),
+        'post_types' => array('post', 'page','Projects'),
+    ));
+}
