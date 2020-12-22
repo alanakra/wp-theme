@@ -134,10 +134,13 @@ if(function_exists('acf_register_block_type')){
 
 function register_acf_block_types(){
     acf_register_block_type( array(
-        'name' => 'project block',
+        'name' => 'project_block',
         'title' => __('project block'),
         'render_template' => 'blocks/project_block/project_block.php',
         'description' => __('Un custom block project'),
         'post_types' => array('post', 'page','Projects'),
     ));
+
+    $stylesheet_url = get_theme_file_uri('assets/css/project_block.css');
+    wp_enqueue_style('bloc_style', esc_url( $stylesheet_url), array(), null, 'all');
 }
