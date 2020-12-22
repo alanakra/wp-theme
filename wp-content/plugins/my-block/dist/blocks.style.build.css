@@ -10,8 +10,13 @@
  * CSS for both Frontend+Backend.
  */
 .wp-block-cgb-block-hello-world-block {
-  background: #d6f279;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, rgba(9, 121, 54, 0.968861)), to(#00d4ff));
+  background: -webkit-linear-gradient(left, #020024 0%, rgba(9, 121, 54, 0.968861) 0%, #00d4ff 100%);
+  background: -o-linear-gradient(left, #020024 0%, rgba(9, 121, 54, 0.968861) 0%, #00d4ff 100%);
+  background: linear-gradient(90deg, #020024 0%, rgba(9, 121, 54, 0.968861) 0%, #00d4ff 100%);
   border: 0.2rem dotted #292929;
   margin: 0 auto;
   padding: 1rem;
-  text-align: center; }
+  text-align: center;
+  color: white; }
