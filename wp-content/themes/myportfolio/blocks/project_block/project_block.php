@@ -5,15 +5,16 @@
 */
 // Création d’un ID unique
 $id = 'banner-' . $block['id'];
-$title = get_field('project_block');
+$attribute = get_field('project_block');
 ?>
 
+
 <div id="<?php echo $id; ?>" class="wp-block-acf-banner-wrapper">
- <?php if ( ! empty ( $title ) ) : ?>
- <div class="wp-block-acf-banner-inner">
-  <h1 class="wp-block-acf-banner-title">
-   <?php echo esc_html( $title ); ?>
-  </h1>
- </div>
- <?php endif; ?>
+   <?php if ( ! empty ( $attribute ) ) : ?>
+     <div class="wp-block-acf-banner-inner">
+       <h1><?php echo esc_html( $attribute['project']['name'] ); ?></h1>
+       <h1><?php echo esc_html( $attribute['project']['category'] ); ?></h1>
+       <h1><?php echo esc_html( $attribute['project']['content'] ); ?></h1>
+     </div>
+   <?php endif; ?>
 </div>

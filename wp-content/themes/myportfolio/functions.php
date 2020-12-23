@@ -141,6 +141,6 @@ function register_acf_block_types(){
         'post_types' => array('post', 'page','Projects'),
     ));
 
-    $stylesheet_url = get_theme_file_uri('assets/css/project_block.css');
+    $stylesheet_url = get_theme_file_uri('blocks/project_block/project_block.css');
     wp_enqueue_style('bloc_style', esc_url( $stylesheet_url), array(), null, 'all');
 }
