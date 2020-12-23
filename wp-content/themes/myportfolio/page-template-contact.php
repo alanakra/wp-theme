@@ -9,7 +9,6 @@ get_header();
 
    <?php
           if( have_rows('link-group') ):
-          print_r($sub_value['link']);
             while( have_rows('link-group') ) : the_row();
               $sub_value = get_sub_field('link');?>
 
@@ -29,3 +28,5 @@ get_header();
    ?>
 
 </div>
+
+<?php get_footer(); ?>

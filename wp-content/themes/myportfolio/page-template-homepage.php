@@ -4,26 +4,21 @@ get_header();
 
 <?php
  function showSkill($list_name){
-   //Check rows exists.
-   if( have_rows($list_name) ):
-        $skill = array();
-   
-       // Loop through rows.
-       while( have_rows($list_name) ) : the_row();
-           // Load sub field value.
-           $sub_value = get_sub_field('quality');
-           // Do something...
-         
-           array_push($skill,$sub_value);
-       // End loop.
-       endwhile;
-       $randomInt = rand(0,4);
-       echo($skill[$randomInt]);
-   
-   // No value.
-   else :
-       // Do something...
-   endif;
+          if( have_rows($list_name) ):
+            $skill = array();
+  
+            while( have_rows($list_name) ) : the_row();
+              $sub_value = get_sub_field('quality');
+    
+              array_push($skill,$sub_value);
+            endwhile;
+
+
+              $randomInt = rand(0,4);
+              echo($skill[$randomInt]);
+           else :
+
+          endif;
  }
 ?>
 

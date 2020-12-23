@@ -28,8 +28,8 @@ function add_specific_style(){
         wp_enqueue_style('projets_style', esc_url( $stylesheet_url), array(), null, 'all');
     }
 
-    if(is_page('a-propos')){
-        $stylesheet_url = get_theme_file_uri('assets/css/apropos.css');
+    if(is_page('about')){
+        $stylesheet_url = get_theme_file_uri('assets/css/about.css');
         wp_enqueue_style('page_style', esc_url( $stylesheet_url), array(), null, 'all');
     }
 
