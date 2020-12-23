@@ -37,23 +37,23 @@ function add_specific_style(){
         $stylesheet_url = get_theme_file_uri('assets/css/contact.css');
         wp_enqueue_style('contact_style', esc_url( $stylesheet_url), array(), null, 'all');
     }
-
     $stylesheetFont_url = get_theme_file_uri('assets/css/fonts-family.css');
     wp_enqueue_style('fonts_style', esc_url( $stylesheetFont_url ), array(), null, 'all');
 }
 
 function add_script(){
-    // if(is_front_page()){
-    //     $script_url = get_theme_file_uri('assets/script/home.js');
-    //     wp_enqueue_script('home_script', esc_url( $script_url), array(), null, 'all');
-    // }
     
     if(is_archive()){
         $script_url1 = get_theme_file_uri('assets/script/scrollReveal.js');
         wp_enqueue_script('project_scripts', esc_url( $script_url1), array(), null, 'all');
-
+        
         $script_url2 = get_theme_file_uri('assets/script/scriptProjets.js');
         wp_enqueue_script('project_script', esc_url( $script_url2), array(), null, 'all');
+    }
+
+    if(is_page('contact')){
+        $script_url = get_theme_file_uri('assets/script/timeContact.js');
+        wp_enqueue_script('contact_script', esc_url( $script_url), array(), null, true);
     }
 }
 

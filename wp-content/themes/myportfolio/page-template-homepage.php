@@ -47,14 +47,4 @@ get_header();
   <a class="know-more" href="<?php the_field('know_more') ?>">En savoir plus</a>
 <?php endif; ?>
 </div>
-
-<?php /*
-  $infoFooter = get_field('info_picture');
-  if($infoFooter):
-?>
-    <img src="<?php echo $infoFooter['info_picture_footer']['url']; ?>" alt="<?php echo esc_attr($infoFooter['legend']); ?>"/>
-<?php
-  endif;
-*/?>
- 
 <?php get_footer() ?>
