@@ -9,3 +9,7 @@
 </head>
 <body <?php body_class(); ?>>
  
+<?php wp_nav_menu(array(
+      'menu' => 'portfolio-menu',
+      'menu_class' => 'nav-menu',
+    )) ?>

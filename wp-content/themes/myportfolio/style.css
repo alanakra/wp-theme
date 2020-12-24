@@ -46,6 +46,8 @@ nav{
  height: 5vh;
  font-size: 1.25rem;
  text-transform: uppercase;
+ font-family: 'Lato';
+ list-style: none;
 }
 
 .menu{

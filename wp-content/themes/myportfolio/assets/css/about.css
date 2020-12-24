@@ -113,6 +113,10 @@ margin-bottom: 1.625rem;
   justify-content: space-around;
 }
 
+.container-button img{
+  max-width: 64px;
+}
+
 .fa-file,.fa-bookmark{
   font-size: 64px;
   transition-duration: 0.5s;

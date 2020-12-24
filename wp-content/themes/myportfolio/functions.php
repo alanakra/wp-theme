@@ -27,12 +27,12 @@ function add_specific_style(){
         $stylesheet_url = get_theme_file_uri('assets/css/projets.css');
         wp_enqueue_style('projets_style', esc_url( $stylesheet_url), array(), null, 'all');
     }
-
+    
     if(is_page('about')){
         $stylesheet_url = get_theme_file_uri('assets/css/about.css');
         wp_enqueue_style('page_style', esc_url( $stylesheet_url), array(), null, 'all');
     }
-
+    
     if(is_page('contact')){
         $stylesheet_url = get_theme_file_uri('assets/css/contact.css');
         wp_enqueue_style('contact_style', esc_url( $stylesheet_url), array(), null, 'all');
