@@ -136,9 +136,9 @@ function register_acf_block_types(){
     acf_register_block_type( array(
         'name' => 'project_block',
         'title' => __('project block'),
-        'render_template' => 'blocks/project_block/project_block.php',
+        'render_template' => 'blocks/project_block/block/project_block.php',
         'description' => __('Un custom block project'),
-        'post_types' => array('post', 'page','Projects'),
+        'keywords' => array('project','projet'),
     ));
 
     $stylesheet_url = get_theme_file_uri('blocks/project_block/project_block.css');
