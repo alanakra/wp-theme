@@ -134,13 +134,11 @@ if(function_exists('acf_register_block_type')){
 
 function register_acf_block_types(){
     acf_register_block_type( array(
-        'name' => 'project_block',
-        'title' => __('project block'),
-        'render_template' => 'blocks/project_block/block/project_block.php',
+        'name' => 'Project block',
+        'title' => __('ProjectBlock'),
+        'render_template' => 'blocks/project_block/projectBlock.php',
         'description' => __('Un custom block project'),
         'keywords' => array('project','projet'),
+        'enqueue_style' => get_template_directory_uri().'/blocks/project_block/block/projectBlock.css',
     ));
-
-    $stylesheet_url = get_theme_file_uri('blocks/project_block/project_block.css');
-    wp_enqueue_style('bloc_style', esc_url( $stylesheet_url), array(), null, 'all');
 }

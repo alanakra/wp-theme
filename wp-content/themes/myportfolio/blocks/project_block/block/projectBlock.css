@@ -1,0 +1,7 @@
+.projectBlock{
+ display: flex;
+}
+
+.projectBlock-partText, .projectBlock-image{
+ width: 50%;
+}
