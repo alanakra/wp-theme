@@ -55,6 +55,9 @@ function add_script(){
         $script_url = get_theme_file_uri('assets/script/timeContact.js');
         wp_enqueue_script('contact_script', esc_url( $script_url), array(), null, true);
     }
+
+    $script_url = get_theme_file_uri('assets/script/cursor.js');
+    wp_enqueue_script('CURSOR_script', esc_url( $script_url), array(), null, true);
 }
 
 // Create Custom Post Type

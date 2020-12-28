@@ -13,3 +13,6 @@
       'menu' => 'portfolio-menu',
       'menu_class' => 'nav-menu',
     )) ?>
+
+<div class="cursor" id="cursor"></div>
+<!-- TODO: Find why cursor effects not working (changeZIndex) -->
