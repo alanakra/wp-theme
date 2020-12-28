@@ -1,7 +1,7 @@
-.projectBlock{
+.container{
  display: flex;
 }
 
-.projectBlock-partText, .photo{
+.partie-texte, .photo{
  width: 50%;
 }

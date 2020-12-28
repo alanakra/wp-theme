@@ -22,8 +22,8 @@ $image = get_field('image') ?: 295;
 
 ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <div class="projectBlock-partText">
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container">
+    <div class="partie-texte">
         <p class="date-projet"><?php echo $date; ?> - <?php echo $category; ?></p><br>
         <p class="texte-projet"><?php echo $projectText; ?></p><br>
     </div>
