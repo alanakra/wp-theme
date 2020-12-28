@@ -1,7 +1,4 @@
 <?php
-
-
-
 // Create id attribute allowing for custom "anchor" value.
 $id = 'projectBlock-' . $block['id'];
 if( !empty($block['anchor']) ) {

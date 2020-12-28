@@ -5,16 +5,8 @@
 
 
 <div class="container">
-  <div class="partie-texte">
     <p class="texte-projet"><?php the_content(); ?></p>
-  </div>
-
-  <div class="photo">
-    <?php the_post_thumbnail(); ?>
-  </div>
-
 </div>
     
-
   <?php endwhile; endif; ?>
 <?php get_footer(); ?>
