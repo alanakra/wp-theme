@@ -2,6 +2,6 @@
  display: flex;
 }
 
-.projectBlock-partText, .projectBlock-image{
+.projectBlock-partText, .photo{
  width: 50%;
 }

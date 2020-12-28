@@ -24,11 +24,10 @@ $image = get_field('image') ?: 295;
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="projectBlock-partText">
-        <p class="projectBlock-category"><?php echo $category; ?></p><br>
-        <p class="projectBlock-date"><?php echo $date; ?></p><br>
-        <p class="projectBlock-text"><?php echo $projectText; ?></p><br>
+        <p class="date-projet"><?php echo $date; ?> - <?php echo $category; ?></p><br>
+        <p class="texte-projet"><?php echo $projectText; ?></p><br>
     </div>
-    <div class="projectBlock-image">
+    <div class="photo">
     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
     </div>
 </div>

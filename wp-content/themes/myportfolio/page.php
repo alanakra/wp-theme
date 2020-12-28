@@ -7,7 +7,7 @@
   <div class="container">
    <div class="partie-texte">
      <p class="texte-propos">
-      <?php the_excerpt(); ?>
+      <?php the_content(); ?>
      </p>
    </div>
     
