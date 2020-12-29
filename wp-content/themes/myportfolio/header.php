@@ -9,10 +9,19 @@
 </head>
 <body <?php body_class(); ?>>
  
-<?php wp_nav_menu(array(
+  <nav>
+    <div class="nav-name">
+      <a href="<?php echo get_home_url() ?>">Alan Akra</a>
+    </div>
+
+    <?php wp_nav_menu(array(
       'menu' => 'portfolio-menu',
-      'menu_class' => 'nav-menu',
+      'container_class' => 'nav-menu',
+      'menu_class' => 'link-menu',
     )) ?>
+  
+  </nav>
+
 
 <div class="cursor" id="cursor"></div>
 <!-- TODO: Find why cursor effects not working (changeZIndex) Function ??-->
