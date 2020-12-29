@@ -1,13 +1,11 @@
 let image = document.querySelectorAll('img');
-let mouseCursor = document.querySelector('#cursor');
+let mouseCursor = document.querySelector('.cursor');
 let navLinks = document.querySelectorAll('a');
 let placeX = Math.ceil(window.innerWidth*0.5);
 let placeY = Math.ceil(window.innerHeight*0.5);
-console.log(image);
 
 window.addEventListener('load', originCursor);
 window.addEventListener('mousemove', cursor);
-image.addEventListener('mousemove', changeZIndex);
 
 function originCursor(){
   mouseCursor.style.top = placeY + 'px';
@@ -30,7 +28,3 @@ navLinks.forEach(link => {
    link.classList.add('hovered-link');
  });
 });
-
-function changeZIndex(){
- console.log('ezdswx');
-}
