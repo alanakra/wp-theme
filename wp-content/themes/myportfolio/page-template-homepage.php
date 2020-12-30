@@ -32,7 +32,7 @@ get_header();
 <?php endif; ?>
 
 <?php if(get_field('content')): ?>
-  <h2 class="accroche"><?php the_field('content') ?> <?php showSkill('description_list') ?> <?php showSkill('description_list_2') ?></h2>
+  <h2 class="accroche"><?php the_field('content') ?> <span id="accroche1"></span> <span id="accroche2"></span></h2>
 <?php endif; ?>
 
 
