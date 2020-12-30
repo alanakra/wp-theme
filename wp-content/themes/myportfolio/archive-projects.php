@@ -15,4 +15,11 @@
 
 	     <?php endwhile; endif; ?>
 				</section>
+
+    <div class="copyright">
+       <footer>
+         <p>Créé avec ❤️ par Alan Akra - 2020</p>
+				   </footer>
+				</div>
+
 <?php get_footer(); ?>

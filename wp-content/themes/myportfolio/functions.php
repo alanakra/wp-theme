@@ -43,6 +43,11 @@ function add_specific_style(){
 
 function add_script(){
     
+    if(is_front_page()){
+        $script_url = get_theme_file_uri('assets/script/home.js');
+        wp_enqueue_script('home_script', esc_url( $script_url), array(), null, true);
+    }
+
     if(is_archive()){
         $script_url1 = get_theme_file_uri('assets/script/scrollReveal.js');
         wp_enqueue_script('project_scripts', esc_url( $script_url1), array(), null, 'all');

@@ -24,4 +24,3 @@
 
 
 <div class="cursor" id="cursor"></div>
-<!-- TODO: Find why cursor effects not working (changeZIndex) Function ??-->
