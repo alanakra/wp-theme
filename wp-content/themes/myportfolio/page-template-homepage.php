@@ -4,7 +4,7 @@ get_header();
 
 <script>
   // I call my JS function once the page is fully loaded
-  // window.addEventListener('load', hook(description_list, description_list_2));
+  window.addEventListener('load', hook(description_list, description_list_2));
 
   // Variable declaration
   let description_list = [];
