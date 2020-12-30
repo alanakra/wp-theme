@@ -19,6 +19,7 @@
 .block{
  display: flex;
  flex-direction: column;
+ z-index: 15;
 }
 
 .block p{
