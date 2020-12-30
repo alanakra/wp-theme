@@ -23,6 +23,7 @@
  font-size: 2rem;
  font-weight: bold;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ z-index: 15;
 }
 
 .know-more>a::after {

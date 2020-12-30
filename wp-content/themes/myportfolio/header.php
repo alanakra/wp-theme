@@ -11,7 +11,9 @@
  
   <nav>
     <div class="nav-name">
-      <a href="<?php echo get_home_url() ?>">Alan Akra</a>
+      <?php if(!is_front_page()): ?>
+        <a href="<?php echo get_home_url() ?>">Alan Akra</a>
+      <?php endif;?>
     </div>
 
     <?php wp_nav_menu(array(
