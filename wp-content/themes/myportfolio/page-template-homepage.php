@@ -2,24 +2,45 @@
 get_header();
 ?>
 
+<script>
+  // I call my JS function once the page is fully loaded
+  // window.addEventListener('load', hook(description_list, description_list_2));
+
+  // Variable declaration
+  let description_list = [];
+  let description_list_2 = [];
+  console.log(typeof(description_list))
+  console.log(typeof(description_list_2))
+</script>
+
 <?php
+
+// The list_name param contains the name of the repeater field
  function showSkill($list_name){
           if( have_rows($list_name) ):
             $skill = array();
   
             while( have_rows($list_name) ) : the_row();
               $sub_value = get_sub_field('quality');
-    
-              array_push($skill,$sub_value);
+              echo($list_name);
+              echo($sub_value);
+              array_push($skill,$sub_value); ?>
+
+<script>
+    <?php echo($list_name)?>.push("<?php echo($sub_value) ?>");
+</script>
+
+    <?php
             endwhile;
 
-
-              $randomInt = rand(0,4);
-              echo($skill[$randomInt]);
+              print_r($skill);
            else :
 
           endif;
  }
+
+  showSkill('description_list');
+  showSkill('description_list_2');
 ?>
 
 <div class="supertitre">
