@@ -27,6 +27,7 @@ get_header();
               array_push($skill,$sub_value); ?>
 
 <script>
+    // I use the JS push() method to add each quality in his specific array
     <?php echo($list_name)?>.push("<?php echo($sub_value) ?>");
 </script>
 
