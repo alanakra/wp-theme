@@ -1,29 +1,29 @@
-.supertitre{
- text-align: center;
- margin-top: 25vh;
+.supertitre {
+    text-align: center;
+    margin-top: 25vh;
 }
 
-.titre-page{
- font-size: 6rem;
+.titre-page {
+    font-size: 6rem;
 }
 
-.accroche-first{
- font-family: 'Carlito';
- font-size: 2.5rem;
+.accroche-first {
+    font-family: 'Carlito';
+    font-size: 2.5rem;
 }
 
-.accroche{
- font-family: 'Akrobat';
- font-size: 1.875rem;
+.accroche {
+    font-family: 'Akrobat';
+    font-size: 1.875rem;
 }
 
-.know-more{
- display: flex;
- justify-content: center;
- font-size: 2rem;
- font-weight: bold;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- z-index: 15;
+.know-more {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 15;
 }
 
 .know-more>a::after {
