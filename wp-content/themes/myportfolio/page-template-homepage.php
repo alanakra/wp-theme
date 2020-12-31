@@ -50,8 +50,6 @@ $description_list_2 = json_encode( showSkill( 'description_list_2' ) , JSON_UNES
 <script>
 let descriptionList = <?php echo $description_list; ?>;
 let descriptionList2 = <?php echo $description_list_2; ?>;
-console.log(descriptionList);
-console.log(descriptionList2);
 
 setTimeout(showQualities(descriptionList, descriptionList2), 2000);
 
