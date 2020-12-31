@@ -46,7 +46,6 @@ nav{
  display: flex;
  width: 50%;
  justify-content: space-around;
- height: 5vh;
  font-size: 1.25rem;
  text-transform: uppercase;
  font-family: 'Lato';
