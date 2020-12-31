@@ -17,8 +17,6 @@ function showSkill( $list_name ){
 
     endwhile;
 
-    print_r( $skill );
-
   endif;
 
   // You need to return the array
@@ -50,18 +48,18 @@ $description_list_2 = json_encode( showSkill( 'description_list_2' ) , JSON_UNES
 
 
 <script>
+let descriptionList = <?php echo $description_list; ?>;
+let descriptionList_2 = <?php echo $description_list_2; ?>;
 
-let description_list = <?php echo $description_list; ?>;
 
-// 1. Parse JSON String to Object
-description_list = JSON.parse(description_list);
-console.log(typeof(description_list));
+function showQualities(firstList, secondList) {
+  var randHook1 = firstList[Math.floor(Math.random() * firstList.length)];
+  var randHook2 = secondList[Math.floor(Math.random() * secondList.length)];
+  console.log(randHook1);
+  console.log(randHook2);
+}
 
-// 2. Convert Object to Array
-description_list = Object.values(description_list);
-
-// 3. Do the same for description_list_2, or convert this process into a function
-let description_list_2 = Object.values(JSON.parse(<?php echo $description_list_2?>));
+setInterval(showQualities(descriptionList, descriptionList_2), 2000);
 
 </script>
 
