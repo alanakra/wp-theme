@@ -1,13 +1,6 @@
-
-  accroche();
-
-  function accroche() {
-  tabAccroche1 = ['étudiant 👨🏾‍💼', 'développeur 👨🏿‍💻', 'webmaster'];
-  tabAccroche2 = ['créatif 🎨.', 'polyvalent.', "à l'écoute.", 'collaboratif 🤝.', 'curieux 👀.'];
-
-   var accrocheAleatoire1 = tabAccroche1[Math.floor(Math.random() * tabAccroche1.length)];
-   var accrocheAleatoire2 = tabAccroche2[Math.floor(Math.random() * tabAccroche2.length)];
-   document.getElementById("accroche1").innerHTML = accrocheAleatoire1;
-   document.getElementById("accroche2").innerHTML = accrocheAleatoire2;
-   setTimeout(accroche, 2000);
-  }
+function showQualities(firstList, secondList) {
+ var rand1 = firstList[Math.floor(Math.random() * firstList.length)];
+ var rand2 = secondList[Math.floor(Math.random() * secondList.length)];
+ document.getElementById("accroche1").innerHTML = rand1;
+ document.getElementById("accroche2").innerHTML = rand2;
+}

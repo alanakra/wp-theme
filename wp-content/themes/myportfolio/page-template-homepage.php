@@ -2,24 +2,29 @@
 get_header();
 ?>
 
+
 <?php
- function showSkill($list_name){
-          if( have_rows($list_name) ):
-            $skill = array();
-  
-            while( have_rows($list_name) ) : the_row();
-              $sub_value = get_sub_field('quality');
-    
-              array_push($skill,$sub_value);
-            endwhile;
 
+function showSkill( $list_name ){
+  $skill = array();
 
-              $randomInt = rand(0,4);
-              echo($skill[$randomInt]);
-           else :
+  if( have_rows( $list_name ) ):
 
-          endif;
- }
+    while( have_rows( $list_name ) ) : the_row();
+
+      $sub_value = get_sub_field( 'quality' );
+      array_push( $skill, $sub_value ); 
+
+    endwhile;
+
+  endif;
+
+  // You need to return the array
+  return $skill;
+}
+
+$description_list = json_encode( showSkill( 'description_list' ) , JSON_UNESCAPED_UNICODE);
+$description_list_2 = json_encode( showSkill( 'description_list_2' ) , JSON_UNESCAPED_UNICODE);
 ?>
 
 <div class="supertitre">
@@ -36,10 +41,18 @@ get_header();
 <?php endif; ?>
 
 
-
-
 <?php if(get_field('know_more')): ?>
   <a class="know-more" href="<?php the_field('know_more') ?>">En savoir plus</a>
 <?php endif; ?>
 </div>
+
+
+<script>
+let descriptionList = <?php echo $description_list; ?>;
+let descriptionList2 = <?php echo $description_list_2; ?>;
+
+setTimeout(showQualities(descriptionList, descriptionList2), 2000);
+
+</script>
+
 <?php get_footer() ?>
