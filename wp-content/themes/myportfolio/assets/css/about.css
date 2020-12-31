@@ -112,6 +112,9 @@ margin-bottom: 1.625rem;
   width: 50%;
   justify-content: space-around;
 }
+.container-button a{
+  z-index: 15;
+}
 
 .container-button img{
   max-width: 64px;
