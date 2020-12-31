@@ -37,7 +37,7 @@ $description_list_2 = json_encode( showSkill( 'description_list_2' ) , JSON_UNES
 <?php endif; ?>
 
 <?php if(get_field('content')): ?>
-  <h2 class="accroche"><?php the_field('content') ?></h2>
+  <h2 class="accroche"><?php the_field('content') ?> <span id="accroche1"></span> <span id="accroche2"></span></h2>
 <?php endif; ?>
 
 
@@ -51,15 +51,7 @@ $description_list_2 = json_encode( showSkill( 'description_list_2' ) , JSON_UNES
 let descriptionList = <?php echo $description_list; ?>;
 let descriptionList_2 = <?php echo $description_list_2; ?>;
 
-
-function showQualities(firstList, secondList) {
-  var randHook1 = firstList[Math.floor(Math.random() * firstList.length)];
-  var randHook2 = secondList[Math.floor(Math.random() * secondList.length)];
-  console.log(randHook1);
-  console.log(randHook2);
-}
-
-setInterval(showQualities(descriptionList, descriptionList_2), 2000);
+setTimeout(showQualities(descriptionList, descriptionList_2), 2000);
 
 </script>
 

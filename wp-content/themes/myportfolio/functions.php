@@ -45,7 +45,7 @@ function add_script(){
     
     if(is_front_page()){
         $script_url = get_theme_file_uri('assets/script/home.js');
-        wp_enqueue_script('home_script', esc_url( $script_url), array(), null, true);
+        wp_enqueue_script('home_script', esc_url( $script_url), array(), null, false);
     }
 
     if(is_archive()){
