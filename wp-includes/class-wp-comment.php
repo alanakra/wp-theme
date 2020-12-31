@@ -17,20 +17,30 @@ final class WP_Comment {
 	/**
 	 * Comment ID.
 	 *
+<<<<<<< HEAD
 	 * A numeric string, for compatibility reasons.
 	 *
 	 * @since 4.4.0
 	 * @var string
+=======
+	 * @since 4.4.0
+	 * @var int
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public $comment_ID;
 
 	/**
 	 * ID of the post the comment is associated with.
 	 *
+<<<<<<< HEAD
 	 * A numeric string, for compatibility reasons.
 	 *
 	 * @since 4.4.0
 	 * @var string
+=======
+	 * @since 4.4.0
+	 * @var int
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public $comment_post_ID = 0;
 
@@ -93,10 +103,15 @@ final class WP_Comment {
 	/**
 	 * Comment karma count.
 	 *
+<<<<<<< HEAD
 	 * A numeric string, for compatibility reasons.
 	 *
 	 * @since 4.4.0
 	 * @var string
+=======
+	 * @since 4.4.0
+	 * @var int
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public $comment_karma = 0;
 
@@ -128,20 +143,30 @@ final class WP_Comment {
 	/**
 	 * Parent comment ID.
 	 *
+<<<<<<< HEAD
 	 * A numeric string, for compatibility reasons.
 	 *
 	 * @since 4.4.0
 	 * @var string
+=======
+	 * @since 4.4.0
+	 * @var int
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public $comment_parent = 0;
 
 	/**
 	 * Comment author ID.
 	 *
+<<<<<<< HEAD
 	 * A numeric string, for compatibility reasons.
 	 *
 	 * @since 4.4.0
 	 * @var string
+=======
+	 * @since 4.4.0
+	 * @var int
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public $user_id = 0;
 

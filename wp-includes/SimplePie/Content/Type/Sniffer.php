@@ -150,7 +150,11 @@ class SimplePie_Content_Type_Sniffer
 		}
 		elseif (preg_match('/[\x00-\x08\x0E-\x1A\x1C-\x1F]/', $this->file->body))
 		{
+<<<<<<< HEAD
 			return 'application/octet-stream';
+=======
+			return 'application/octect-stream';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		return 'text/plain';

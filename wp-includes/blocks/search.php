@@ -27,6 +27,7 @@ function render_block_core_search( $attributes ) {
 		)
 	);
 
+<<<<<<< HEAD
 	$input_id        = 'wp-block-search__input-' . ++$instance_id;
 	$classnames      = classnames_for_block_core_search( $attributes );
 	$show_label      = ( ! empty( $attributes['showLabel'] ) ) ? true : false;
@@ -103,6 +104,53 @@ function render_block_core_search( $attributes ) {
 		esc_url( home_url( '/' ) ),
 		$wrapper_attributes,
 		$label_markup . $field_markup
+=======
+	$input_id      = 'wp-block-search__input-' . ++$instance_id;
+	$label_markup  = '';
+	$button_markup = '';
+
+	if ( ! empty( $attributes['label'] ) ) {
+		$label_markup = sprintf(
+			'<label for="%s" class="wp-block-search__label">%s</label>',
+			$input_id,
+			$attributes['label']
+		);
+	} else {
+		$label_markup = sprintf(
+			'<label for="%s" class="wp-block-search__label screen-reader-text">%s</label>',
+			$input_id,
+			__( 'Search' )
+		);
+	}
+
+	$input_markup = sprintf(
+		'<input type="search" id="%s" class="wp-block-search__input" name="s" value="%s" placeholder="%s" required />',
+		$input_id,
+		esc_attr( get_search_query() ),
+		esc_attr( $attributes['placeholder'] )
+	);
+
+	if ( ! empty( $attributes['buttonText'] ) ) {
+		$button_markup = sprintf(
+			'<button type="submit" class="wp-block-search__button">%s</button>',
+			$attributes['buttonText']
+		);
+	}
+
+	$class = 'wp-block-search';
+	if ( isset( $attributes['className'] ) ) {
+		$class .= ' ' . $attributes['className'];
+	}
+	if ( isset( $attributes['align'] ) ) {
+		$class .= ' align' . $attributes['align'];
+	}
+
+	return sprintf(
+		'<form class="%s" role="search" method="get" action="%s">%s</form>',
+		esc_attr( $class ),
+		esc_url( home_url( '/' ) ),
+		$label_markup . $input_markup . $button_markup
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	);
 }
 
@@ -118,6 +166,7 @@ function register_block_core_search() {
 	);
 }
 add_action( 'init', 'register_block_core_search' );
+<<<<<<< HEAD
 
 /**
  * Builds the correct top level classnames for the 'core/search' block.
@@ -159,3 +208,5 @@ function classnames_for_block_core_search( $attributes ) {
 
 	return implode( ' ', $classnames );
 }
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89

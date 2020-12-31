@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	"name": "core/image",
 	"category": "media",
 	"attributes": {
@@ -61,7 +64,12 @@
 			"type": "string"
 		},
 		"linkDestination": {
+<<<<<<< HEAD
 			"type": "string"
+=======
+			"type": "string",
+			"default": "none"
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		},
 		"linkTarget": {
 			"type": "string",
@@ -71,6 +79,11 @@
 		}
 	},
 	"supports": {
+<<<<<<< HEAD
 		"anchor": true
+=======
+		"anchor": true,
+		"lightBlockWrapper": true
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 }

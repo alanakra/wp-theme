@@ -246,6 +246,7 @@ class WP_Theme_Install_List_Table extends WP_Themes_List_Table {
 	 * @param object $theme {
 	 *     An object that contains theme data returned by the WordPress.org API.
 	 *
+<<<<<<< HEAD
 	 *     @type string $name           Theme name, e.g. 'Twenty Twenty-One'.
 	 *     @type string $slug           Theme slug, e.g. 'twentytwentyone'.
 	 *     @type string $version        Theme version, e.g. '1.1'.
@@ -255,6 +256,17 @@ class WP_Theme_Install_List_Table extends WP_Themes_List_Table {
 	 *     @type float  $rating         Rating score.
 	 *     @type int    $num_ratings    The number of ratings.
 	 *     @type string $homepage       Theme homepage, e.g. 'https://wordpress.org/themes/twentytwentyone/'.
+=======
+	 *     @type string $name           Theme name, e.g. 'Twenty Twenty'.
+	 *     @type string $slug           Theme slug, e.g. 'twentytwenty'.
+	 *     @type string $version        Theme version, e.g. '1.1'.
+	 *     @type string $author         Theme author username, e.g. 'melchoyce'.
+	 *     @type string $preview_url    Preview URL, e.g. 'https://2020.wordpress.net/'.
+	 *     @type string $screenshot_url Screenshot URL, e.g. 'https://wordpress.org/themes/twentytwenty/'.
+	 *     @type float  $rating         Rating score.
+	 *     @type int    $num_ratings    The number of ratings.
+	 *     @type string $homepage       Theme homepage, e.g. 'https://wordpress.org/themes/twentytwenty/'.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *     @type string $description    Theme description.
 	 *     @type string $download_link  Theme ZIP download URL.
 	 * }

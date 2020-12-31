@@ -126,7 +126,11 @@ if ( $doaction ) {
 			$sendback = add_query_arg(
 				array(
 					'trashed' => $trashed,
+<<<<<<< HEAD
 					'ids'     => implode( ',', $post_ids ),
+=======
+					'ids'     => join( ',', $post_ids ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					'locked'  => $locked,
 				),
 				$sendback
@@ -134,11 +138,14 @@ if ( $doaction ) {
 			break;
 		case 'untrash':
 			$untrashed = 0;
+<<<<<<< HEAD
 
 			if ( isset( $_GET['doaction'] ) && ( 'undo' === $_GET['doaction'] ) ) {
 				add_filter( 'wp_untrash_post_status', 'wp_untrash_post_set_previous_status', 10, 3 );
 			}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			foreach ( (array) $post_ids as $post_id ) {
 				if ( ! current_user_can( 'delete_post', $post_id ) ) {
 					wp_die( __( 'Sorry, you are not allowed to restore this item from the Trash.' ) );
@@ -151,9 +158,12 @@ if ( $doaction ) {
 				$untrashed++;
 			}
 			$sendback = add_query_arg( 'untrashed', $untrashed, $sendback );
+<<<<<<< HEAD
 
 			remove_filter( 'wp_untrash_post_status', 'wp_untrash_post_set_previous_status', 10, 3 );
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			break;
 		case 'delete':
 			$deleted = 0;
@@ -406,6 +416,7 @@ if ( current_user_can( $post_type_object->cap->create_posts ) ) {
 }
 
 if ( isset( $_REQUEST['s'] ) && strlen( $_REQUEST['s'] ) ) {
+<<<<<<< HEAD
 	echo '<span class="subtitle">';
 	printf(
 		/* translators: %s: Search query. */
@@ -413,6 +424,10 @@ if ( isset( $_REQUEST['s'] ) && strlen( $_REQUEST['s'] ) ) {
 		'<strong>' . get_search_query() . '</strong>'
 	);
 	echo '</span>';
+=======
+	/* translators: %s: Search query. */
+	printf( ' <span class="subtitle">' . __( 'Search results for &#8220;%s&#8221;' ) . '</span>', get_search_query() );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 ?>
 
@@ -432,6 +447,7 @@ foreach ( $bulk_counts as $message => $count ) {
 		$ids        = preg_replace( '/[^0-9,]/', '', $_REQUEST['ids'] );
 		$messages[] = '<a href="' . esc_url( wp_nonce_url( "edit.php?post_type=$post_type&doaction=undo&action=untrash&ids=$ids", 'bulk-posts' ) ) . '">' . __( 'Undo' ) . '</a>';
 	}
+<<<<<<< HEAD
 
 	if ( 'untrashed' === $message && isset( $_REQUEST['ids'] ) ) {
 		$ids = explode( ',', $_REQUEST['ids'] );
@@ -448,6 +464,12 @@ foreach ( $bulk_counts as $message => $count ) {
 
 if ( $messages ) {
 	echo '<div id="message" class="updated notice is-dismissible"><p>' . implode( ' ', $messages ) . '</p></div>';
+=======
+}
+
+if ( $messages ) {
+	echo '<div id="message" class="updated notice is-dismissible"><p>' . join( ' ', $messages ) . '</p></div>';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 unset( $messages );
 
@@ -482,7 +504,11 @@ if ( $wp_list_table->has_items() ) {
 ?>
 
 <div id="ajax-response"></div>
+<<<<<<< HEAD
 <div class="clear" /></div>
+=======
+<br class="clear" />
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 </div>
 
 <?php

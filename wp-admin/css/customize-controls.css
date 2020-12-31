@@ -1283,7 +1283,11 @@ p.customize-section-description {
 .customize-control .dropdown-arrow:after {
 	content: "\f140";
 	font: normal 20px/1 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	display: block;
 	padding: 0;
 	text-indent: 0;

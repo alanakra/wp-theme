@@ -82,20 +82,34 @@ this["wp"] = this["wp"] || {}; this["wp"]["url"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 476);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 444);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /******/ })
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
 /***/ 119:
+=======
+/***/ 115:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< HEAD
 var stringify = __webpack_require__(465);
 var parse = __webpack_require__(466);
 var formats = __webpack_require__(272);
+=======
+var stringify = __webpack_require__(433);
+var parse = __webpack_require__(434);
+var formats = __webpack_require__(259);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 module.exports = {
     formats: formats,
@@ -113,7 +127,11 @@ module.exports = {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 271:
+=======
+/***/ 258:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -351,7 +369,11 @@ module.exports = {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 272:
+=======
+/***/ 259:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -377,14 +399,23 @@ module.exports = {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 465:
+=======
+/***/ 433:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< HEAD
 var utils = __webpack_require__(271);
 var formats = __webpack_require__(272);
+=======
+var utils = __webpack_require__(258);
+var formats = __webpack_require__(259);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 var has = Object.prototype.hasOwnProperty;
 
 var arrayPrefixGenerators = {
@@ -654,13 +685,21 @@ module.exports = function (object, opts) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 466:
+=======
+/***/ 434:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< HEAD
 var utils = __webpack_require__(271);
+=======
+var utils = __webpack_require__(258);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 var has = Object.prototype.hasOwnProperty;
 
@@ -904,7 +943,11 @@ module.exports = function (str, opts) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 476:
+=======
+/***/ 444:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1233,7 +1276,11 @@ function isValidFragment(fragment) {
 }
 
 // EXTERNAL MODULE: ./node_modules/qs/lib/index.js
+<<<<<<< HEAD
 var lib = __webpack_require__(119);
+=======
+var lib = __webpack_require__(115);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/add-query-args.js
 /**

@@ -9,8 +9,11 @@
  * - Allows specifying only an endpoint namespace/path instead of a full URL.
  *
  * @since 4.9.0
+<<<<<<< HEAD
  * @since 5.6.0 Added overriding of the "PUT" and "DELETE" methods with "POST".
  *              Added an "application/json" Accept header to all requests.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @output wp-includes/js/api-request.js
  */
 
@@ -25,9 +28,14 @@
 	apiRequest.buildAjaxOptions = function( options ) {
 		var url = options.url;
 		var path = options.path;
+<<<<<<< HEAD
 		var method = options.method;
 		var namespaceTrimmed, endpointTrimmed, apiRoot;
 		var headers, addNonceHeader, addAcceptHeader, headerName;
+=======
+		var namespaceTrimmed, endpointTrimmed, apiRoot;
+		var headers, addNonceHeader, headerName;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if (
 			typeof options.namespace === 'string' &&
@@ -56,6 +64,7 @@
 
 		// If ?_wpnonce=... is present, no need to add a nonce header.
 		addNonceHeader = ! ( options.data && options.data._wpnonce );
+<<<<<<< HEAD
 		addAcceptHeader = true;
 
 		headers = options.headers || {};
@@ -74,6 +83,21 @@
 				case 'accept':
 					addAcceptHeader = false;
 					break;
+=======
+
+		headers = options.headers || {};
+
+		// If an 'X-WP-Nonce' header (or any case-insensitive variation
+		// thereof) was specified, no need to add a nonce header.
+		if ( addNonceHeader ) {
+			for ( headerName in headers ) {
+				if ( headers.hasOwnProperty( headerName ) ) {
+					if ( headerName.toLowerCase() === 'x-wp-nonce' ) {
+						addNonceHeader = false;
+						break;
+					}
+				}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 		}
 
@@ -84,6 +108,7 @@
 			}, headers );
 		}
 
+<<<<<<< HEAD
 		if ( addAcceptHeader ) {
 			headers = $.extend( {
 				'Accept': 'application/json, */*;q=0.1'
@@ -107,6 +132,12 @@
 			headers: headers,
 			url: url,
 			method: method
+=======
+		// Do not mutate the original options object.
+		options = $.extend( {}, options, {
+			headers: headers,
+			url: url
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		} );
 
 		delete options.path;

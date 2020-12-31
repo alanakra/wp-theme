@@ -14,7 +14,11 @@
  *
  * @property string $page_template
  *
+<<<<<<< HEAD
  * @property-read int[]  $ancestors
+=======
+ * @property-read array  $ancestors
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @property-read int    $post_category
  * @property-read string $tag_input
  */
@@ -352,7 +356,11 @@ final class WP_Post {
 	 * @since 3.5.0
 	 *
 	 * @param string $filter Filter.
+<<<<<<< HEAD
 	 * @return WP_Post
+=======
+	 * @return array|bool|object|WP_Post
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function filter( $filter ) {
 		if ( $this->filter === $filter ) {

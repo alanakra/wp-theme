@@ -141,7 +141,11 @@ class WP_Customize_Nav_Menu_Setting extends WP_Customize_Setting {
 			throw new Exception( "Illegal widget setting ID: $id" );
 		}
 
+<<<<<<< HEAD
 		$this->term_id = (int) $matches['id'];
+=======
+		$this->term_id = intval( $matches['id'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		parent::__construct( $manager, $id, $args );
 	}
@@ -433,7 +437,11 @@ class WP_Customize_Nav_Menu_Setting extends WP_Customize_Setting {
 
 		$value['name']        = trim( esc_html( $value['name'] ) ); // This sanitization code is used in wp-admin/nav-menus.php.
 		$value['description'] = sanitize_text_field( $value['description'] );
+<<<<<<< HEAD
 		$value['parent']      = max( 0, (int) $value['parent'] );
+=======
+		$value['parent']      = max( 0, intval( $value['parent'] ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$value['auto_add']    = ! empty( $value['auto_add'] );
 
 		if ( '' === $value['name'] ) {
@@ -556,7 +564,11 @@ class WP_Customize_Nav_Menu_Setting extends WP_Customize_Setting {
 				}
 
 				$post_value = $setting->post_value( null );
+<<<<<<< HEAD
 				if ( ! is_null( $post_value ) && (int) $post_value === $this->previous_term_id ) {
+=======
+				if ( ! is_null( $post_value ) && intval( $post_value ) === $this->previous_term_id ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					$this->manager->set_post_value( $setting->id, $this->term_id );
 					$setting->save();
 				}
@@ -570,7 +582,11 @@ class WP_Customize_Nav_Menu_Setting extends WP_Customize_Setting {
 				}
 
 				$widget_instance = $nav_menu_widget_setting->post_value(); // Note that this calls WP_Customize_Widgets::sanitize_widget_instance().
+<<<<<<< HEAD
 				if ( empty( $widget_instance['nav_menu'] ) || (int) $widget_instance['nav_menu'] !== $this->previous_term_id ) {
+=======
+				if ( empty( $widget_instance['nav_menu'] ) || intval( $widget_instance['nav_menu'] ) !== $this->previous_term_id ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					continue;
 				}
 

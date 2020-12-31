@@ -21,7 +21,11 @@ ini_set( 'auto_detect_line_endings', 1 );
 if ( ! class_exists( 'PO', false ) ) :
 	class PO extends Gettext_Translations {
 
+<<<<<<< HEAD
 		public $comments_before_headers = '';
+=======
+		var $comments_before_headers = '';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		/**
 		 * Exports headers to a PO entry
@@ -212,11 +216,19 @@ if ( ! class_exists( 'PO', false ) ) :
 		/**
 		 * Builds a string from the entry for inclusion in PO file
 		 *
+<<<<<<< HEAD
 		 * @param Translation_Entry $entry the entry to convert to po string.
 		 * @return string|false PO-style formatted string for the entry or
 		 *  false if the entry is empty
 		 */
 		public static function export_entry( $entry ) {
+=======
+		 * @param Translation_Entry $entry the entry to convert to po string (passed by reference).
+		 * @return string|false PO-style formatted string for the entry or
+		 *  false if the entry is empty
+		 */
+		public static function export_entry( &$entry ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			if ( null === $entry->singular || '' === $entry->singular ) {
 				return false;
 			}
@@ -283,7 +295,11 @@ if ( ! class_exists( 'PO', false ) ) :
 
 		/**
 		 * @param string $filename
+<<<<<<< HEAD
 		 * @return bool
+=======
+		 * @return boolean
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		function import_from_file( $filename ) {
 			$f = fopen( $filename, 'r' );
@@ -454,7 +470,11 @@ if ( ! class_exists( 'PO', false ) ) :
 		/**
 		 * @param resource $f
 		 * @param string   $action
+<<<<<<< HEAD
 		 * @return bool
+=======
+		 * @return boolean
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		function read_line( $f, $action = 'read' ) {
 			static $last_line     = '';

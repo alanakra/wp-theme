@@ -202,7 +202,11 @@ window.addComment = ( function( window ) {
 		var replyNode = getElementById( config.commentReplyTitleId );
 		var defaultReplyHeading = replyNode && replyNode.firstChild.textContent;
 		var replyLink = this,
+<<<<<<< HEAD
 			commId    = getDataAttribute( replyLink, 'belowelement' ),
+=======
+			commId    = getDataAttribute( replyLink, 'belowelement'),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			parentId  = getDataAttribute( replyLink, 'commentid' ),
 			respondId = getDataAttribute( replyLink, 'respondelement' ),
 			postId    = getDataAttribute( replyLink, 'postid' ),

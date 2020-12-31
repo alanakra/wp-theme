@@ -269,7 +269,11 @@ th .comment-grey-bubble {
 th .comment-grey-bubble:before {
 	content: "\f101";
 	font: normal 20px/.5 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	display: inline-block;
 	padding: 0;
 	top: 4px;
@@ -314,9 +318,12 @@ table.fixed {
 
 .fixed .column-posts {
 	width: 74px;
+<<<<<<< HEAD
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 .fixed .column-comment .comment-author {
@@ -454,7 +461,11 @@ table.media .column-title .filename {
 .sorting-indicator:before {
 	content: "\f142";
 	font: normal 20px/1 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	display: inline-block;
 	padding: 0;
 	top: -4px;
@@ -526,7 +537,11 @@ th.asc a:focus span.sorting-indicator:before {
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 .wp-list-table .is-expanded .toggle-row:before {
@@ -545,7 +560,11 @@ th.asc a:focus span.sorting-indicator:before {
 	content: "\f160";
 	display: inline-block;
 	font: normal 20px/1 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -713,7 +732,11 @@ th.asc a:focus span.sorting-indicator {
 	color: #b4b9be;
 	display: inline-block;
 	font: normal 20px/1 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -1316,7 +1339,11 @@ ul.cat-checklist {
 	display: inline-block;
 	font: normal 20px/1 dashicons;
 	margin: 3px -2px 0 5px;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	vertical-align: top;
@@ -1526,7 +1553,11 @@ div.action-links,
 
 .plugin-card .column-compatibility span:before {
 	font: normal 20px/.5 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	display: inline-block;
 	padding: 0;
 	top: 4px;
@@ -1700,7 +1731,11 @@ div.action-links,
 	}
 
 	.tablenav.bottom .tablenav-pages.one-page {
+<<<<<<< HEAD
 		margin-top: 15px;
+=======
+		margin: 15px 0 0 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		height: 0;
 	}
 
@@ -2156,6 +2191,7 @@ div.action-links,
 		grid-template-columns: auto auto;
 	}
 
+<<<<<<< HEAD
 	.tablenav.bottom .displaying-num {
 		position: relative;
 		top: 0;
@@ -2168,6 +2204,8 @@ div.action-links,
 		height: auto;
 	}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	.tablenav-pages .tablenav-paging-text {
 		float: right;
 		width: 100%;

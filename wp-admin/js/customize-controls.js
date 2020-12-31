@@ -3700,8 +3700,13 @@
 						parentContainer = ( section.contentContainer.is( 'ul' ) ) ? section.contentContainer : section.contentContainer.find( 'ul:first' );
 						if ( ! control.container.parent().is( parentContainer ) ) {
 							parentContainer.append( control.container );
+<<<<<<< HEAD
 						}
 						control.renderContent();
+=======
+							control.renderContent();
+						}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						control.deferred.embedded.resolve();
 					});
 				});

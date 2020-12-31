@@ -10,7 +10,11 @@
 /**
  * oEmbed API endpoint controller.
  *
+<<<<<<< HEAD
  * Registers the REST API route and delivers the response data.
+=======
+ * Registers the API route and delivers the response data.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * The output format (XML or JSON) is handled by the REST API.
  *
  * @since 4.4.0

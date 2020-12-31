@@ -424,7 +424,11 @@ switch ( $action ) {
 
 				// If the menu ID changed, redirect to the new URL.
 				if ( $nav_menu_selected_id !== $_nav_menu_selected_id ) {
+<<<<<<< HEAD
 					wp_redirect( admin_url( 'nav-menus.php?menu=' . (int) $_nav_menu_selected_id ) );
+=======
+					wp_redirect( admin_url( 'nav-menus.php?menu=' . intval( $_nav_menu_selected_id ) ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					exit;
 				}
 			}
@@ -596,8 +600,13 @@ if ( ! $locations_screen ) : // Main tab.
 		/* translators: 1: URL to Widgets screen, 2 and 3: The names of the default themes. */
 		__( 'Menus can be displayed in locations defined by your theme, even used in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href="%1$s">Widgets</a> screen. If your theme does not support the navigation menus feature (the default themes, %2$s and %3$s, do), you can learn about adding this support by following the Documentation link to the side.' ),
 		admin_url( 'widgets.php' ),
+<<<<<<< HEAD
 		'Twenty Twenty',
 		'Twenty Twenty-One'
+=======
+		'Twenty Nineteen',
+		'Twenty Twenty'
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	) . '</p>';
 	$overview .= '<p>' . __( 'From this screen you can:' ) . '</p>';
 	$overview .= '<ul><li>' . __( 'Create, edit, and delete menus' ) . '</li>';
@@ -961,7 +970,11 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 					<div id="nav-menu-header">
 						<div class="major-publishing-actions wp-clearfix">
 							<label class="menu-name-label" for="menu-name"><?php _e( 'Menu Name' ); ?></label>
+<<<<<<< HEAD
 							<input name="menu-name" id="menu-name" type="text" class="menu-name regular-text menu-item-textbox form-required" required="required" <?php echo $menu_name_val . $menu_name_aria_desc; ?> />
+=======
+							<input name="menu-name" id="menu-name" type="text" class="menu-name regular-text menu-item-textbox" <?php echo $menu_name_val . $menu_name_aria_desc; ?> />
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 							<div class="publishing-action">
 								<?php submit_button( empty( $nav_menu_selected_id ) ? __( 'Create Menu' ) : __( 'Save Menu' ), 'primary large menu-save', 'save_menu', false, array( 'id' => 'save_menu_header' ) ); ?>
 							</div><!-- END .publishing-action -->

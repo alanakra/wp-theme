@@ -36,14 +36,21 @@ final class WP_Recovery_Mode_Cookie_Service {
 		$value = $this->generate_cookie();
 
 		/**
+<<<<<<< HEAD
 		 * Filters the length of time a Recovery Mode cookie is valid for.
+=======
+		 * Filter the length of time a Recovery Mode cookie is valid for.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @since 5.2.0
 		 *
 		 * @param int $length Length in seconds.
 		 */
 		$length = apply_filters( 'recovery_mode_cookie_length', WEEK_IN_SECONDS );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$expire = time() + $length;
 
 		setcookie( RECOVERY_MODE_COOKIE, $value, $expire, COOKIEPATH, COOKIE_DOMAIN, is_ssl(), true );

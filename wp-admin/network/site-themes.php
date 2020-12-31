@@ -40,7 +40,11 @@ if ( ! empty( $_REQUEST['paged'] ) ) {
 	$referer = add_query_arg( 'paged', (int) $_REQUEST['paged'], $referer );
 }
 
+<<<<<<< HEAD
 $id = isset( $_REQUEST['id'] ) ? (int) $_REQUEST['id'] : 0;
+=======
+$id = isset( $_REQUEST['id'] ) ? intval( $_REQUEST['id'] ) : 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 if ( ! $id ) {
 	wp_die( __( 'Invalid site ID.' ) );

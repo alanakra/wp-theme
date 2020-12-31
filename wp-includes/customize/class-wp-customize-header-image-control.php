@@ -133,7 +133,11 @@ class WP_Customize_Header_Image_Control extends WP_Customize_Image_Control {
 				data-customize-image-value="{{{data.header.url}}}"
 				data-customize-header-image-data="{{JSON.stringify(data.header)}}">
 				<span class="screen-reader-text"><?php _e( 'Set image' ); ?></span>
+<<<<<<< HEAD
 				<img src="{{{data.header.thumbnail_url}}}" alt="{{{data.header.alt_text || data.header.description}}}" />
+=======
+				<img src="{{{data.header.thumbnail_url}}}" alt="{{{data.header.alt_text || data.header.description}}}">
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			</button>
 
 			<# if ( data.type === 'uploaded' ) { #>

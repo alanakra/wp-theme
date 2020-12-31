@@ -82,12 +82,20 @@ this["wp"] = this["wp"] || {}; this["wp"]["warning"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 467);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 435);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /******/ })
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
 /***/ 103:
+=======
+/***/ 117:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -278,7 +286,11 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 467:
+=======
+/***/ 435:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -322,7 +334,11 @@ function warning(message) {
   }
 }
 
+<<<<<<< HEAD
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(103)))
+=======
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(117)))
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 /***/ })
 

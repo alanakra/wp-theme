@@ -17,7 +17,19 @@
 function render_block_core_archives( $attributes ) {
 	$show_post_count = ! empty( $attributes['showPostCounts'] );
 
+<<<<<<< HEAD
 	$class = '';
+=======
+	$class = 'wp-block-archives';
+
+	if ( isset( $attributes['align'] ) ) {
+		$class .= " align{$attributes['align']}";
+	}
+
+	if ( isset( $attributes['className'] ) ) {
+		$class .= " {$attributes['className']}";
+	}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	if ( ! empty( $attributes['displayAsDropdown'] ) ) {
 
@@ -58,7 +70,11 @@ function render_block_core_archives( $attributes ) {
 				break;
 		}
 
+<<<<<<< HEAD
 		$label = esc_html( $label );
+=======
+		$label = esc_attr( $label );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		$block_content = '<label class="screen-reader-text" for="' . $dropdown_id . '">' . $title . '</label>
 	<select id="' . $dropdown_id . '" name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
@@ -88,19 +104,32 @@ function render_block_core_archives( $attributes ) {
 
 	$classnames = esc_attr( $class );
 
+<<<<<<< HEAD
 	$wrapper_attributes = get_block_wrapper_attributes( array( 'class' => $classnames ) );
 
 	if ( empty( $archives ) ) {
 		return sprintf(
 			'<div %1$s>%2$s</div>',
 			$wrapper_attributes,
+=======
+	if ( empty( $archives ) ) {
+
+		return sprintf(
+			'<div class="%1$s">%2$s</div>',
+			$classnames,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			__( 'No archives to show.' )
 		);
 	}
 
 	return sprintf(
+<<<<<<< HEAD
 		'<ul %1$s>%2$s</ul>',
 		$wrapper_attributes,
+=======
+		'<ul class="%1$s">%2$s</ul>',
+		$classnames,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$archives
 	);
 }

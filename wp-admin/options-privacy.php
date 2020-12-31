@@ -10,7 +10,11 @@
 require_once __DIR__ . '/admin.php';
 
 if ( ! current_user_can( 'manage_privacy_options' ) ) {
+<<<<<<< HEAD
 	wp_die( __( 'Sorry, you are not allowed to manage privacy options on this site.' ) );
+=======
+	wp_die( __( 'Sorry, you are not allowed to manage privacy on this site.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 $action = isset( $_POST['action'] ) ? $_POST['action'] : '';
@@ -234,7 +238,11 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 					<span>
 						<?php
 						if ( $has_pages ) {
+<<<<<<< HEAD
 							_e( 'Or' );
+=======
+							_e( 'Or:' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						} else {
 							_e( 'There are no pages.' );
 						}

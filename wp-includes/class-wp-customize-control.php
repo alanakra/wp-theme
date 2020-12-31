@@ -60,7 +60,11 @@ class WP_Customize_Control {
 	 * The primary setting for the control (if there is one).
 	 *
 	 * @since 3.4.0
+<<<<<<< HEAD
 	 * @var string|WP_Customize_Setting|null
+=======
+	 * @var string
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public $setting = 'default';
 

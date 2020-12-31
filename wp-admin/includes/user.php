@@ -47,10 +47,17 @@ function edit_user( $user_id = 0 ) {
 	$pass1 = '';
 	$pass2 = '';
 	if ( isset( $_POST['pass1'] ) ) {
+<<<<<<< HEAD
 		$pass1 = trim( $_POST['pass1'] );
 	}
 	if ( isset( $_POST['pass2'] ) ) {
 		$pass2 = trim( $_POST['pass2'] );
+=======
+		$pass1 = $_POST['pass1'];
+	}
+	if ( isset( $_POST['pass2'] ) ) {
+		$pass2 = $_POST['pass2'];
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	if ( isset( $_POST['role'] ) && current_user_can( 'promote_users' ) && ( ! $user_id || current_user_can( 'promote_user', $user_id ) ) ) {
@@ -489,8 +496,13 @@ function default_password_nag_handler( $errors = false ) {
 /**
  * @since 2.8.0
  *
+<<<<<<< HEAD
  * @param int     $user_ID
  * @param WP_User $old_data
+=======
+ * @param int    $user_ID
+ * @param object $old_data
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function default_password_nag_edit_user( $user_ID, $old_data ) {
 	// Short-circuit it.
@@ -594,6 +606,7 @@ Please click the following link to activate your user account:
 		wp_specialchars_decode( translate_user_role( $role['name'] ) )
 	);
 }
+<<<<<<< HEAD
 
 /**
  * Checks if the Authorize Application Password request is valid.
@@ -660,3 +673,5 @@ function wp_is_authorize_application_password_request_valid( $request, $user ) {
 
 	return true;
 }
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89

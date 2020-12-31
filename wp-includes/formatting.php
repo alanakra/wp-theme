@@ -722,7 +722,11 @@ function _get_wptexturize_split_regex( $shortcode_regex = '' ) {
  * @return string The regular expression
  */
 function _get_wptexturize_shortcode_regex( $tagnames ) {
+<<<<<<< HEAD
 	$tagregexp = implode( '|', array_map( 'preg_quote', $tagnames ) );
+=======
+	$tagregexp = join( '|', array_map( 'preg_quote', $tagnames ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$tagregexp = "(?:$tagregexp)(?=[\\s\\]\\/])"; // Excerpt of get_shortcode_regex().
 	// phpcs:disable Squiz.Strings.ConcatenationSpacing.PaddingFound -- don't remove regex indentation
 	$regex =
@@ -824,7 +828,11 @@ function shortcode_unautop( $pee ) {
 		return $pee;
 	}
 
+<<<<<<< HEAD
 	$tagregexp = implode( '|', array_map( 'preg_quote', array_keys( $shortcode_tags ) ) );
+=======
+	$tagregexp = join( '|', array_map( 'preg_quote', array_keys( $shortcode_tags ) ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$spaces    = wp_spaces_regexp();
 
 	// phpcs:disable Squiz.Strings.ConcatenationSpacing.PaddingFound,WordPress.WhiteSpace.PrecisionAlignment.Found -- don't remove regex indentation
@@ -2164,7 +2172,10 @@ function sanitize_key( $key ) {
  * @param string $title          The string to be sanitized.
  * @param string $fallback_title Optional. A title to use if $title is empty. Default empty.
  * @param string $context        Optional. The operation for which the string is sanitized.
+<<<<<<< HEAD
  *                               When set to 'save', the string runs through remove_accents().
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *                               Default 'save'.
  * @return string The sanitized string.
  */
@@ -2218,8 +2229,12 @@ function sanitize_title_for_query( $title ) {
  * @param string $title     The title to be sanitized.
  * @param string $raw_title Optional. Not used. Default empty.
  * @param string $context   Optional. The operation for which the string is sanitized.
+<<<<<<< HEAD
  *                          When set to 'save', additional entities are converted to hyphens
  *                          or stripped entirely. Default 'display'.
+=======
+ *                          Default 'display'.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @return string The sanitized title.
  */
 function sanitize_title_with_dashes( $title, $raw_title = '', $context = 'display' ) {
@@ -3155,10 +3170,16 @@ function wp_rel_ugc( $text ) {
 }
 
 /**
+<<<<<<< HEAD
  * Adds `rel="noopener"` to all HTML A elements that have a target.
  *
  * @since 5.1.0
  * @since 5.6.0 Removed 'noreferrer' relationship.
+=======
+ * Adds rel noreferrer and noopener to all HTML A elements that have a target.
+ *
+ * @since 5.1.0
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @param string $text Content that may contain HTML A elements.
  * @return string Converted content.
@@ -3191,6 +3212,7 @@ function wp_targeted_link_rel( $text ) {
 }
 
 /**
+<<<<<<< HEAD
  * Callback to add `rel="noopener"` string to HTML A element.
  *
  * Will not duplicate an existing 'noopener' value to avoid invalidating the HTML.
@@ -3200,6 +3222,17 @@ function wp_targeted_link_rel( $text ) {
  *
  * @param array $matches Single match.
  * @return string HTML A Element with `rel="noopener"` in addition to any existing values.
+=======
+ * Callback to add rel="noreferrer noopener" string to HTML A element.
+ *
+ * Will not duplicate existing noreferrer and noopener values
+ * to prevent from invalidating the HTML.
+ *
+ * @since 5.1.0
+ *
+ * @param array $matches Single Match
+ * @return string HTML A Element with rel noreferrer noopener in addition to any existing values
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function wp_targeted_link_rel_callback( $matches ) {
 	$link_html          = $matches[1];
@@ -3222,7 +3255,11 @@ function wp_targeted_link_rel_callback( $matches ) {
 	 * @param string $rel       The rel values.
 	 * @param string $link_html The matched content of the link tag including all HTML attributes.
 	 */
+<<<<<<< HEAD
 	$rel = apply_filters( 'wp_targeted_link_rel', 'noopener', $link_html );
+=======
+	$rel = apply_filters( 'wp_targeted_link_rel', 'noopener noreferrer', $link_html );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	// Return early if no rel values to be added or if no actual target attribute.
 	if ( ! $rel || ! isset( $atts['target'] ) ) {
@@ -3235,7 +3272,11 @@ function wp_targeted_link_rel_callback( $matches ) {
 	}
 
 	$atts['rel']['whole'] = 'rel="' . esc_attr( $rel ) . '"';
+<<<<<<< HEAD
 	$link_html            = implode( ' ', array_column( $atts, 'whole' ) );
+=======
+	$link_html            = join( ' ', array_column( $atts, 'whole' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	if ( $is_escaped ) {
 		$link_html = preg_replace( '/[\'"]/', '\\\\$0', $link_html );
@@ -3571,8 +3612,13 @@ function iso8601_timezone_to_offset( $timezone ) {
 		$offset = 0;
 	} else {
 		$sign    = ( '+' === substr( $timezone, 0, 1 ) ) ? 1 : -1;
+<<<<<<< HEAD
 		$hours   = (int) substr( $timezone, 1, 2 );
 		$minutes = (int) substr( $timezone, 3, 4 ) / 60;
+=======
+		$hours   = intval( substr( $timezone, 1, 2 ) );
+		$minutes = intval( substr( $timezone, 3, 4 ) ) / 60;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$offset  = $sign * HOUR_IN_SECONDS * ( $hours + $minutes );
 	}
 	return $offset;
@@ -3699,7 +3745,11 @@ function sanitize_email( $email ) {
 	}
 
 	// Join valid subs into the new domain.
+<<<<<<< HEAD
 	$domain = implode( '.', $new_subs );
+=======
+	$domain = join( '.', $new_subs );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	// Put the email back together.
 	$sanitized_email = $local . '@' . $domain;
@@ -3823,7 +3873,11 @@ function wp_trim_excerpt( $text = '', $post = null ) {
 		$text = str_replace( ']]>', ']]&gt;', $text );
 
 		/* translators: Maximum number of words used in a post excerpt. */
+<<<<<<< HEAD
 		$excerpt_length = (int) _x( '55', 'excerpt_length' );
+=======
+		$excerpt_length = intval( _x( '55', 'excerpt_length' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		/**
 		 * Filters the maximum number of words in a post excerpt.
@@ -4301,8 +4355,11 @@ function esc_sql( $data ) {
  *                            Defaults to return value of wp_allowed_protocols().
  * @param string   $_context  Private. Use esc_url_raw() for database usage.
  * @return string The cleaned URL after the {@see 'clean_url'} filter is applied.
+<<<<<<< HEAD
  *                An empty string is returned if `$url` specifies a protocol other than
  *                those in `$protocols`, or if `$url` contains an empty string.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function esc_url( $url, $protocols = null, $_context = 'display' ) {
 	$original_url = $url;
@@ -4407,12 +4464,19 @@ function esc_url( $url, $protocols = null, $_context = 'display' ) {
  *
  * @since 2.8.0
  *
+<<<<<<< HEAD
  * @see esc_url()
  *
  * @param string   $url       The URL to be cleaned.
  * @param string[] $protocols Optional. An array of acceptable protocols.
  *                            Defaults to return value of wp_allowed_protocols().
  * @return string The cleaned URL after esc_url() is run with the 'db' context.
+=======
+ * @param string   $url       The URL to be cleaned.
+ * @param string[] $protocols Optional. An array of acceptable protocols.
+ *                            Defaults to return value of wp_allowed_protocols().
+ * @return string The cleaned URL.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function esc_url_raw( $url, $protocols = null ) {
 	return esc_url( $url, $protocols, 'db' );
@@ -4732,7 +4796,11 @@ function sanitize_option( $option, $value ) {
 			if ( null === $value ) {
 				$value = 1;
 			} else {
+<<<<<<< HEAD
 				$value = (int) $value;
+=======
+				$value = intval( $value );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 			break;
 
@@ -5074,7 +5142,11 @@ function wp_sprintf( $pattern, ...$args ) {
 			if ( $_fragment != $fragment ) {
 				$fragment = $_fragment;
 			} else {
+<<<<<<< HEAD
 				$fragment = sprintf( $fragment, (string) $arg );
+=======
+				$fragment = sprintf( $fragment, strval( $arg ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 		}
 
@@ -5250,7 +5322,11 @@ function links_add_target( $content, $target = '_blank', $tags = array( 'a' ) ) 
 	global $_links_add_target;
 	$_links_add_target = $target;
 	$tags              = implode( '|', (array) $tags );
+<<<<<<< HEAD
 	return preg_replace_callback( "!<($tags)((\s[^>]*)?)>!i", '_links_add_target', $content );
+=======
+	return preg_replace_callback( "!<($tags)([^>]*)>!i", '_links_add_target', $content );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**
@@ -5553,6 +5629,36 @@ function wp_unslash( $value ) {
 }
 
 /**
+<<<<<<< HEAD
+=======
+ * Adds slashes to only string values in an array of values.
+ *
+ * This should be used when preparing data for core APIs that expect slashed data.
+ * This should not be used to escape data going directly into an SQL query.
+ *
+ * @since 5.3.0
+ *
+ * @param mixed $value Scalar or array of scalars.
+ * @return mixed Slashes $value
+ */
+function wp_slash_strings_only( $value ) {
+	return map_deep( $value, 'addslashes_strings_only' );
+}
+
+/**
+ * Adds slashes only if the provided value is a string.
+ *
+ * @since 5.3.0
+ *
+ * @param mixed $value
+ * @return mixed
+ */
+function addslashes_strings_only( $value ) {
+	return is_string( $value ) ? addslashes( $value ) : $value;
+}
+
+/**
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Extract and return the first URL from passed content.
  *
  * @since 3.6.0
@@ -5671,7 +5777,11 @@ function _print_emoji_detection_script() {
 		 *
 		 * @param string $url The emoji base URL for png images.
 		 */
+<<<<<<< HEAD
 		'baseUrl' => apply_filters( 'emoji_url', 'https://s.w.org/images/core/emoji/13.0.1/72x72/' ),
+=======
+		'baseUrl' => apply_filters( 'emoji_url', 'https://s.w.org/images/core/emoji/13.0.0/72x72/' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		/**
 		 * Filters the extension of the emoji png files.
@@ -5689,7 +5799,11 @@ function _print_emoji_detection_script() {
 		 *
 		 * @param string $url The emoji base URL for svg images.
 		 */
+<<<<<<< HEAD
 		'svgUrl'  => apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/13.0.1/svg/' ),
+=======
+		'svgUrl'  => apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/13.0.0/svg/' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		/**
 		 * Filters the extension of the emoji SVG files.
@@ -5804,7 +5918,11 @@ function wp_staticize_emoji( $text ) {
 	}
 
 	/** This filter is documented in wp-includes/formatting.php */
+<<<<<<< HEAD
 	$cdn_url = apply_filters( 'emoji_url', 'https://s.w.org/images/core/emoji/13.0.1/72x72/' );
+=======
+	$cdn_url = apply_filters( 'emoji_url', 'https://s.w.org/images/core/emoji/13.0.0/72x72/' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/** This filter is documented in wp-includes/formatting.php */
 	$ext = apply_filters( 'emoji_ext', '.png' );

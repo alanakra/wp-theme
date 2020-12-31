@@ -115,9 +115,13 @@ class WP_Links_List_Table extends WP_List_Table {
 			);
 
 			echo '<label class="screen-reader-text" for="cat_id">' . __( 'Filter by category' ) . '</label>';
+<<<<<<< HEAD
 
 			wp_dropdown_categories( $dropdown_options );
 
+=======
+			wp_dropdown_categories( $dropdown_options );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			submit_button( __( 'Filter' ), '', 'filter_action', false, array( 'id' => 'post-query-submit' ) );
 			?>
 		</div>

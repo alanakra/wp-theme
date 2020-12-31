@@ -297,7 +297,11 @@ class WP_Recovery_Mode {
 	 */
 	protected function get_email_rate_limit() {
 		/**
+<<<<<<< HEAD
 		 * Filters the rate limit between sending new recovery mode email links.
+=======
+		 * Filter the rate limit between sending new recovery mode email links.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @since 5.2.0
 		 *
@@ -319,7 +323,11 @@ class WP_Recovery_Mode {
 		$valid_for  = $rate_limit;
 
 		/**
+<<<<<<< HEAD
 		 * Filters the amount of time the recovery mode email link is valid for.
+=======
+		 * Filter the amount of time the recovery mode email link is valid for.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * The ttl must be at least as long as the email rate limit.
 		 *

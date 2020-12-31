@@ -677,6 +677,17 @@ var Attachments = Backbone.Collection.extend(/** @lends wp.media.model.Attachmen
 	 */
 	validator: function( attachment ) {
 
+<<<<<<< HEAD
+=======
+		// Filter out contextually created attachments (e.g. headers, logos, etc.).
+		if (
+			! _.isUndefined( attachment.attributes.context ) &&
+			'' !== attachment.attributes.context
+		) {
+			return false;
+		}
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( ! this.validateDestroyed && attachment.destroyed ) {
 			return false;
 		}

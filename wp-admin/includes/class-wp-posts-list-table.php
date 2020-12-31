@@ -89,17 +89,30 @@ class WP_Posts_List_Table extends WP_List_Table {
 				'show_in_admin_all_list' => false,
 			)
 		);
+<<<<<<< HEAD
 		$this->user_posts_count = (int) $wpdb->get_var(
 			$wpdb->prepare(
 				"
+=======
+		$this->user_posts_count = intval(
+			$wpdb->get_var(
+				$wpdb->prepare(
+					"
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			SELECT COUNT( 1 )
 			FROM $wpdb->posts
 			WHERE post_type = %s
 			AND post_status NOT IN ( '" . implode( "','", $exclude_states ) . "' )
 			AND post_author = %d
 		",
+<<<<<<< HEAD
 				$post_type,
 				get_current_user_id()
+=======
+					$post_type,
+					get_current_user_id()
+				)
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			)
 		);
 
@@ -1079,9 +1092,15 @@ class WP_Posts_List_Table extends WP_List_Table {
 			$t_time = sprintf(
 				/* translators: 1: Post date, 2: Post time. */
 				__( '%1$s at %2$s' ),
+<<<<<<< HEAD
 				/* translators: Post date format. See https://www.php.net/manual/datetime.format.php */
 				get_the_time( __( 'Y/m/d' ), $post ),
 				/* translators: Post time format. See https://www.php.net/manual/datetime.format.php */
+=======
+				/* translators: Post date format. See https://www.php.net/date */
+				get_the_time( __( 'Y/m/d' ), $post ),
+				/* translators: Post time format. See https://www.php.net/date */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				get_the_time( __( 'g:i a' ), $post )
 			);
 
@@ -1219,7 +1238,11 @@ class WP_Posts_List_Table extends WP_List_Table {
 				$term_links = apply_filters( 'post_column_taxonomy_links', $term_links, $taxonomy, $terms );
 
 				/* translators: Used between list items, there is a space after the comma. */
+<<<<<<< HEAD
 				echo implode( __( ', ' ), $term_links );
+=======
+				echo join( __( ', ' ), $term_links );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			} else {
 				echo '<span aria-hidden="true">&#8212;</span><span class="screen-reader-text">' . $taxonomy_object->labels->no_terms . '</span>';
 			}
@@ -1321,9 +1344,15 @@ class WP_Posts_List_Table extends WP_List_Table {
 	 *
 	 * @since 4.3.0
 	 *
+<<<<<<< HEAD
 	 * @param WP_Post $post        Post being acted upon.
 	 * @param string  $column_name Current column name.
 	 * @param string  $primary     Primary column name.
+=======
+	 * @param object $post        Post being acted upon.
+	 * @param string $column_name Current column name.
+	 * @param string $primary     Primary column name.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return string Row actions output for posts, or an empty string
 	 *                if the current column is not the primary column.
 	 */
@@ -1587,6 +1616,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 							$users_opt['show_option_none'] = __( '&mdash; No Change &mdash;' );
 						}
 
+<<<<<<< HEAD
 						/**
 						 * Filters the arguments used to generate the Quick Edit authors drop-down.
 						 *
@@ -1599,6 +1629,8 @@ class WP_Posts_List_Table extends WP_List_Table {
 						 */
 						$users_opt = apply_filters( 'quick_edit_dropdown_authors_args', $users_opt, $bulk );
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						$authors = wp_dropdown_users( $users_opt );
 						if ( $authors ) :
 							$authors_dropdown  = '<label class="inline-edit-author">';
@@ -1694,6 +1726,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 							 * Filters the arguments used to generate the Quick Edit page-parent drop-down.
 							 *
 							 * @since 2.7.0
+<<<<<<< HEAD
 							 * @since 5.6.0 The `$bulk` parameter was added.
 							 *
 							 * @see wp_dropdown_pages()
@@ -1702,6 +1735,14 @@ class WP_Posts_List_Table extends WP_List_Table {
 							 * @param bool  $bulk          A flag to denote if it's a bulk action.
 							 */
 							$dropdown_args = apply_filters( 'quick_edit_dropdown_pages_args', $dropdown_args, $bulk );
+=======
+							 *
+							 * @see wp_dropdown_pages()
+							 *
+							 * @param array $dropdown_args An array of arguments.
+							 */
+							$dropdown_args = apply_filters( 'quick_edit_dropdown_pages_args', $dropdown_args );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 							wp_dropdown_pages( $dropdown_args );
 							?>

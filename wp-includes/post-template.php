@@ -456,7 +456,11 @@ function has_excerpt( $post = 0 ) {
  */
 function post_class( $class = '', $post_id = null ) {
 	// Separates classes with a single space, collates classes for post DIV.
+<<<<<<< HEAD
 	echo 'class="' . esc_attr( implode( ' ', get_post_class( $class, $post_id ) ) ) . '"';
+=======
+	echo 'class="' . esc_attr( join( ' ', get_post_class( $class, $post_id ) ) ) . '"';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**
@@ -592,7 +596,11 @@ function get_post_class( $class = '', $post_id = null ) {
  */
 function body_class( $class = '' ) {
 	// Separates class names with a single space, collates class names for body element.
+<<<<<<< HEAD
 	echo 'class="' . esc_attr( implode( ' ', get_body_class( $class ) ) ) . '"';
+=======
+	echo 'class="' . esc_attr( join( ' ', get_body_class( $class ) ) ) . '"';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**
@@ -1596,8 +1604,14 @@ function the_attachment_link( $id = 0, $fullsize = false, $deprecated = false, $
  * @since 4.4.0 The `$id` parameter can now accept either a post ID or `WP_Post` object.
  *
  * @param int|WP_Post  $id        Optional. Post ID or post object.
+<<<<<<< HEAD
  * @param string|int[] $size      Optional. Image size. Accepts any registered image size name, or an array
  *                                of width and height values in pixels (in that order). Default 'thumbnail'.
+=======
+ * @param string|array $size      Optional. Image size. Accepts any valid image size, or an array
+ *                                of width and height values in pixels (in that order).
+ *                                Default 'thumbnail'.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param bool         $permalink Optional. Whether to add permalink to image. Default false.
  * @param bool         $icon      Optional. Whether the attachment is an icon. Default false.
  * @param string|false $text      Optional. Link text to use. Activated by passing a string, false otherwise.
@@ -1641,12 +1655,21 @@ function wp_get_attachment_link( $id = 0, $size = 'thumbnail', $permalink = fals
 	 *
 	 * @param string       $link_html The page link HTML output.
 	 * @param int          $id        Post ID.
+<<<<<<< HEAD
 	 * @param string|int[] $size      Requested image size. Can be any registered image size name, or
 	 *                                an array of width and height values in pixels (in that order).
 	 * @param bool         $permalink Whether to add permalink to image. Default false.
 	 * @param bool         $icon      Whether to include an icon.
 	 * @param string|bool  $text      If string, will be link text.
 	 * @param array|string $attr      Array or string of attributes.
+=======
+	 * @param string|array $size      Size of the image. Image size or array of width and height values (in that order).
+	 *                                Default 'thumbnail'.
+	 * @param bool         $permalink Whether to add permalink to image. Default false.
+	 * @param bool         $icon      Whether to include an icon. Default false.
+	 * @param string|bool  $text      If string, will be link text. Default false.
+	 * @param array|string $attr      Array or string of attributes. Default empty.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	return apply_filters( 'wp_get_attachment_link', "<a href='" . esc_url( $url ) . "'>$link_text</a>", $id, $size, $permalink, $icon, $text, $attr );
 }
@@ -1823,7 +1846,11 @@ function wp_post_revision_title( $revision, $link = true ) {
 		return false;
 	}
 
+<<<<<<< HEAD
 	/* translators: Revision date format, see https://www.php.net/manual/datetime.format.php */
+=======
+	/* translators: Revision date format, see https://www.php.net/date */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$datef = _x( 'F j, Y @ H:i:s', 'revision date format' );
 	/* translators: %s: Revision date. */
 	$autosavef = __( '%s [Autosave]' );
@@ -1865,7 +1892,11 @@ function wp_post_revision_title_expanded( $revision, $link = true ) {
 	}
 
 	$author = get_the_author_meta( 'display_name', $revision->post_author );
+<<<<<<< HEAD
 	/* translators: Revision date format, see https://www.php.net/manual/datetime.format.php */
+=======
+	/* translators: Revision date format, see https://www.php.net/date */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$datef = _x( 'F j, Y @ H:i:s', 'revision date format' );
 
 	$gravatar = get_avatar( $revision->post_author, 24 );

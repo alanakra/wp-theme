@@ -10,7 +10,11 @@
 require_once __DIR__ . '/admin.php';
 
 if ( ! current_user_can( 'erase_others_personal_data' ) || ! current_user_can( 'delete_users' ) ) {
+<<<<<<< HEAD
 	wp_die( __( 'Sorry, you are not allowed to erase personal data on this site.' ) );
+=======
+	wp_die( __( 'Sorry, you are not allowed to erase data on this site.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 // Handle list table actions.

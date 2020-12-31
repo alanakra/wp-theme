@@ -51,7 +51,11 @@ if ( ! empty( $_REQUEST['post_id'] ) && ! current_user_can( 'edit_post', $_REQUE
 
 // Upload type: image, video, file, ...?
 if ( isset( $_GET['type'] ) ) {
+<<<<<<< HEAD
 	$type = (string) $_GET['type'];
+=======
+	$type = strval( $_GET['type'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 } else {
 	/**
 	 * Filters the default media upload type in the legacy (pre-3.5.0) media popup.
@@ -66,14 +70,22 @@ if ( isset( $_GET['type'] ) ) {
 
 // Tab: gallery, library, or type-specific.
 if ( isset( $_GET['tab'] ) ) {
+<<<<<<< HEAD
 	$tab = (string) $_GET['tab'];
+=======
+	$tab = strval( $_GET['tab'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 } else {
 	/**
 	 * Filters the default tab in the legacy (pre-3.5.0) media popup.
 	 *
 	 * @since 2.5.0
 	 *
+<<<<<<< HEAD
 	 * @param string $tab The default media popup tab. Default 'type' (From Computer).
+=======
+	 * @param string $type The default media popup tab. Default 'type' (From Computer).
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	$tab = apply_filters( 'media_upload_default_tab', 'type' );
 }

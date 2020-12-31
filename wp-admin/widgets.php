@@ -346,6 +346,7 @@ if ( isset( $_GET['editwidget'] ) && $_GET['editwidget'] ) {
 	</div>
 
 	<div class="widget-control-actions">
+<<<<<<< HEAD
 		<div class="alignleft">
 			<?php if ( ! isset( $_GET['addnew'] ) ) : ?>
 				<input type="submit" name="removewidget" id="removewidget" class="button-link button-link-delete widget-control-remove" value="<?php _e( 'Delete' ); ?>" />
@@ -366,6 +367,24 @@ if ( isset( $_GET['editwidget'] ) && $_GET['editwidget'] ) {
 		<br class="clear" />
 	</div>
 
+=======
+	<?php
+	if ( isset( $_GET['addnew'] ) ) {
+		?>
+	<a href="widgets.php" class="button alignleft"><?php _e( 'Cancel' ); ?></a>
+		<?php
+	} else {
+		submit_button( __( 'Delete' ), 'alignleft', 'removewidget', false );
+	}
+	submit_button( __( 'Save Widget' ), 'primary alignright', 'savewidget', false );
+	?>
+	<input type="hidden" name="widget-id" class="widget-id" value="<?php echo esc_attr( $widget_id ); ?>" />
+	<input type="hidden" name="id_base" class="id_base" value="<?php echo esc_attr( $id_base ); ?>" />
+	<input type="hidden" name="multi_number" class="multi_number" value="<?php echo esc_attr( $multi_number ); ?>" />
+	<?php	wp_nonce_field( "save-delete-widget-$widget_id" ); ?>
+	<br class="clear" />
+	</div>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	</form>
 	</div>
 	</div>

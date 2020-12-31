@@ -45,7 +45,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $author_base = 'author';
+=======
+	var $author_base = 'author';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Permalink structure for author archives.
@@ -53,7 +57,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $author_structure;
+=======
+	var $author_structure;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Permalink structure for date archives.
@@ -61,7 +69,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $date_structure;
+=======
+	var $date_structure;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Permalink structure for pages.
@@ -69,7 +81,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $page_structure;
+=======
+	var $page_structure;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Base of the search permalink structure (example.com/$search_base/query).
@@ -77,7 +93,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $search_base = 'search';
+=======
+	var $search_base = 'search';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Permalink structure for searches.
@@ -85,7 +105,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $search_structure;
+=======
+	var $search_structure;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Comments permalink base.
@@ -93,7 +117,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $comments_base = 'comments';
+=======
+	var $comments_base = 'comments';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Pagination permalink base.
@@ -109,7 +137,11 @@ class WP_Rewrite {
 	 * @since 4.2.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $comments_pagination_base = 'comment-page';
+=======
+	var $comments_pagination_base = 'comment-page';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Feed permalink base.
@@ -117,7 +149,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $feed_base = 'feed';
+=======
+	var $feed_base = 'feed';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Comments feed permalink structure.
@@ -125,7 +161,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $comment_feed_structure;
+=======
+	var $comment_feed_structure;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Feed request permalink structure.
@@ -133,7 +173,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $feed_structure;
+=======
+	var $feed_structure;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * The static portion of the post permalink structure.
@@ -178,7 +222,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $matches = '';
+=======
+	var $matches = '';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Rewrite rules to match against the request to find the redirect or query.
@@ -186,7 +234,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $rules;
+=======
+	var $rules;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Additional rules added external to the rewrite class.
@@ -196,7 +248,11 @@ class WP_Rewrite {
 	 * @since 2.1.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $extra_rules = array();
+=======
+	var $extra_rules = array();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Additional rules that belong at the beginning to match first.
@@ -206,7 +262,11 @@ class WP_Rewrite {
 	 * @since 2.3.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $extra_rules_top = array();
+=======
+	var $extra_rules_top = array();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Rules that don't redirect to WordPress' index.php.
@@ -217,7 +277,11 @@ class WP_Rewrite {
 	 * @since 2.1.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $non_wp_rules = array();
+=======
+	var $non_wp_rules = array();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Extra permalink structures, e.g. categories, added by add_permastruct().
@@ -225,7 +289,11 @@ class WP_Rewrite {
 	 * @since 2.1.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $extra_permastructs = array();
+=======
+	var $extra_permastructs = array();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Endpoints (like /trackback/) added by add_rewrite_endpoint().
@@ -233,7 +301,11 @@ class WP_Rewrite {
 	 * @since 2.1.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $endpoints;
+=======
+	var $endpoints;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	/**
 	 * Whether to write every mod_rewrite rule for WordPress into the .htaccess file.
@@ -277,7 +349,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $rewritecode = array(
+=======
+	var $rewritecode = array(
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		'%year%',
 		'%monthnum%',
 		'%day%',
@@ -298,7 +374,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $rewritereplace = array(
+=======
+	var $rewritereplace = array(
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		'([0-9]{4})',
 		'([0-9]{1,2})',
 		'([0-9]{1,2})',
@@ -318,7 +398,11 @@ class WP_Rewrite {
 	 * @since 1.5.0
 	 * @var array
 	 */
+<<<<<<< HEAD
 	public $queryreplace = array(
+=======
+	var $queryreplace = array(
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		'year=',
 		'monthnum=',
 		'day=',
@@ -1509,7 +1593,10 @@ class WP_Rewrite {
 
 		$rules  = "<IfModule mod_rewrite.c>\n";
 		$rules .= "RewriteEngine On\n";
+<<<<<<< HEAD
 		$rules .= "RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]\n";
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$rules .= "RewriteBase $home_root\n";
 
 		// Prevent -f checks on index.php.

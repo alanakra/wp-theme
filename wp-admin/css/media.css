@@ -201,10 +201,13 @@
 	display: block;
 }
 
+<<<<<<< HEAD
 #html-upload-ui #async-upload {
 	font-size: 1em;
 }
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 .media-upload-form .media-item.error,
 .media-upload-form .media-item .error {
 	width: auto;
@@ -325,7 +328,11 @@
 #find-posts-close:before {
 	font: normal 20px/36px dashicons;
 	vertical-align: top;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	content: "\f158";
@@ -808,12 +815,16 @@ border color while dragging a file over the uploader drop area */
 	clear: both;
 }
 
+<<<<<<< HEAD
 .copy-to-clipboard-container .copy-attachment-url {
 	white-space: normal;
 }
 
 .copy-to-clipboard-container .success {
 	color: #40860a;
+=======
+.copy-to-clipboard-container .success {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	margin-left: 8px;
 }
 
@@ -962,7 +973,11 @@ border color while dragging a file over the uploader drop area */
 .imgedit-menu .button:before {
 	font: normal 16px/1 dashicons;
 	margin-right: 8px;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	vertical-align: middle;
 	position: relative;
 	top: -2px;
@@ -1178,11 +1193,16 @@ audio, video {
 	max-width: 100%;
 }
 
+<<<<<<< HEAD
 .wp-core-ui .mejs-container {
+=======
+.mejs-container {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	width: 100%;
 	max-width: 100%;
 }
 
+<<<<<<< HEAD
 .wp-core-ui .mejs-container * {
 	box-sizing: border-box;
 }
@@ -1191,6 +1211,12 @@ audio, video {
 	box-sizing: content-box;
 }
 
+=======
+.mejs-container .mejs-controls {
+	box-sizing: border-box;
+}
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /* =Media Queries
 -------------------------------------------------------------- */
 

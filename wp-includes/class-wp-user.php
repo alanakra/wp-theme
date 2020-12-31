@@ -199,7 +199,11 @@ class WP_User {
 			if ( ! is_numeric( $value ) ) {
 				return false;
 			}
+<<<<<<< HEAD
 			$value = (int) $value;
+=======
+			$value = intval( $value );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			if ( $value < 1 ) {
 				return false;
 			}
@@ -645,7 +649,11 @@ class WP_User {
 	 */
 	public function level_reduction( $max, $item ) {
 		if ( preg_match( '/^level_(10|[0-9])$/i', $item, $matches ) ) {
+<<<<<<< HEAD
 			$level = (int) $matches[1];
+=======
+			$level = intval( $matches[1] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return max( $max, $level );
 		} else {
 			return $max;

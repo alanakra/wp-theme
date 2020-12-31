@@ -98,7 +98,11 @@
 			match = new RegExp( '^(?=.*' + term + ').+', 'i' );
 
 			this.each( function ( data ) {
+<<<<<<< HEAD
 				haystack = [ data.get( 'name' ), data.get( 'description' ) ].join( ' ' );
+=======
+				haystack = [ data.get( 'name' ), data.get( 'id' ), data.get( 'description' ) ].join( ' ' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				data.set( 'search_matched', match.test( haystack ) );
 			} );
 		}

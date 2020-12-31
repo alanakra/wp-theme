@@ -94,7 +94,11 @@ class WP_Http_Streams {
 		$ssl_verify = isset( $parsed_args['sslverify'] ) && $parsed_args['sslverify'];
 		if ( $is_local ) {
 			/**
+<<<<<<< HEAD
 			 * Filters whether SSL should be verified for local HTTP API requests.
+=======
+			 * Filters whether SSL should be verified for local requests.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			 *
 			 * @since 2.8.0
 			 * @since 5.1.0 The `$url` parameter was added.

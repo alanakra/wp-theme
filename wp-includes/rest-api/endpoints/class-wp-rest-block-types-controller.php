@@ -87,11 +87,19 @@ class WP_REST_Block_Types_Controller extends WP_REST_Controller {
 			array(
 				'args'   => array(
 					'name'      => array(
+<<<<<<< HEAD
 						'description' => __( 'Block name.' ),
 						'type'        => 'string',
 					),
 					'namespace' => array(
 						'description' => __( 'Block namespace.' ),
+=======
+						'description' => __( 'Block name' ),
+						'type'        => 'string',
+					),
+					'namespace' => array(
+						'description' => __( 'Block namespace' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						'type'        => 'string',
 					),
 				),
@@ -256,7 +264,10 @@ class WP_REST_Block_Types_Controller extends WP_REST_Controller {
 
 		$schema       = $this->get_item_schema();
 		$extra_fields = array(
+<<<<<<< HEAD
 			'api_version',
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			'name',
 			'title',
 			'description',
@@ -366,6 +377,7 @@ class WP_REST_Block_Types_Controller extends WP_REST_Controller {
 			'title'      => 'block-type',
 			'type'       => 'object',
 			'properties' => array(
+<<<<<<< HEAD
 				'api_version'      => array(
 					'description' => __( 'Version of block API.' ),
 					'type'        => 'integer',
@@ -373,6 +385,8 @@ class WP_REST_Block_Types_Controller extends WP_REST_Controller {
 					'context'     => array( 'embed', 'view', 'edit' ),
 					'readonly'    => true,
 				),
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				'title'            => array(
 					'description' => __( 'Title of block type.' ),
 					'type'        => 'string',

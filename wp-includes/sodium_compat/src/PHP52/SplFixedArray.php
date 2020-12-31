@@ -102,7 +102,10 @@ class SplFixedArray implements Iterator, ArrayAccess, Countable
      */
     public function offsetGet($index)
     {
+<<<<<<< HEAD
         /** @psalm-suppress MixedReturnStatement */
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         return $this->internalArray[(int) $index];
     }
 
@@ -143,7 +146,10 @@ class SplFixedArray implements Iterator, ArrayAccess, Countable
      */
     public function current()
     {
+<<<<<<< HEAD
         /** @psalm-suppress MixedReturnStatement */
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         return current($this->internalArray);
     }
 

@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["coreData"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 479);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 447);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -101,7 +105,18 @@ this["wp"] = this["wp"] || {}; this["wp"]["coreData"] =
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 108:
+=======
+/***/ 10:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["blocks"]; }());
+
+/***/ }),
+
+/***/ 126:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -416,6 +431,7 @@ module.exports = EquivalentKeyMap;
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 11:
 /***/ (function(module, exports) {
 
@@ -424,6 +440,9 @@ module.exports = EquivalentKeyMap;
 /***/ }),
 
 /***/ 12:
+=======
+/***/ 14:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -462,7 +481,11 @@ function _iterableToArrayLimit(arr, i) {
   return _arr;
 }
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+<<<<<<< HEAD
 var unsupportedIterableToArray = __webpack_require__(31);
+=======
+var unsupportedIterableToArray = __webpack_require__(29);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
 var nonIterableRest = __webpack_require__(39);
@@ -478,7 +501,11 @@ function _slicedToArray(arr, i) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 17:
+=======
+/***/ 18:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -487,7 +514,11 @@ function _slicedToArray(arr, i) {
 __webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _toConsumableArray; });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+<<<<<<< HEAD
 var arrayLikeToArray = __webpack_require__(27);
+=======
+var arrayLikeToArray = __webpack_require__(26);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
 
@@ -495,10 +526,17 @@ function _arrayWithoutHoles(arr) {
   if (Array.isArray(arr)) return Object(arrayLikeToArray["a" /* default */])(arr);
 }
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
+<<<<<<< HEAD
 var iterableToArray = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
 var unsupportedIterableToArray = __webpack_require__(31);
+=======
+var iterableToArray = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+var unsupportedIterableToArray = __webpack_require__(29);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
 function _nonIterableSpread() {
@@ -522,14 +560,22 @@ function _toConsumableArray(arr) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 20:
+=======
+/***/ 24:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["regeneratorRuntime"]; }());
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 27:
+=======
+/***/ 26:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -546,6 +592,7 @@ function _arrayLikeToArray(arr, len) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 30:
 /***/ (function(module, exports) {
 
@@ -554,10 +601,14 @@ function _arrayLikeToArray(arr, len) {
 /***/ }),
 
 /***/ 31:
+=======
+/***/ 29:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
 
 function _unsupportedIterableToArray(o, minLen) {
@@ -567,25 +618,35 @@ function _unsupportedIterableToArray(o, minLen) {
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+=======
+/* harmony import */ var _arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 32:
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["wp"]["dataControls"]; }());
-
-/***/ }),
-
-/***/ 36:
+=======
+/***/ 31:
 /***/ (function(module, exports) {
 
-(function() { module.exports = this["wp"]["deprecated"]; }());
+(function() { module.exports = this["wp"]["url"]; }());
 
 /***/ }),
 
-/***/ 37:
+/***/ 35:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -593,6 +654,35 @@ function _unsupportedIterableToArray(o, minLen) {
 function _iterableToArray(iter) {
   if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports) {
+
+<<<<<<< HEAD
+(function() { module.exports = this["wp"]["deprecated"]; }());
+=======
+(function() { module.exports = this["wp"]["dataControls"]; }());
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
+
+/***/ }),
+
+/***/ 37:
+<<<<<<< HEAD
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _iterableToArray; });
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+=======
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["deprecated"]; }());
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 /***/ }),
 
@@ -907,7 +997,11 @@ function isShallowEqual( a, b, fromIndex ) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 479:
+=======
+/***/ 447:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -930,7 +1024,10 @@ __webpack_require__.d(build_module_actions_namespaceObject, "receiveEntityRecord
 __webpack_require__.d(build_module_actions_namespaceObject, "receiveCurrentTheme", function() { return receiveCurrentTheme; });
 __webpack_require__.d(build_module_actions_namespaceObject, "receiveThemeSupports", function() { return receiveThemeSupports; });
 __webpack_require__.d(build_module_actions_namespaceObject, "receiveEmbedPreview", function() { return receiveEmbedPreview; });
+<<<<<<< HEAD
 __webpack_require__.d(build_module_actions_namespaceObject, "deleteEntityRecord", function() { return deleteEntityRecord; });
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 __webpack_require__.d(build_module_actions_namespaceObject, "editEntityRecord", function() { return actions_editEntityRecord; });
 __webpack_require__.d(build_module_actions_namespaceObject, "undo", function() { return undo; });
 __webpack_require__.d(build_module_actions_namespaceObject, "redo", function() { return redo; });
@@ -946,7 +1043,10 @@ var build_module_selectors_namespaceObject = {};
 __webpack_require__.r(build_module_selectors_namespaceObject);
 __webpack_require__.d(build_module_selectors_namespaceObject, "isRequestingEmbedPreview", function() { return isRequestingEmbedPreview; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "getAuthors", function() { return getAuthors; });
+<<<<<<< HEAD
 __webpack_require__.d(build_module_selectors_namespaceObject, "__unstableGetAuthor", function() { return __unstableGetAuthor; });
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 __webpack_require__.d(build_module_selectors_namespaceObject, "getCurrentUser", function() { return getCurrentUser; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "getUserQueryResults", function() { return getUserQueryResults; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "getEntitiesByKind", function() { return getEntitiesByKind; });
@@ -954,7 +1054,10 @@ __webpack_require__.d(build_module_selectors_namespaceObject, "getEntity", funct
 __webpack_require__.d(build_module_selectors_namespaceObject, "getEntityRecord", function() { return getEntityRecord; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "__experimentalGetEntityRecordNoResolver", function() { return __experimentalGetEntityRecordNoResolver; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "getRawEntityRecord", function() { return getRawEntityRecord; });
+<<<<<<< HEAD
 __webpack_require__.d(build_module_selectors_namespaceObject, "hasEntityRecords", function() { return hasEntityRecords; });
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 __webpack_require__.d(build_module_selectors_namespaceObject, "getEntityRecords", function() { return getEntityRecords; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "__experimentalGetDirtyEntityRecords", function() { return __experimentalGetDirtyEntityRecords; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "getEntityRecordEdits", function() { return getEntityRecordEdits; });
@@ -963,9 +1066,13 @@ __webpack_require__.d(build_module_selectors_namespaceObject, "hasEditsForEntity
 __webpack_require__.d(build_module_selectors_namespaceObject, "getEditedEntityRecord", function() { return getEditedEntityRecord; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "isAutosavingEntityRecord", function() { return isAutosavingEntityRecord; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "isSavingEntityRecord", function() { return isSavingEntityRecord; });
+<<<<<<< HEAD
 __webpack_require__.d(build_module_selectors_namespaceObject, "isDeletingEntityRecord", function() { return isDeletingEntityRecord; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "getLastEntitySaveError", function() { return getLastEntitySaveError; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "getLastEntityDeleteError", function() { return getLastEntityDeleteError; });
+=======
+__webpack_require__.d(build_module_selectors_namespaceObject, "getLastEntitySaveError", function() { return getLastEntitySaveError; });
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 __webpack_require__.d(build_module_selectors_namespaceObject, "getUndoEdit", function() { return getUndoEdit; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "getRedoEdit", function() { return getRedoEdit; });
 __webpack_require__.d(build_module_selectors_namespaceObject, "hasUndo", function() { return hasUndo; });
@@ -985,7 +1092,10 @@ __webpack_require__.d(build_module_selectors_namespaceObject, "getReferenceByDis
 var resolvers_namespaceObject = {};
 __webpack_require__.r(resolvers_namespaceObject);
 __webpack_require__.d(resolvers_namespaceObject, "getAuthors", function() { return resolvers_getAuthors; });
+<<<<<<< HEAD
 __webpack_require__.d(resolvers_namespaceObject, "__unstableGetAuthor", function() { return resolvers_unstableGetAuthor; });
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 __webpack_require__.d(resolvers_namespaceObject, "getCurrentUser", function() { return resolvers_getCurrentUser; });
 __webpack_require__.d(resolvers_namespaceObject, "getEntityRecord", function() { return resolvers_getEntityRecord; });
 __webpack_require__.d(resolvers_namespaceObject, "getRawEntityRecord", function() { return resolvers_getRawEntityRecord; });
@@ -1005,6 +1115,7 @@ var defineProperty = __webpack_require__(5);
 // EXTERNAL MODULE: external {"this":["wp","data"]}
 var external_this_wp_data_ = __webpack_require__(4);
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external {"this":["wp","dataControls"]}
 var external_this_wp_dataControls_ = __webpack_require__(32);
 
@@ -1013,6 +1124,13 @@ var slicedToArray = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
 var toConsumableArray = __webpack_require__(17);
+=======
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
+var slicedToArray = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
+var toConsumableArray = __webpack_require__(18);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // EXTERNAL MODULE: external {"this":"lodash"}
 var external_this_lodash_ = __webpack_require__(2);
@@ -1100,6 +1218,7 @@ function conservativeMapItem(item, nextItem) {
 
   if (!hasChanges) {
     return item;
+<<<<<<< HEAD
   } // Only at this point, backfill properties from the original item which
   // weren't explicitly set into the result above. This is an optimization
   // to allow `hasChanges` to return early.
@@ -1109,6 +1228,8 @@ function conservativeMapItem(item, nextItem) {
     if (!result.hasOwnProperty(_key)) {
       result[_key] = item[_key];
     }
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return result;
@@ -1150,22 +1271,33 @@ var on_sub_key_onSubKey = function onSubKey(actionProperty) {
         return state;
       }
 
+<<<<<<< HEAD
       return _objectSpread(_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, key, nextKeyState));
+=======
+      return _objectSpread({}, state, Object(defineProperty["a" /* default */])({}, key, nextKeyState));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     };
   };
 };
 /* harmony default export */ var on_sub_key = (on_sub_key_onSubKey);
 
 // EXTERNAL MODULE: external {"this":"regeneratorRuntime"}
+<<<<<<< HEAD
 var external_this_regeneratorRuntime_ = __webpack_require__(20);
+=======
+var external_this_regeneratorRuntime_ = __webpack_require__(24);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 var external_this_regeneratorRuntime_default = /*#__PURE__*/__webpack_require__.n(external_this_regeneratorRuntime_);
 
 // EXTERNAL MODULE: external {"this":["wp","i18n"]}
 var external_this_wp_i18n_ = __webpack_require__(1);
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external {"this":["wp","url"]}
 var external_this_wp_url_ = __webpack_require__(30);
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 // CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/queried-data/actions.js
 
 
@@ -1192,6 +1324,7 @@ function receiveItems(items) {
   };
 }
 /**
+<<<<<<< HEAD
  * Returns an action object used in signalling that entity records have been
  * deleted and they need to be removed from entities state.
  *
@@ -1213,6 +1346,8 @@ function removeItems(kind, name, records) {
   };
 }
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Returns an action object used in signalling that queried data has been
  * received.
  *
@@ -1224,11 +1359,16 @@ function removeItems(kind, name, records) {
 
 function receiveQueriedItems(items) {
   var query = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+<<<<<<< HEAD
   return actions_objectSpread(actions_objectSpread({}, receiveItems(items)), {}, {
+=======
+  return actions_objectSpread({}, receiveItems(items), {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     query: query
   });
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/actions.js
 
 
@@ -1254,6 +1394,118 @@ function build_module_actions_objectSpread(target) { for (var i = 1; i < argumen
  */
 
 
+=======
+// EXTERNAL MODULE: external {"this":["wp","apiFetch"]}
+var external_this_wp_apiFetch_ = __webpack_require__(45);
+var external_this_wp_apiFetch_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_apiFetch_);
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/controls.js
+
+
+/**
+ * WordPress dependencies
+ */
+
+
+/**
+ * Trigger an API Fetch request.
+ *
+ * @param {Object} request API Fetch Request Object.
+ * @return {Object} control descriptor.
+ */
+
+function apiFetch(request) {
+  return {
+    type: 'API_FETCH',
+    request: request
+  };
+}
+/**
+ * Calls a selector using the current state.
+ *
+ * @param {string} selectorName Selector name.
+ * @param  {Array} args         Selector arguments.
+ *
+ * @return {Object} control descriptor.
+ */
+
+function controls_select(selectorName) {
+  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  return {
+    type: 'SELECT',
+    selectorName: selectorName,
+    args: args
+  };
+}
+/**
+ * Dispatches a control action for triggering a registry select that has a
+ * resolver.
+ *
+ * @param {string}  selectorName
+ * @param {Array}   args  Arguments for the select.
+ *
+ * @return {Object} control descriptor.
+ */
+
+function resolveSelect(selectorName) {
+  for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+    args[_key2 - 1] = arguments[_key2];
+  }
+
+  return {
+    type: 'RESOLVE_SELECT',
+    selectorName: selectorName,
+    args: args
+  };
+}
+var controls = {
+  API_FETCH: function API_FETCH(_ref) {
+    var request = _ref.request;
+    return external_this_wp_apiFetch_default()(request);
+  },
+  SELECT: Object(external_this_wp_data_["createRegistryControl"])(function (registry) {
+    return function (_ref2) {
+      var _registry$select;
+
+      var selectorName = _ref2.selectorName,
+          args = _ref2.args;
+      return (_registry$select = registry.select('core'))[selectorName].apply(_registry$select, Object(toConsumableArray["a" /* default */])(args));
+    };
+  }),
+  RESOLVE_SELECT: Object(external_this_wp_data_["createRegistryControl"])(function (registry) {
+    return function (_ref3) {
+      var _registry$__experimen;
+
+      var selectorName = _ref3.selectorName,
+          args = _ref3.args;
+      return (_registry$__experimen = registry.__experimentalResolveSelect('core'))[selectorName].apply(_registry$__experimen, Object(toConsumableArray["a" /* default */])(args));
+    };
+  })
+};
+/* harmony default export */ var build_module_controls = (controls);
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/actions.js
+
+
+
+
+var _marked = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(actions_editEntityRecord),
+    _marked2 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(undo),
+    _marked3 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(redo),
+    _marked4 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(saveEntityRecord),
+    _marked5 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(saveEditedEntityRecord);
+
+function build_module_actions_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function build_module_actions_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { build_module_actions_ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { build_module_actions_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+/**
+ * External dependencies
+ */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 /**
  * Internal dependencies
@@ -1261,6 +1513,10 @@ function build_module_actions_objectSpread(target) { for (var i = 1; i < argumen
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Returns an action object used in signalling that authors have been received.
  *
@@ -1324,7 +1580,11 @@ function receiveEntityRecords(kind, name, records, query) {
   // on the server.
   if (kind === 'postType') {
     records = Object(external_this_lodash_["castArray"])(records).map(function (record) {
+<<<<<<< HEAD
       return record.status === 'auto-draft' ? build_module_actions_objectSpread(build_module_actions_objectSpread({}, record), {}, {
+=======
+      return record.status === 'auto-draft' ? build_module_actions_objectSpread({}, record, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         title: ''
       }) : record;
     });
@@ -1338,7 +1598,11 @@ function receiveEntityRecords(kind, name, records, query) {
     action = receiveItems(records);
   }
 
+<<<<<<< HEAD
   return build_module_actions_objectSpread(build_module_actions_objectSpread({}, action), {}, {
+=======
+  return build_module_actions_objectSpread({}, action, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     kind: kind,
     name: name,
     invalidateCache: invalidateCache
@@ -1390,6 +1654,7 @@ function receiveEmbedPreview(url, preview) {
   };
 }
 /**
+<<<<<<< HEAD
  * Action triggered to delete an entity record.
  *
  * @param {string}  kind              Kind of the deleted entity.
@@ -1480,6 +1745,8 @@ function deleteEntityRecord(kind, name, recordId, query) {
   }, _marked, null, [[9, 19]]);
 }
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Returns an action object that triggers an
  * edit to an entity record.
  *
@@ -1503,6 +1770,7 @@ function actions_editEntityRecord(kind, name, recordId, edits) {
       record,
       editedRecord,
       edit,
+<<<<<<< HEAD
       _args2 = arguments;
 
   return external_this_regeneratorRuntime_default.a.wrap(function editEntityRecord$(_context2) {
@@ -1518,6 +1786,23 @@ function actions_editEntityRecord(kind, name, recordId, edits) {
 
           if (entity) {
             _context2.next = 6;
+=======
+      _args = arguments;
+
+  return external_this_regeneratorRuntime_default.a.wrap(function editEntityRecord$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          options = _args.length > 4 && _args[4] !== undefined ? _args[4] : {};
+          _context.next = 3;
+          return controls_select('getEntity', kind, name);
+
+        case 3:
+          entity = _context.sent;
+
+          if (entity) {
+            _context.next = 6;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             break;
           }
 
@@ -1525,6 +1810,7 @@ function actions_editEntityRecord(kind, name, recordId, edits) {
 
         case 6:
           _entity$transientEdit = entity.transientEdits, transientEdits = _entity$transientEdit === void 0 ? {} : _entity$transientEdit, _entity$mergedEdits = entity.mergedEdits, mergedEdits = _entity$mergedEdits === void 0 ? {} : _entity$mergedEdits;
+<<<<<<< HEAD
           _context2.next = 9;
           return Object(external_this_wp_dataControls_["syncSelect"])('core', 'getRawEntityRecord', kind, name, recordId);
 
@@ -1535,6 +1821,18 @@ function actions_editEntityRecord(kind, name, recordId, edits) {
 
         case 12:
           editedRecord = _context2.sent;
+=======
+          _context.next = 9;
+          return controls_select('getRawEntityRecord', kind, name, recordId);
+
+        case 9:
+          record = _context.sent;
+          _context.next = 12;
+          return controls_select('getEditedEntityRecord', kind, name, recordId);
+
+        case 12:
+          editedRecord = _context.sent;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           edit = {
             kind: kind,
             name: name,
@@ -1544,17 +1842,29 @@ function actions_editEntityRecord(kind, name, recordId, edits) {
             edits: Object.keys(edits).reduce(function (acc, key) {
               var recordValue = record[key];
               var editedRecordValue = editedRecord[key];
+<<<<<<< HEAD
               var value = mergedEdits[key] ? build_module_actions_objectSpread(build_module_actions_objectSpread({}, editedRecordValue), edits[key]) : edits[key];
+=======
+              var value = mergedEdits[key] ? build_module_actions_objectSpread({}, editedRecordValue, {}, edits[key]) : edits[key];
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
               acc[key] = Object(external_this_lodash_["isEqual"])(recordValue, value) ? undefined : value;
               return acc;
             }, {}),
             transientEdits: transientEdits
           };
+<<<<<<< HEAD
           return _context2.abrupt("return", build_module_actions_objectSpread(build_module_actions_objectSpread({
             type: 'EDIT_ENTITY_RECORD'
           }, edit), {}, {
             meta: {
               undo: !options.undoIgnore && build_module_actions_objectSpread(build_module_actions_objectSpread({}, edit), {}, {
+=======
+          return _context.abrupt("return", build_module_actions_objectSpread({
+            type: 'EDIT_ENTITY_RECORD'
+          }, edit, {
+            meta: {
+              undo: !options.undoIgnore && build_module_actions_objectSpread({}, edit, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
                 // Send the current values for things like the first undo stack entry.
                 edits: Object.keys(edits).reduce(function (acc, key) {
                   acc[key] = editedRecord[key];
@@ -1566,10 +1876,17 @@ function actions_editEntityRecord(kind, name, recordId, edits) {
 
         case 15:
         case "end":
+<<<<<<< HEAD
           return _context2.stop();
       }
     }
   }, _marked2);
+=======
+          return _context.stop();
+      }
+    }
+  }, _marked);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Action triggered to undo the last edit to
@@ -1578,6 +1895,7 @@ function actions_editEntityRecord(kind, name, recordId, edits) {
 
 function undo() {
   var undoEdit;
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function undo$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
@@ -1600,6 +1918,30 @@ function undo() {
           return build_module_actions_objectSpread(build_module_actions_objectSpread({
             type: 'EDIT_ENTITY_RECORD'
           }, undoEdit), {}, {
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function undo$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.next = 2;
+          return controls_select('getUndoEdit');
+
+        case 2:
+          undoEdit = _context2.sent;
+
+          if (undoEdit) {
+            _context2.next = 5;
+            break;
+          }
+
+          return _context2.abrupt("return");
+
+        case 5:
+          _context2.next = 7;
+          return build_module_actions_objectSpread({
+            type: 'EDIT_ENTITY_RECORD'
+          }, undoEdit, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             meta: {
               isUndo: true
             }
@@ -1607,10 +1949,17 @@ function undo() {
 
         case 7:
         case "end":
+<<<<<<< HEAD
           return _context3.stop();
       }
     }
   }, _marked3);
+=======
+          return _context2.stop();
+      }
+    }
+  }, _marked2);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Action triggered to redo the last undoed
@@ -1619,6 +1968,7 @@ function undo() {
 
 function redo() {
   var redoEdit;
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function redo$(_context4) {
     while (1) {
       switch (_context4.prev = _context4.next) {
@@ -1641,6 +1991,30 @@ function redo() {
           return build_module_actions_objectSpread(build_module_actions_objectSpread({
             type: 'EDIT_ENTITY_RECORD'
           }, redoEdit), {}, {
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function redo$(_context3) {
+    while (1) {
+      switch (_context3.prev = _context3.next) {
+        case 0:
+          _context3.next = 2;
+          return controls_select('getRedoEdit');
+
+        case 2:
+          redoEdit = _context3.sent;
+
+          if (redoEdit) {
+            _context3.next = 5;
+            break;
+          }
+
+          return _context3.abrupt("return");
+
+        case 5:
+          _context3.next = 7;
+          return build_module_actions_objectSpread({
+            type: 'EDIT_ENTITY_RECORD'
+          }, redoEdit, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             meta: {
               isRedo: true
             }
@@ -1648,10 +2022,17 @@ function redo() {
 
         case 7:
         case "end":
+<<<<<<< HEAD
           return _context4.stop();
       }
     }
   }, _marked4);
+=======
+          return _context3.stop();
+      }
+    }
+  }, _marked3);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Forces the creation of a new undo level.
@@ -1700,6 +2081,7 @@ function saveEntityRecord(kind, name, record) {
       data,
       newRecord,
       _data,
+<<<<<<< HEAD
       _args5 = arguments;
 
   return external_this_regeneratorRuntime_default.a.wrap(function saveEntityRecord$(_context5) {
@@ -1714,17 +2096,41 @@ function saveEntityRecord(kind, name, record) {
 
         case 3:
           entities = _context5.sent;
+=======
+      _args4 = arguments;
+
+  return external_this_regeneratorRuntime_default.a.wrap(function saveEntityRecord$(_context4) {
+    while (1) {
+      switch (_context4.prev = _context4.next) {
+        case 0:
+          _ref = _args4.length > 3 && _args4[3] !== undefined ? _args4[3] : {
+            isAutosave: false
+          }, _ref$isAutosave = _ref.isAutosave, isAutosave = _ref$isAutosave === void 0 ? false : _ref$isAutosave;
+          _context4.next = 3;
+          return getKindEntities(kind);
+
+        case 3:
+          entities = _context4.sent;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           entity = Object(external_this_lodash_["find"])(entities, {
             kind: kind,
             name: name
           });
 
           if (entity) {
+<<<<<<< HEAD
             _context5.next = 7;
             break;
           }
 
           return _context5.abrupt("return");
+=======
+            _context4.next = 7;
+            break;
+          }
+
+          return _context4.abrupt("return");
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
         case 7:
           entityIdKey = entity.key || DEFAULT_ENTITY_KEY;
@@ -1735,13 +2141,18 @@ function saveEntityRecord(kind, name, record) {
 
         case 10:
           if (!(_i < _Object$entries.length)) {
+<<<<<<< HEAD
             _context5.next = 24;
+=======
+            _context4.next = 24;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             break;
           }
 
           _Object$entries$_i = Object(slicedToArray["a" /* default */])(_Object$entries[_i], 2), key = _Object$entries$_i[0], value = _Object$entries$_i[1];
 
           if (!(typeof value === 'function')) {
+<<<<<<< HEAD
             _context5.next = 21;
             break;
           }
@@ -1754,6 +2165,20 @@ function saveEntityRecord(kind, name, record) {
           _context5.t1 = _context5.sent;
           evaluatedValue = (0, _context5.t0)(_context5.t1);
           _context5.next = 20;
+=======
+            _context4.next = 21;
+            break;
+          }
+
+          _context4.t0 = value;
+          _context4.next = 16;
+          return controls_select('getEditedEntityRecord', kind, name, recordId);
+
+        case 16:
+          _context4.t1 = _context4.sent;
+          evaluatedValue = (0, _context4.t0)(_context4.t1);
+          _context4.next = 20;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return actions_editEntityRecord(kind, name, recordId, Object(defineProperty["a" /* default */])({}, key, evaluatedValue), {
             undoIgnore: true
           });
@@ -1763,11 +2188,19 @@ function saveEntityRecord(kind, name, record) {
 
         case 21:
           _i++;
+<<<<<<< HEAD
           _context5.next = 10;
           break;
 
         case 24:
           _context5.next = 26;
+=======
+          _context4.next = 10;
+          break;
+
+        case 24:
+          _context4.next = 26;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return {
             type: 'SAVE_ENTITY_RECORD_START',
             kind: kind,
@@ -1777,6 +2210,7 @@ function saveEntityRecord(kind, name, record) {
           };
 
         case 26:
+<<<<<<< HEAD
           _context5.prev = 26;
           path = "".concat(entity.baseURL).concat(recordId ? '/' + recordId : '');
           _context5.next = 30;
@@ -1801,11 +2235,41 @@ function saveEntityRecord(kind, name, record) {
 
         case 38:
           autosavePost = _context5.sent;
+=======
+          _context4.prev = 26;
+          path = "".concat(entity.baseURL).concat(recordId ? '/' + recordId : '');
+          _context4.next = 30;
+          return controls_select('getRawEntityRecord', kind, name, recordId);
+
+        case 30:
+          persistedRecord = _context4.sent;
+
+          if (!isAutosave) {
+            _context4.next = 55;
+            break;
+          }
+
+          _context4.next = 34;
+          return controls_select('getCurrentUser');
+
+        case 34:
+          currentUser = _context4.sent;
+          currentUserId = currentUser ? currentUser.id : undefined;
+          _context4.next = 38;
+          return controls_select('getAutosave', persistedRecord.type, persistedRecord.id, currentUserId);
+
+        case 38:
+          autosavePost = _context4.sent;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           // Autosaves need all expected fields to be present.
           // So we fallback to the previous autosave and then
           // to the actual persisted entity if the edits don't
           // have a value.
+<<<<<<< HEAD
           data = build_module_actions_objectSpread(build_module_actions_objectSpread(build_module_actions_objectSpread({}, persistedRecord), autosavePost), record);
+=======
+          data = build_module_actions_objectSpread({}, persistedRecord, {}, autosavePost, {}, record);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           data = Object.keys(data).reduce(function (acc, key) {
             if (['title', 'excerpt', 'content'].includes(key)) {
               // Edits should be the "raw" attribute values.
@@ -1816,14 +2280,20 @@ function saveEntityRecord(kind, name, record) {
           }, {
             status: data.status === 'auto-draft' ? 'draft' : data.status
           });
+<<<<<<< HEAD
           _context5.next = 43;
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+          _context4.next = 43;
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: "".concat(path, "/autosaves"),
             method: 'POST',
             data: data
           });
 
         case 43:
+<<<<<<< HEAD
           updatedRecord = _context5.sent;
 
           if (!(persistedRecord.id === updatedRecord.id)) {
@@ -1832,6 +2302,16 @@ function saveEntityRecord(kind, name, record) {
           }
 
           newRecord = build_module_actions_objectSpread(build_module_actions_objectSpread(build_module_actions_objectSpread({}, persistedRecord), data), updatedRecord);
+=======
+          updatedRecord = _context4.sent;
+
+          if (!(persistedRecord.id === updatedRecord.id)) {
+            _context4.next = 51;
+            break;
+          }
+
+          newRecord = build_module_actions_objectSpread({}, persistedRecord, {}, data, {}, updatedRecord);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           newRecord = Object.keys(newRecord).reduce(function (acc, key) {
             // These properties are persisted in autosaves.
             if (['title', 'excerpt', 'content'].includes(key)) {
@@ -1848,6 +2328,7 @@ function saveEntityRecord(kind, name, record) {
 
             return acc;
           }, {});
+<<<<<<< HEAD
           _context5.next = 49;
           return receiveEntityRecords(kind, name, newRecord, undefined, true);
 
@@ -1861,6 +2342,21 @@ function saveEntityRecord(kind, name, record) {
 
         case 53:
           _context5.next = 70;
+=======
+          _context4.next = 49;
+          return receiveEntityRecords(kind, name, newRecord, undefined, true);
+
+        case 49:
+          _context4.next = 53;
+          break;
+
+        case 51:
+          _context4.next = 53;
+          return receiveAutosaves(persistedRecord.id, updatedRecord);
+
+        case 53:
+          _context4.next = 70;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           break;
 
         case 55:
@@ -1870,13 +2366,21 @@ function saveEntityRecord(kind, name, record) {
 
           if (kind === 'postType' && persistedRecord && persistedRecord.status === 'auto-draft') {
             if (!_data.status) {
+<<<<<<< HEAD
               _data = build_module_actions_objectSpread(build_module_actions_objectSpread({}, _data), {}, {
+=======
+              _data = build_module_actions_objectSpread({}, _data, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
                 status: 'draft'
               });
             }
 
             if (!_data.title || _data.title === 'Auto Draft') {
+<<<<<<< HEAD
               _data = build_module_actions_objectSpread(build_module_actions_objectSpread({}, _data), {}, {
+=======
+              _data = build_module_actions_objectSpread({}, _data, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
                 title: ''
               });
             }
@@ -1884,6 +2388,7 @@ function saveEntityRecord(kind, name, record) {
           // to merge it with the edits and then propagate it to subscribers
 
 
+<<<<<<< HEAD
           _context5.next = 59;
           return Object(external_this_wp_dataControls_["syncSelect"])('core', '__experimentalGetEntityRecordNoResolver', kind, name, recordId);
 
@@ -1900,12 +2405,31 @@ function saveEntityRecord(kind, name, record) {
         case 65:
           _context5.next = 67;
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+          _context4.next = 59;
+          return controls_select('__experimentalGetEntityRecordNoResolver', kind, name, recordId);
+
+        case 59:
+          persistedEntity = _context4.sent;
+          _context4.next = 62;
+          return controls_select('getEntityRecordEdits', kind, name, recordId);
+
+        case 62:
+          currentEdits = _context4.sent;
+          _context4.next = 65;
+          return receiveEntityRecords(kind, name, build_module_actions_objectSpread({}, persistedEntity, {}, _data), undefined, true);
+
+        case 65:
+          _context4.next = 67;
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: path,
             method: recordId ? 'PUT' : 'POST',
             data: _data
           });
 
         case 67:
+<<<<<<< HEAD
           updatedRecord = _context5.sent;
           _context5.next = 70;
           return receiveEntityRecords(kind, name, updatedRecord, undefined, true);
@@ -1949,6 +2473,53 @@ function saveEntityRecord(kind, name, record) {
 
         case 91:
           _context5.next = 93;
+=======
+          updatedRecord = _context4.sent;
+          _context4.next = 70;
+          return receiveEntityRecords(kind, name, updatedRecord, undefined, true);
+
+        case 70:
+          _context4.next = 93;
+          break;
+
+        case 72:
+          _context4.prev = 72;
+          _context4.t2 = _context4["catch"](26);
+          error = _context4.t2; // If we got to the point in the try block where we made an optimistic update,
+          // we need to roll it back here.
+
+          if (!(persistedEntity && currentEdits)) {
+            _context4.next = 93;
+            break;
+          }
+
+          _context4.next = 78;
+          return receiveEntityRecords(kind, name, persistedEntity, undefined, true);
+
+        case 78:
+          _context4.t3 = actions_editEntityRecord;
+          _context4.t4 = kind;
+          _context4.t5 = name;
+          _context4.t6 = recordId;
+          _context4.t7 = build_module_actions_objectSpread;
+          _context4.t8 = {};
+          _context4.t9 = currentEdits;
+          _context4.t10 = {};
+          _context4.next = 88;
+          return controls_select('getEntityRecordEdits', kind, name, recordId);
+
+        case 88:
+          _context4.t11 = _context4.sent;
+          _context4.t12 = (0, _context4.t7)(_context4.t8, _context4.t9, _context4.t10, _context4.t11);
+          _context4.t13 = {
+            undoIgnore: true
+          };
+          _context4.next = 93;
+          return (0, _context4.t3)(_context4.t4, _context4.t5, _context4.t6, _context4.t12, _context4.t13);
+
+        case 93:
+          _context4.next = 95;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return {
             type: 'SAVE_ENTITY_RECORD_FINISH',
             kind: kind,
@@ -1958,6 +2529,7 @@ function saveEntityRecord(kind, name, record) {
             isAutosave: isAutosave
           };
 
+<<<<<<< HEAD
         case 93:
           return _context5.abrupt("return", updatedRecord);
 
@@ -1967,6 +2539,17 @@ function saveEntityRecord(kind, name, record) {
       }
     }
   }, _marked5, null, [[26, 72]]);
+=======
+        case 95:
+          return _context4.abrupt("return", updatedRecord);
+
+        case 96:
+        case "end":
+          return _context4.stop();
+      }
+    }
+  }, _marked4, null, [[26, 72]]);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Action triggered to save an entity record's edits.
@@ -1979,6 +2562,7 @@ function saveEntityRecord(kind, name, record) {
 
 function saveEditedEntityRecord(kind, name, recordId, options) {
   var edits, record;
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function saveEditedEntityRecord$(_context6) {
     while (1) {
       switch (_context6.prev = _context6.next) {
@@ -2011,6 +2595,40 @@ function saveEditedEntityRecord(kind, name, recordId, options) {
       }
     }
   }, _marked6);
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function saveEditedEntityRecord$(_context5) {
+    while (1) {
+      switch (_context5.prev = _context5.next) {
+        case 0:
+          _context5.next = 2;
+          return controls_select('hasEditsForEntityRecord', kind, name, recordId);
+
+        case 2:
+          if (_context5.sent) {
+            _context5.next = 4;
+            break;
+          }
+
+          return _context5.abrupt("return");
+
+        case 4:
+          _context5.next = 6;
+          return controls_select('getEntityRecordNonTransientEdits', kind, name, recordId);
+
+        case 6:
+          edits = _context5.sent;
+          record = build_module_actions_objectSpread({
+            id: recordId
+          }, edits);
+          return _context5.delegateYield(saveEntityRecord(kind, name, record, options), "t0", 9);
+
+        case 9:
+        case "end":
+          return _context5.stop();
+      }
+    }
+  }, _marked5);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Returns an action object used in signalling that Upload permissions have been received.
@@ -2078,12 +2696,16 @@ var entities_marked = /*#__PURE__*/external_this_regeneratorRuntime_default.a.ma
  */
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Internal dependencies
  */
 
 
+<<<<<<< HEAD
 var DEFAULT_ENTITY_KEY = 'id';
 var defaultEntities = [{
   label: Object(external_this_wp_i18n_["__"])('Base'),
@@ -2091,6 +2713,11 @@ var defaultEntities = [{
   kind: 'root',
   baseURL: ''
 }, {
+=======
+
+var DEFAULT_ENTITY_KEY = 'id';
+var defaultEntities = [{
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   label: Object(external_this_wp_i18n_["__"])('Site'),
   name: 'site',
   kind: 'root',
@@ -2118,6 +2745,7 @@ var defaultEntities = [{
   plural: 'taxonomies',
   label: Object(external_this_wp_i18n_["__"])('Taxonomy')
 }, {
+<<<<<<< HEAD
   name: 'sidebar',
   kind: 'root',
   baseURL: '/wp/v2/sidebars',
@@ -2135,6 +2763,16 @@ var defaultEntities = [{
     blocks: true
   },
   label: Object(external_this_wp_i18n_["__"])('Widgets')
+=======
+  name: 'widgetArea',
+  kind: 'root',
+  baseURL: '/__experimental/widget-areas',
+  plural: 'widgetAreas',
+  transientEdits: {
+    blocks: true
+  },
+  label: Object(external_this_wp_i18n_["__"])('Widget area')
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }, {
   label: Object(external_this_wp_i18n_["__"])('User'),
   name: 'user',
@@ -2187,7 +2825,11 @@ function loadPostTypeEntities() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
+<<<<<<< HEAD
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: '/wp/v2/types?context=edit'
           });
 
@@ -2238,7 +2880,11 @@ function loadTaxonomyEntities() {
       switch (_context2.prev = _context2.next) {
         case 0:
           _context2.next = 2;
+<<<<<<< HEAD
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: '/wp/v2/taxonomies?context=edit'
           });
 
@@ -2299,7 +2945,11 @@ function getKindEntities(kind) {
       switch (_context3.prev = _context3.next) {
         case 0:
           _context3.next = 2;
+<<<<<<< HEAD
           return Object(external_this_wp_dataControls_["syncSelect"])('core', 'getEntitiesByKind', kind);
+=======
+          return controls_select('getEntitiesByKind', kind);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
         case 2:
           entities = _context3.sent;
@@ -2343,6 +2993,7 @@ function getKindEntities(kind) {
   }, entities_marked3);
 }
 
+<<<<<<< HEAD
 // CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/utils/get-normalized-comma-separable.js
 /**
  * Given a value which can be specified as one or the other of a comma-separated
@@ -2364,6 +3015,10 @@ function getNormalizedCommaSeparable(value) {
 }
 
 /* harmony default export */ var get_normalized_comma_separable = (getNormalizedCommaSeparable);
+=======
+// EXTERNAL MODULE: external {"this":["wp","url"]}
+var external_this_wp_url_ = __webpack_require__(31);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/utils/with-weak-map-cache.js
 /**
@@ -2420,6 +3075,7 @@ function withWeakMapCache(fn) {
  *
  * @typedef {Object} WPQueriedDataQueryParts
  *
+<<<<<<< HEAD
  * @property {number}      page      The query page (1-based index, default 1).
  * @property {number}      perPage   Items per page for query (default 10).
  * @property {string}      stableKey An encoded stable string of all non-
@@ -2427,6 +3083,12 @@ function withWeakMapCache(fn) {
  * @property {?(string[])} fields    Target subset of fields to derive from
  *                                   item objects.
  * @property {?(number[])} include   Specific item IDs to include.
+=======
+ * @property {number} page      The query page (1-based index, default 1).
+ * @property {number} perPage   Items per page for query (default 10).
+ * @property {string} stableKey An encoded stable string of all non-pagination
+ *                              query parameters.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 
 /**
@@ -2446,9 +3108,13 @@ function getQueryParts(query) {
   var parts = {
     stableKey: '',
     page: 1,
+<<<<<<< HEAD
     perPage: 10,
     fields: null,
     include: null
+=======
+    perPage: 10
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }; // Ensure stable key by sorting keys. Also more efficient for iterating.
 
   var keys = Object.keys(query).sort();
@@ -2466,6 +3132,7 @@ function getQueryParts(query) {
         parts.perPage = Number(value);
         break;
 
+<<<<<<< HEAD
       case 'include':
         parts.include = get_normalized_comma_separable(value).map(Number);
         break;
@@ -2479,14 +3146,21 @@ function getQueryParts(query) {
         if (key === '_fields') {
           parts.fields = get_normalized_comma_separable(value);
         } // While it could be any deterministic string, for simplicity's
+=======
+      default:
+        // While it could be any deterministic string, for simplicity's
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         // sake mimic querystring encoding for stable key.
         //
         // TODO: For consistency with PHP implementation, addQueryArgs
         // should accept a key value pair, which may optimize its
         // implementation for our use here, vs. iterating an object
         // with only a single key.
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         parts.stableKey += (parts.stableKey ? '&' : '') + Object(external_this_wp_url_["addQueryArgs"])('', Object(defineProperty["a" /* default */])({}, key, value)).slice(1);
     }
   }
@@ -2569,20 +3243,28 @@ function reducer_items() {
   switch (action.type) {
     case 'RECEIVE_ITEMS':
       var key = action.key || DEFAULT_ENTITY_KEY;
+<<<<<<< HEAD
       return reducer_objectSpread(reducer_objectSpread({}, state), action.items.reduce(function (accumulator, value) {
+=======
+      return reducer_objectSpread({}, state, {}, action.items.reduce(function (accumulator, value) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         var itemId = value[key];
         accumulator[itemId] = conservativeMapItem(state[itemId], value);
         return accumulator;
       }, {}));
+<<<<<<< HEAD
 
     case 'REMOVE_ITEMS':
       var newState = Object(external_this_lodash_["omit"])(state, action.itemIds);
       return newState;
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return state;
 }
 /**
+<<<<<<< HEAD
  * Reducer tracking item completeness, keyed by ID. A complete item is one for
  * which all fields are known. This is used in supporting `_fields` queries,
  * where not all properties associated with an entity are necessarily returned.
@@ -2624,6 +3306,8 @@ function itemIsComplete() {
   }, {}));
 }
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Reducer tracking queries state, keyed by stable query key. Each reducer
  * query object includes `itemIds` and `requestingPageByPerPage`.
  *
@@ -2633,7 +3317,12 @@ function itemIsComplete() {
  * @return {Object} Next state.
  */
 
+<<<<<<< HEAD
 var receiveQueries = Object(external_this_lodash_["flowRight"])([// Limit to matching action type so we don't attempt to replace action on
+=======
+
+var queries = Object(external_this_lodash_["flowRight"])([// Limit to matching action type so we don't attempt to replace action on
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 // an unhandled action.
 if_matching_action(function (action) {
   return 'query' in action;
@@ -2643,7 +3332,11 @@ replace_action(function (action) {
   // undefined and a query is not assigned. Avoid attempting to parse
   // parts. `onSubKey` will omit by lack of `stableKey`.
   if (action.query) {
+<<<<<<< HEAD
     return reducer_objectSpread(reducer_objectSpread({}, action), get_query_parts(action.query));
+=======
+    return reducer_objectSpread({}, action, {}, get_query_parts(action.query));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return action;
@@ -2655,8 +3348,13 @@ on_sub_key('stableKey')])(function () {
   var type = action.type,
       page = action.page,
       perPage = action.perPage,
+<<<<<<< HEAD
       _action$key2 = action.key,
       key = _action$key2 === void 0 ? DEFAULT_ENTITY_KEY : _action$key2;
+=======
+      _action$key = action.key,
+      key = _action$key === void 0 ? DEFAULT_ENTITY_KEY : _action$key;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
   if (type !== 'RECEIVE_ITEMS') {
     return state;
@@ -2664,6 +3362,7 @@ on_sub_key('stableKey')])(function () {
 
   return getMergedItemIds(state || [], Object(external_this_lodash_["map"])(action.items, key), page, perPage);
 });
+<<<<<<< HEAD
 /**
  * Reducer tracking queries state.
  *
@@ -2704,6 +3403,11 @@ var reducer_queries = function queries() {
   items: reducer_items,
   itemIsComplete: itemIsComplete,
   queries: reducer_queries
+=======
+/* harmony default export */ var queried_data_reducer = (Object(external_this_wp_data_["combineReducers"])({
+  items: reducer_items,
+  queries: queries
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }));
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/reducer.js
@@ -2711,9 +3415,15 @@ var reducer_queries = function queries() {
 
 
 
+<<<<<<< HEAD
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+=======
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
@@ -2756,7 +3466,11 @@ function terms() {
 
   switch (action.type) {
     case 'RECEIVE_TERMS':
+<<<<<<< HEAD
       return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, action.taxonomy, action.terms));
+=======
+      return build_module_reducer_objectSpread({}, state, Object(defineProperty["a" /* default */])({}, action.taxonomy, action.terms));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return state;
@@ -2780,8 +3494,13 @@ function reducer_users() {
   switch (action.type) {
     case 'RECEIVE_USER_QUERY':
       return {
+<<<<<<< HEAD
         byId: build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state.byId), Object(external_this_lodash_["keyBy"])(action.users, 'id')),
         queries: build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state.queries), {}, Object(defineProperty["a" /* default */])({}, action.queryID, Object(external_this_lodash_["map"])(action.users, function (user) {
+=======
+        byId: build_module_reducer_objectSpread({}, state.byId, {}, Object(external_this_lodash_["keyBy"])(action.users, 'id')),
+        queries: build_module_reducer_objectSpread({}, state.queries, Object(defineProperty["a" /* default */])({}, action.queryID, Object(external_this_lodash_["map"])(action.users, function (user) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return user.id;
         })))
       };
@@ -2864,7 +3583,11 @@ function themes() {
 
   switch (action.type) {
     case 'RECEIVE_CURRENT_THEME':
+<<<<<<< HEAD
       return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, action.currentTheme.stylesheet, action.currentTheme));
+=======
+      return build_module_reducer_objectSpread({}, state, Object(defineProperty["a" /* default */])({}, action.currentTheme.stylesheet, action.currentTheme));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return state;
@@ -2884,7 +3607,11 @@ function themeSupports() {
 
   switch (action.type) {
     case 'RECEIVE_THEME_SUPPORTS':
+<<<<<<< HEAD
       return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state), action.themeSupports);
+=======
+      return build_module_reducer_objectSpread({}, state, {}, action.themeSupports);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return state;
@@ -2908,7 +3635,11 @@ function reducer_entity(entityConfig) {
     return action.name && action.kind && action.name === entityConfig.name && action.kind === entityConfig.kind;
   }), // Inject the entity config into the action.
   replace_action(function (action) {
+<<<<<<< HEAD
     return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, action), {}, {
+=======
+    return build_module_reducer_objectSpread({}, action, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
       key: entityConfig.key || DEFAULT_ENTITY_KEY
     });
   })])(Object(external_this_wp_data_["combineReducers"])({
@@ -2968,7 +3699,11 @@ function reducer_entity(entityConfig) {
           return nextState;
 
         case 'EDIT_ENTITY_RECORD':
+<<<<<<< HEAD
           var nextEdits = build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state[action.recordId]), action.edits);
+=======
+          var nextEdits = build_module_reducer_objectSpread({}, state[action.recordId], {}, action.edits);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
           Object.keys(nextEdits).forEach(function (key) {
             // Delete cleared edits so that the properties
@@ -2977,7 +3712,11 @@ function reducer_entity(entityConfig) {
               delete nextEdits[key];
             }
           });
+<<<<<<< HEAD
           return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, action.recordId, nextEdits));
+=======
+          return build_module_reducer_objectSpread({}, state, Object(defineProperty["a" /* default */])({}, action.recordId, nextEdits));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
       }
 
       return state;
@@ -2989,7 +3728,11 @@ function reducer_entity(entityConfig) {
       switch (action.type) {
         case 'SAVE_ENTITY_RECORD_START':
         case 'SAVE_ENTITY_RECORD_FINISH':
+<<<<<<< HEAD
           return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, action.recordId, {
+=======
+          return build_module_reducer_objectSpread({}, state, Object(defineProperty["a" /* default */])({}, action.recordId, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             pending: action.type === 'SAVE_ENTITY_RECORD_START',
             error: action.error,
             isAutosave: action.isAutosave
@@ -2997,6 +3740,7 @@ function reducer_entity(entityConfig) {
       }
 
       return state;
+<<<<<<< HEAD
     },
     deleting: function deleting() {
       var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -3012,6 +3756,8 @@ function reducer_entity(entityConfig) {
       }
 
       return state;
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     }
   }));
 }
@@ -3060,7 +3806,11 @@ var reducer_entities = function entities() {
           subEntities = _ref2[1];
 
       var kindReducer = Object(external_this_wp_data_["combineReducers"])(subEntities.reduce(function (kindMemo, entityConfig) {
+<<<<<<< HEAD
         return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, kindMemo), {}, Object(defineProperty["a" /* default */])({}, entityConfig.name, reducer_entity(entityConfig)));
+=======
+        return build_module_reducer_objectSpread({}, kindMemo, Object(defineProperty["a" /* default */])({}, entityConfig.name, reducer_entity(entityConfig)));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
       }, {}));
       memo[kind] = kindReducer;
       return memo;
@@ -3112,8 +3862,13 @@ function reducer_undo() {
         })) {
           lastEditAction = action;
         } else {
+<<<<<<< HEAD
           lastEditAction = build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, action), {}, {
             edits: build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, lastEditAction && lastEditAction.edits), action.edits)
+=======
+          lastEditAction = build_module_reducer_objectSpread({}, action, {
+            edits: build_module_reducer_objectSpread({}, lastEditAction && lastEditAction.edits, {}, action.edits)
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           });
         }
       }
@@ -3148,7 +3903,11 @@ function reducer_undo() {
         return !action.transientEdits[key];
       })) {
         nextState = Object(toConsumableArray["a" /* default */])(state);
+<<<<<<< HEAD
         nextState.flattenedUndo = build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state.flattenedUndo), action.edits);
+=======
+        nextState.flattenedUndo = build_module_reducer_objectSpread({}, state.flattenedUndo, {}, action.edits);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         nextState.offset = state.offset;
         return nextState;
       } // Clear potential redos, because this only supports linear history.
@@ -3163,7 +3922,11 @@ function reducer_undo() {
           kind: action.meta.undo.kind,
           name: action.meta.undo.name,
           recordId: action.meta.undo.recordId,
+<<<<<<< HEAD
           edits: build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state.flattenedUndo), action.meta.undo.edits)
+=======
+          edits: build_module_reducer_objectSpread({}, state.flattenedUndo, {}, action.meta.undo.edits)
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         });
       } // When an edit is a function it's an optimization to avoid running some expensive operation.
       // We can't rely on the function references being the same so we opt out of comparing them here.
@@ -3181,7 +3944,11 @@ function reducer_undo() {
           kind: action.kind,
           name: action.name,
           recordId: action.recordId,
+<<<<<<< HEAD
           edits: isCreateUndoLevel ? build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state.flattenedUndo), action.edits) : action.edits
+=======
+          edits: isCreateUndoLevel ? build_module_reducer_objectSpread({}, state.flattenedUndo, {}, action.edits) : action.edits
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         });
       }
 
@@ -3207,7 +3974,11 @@ function embedPreviews() {
     case 'RECEIVE_EMBED_PREVIEW':
       var url = action.url,
           preview = action.preview;
+<<<<<<< HEAD
       return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, url, preview));
+=======
+      return build_module_reducer_objectSpread({}, state, Object(defineProperty["a" /* default */])({}, url, preview));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return state;
@@ -3228,7 +3999,11 @@ function userPermissions() {
 
   switch (action.type) {
     case 'RECEIVE_USER_PERMISSION':
+<<<<<<< HEAD
       return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, action.key, action.isAllowed));
+=======
+      return build_module_reducer_objectSpread({}, state, Object(defineProperty["a" /* default */])({}, action.key, action.isAllowed));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return state;
@@ -3250,7 +4025,11 @@ function reducer_autosaves() {
     case 'RECEIVE_AUTOSAVES':
       var postId = action.postId,
           autosavesData = action.autosaves;
+<<<<<<< HEAD
       return build_module_reducer_objectSpread(build_module_reducer_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, postId, autosavesData));
+=======
+      return build_module_reducer_objectSpread({}, state, Object(defineProperty["a" /* default */])({}, postId, autosavesData));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return state;
@@ -3274,7 +4053,11 @@ function reducer_autosaves() {
 var rememo = __webpack_require__(42);
 
 // EXTERNAL MODULE: external {"this":["wp","deprecated"]}
+<<<<<<< HEAD
 var external_this_wp_deprecated_ = __webpack_require__(36);
+=======
+var external_this_wp_deprecated_ = __webpack_require__(37);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 var external_this_wp_deprecated_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_deprecated_);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/name.js
@@ -3287,7 +4070,11 @@ var external_this_wp_deprecated_default = /*#__PURE__*/__webpack_require__.n(ext
 var REDUCER_KEY = 'core';
 
 // EXTERNAL MODULE: ./node_modules/equivalent-key-map/equivalent-key-map.js
+<<<<<<< HEAD
 var equivalent_key_map = __webpack_require__(108);
+=======
+var equivalent_key_map = __webpack_require__(126);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 var equivalent_key_map_default = /*#__PURE__*/__webpack_require__.n(equivalent_key_map);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/queried-data/selectors.js
@@ -3296,7 +4083,10 @@ var equivalent_key_map_default = /*#__PURE__*/__webpack_require__.n(equivalent_k
  */
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Internal dependencies
  */
@@ -3324,6 +4114,7 @@ function getQueriedItemsUncached(state, query) {
   var _getQueryParts = get_query_parts(query),
       stableKey = _getQueryParts.stableKey,
       page = _getQueryParts.page,
+<<<<<<< HEAD
       perPage = _getQueryParts.perPage,
       include = _getQueryParts.include,
       fields = _getQueryParts.fields;
@@ -3341,6 +4132,16 @@ function getQueriedItemsUncached(state, query) {
     itemIds = state.queries[stableKey];
   }
 
+=======
+      perPage = _getQueryParts.perPage;
+
+  if (!state.queries[stableKey]) {
+    return null;
+  }
+
+  var itemIds = state.queries[stableKey];
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   if (!itemIds) {
     return null;
   }
@@ -3351,6 +4152,7 @@ function getQueriedItemsUncached(state, query) {
 
   for (var i = startOffset; i < endOffset; i++) {
     var itemId = itemIds[i];
+<<<<<<< HEAD
 
     if (Array.isArray(include) && !include.includes(itemId)) {
       continue;
@@ -3382,6 +4184,9 @@ function getQueriedItemsUncached(state, query) {
     }
 
     items.push(filteredItem);
+=======
+    items.push(state.items[itemId]);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }
 
   return items;
@@ -3439,7 +4244,10 @@ function selectors_objectSpread(target) { for (var i = 1; i < arguments.length; 
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Internal dependencies
  */
@@ -3447,7 +4255,10 @@ function selectors_objectSpread(target) { for (var i = 1; i < arguments.length; 
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Returns true if a request is in progress for embed preview data, or false
  * otherwise.
@@ -3466,6 +4277,7 @@ var isRequestingEmbedPreview = Object(external_this_wp_data_["createRegistrySele
 /**
  * Returns all available authors.
  *
+<<<<<<< HEAD
  * @param {Object}           state Data state.
  * @param {Object|undefined} query Optional object of query parameters to
  *                                 include with request.
@@ -3481,12 +4293,20 @@ function getAuthors(state, query) {
  *
  * @param {Object} state Data state.
  * @param {number} id The author id.
+=======
+ * @param {Object} state Data state.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @return {Array} Authors list.
  */
 
+<<<<<<< HEAD
 function __unstableGetAuthor(state, id) {
   return Object(external_this_lodash_["get"])(state, ['users', 'byId', id], null);
+=======
+function getAuthors(state) {
+  return getUserQueryResults(state, 'authors');
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Returns the current user.
@@ -3547,6 +4367,7 @@ function selectors_getEntity(state, kind, name) {
   });
 }
 /**
+<<<<<<< HEAD
  * Returns the Entity's record object by key. Returns `null` if the value is not
  * yet received, undefined if the value entity is known to not exist, or the
  * entity object if it exists and is received.
@@ -3556,10 +4377,19 @@ function selectors_getEntity(state, kind, name) {
  * @param {string}  name  Entity name.
  * @param {number}  key   Record's key
  * @param {?Object} query Optional query.
+=======
+ * Returns the Entity's record object by key.
+ *
+ * @param {Object} state  State tree
+ * @param {string} kind   Entity kind.
+ * @param {string} name   Entity name.
+ * @param {number} key    Record's key
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @return {Object?} Record.
  */
 
+<<<<<<< HEAD
 function getEntityRecord(state, kind, name, key, query) {
   var queriedState = Object(external_this_lodash_["get"])(state.entities.data, [kind, name, 'queriedData']);
 
@@ -3592,6 +4422,10 @@ function getEntityRecord(state, kind, name, key, query) {
   }
 
   return item;
+=======
+function getEntityRecord(state, kind, name, key) {
+  return Object(external_this_lodash_["get"])(state.entities.data, [kind, name, 'queriedData', 'items', key]);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Returns the Entity's record object by key. Doesn't trigger a resolver nor requests the entity from the API if the entity record isn't available in the local state.
@@ -3601,7 +4435,11 @@ function getEntityRecord(state, kind, name, key, query) {
  * @param {string} name   Entity name.
  * @param {number} key    Record's key
  *
+<<<<<<< HEAD
  * @return {Object|null} Record.
+=======
+ * @return {Object?} Record.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 
 function __experimentalGetEntityRecordNoResolver(state, kind, name, key) {
@@ -3632,6 +4470,7 @@ var getRawEntityRecord = Object(rememo["a" /* default */])(function (state, kind
   return [state.entities.data];
 });
 /**
+<<<<<<< HEAD
  * Returns true if records have been received for the given set of parameters,
  * or false otherwise.
  *
@@ -3653,15 +4492,26 @@ function hasEntityRecords(state, kind, name, query) {
  * @param {string}  kind  Entity kind.
  * @param {string}  name  Entity name.
  * @param {?Object} query Optional terms query.
+=======
+ * Returns the Entity's records.
+ *
+ * @param {Object}  state  State tree
+ * @param {string}  kind   Entity kind.
+ * @param {string}  name   Entity name.
+ * @param {?Object} query  Optional terms query.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @return {?Array} Records.
  */
 
 function getEntityRecords(state, kind, name, query) {
+<<<<<<< HEAD
   // Queried data state is prepopulated for all known entities. If this is not
   // assigned for the given parameters, then it is known to not exist. Thus, a
   // return value of an empty array is used instead of `null` (where `null` is
   // otherwise used to represent an unknown state).
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var queriedState = Object(external_this_lodash_["get"])(state.entities.data, [kind, name, 'queriedData']);
 
   if (!queriedState) {
@@ -3690,7 +4540,11 @@ var __experimentalGetDirtyEntityRecords = Object(rememo["a" /* default */])(func
       if (primaryKeys.length) {
         var entity = selectors_getEntity(state, kind, name);
         primaryKeys.forEach(function (primaryKey) {
+<<<<<<< HEAD
           var entityRecord = getEditedEntityRecord(state, kind, name, primaryKey);
+=======
+          var entityRecord = getEntityRecord(state, kind, name, primaryKey);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           dirtyRecords.push({
             // We avoid using primaryKey because it's transformed into a string
             // when it's used as an object key.
@@ -3783,7 +4637,11 @@ function hasEditsForEntityRecord(state, kind, name, recordId) {
  */
 
 var getEditedEntityRecord = Object(rememo["a" /* default */])(function (state, kind, name, recordId) {
+<<<<<<< HEAD
   return selectors_objectSpread(selectors_objectSpread({}, getRawEntityRecord(state, kind, name, recordId)), getEntityRecordEdits(state, kind, name, recordId));
+=======
+  return selectors_objectSpread({}, getRawEntityRecord(state, kind, name, recordId), {}, getEntityRecordEdits(state, kind, name, recordId));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }, function (state) {
   return [state.entities.data];
 });
@@ -3820,6 +4678,7 @@ function isSavingEntityRecord(state, kind, name, recordId) {
   return Object(external_this_lodash_["get"])(state.entities.data, [kind, name, 'saving', recordId, 'pending'], false);
 }
 /**
+<<<<<<< HEAD
  * Returns true if the specified entity record is deleting, and false otherwise.
  *
  * @param {Object} state    State tree.
@@ -3834,6 +4693,8 @@ function isDeletingEntityRecord(state, kind, name, recordId) {
   return Object(external_this_lodash_["get"])(state.entities.data, [kind, name, 'deleting', recordId, 'pending'], false);
 }
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Returns the specified entity record's last save error.
  *
  * @param {Object} state    State tree.
@@ -3848,6 +4709,7 @@ function getLastEntitySaveError(state, kind, name, recordId) {
   return Object(external_this_lodash_["get"])(state.entities.data, [kind, name, 'saving', recordId, 'error']);
 }
 /**
+<<<<<<< HEAD
  * Returns the specified entity record's last delete error.
  *
  * @param {Object} state    State tree.
@@ -3862,6 +4724,8 @@ function getLastEntityDeleteError(state, kind, name, recordId) {
   return Object(external_this_lodash_["get"])(state.entities.data, [kind, name, 'deleting', recordId, 'error']);
 }
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Returns the current undo offset for the
  * entity records edits history. The offset
  * represents how many items from the end
@@ -4101,9 +4965,18 @@ var hasFetchedAutosaves = Object(external_this_wp_data_["createRegistrySelector"
 var getReferenceByDistinctEdits = Object(rememo["a" /* default */])(function () {
   return [];
 }, function (state) {
+<<<<<<< HEAD
   return [state.undo.length, state.undo.offset, state.undo.flattenedUndo];
 });
 
+=======
+  return [state.undo.length, state.undo.offset];
+});
+
+// EXTERNAL MODULE: external {"this":["wp","dataControls"]}
+var external_this_wp_dataControls_ = __webpack_require__(36);
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 // CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/utils/if-not-resolved.js
 
 
@@ -4175,12 +5048,16 @@ var if_not_resolved_ifNotResolved = function ifNotResolved(resolver, selectorNam
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 function resolvers_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function resolvers_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { resolvers_ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { resolvers_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 var resolvers_marked = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getAuthors),
+<<<<<<< HEAD
     resolvers_marked2 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_unstableGetAuthor),
     resolvers_marked3 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getCurrentUser),
     resolvers_marked4 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getEntityRecord),
@@ -4192,6 +5069,18 @@ var resolvers_marked = /*#__PURE__*/external_this_regeneratorRuntime_default.a.m
     _marked10 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_canUser),
     _marked11 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getAutosaves),
     _marked12 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getAutosave);
+=======
+    resolvers_marked2 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getCurrentUser),
+    resolvers_marked3 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getEntityRecord),
+    resolvers_marked4 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getEntityRecords),
+    resolvers_marked5 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getCurrentTheme),
+    _marked6 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getThemeSupports),
+    _marked7 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getEmbedPreview),
+    _marked8 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_hasUploadPermissions),
+    _marked9 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_canUser),
+    _marked10 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getAutosaves),
+    _marked11 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resolvers_getAutosave);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 /**
  * External dependencies
@@ -4203,7 +5092,10 @@ var resolvers_marked = /*#__PURE__*/external_this_regeneratorRuntime_default.a.m
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Internal dependencies
  */
@@ -4211,6 +5103,7 @@ var resolvers_marked = /*#__PURE__*/external_this_regeneratorRuntime_default.a.m
 
 
 
+<<<<<<< HEAD
 /**
  * Requests authors from the REST API.
  *
@@ -4220,10 +5113,20 @@ var resolvers_marked = /*#__PURE__*/external_this_regeneratorRuntime_default.a.m
 
 function resolvers_getAuthors(query) {
   var path, users;
+=======
+
+/**
+ * Requests authors from the REST API.
+ */
+
+function resolvers_getAuthors() {
+  var users;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   return external_this_regeneratorRuntime_default.a.wrap(function getAuthors$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
+<<<<<<< HEAD
           path = Object(external_this_wp_url_["addQueryArgs"])('/wp/v2/users/?who=authors&per_page=100', query);
           _context.next = 3;
           return Object(external_this_wp_dataControls_["apiFetch"])({
@@ -4236,6 +5139,19 @@ function resolvers_getAuthors(query) {
           return receiveUserQuery(path, users);
 
         case 6:
+=======
+          _context.next = 2;
+          return apiFetch({
+            path: '/wp/v2/users/?who=authors&per_page=-1'
+          });
+
+        case 2:
+          users = _context.sent;
+          _context.next = 5;
+          return receiveUserQuery('authors', users);
+
+        case 5:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         case "end":
           return _context.stop();
       }
@@ -4243,6 +5159,7 @@ function resolvers_getAuthors(query) {
   }, resolvers_marked);
 }
 /**
+<<<<<<< HEAD
  * Temporary approach to resolving editor access to author queries.
  *
  * @param {number} id The author id.
@@ -4273,44 +5190,74 @@ function resolvers_unstableGetAuthor(id) {
   }, resolvers_marked2);
 }
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Requests the current user from the REST API.
  */
 
 function resolvers_getCurrentUser() {
   var currentUser;
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function getCurrentUser$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
         case 0:
           _context3.next = 2;
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function getCurrentUser$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.next = 2;
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: '/wp/v2/users/me'
           });
 
         case 2:
+<<<<<<< HEAD
           currentUser = _context3.sent;
           _context3.next = 5;
+=======
+          currentUser = _context2.sent;
+          _context2.next = 5;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return receiveCurrentUser(currentUser);
 
         case 5:
         case "end":
+<<<<<<< HEAD
           return _context3.stop();
       }
     }
   }, resolvers_marked3);
+=======
+          return _context2.stop();
+      }
+    }
+  }, resolvers_marked2);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Requests an entity's record from the REST API.
  *
+<<<<<<< HEAD
  * @param {string}           kind  Entity kind.
  * @param {string}           name  Entity name.
  * @param {number|string}    key   Record's key
  * @param {Object|undefined} query Optional object of query parameters to
  *                                 include with request.
+=======
+ * @param {string} kind   Entity kind.
+ * @param {string} name   Entity name.
+ * @param {number} key    Record's key
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 
 function resolvers_getEntityRecord(kind, name) {
   var key,
+<<<<<<< HEAD
       query,
       entities,
       entity,
@@ -4329,12 +5276,29 @@ function resolvers_getEntityRecord(kind, name) {
 
         case 4:
           entities = _context4.sent;
+=======
+      entities,
+      entity,
+      record,
+      _args3 = arguments;
+  return external_this_regeneratorRuntime_default.a.wrap(function getEntityRecord$(_context3) {
+    while (1) {
+      switch (_context3.prev = _context3.next) {
+        case 0:
+          key = _args3.length > 2 && _args3[2] !== undefined ? _args3[2] : '';
+          _context3.next = 3;
+          return getKindEntities(kind);
+
+        case 3:
+          entities = _context3.sent;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           entity = Object(external_this_lodash_["find"])(entities, {
             kind: kind,
             name: name
           });
 
           if (entity) {
+<<<<<<< HEAD
             _context4.next = 8;
             break;
           }
@@ -4402,6 +5366,31 @@ function resolvers_getEntityRecord(kind, name) {
       }
     }
   }, resolvers_marked4);
+=======
+            _context3.next = 7;
+            break;
+          }
+
+          return _context3.abrupt("return");
+
+        case 7:
+          _context3.next = 9;
+          return apiFetch({
+            path: "".concat(entity.baseURL, "/").concat(key, "?context=edit")
+          });
+
+        case 9:
+          record = _context3.sent;
+          _context3.next = 12;
+          return receiveEntityRecords(kind, name, record);
+
+        case 12:
+        case "end":
+          return _context3.stop();
+      }
+    }
+  }, resolvers_marked3);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Requests an entity's record from the REST API.
@@ -4427,6 +5416,7 @@ function resolvers_getEntityRecords(kind, name) {
       entity,
       path,
       records,
+<<<<<<< HEAD
       _args5 = arguments;
   return external_this_regeneratorRuntime_default.a.wrap(function getEntityRecords$(_context5) {
     while (1) {
@@ -4438,12 +5428,26 @@ function resolvers_getEntityRecords(kind, name) {
 
         case 3:
           entities = _context5.sent;
+=======
+      _args4 = arguments;
+  return external_this_regeneratorRuntime_default.a.wrap(function getEntityRecords$(_context4) {
+    while (1) {
+      switch (_context4.prev = _context4.next) {
+        case 0:
+          query = _args4.length > 2 && _args4[2] !== undefined ? _args4[2] : {};
+          _context4.next = 3;
+          return getKindEntities(kind);
+
+        case 3:
+          entities = _context4.sent;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           entity = Object(external_this_lodash_["find"])(entities, {
             kind: kind,
             name: name
           });
 
           if (entity) {
+<<<<<<< HEAD
             _context5.next = 7;
             break;
           }
@@ -4501,6 +5505,38 @@ function resolvers_getEntityRecords(kind, name) {
 
 resolvers_getEntityRecords.shouldInvalidate = function (action, kind, name) {
   return (action.type === 'RECEIVE_ITEMS' || action.type === 'REMOVE_ITEMS') && action.invalidateCache && kind === action.kind && name === action.name;
+=======
+            _context4.next = 7;
+            break;
+          }
+
+          return _context4.abrupt("return");
+
+        case 7:
+          path = Object(external_this_wp_url_["addQueryArgs"])(entity.baseURL, resolvers_objectSpread({}, query, {
+            context: 'edit'
+          }));
+          _context4.next = 10;
+          return apiFetch({
+            path: path
+          });
+
+        case 10:
+          records = _context4.sent;
+          _context4.next = 13;
+          return receiveEntityRecords(kind, name, Object.values(records), query);
+
+        case 13:
+        case "end":
+          return _context4.stop();
+      }
+    }
+  }, resolvers_marked4);
+}
+
+resolvers_getEntityRecords.shouldInvalidate = function (action, kind, name) {
+  return action.type === 'RECEIVE_ITEMS' && action.invalidateCache && kind === action.kind && name === action.name;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 };
 /**
  * Requests the current theme.
@@ -4509,26 +5545,47 @@ resolvers_getEntityRecords.shouldInvalidate = function (action, kind, name) {
 
 function resolvers_getCurrentTheme() {
   var activeThemes;
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function getCurrentTheme$(_context6) {
     while (1) {
       switch (_context6.prev = _context6.next) {
         case 0:
           _context6.next = 2;
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function getCurrentTheme$(_context5) {
+    while (1) {
+      switch (_context5.prev = _context5.next) {
+        case 0:
+          _context5.next = 2;
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: '/wp/v2/themes?status=active'
           });
 
         case 2:
+<<<<<<< HEAD
           activeThemes = _context6.sent;
           _context6.next = 5;
+=======
+          activeThemes = _context5.sent;
+          _context5.next = 5;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return receiveCurrentTheme(activeThemes[0]);
 
         case 5:
         case "end":
+<<<<<<< HEAD
           return _context6.stop();
       }
     }
   }, resolvers_marked6);
+=======
+          return _context5.stop();
+      }
+    }
+  }, resolvers_marked5);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Requests theme supports data from the index.
@@ -4536,26 +5593,47 @@ function resolvers_getCurrentTheme() {
 
 function resolvers_getThemeSupports() {
   var activeThemes;
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function getThemeSupports$(_context7) {
     while (1) {
       switch (_context7.prev = _context7.next) {
         case 0:
           _context7.next = 2;
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function getThemeSupports$(_context6) {
+    while (1) {
+      switch (_context6.prev = _context6.next) {
+        case 0:
+          _context6.next = 2;
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: '/wp/v2/themes?status=active'
           });
 
         case 2:
+<<<<<<< HEAD
           activeThemes = _context7.sent;
           _context7.next = 5;
+=======
+          activeThemes = _context6.sent;
+          _context6.next = 5;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return receiveThemeSupports(activeThemes[0].theme_supports);
 
         case 5:
         case "end":
+<<<<<<< HEAD
           return _context7.stop();
       }
     }
   }, _marked7);
+=======
+          return _context6.stop();
+      }
+    }
+  }, _marked6);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Requests a preview from the from the Embed API.
@@ -4565,6 +5643,7 @@ function resolvers_getThemeSupports() {
 
 function resolvers_getEmbedPreview(url) {
   var embedProxyResponse;
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function getEmbedPreview$(_context8) {
     while (1) {
       switch (_context8.prev = _context8.next) {
@@ -4572,12 +5651,22 @@ function resolvers_getEmbedPreview(url) {
           _context8.prev = 0;
           _context8.next = 3;
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function getEmbedPreview$(_context7) {
+    while (1) {
+      switch (_context7.prev = _context7.next) {
+        case 0:
+          _context7.prev = 0;
+          _context7.next = 3;
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: Object(external_this_wp_url_["addQueryArgs"])('/oembed/1.0/proxy', {
               url: url
             })
           });
 
         case 3:
+<<<<<<< HEAD
           embedProxyResponse = _context8.sent;
           _context8.next = 6;
           return receiveEmbedPreview(url, embedProxyResponse);
@@ -4590,14 +5679,35 @@ function resolvers_getEmbedPreview(url) {
           _context8.prev = 8;
           _context8.t0 = _context8["catch"](0);
           _context8.next = 12;
+=======
+          embedProxyResponse = _context7.sent;
+          _context7.next = 6;
+          return receiveEmbedPreview(url, embedProxyResponse);
+
+        case 6:
+          _context7.next = 12;
+          break;
+
+        case 8:
+          _context7.prev = 8;
+          _context7.t0 = _context7["catch"](0);
+          _context7.next = 12;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return receiveEmbedPreview(url, false);
 
         case 12:
         case "end":
+<<<<<<< HEAD
           return _context8.stop();
       }
     }
   }, _marked8, null, [[0, 8]]);
+=======
+          return _context7.stop();
+      }
+    }
+  }, _marked7, null, [[0, 8]]);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Requests Upload Permissions from the REST API.
@@ -4607,13 +5717,20 @@ function resolvers_getEmbedPreview(url) {
  */
 
 function resolvers_hasUploadPermissions() {
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function hasUploadPermissions$(_context9) {
     while (1) {
       switch (_context9.prev = _context9.next) {
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function hasUploadPermissions$(_context8) {
+    while (1) {
+      switch (_context8.prev = _context8.next) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         case 0:
           external_this_wp_deprecated_default()("select( 'core' ).hasUploadPermissions()", {
             alternative: "select( 'core' ).canUser( 'create', 'media' )"
           });
+<<<<<<< HEAD
           return _context9.delegateYield(resolvers_canUser('create', 'media'), "t0", 2);
 
         case 2:
@@ -4622,6 +5739,16 @@ function resolvers_hasUploadPermissions() {
       }
     }
   }, _marked9);
+=======
+          return _context8.delegateYield(resolvers_canUser('create', 'media'), "t0", 2);
+
+        case 2:
+        case "end":
+          return _context8.stop();
+      }
+    }
+  }, _marked8);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Checks whether the current user can perform the given action on the given
@@ -4635,9 +5762,15 @@ function resolvers_hasUploadPermissions() {
 
 function resolvers_canUser(action, resource, id) {
   var methods, method, path, response, allowHeader, key, isAllowed;
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function canUser$(_context10) {
     while (1) {
       switch (_context10.prev = _context10.next) {
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function canUser$(_context9) {
+    while (1) {
+      switch (_context9.prev = _context9.next) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         case 0:
           methods = {
             create: 'POST',
@@ -4648,7 +5781,11 @@ function resolvers_canUser(action, resource, id) {
           method = methods[action];
 
           if (method) {
+<<<<<<< HEAD
             _context10.next = 4;
+=======
+            _context9.next = 4;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             break;
           }
 
@@ -4656,9 +5793,15 @@ function resolvers_canUser(action, resource, id) {
 
         case 4:
           path = id ? "/wp/v2/".concat(resource, "/").concat(id) : "/wp/v2/".concat(resource);
+<<<<<<< HEAD
           _context10.prev = 5;
           _context10.next = 8;
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+          _context9.prev = 5;
+          _context9.next = 8;
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: path,
             // Ideally this would always be an OPTIONS request, but unfortunately there's
             // a bug in the REST API which causes the Allow header to not be sent on
@@ -4669,6 +5812,7 @@ function resolvers_canUser(action, resource, id) {
           });
 
         case 8:
+<<<<<<< HEAD
           response = _context10.sent;
           _context10.next = 14;
           break;
@@ -4677,6 +5821,16 @@ function resolvers_canUser(action, resource, id) {
           _context10.prev = 11;
           _context10.t0 = _context10["catch"](5);
           return _context10.abrupt("return");
+=======
+          response = _context9.sent;
+          _context9.next = 14;
+          break;
+
+        case 11:
+          _context9.prev = 11;
+          _context9.t0 = _context9["catch"](5);
+          return _context9.abrupt("return");
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
         case 14:
           if (Object(external_this_lodash_["hasIn"])(response, ['headers', 'get'])) {
@@ -4691,15 +5845,26 @@ function resolvers_canUser(action, resource, id) {
 
           key = Object(external_this_lodash_["compact"])([action, resource, id]).join('/');
           isAllowed = Object(external_this_lodash_["includes"])(allowHeader, method);
+<<<<<<< HEAD
           _context10.next = 19;
+=======
+          _context9.next = 19;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return receiveUserPermission(key, isAllowed);
 
         case 19:
         case "end":
+<<<<<<< HEAD
           return _context10.stop();
       }
     }
   }, _marked10, null, [[5, 11]]);
+=======
+          return _context9.stop();
+      }
+    }
+  }, _marked9, null, [[5, 11]]);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Request autosave data from the REST API.
@@ -4709,6 +5874,7 @@ function resolvers_canUser(action, resource, id) {
  */
 
 function resolvers_getAutosaves(postType, postId) {
+<<<<<<< HEAD
   var _yield$select, restBase, autosaves;
 
   return external_this_regeneratorRuntime_default.a.wrap(function getAutosaves$(_context11) {
@@ -4723,10 +5889,27 @@ function resolvers_getAutosaves(postType, postId) {
           restBase = _yield$select.rest_base;
           _context11.next = 6;
           return Object(external_this_wp_dataControls_["apiFetch"])({
+=======
+  var _yield$resolveSelect, restBase, autosaves;
+
+  return external_this_regeneratorRuntime_default.a.wrap(function getAutosaves$(_context10) {
+    while (1) {
+      switch (_context10.prev = _context10.next) {
+        case 0:
+          _context10.next = 2;
+          return resolveSelect('getPostType', postType);
+
+        case 2:
+          _yield$resolveSelect = _context10.sent;
+          restBase = _yield$resolveSelect.rest_base;
+          _context10.next = 6;
+          return apiFetch({
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             path: "/wp/v2/".concat(restBase, "/").concat(postId, "/autosaves?context=edit")
           });
 
         case 6:
+<<<<<<< HEAD
           autosaves = _context11.sent;
 
           if (!(autosaves && autosaves.length)) {
@@ -4735,14 +5918,31 @@ function resolvers_getAutosaves(postType, postId) {
           }
 
           _context11.next = 10;
+=======
+          autosaves = _context10.sent;
+
+          if (!(autosaves && autosaves.length)) {
+            _context10.next = 10;
+            break;
+          }
+
+          _context10.next = 10;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           return receiveAutosaves(postId, autosaves);
 
         case 10:
         case "end":
+<<<<<<< HEAD
           return _context11.stop();
       }
     }
   }, _marked11);
+=======
+          return _context10.stop();
+      }
+    }
+  }, _marked10);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Request autosave data from the REST API.
@@ -4755,6 +5955,7 @@ function resolvers_getAutosaves(postType, postId) {
  */
 
 function resolvers_getAutosave(postType, postId) {
+<<<<<<< HEAD
   return external_this_regeneratorRuntime_default.a.wrap(function getAutosave$(_context12) {
     while (1) {
       switch (_context12.prev = _context12.next) {
@@ -4768,13 +5969,32 @@ function resolvers_getAutosave(postType, postId) {
       }
     }
   }, _marked12);
+=======
+  return external_this_regeneratorRuntime_default.a.wrap(function getAutosave$(_context11) {
+    while (1) {
+      switch (_context11.prev = _context11.next) {
+        case 0:
+          _context11.next = 2;
+          return resolveSelect('getAutosaves', postType, postId);
+
+        case 2:
+        case "end":
+          return _context11.stop();
+      }
+    }
+  }, _marked11);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 // EXTERNAL MODULE: external {"this":["wp","element"]}
 var external_this_wp_element_ = __webpack_require__(0);
 
 // EXTERNAL MODULE: external {"this":["wp","blocks"]}
+<<<<<<< HEAD
 var external_this_wp_blocks_ = __webpack_require__(11);
+=======
+var external_this_wp_blocks_ = __webpack_require__(10);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/core-data/build-module/entity-provider.js
 
@@ -4797,7 +6017,11 @@ function entity_provider_objectSpread(target) { for (var i = 1; i < arguments.le
 
 
 
+<<<<<<< HEAD
 var entity_provider_entities = entity_provider_objectSpread(entity_provider_objectSpread({}, defaultEntities.reduce(function (acc, entity) {
+=======
+var entity_provider_entities = entity_provider_objectSpread({}, defaultEntities.reduce(function (acc, entity) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   if (!acc[entity.kind]) {
     acc[entity.kind] = {};
   }
@@ -4806,7 +6030,11 @@ var entity_provider_entities = entity_provider_objectSpread(entity_provider_obje
     context: Object(external_this_wp_element_["createContext"])()
   };
   return acc;
+<<<<<<< HEAD
 }, {})), kinds.reduce(function (acc, kind) {
+=======
+}, {}), {}, kinds.reduce(function (acc, kind) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   acc[kind.name] = {};
   return acc;
 }, {}));
@@ -4991,7 +6219,10 @@ function build_module_objectSpread(target) { for (var i = 1; i < arguments.lengt
  * WordPress dependencies
  */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Internal dependencies
  */
@@ -5001,6 +6232,10 @@ function build_module_objectSpread(target) { for (var i = 1; i < arguments.lengt
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  // The entity selectors/resolvers and actions are shortcuts to their generic equivalents
 // (getEntityRecord, getEntityRecords, updateEntityRecord, updateEntityRecordss)
 // Instead of getEntityRecord, the consumer could use more user-frieldly named selector: getPostType, getTaxonomy...
@@ -5062,18 +6297,28 @@ var entityActions = defaultEntities.reduce(function (result, entity) {
     return saveEntityRecord(kind, name, key);
   };
 
+<<<<<<< HEAD
   result[entities_getMethodName(kind, name, 'delete')] = function (key, query) {
     return deleteEntityRecord(kind, name, key, query);
   };
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   return result;
 }, {});
 Object(external_this_wp_data_["registerStore"])(REDUCER_KEY, {
   reducer: build_module_reducer,
+<<<<<<< HEAD
   controls: external_this_wp_dataControls_["controls"],
   actions: build_module_objectSpread(build_module_objectSpread({}, build_module_actions_namespaceObject), entityActions),
   selectors: build_module_objectSpread(build_module_objectSpread({}, build_module_selectors_namespaceObject), entitySelectors),
   resolvers: build_module_objectSpread(build_module_objectSpread({}, resolvers_namespaceObject), entityResolvers)
+=======
+  controls: build_module_controls,
+  actions: build_module_objectSpread({}, build_module_actions_namespaceObject, {}, entityActions),
+  selectors: build_module_objectSpread({}, build_module_selectors_namespaceObject, {}, entitySelectors),
+  resolvers: build_module_objectSpread({}, resolvers_namespaceObject, {}, entityResolvers)
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 });
 
 
@@ -5081,6 +6326,16 @@ Object(external_this_wp_data_["registerStore"])(REDUCER_KEY, {
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ 45:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["apiFetch"]; }());
+
+/***/ }),
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ 5:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

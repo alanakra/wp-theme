@@ -62,7 +62,11 @@ class WP_Automatic_Updater {
 	 * filesystem to the top of the drive, erring on the side of detecting a VCS
 	 * checkout somewhere.
 	 *
+<<<<<<< HEAD
 	 * ABSPATH is always checked in addition to whatever `$context` is (which may be the
+=======
+	 * ABSPATH is always checked in addition to whatever $context is (which may be the
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * wp-content directory, for example). The underlying assumption is that if you are
 	 * using version control *anywhere*, then you should be making decisions for
 	 * how things get updated.
@@ -70,8 +74,11 @@ class WP_Automatic_Updater {
 	 * @since 3.7.0
 	 *
 	 * @param string $context The filesystem path to check, in addition to ABSPATH.
+<<<<<<< HEAD
 	 * @return bool True if a VCS checkout was discovered at `$context` or ABSPATH,
 	 *              or anywhere higher. False otherwise.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function is_vcs_checkout( $context ) {
 		$context_dirs = array( untrailingslashit( $context ) );
@@ -114,7 +121,11 @@ class WP_Automatic_Updater {
 		 *
 		 * @since 3.7.0
 		 *
+<<<<<<< HEAD
 		 * @param bool $checkout  Whether a VCS checkout was discovered at `$context`
+=======
+		 * @param bool $checkout  Whether a VCS checkout was discovered at $context
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *                        or ABSPATH, or anywhere higher.
 		 * @param string $context The filesystem context (a path) against which
 		 *                        filesystem status should be checked.
@@ -134,7 +145,10 @@ class WP_Automatic_Updater {
 	 * @param object $item    The update offer.
 	 * @param string $context The filesystem context (a path) against which filesystem
 	 *                        access and status should be checked.
+<<<<<<< HEAD
 	 * @return bool True if the item should be updated, false otherwise.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function should_update( $type, $item, $context ) {
 		// Used to see if WP_Filesystem is set up to allow unattended updates.
@@ -245,8 +259,11 @@ class WP_Automatic_Updater {
 	 * @since 3.7.0
 	 *
 	 * @param object $item The update offer.
+<<<<<<< HEAD
 	 * @return bool True if the site administrator is notified of a core update,
 	 *              false otherwise.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	protected function send_core_update_notification_email( $item ) {
 		$notified = get_site_option( 'auto_core_update_notified' );
@@ -348,11 +365,14 @@ class WP_Automatic_Updater {
 				$upgrader_item = $item->theme;
 				$theme         = wp_get_theme( $upgrader_item );
 				$item_name     = $theme->Get( 'Name' );
+<<<<<<< HEAD
 				// Add the current version so that it can be reported in the notification email.
 				$item->current_version = $theme->get( 'Version' );
 				if ( empty( $item->current_version ) ) {
 					$item->current_version = false;
 				}
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				/* translators: %s: Theme name. */
 				$skin->feedback( __( 'Updating theme: %s' ), $item_name );
 				break;
@@ -360,11 +380,14 @@ class WP_Automatic_Updater {
 				$upgrader_item = $item->plugin;
 				$plugin_data   = get_plugin_data( $context . '/' . $upgrader_item );
 				$item_name     = $plugin_data['Name'];
+<<<<<<< HEAD
 				// Add the current version so that it can be reported in the notification email.
 				$item->current_version = $plugin_data['Version'];
 				if ( empty( $item->current_version ) ) {
 					$item->current_version = false;
 				}
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				/* translators: %s: Plugin name. */
 				$skin->feedback( __( 'Updating plugin: %s' ), $item_name );
 				break;
@@ -1080,6 +1103,7 @@ class WP_Automatic_Updater {
 				$body[] = __( 'These plugins failed to update:' );
 
 				foreach ( $failed_updates['plugin'] as $item ) {
+<<<<<<< HEAD
 					if ( $item->item->current_version ) {
 						$body[] = sprintf(
 							/* translators: 1: Plugin name, 2: Current version number, 3: New version number. */
@@ -1096,6 +1120,14 @@ class WP_Automatic_Updater {
 							$item->item->new_version
 						);
 					}
+=======
+					$body[] = sprintf(
+						/* translators: 1: Plugin name, 2: Version number. */
+						__( '- %1$s version %2$s' ),
+						$item->name,
+						$item->item->new_version
+					);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 					$past_failure_emails[ $item->item->plugin ] = $item->item->new_version;
 				}
@@ -1108,6 +1140,7 @@ class WP_Automatic_Updater {
 				$body[] = __( 'These themes failed to update:' );
 
 				foreach ( $failed_updates['theme'] as $item ) {
+<<<<<<< HEAD
 					if ( $item->item->current_version ) {
 						$body[] = sprintf(
 							/* translators: 1: Theme name, 2: Current version number, 3: New version number. */
@@ -1124,6 +1157,14 @@ class WP_Automatic_Updater {
 							$item->item->new_version
 						);
 					}
+=======
+					$body[] = sprintf(
+						/* translators: 1: Theme name, 2: Version number. */
+						__( '- %1$s version %2$s' ),
+						$item->name,
+						$item->item->new_version
+					);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 					$past_failure_emails[ $item->item->theme ] = $item->item->new_version;
 				}
@@ -1141,6 +1182,7 @@ class WP_Automatic_Updater {
 				$body[] = __( 'These plugins are now up to date:' );
 
 				foreach ( $successful_updates['plugin'] as $item ) {
+<<<<<<< HEAD
 					if ( $item->item->current_version ) {
 						$body[] = sprintf(
 							/* translators: 1: Plugin name, 2: Current version number, 3: New version number. */
@@ -1157,6 +1199,14 @@ class WP_Automatic_Updater {
 							$item->item->new_version
 						);
 					}
+=======
+					$body[] = sprintf(
+						/* translators: 1: Plugin name, 2: Version number. */
+						__( '- %1$s version %2$s' ),
+						$item->name,
+						$item->item->new_version
+					);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 					unset( $past_failure_emails[ $item->item->plugin ] );
 				}
@@ -1169,6 +1219,7 @@ class WP_Automatic_Updater {
 				$body[] = __( 'These themes are now up to date:' );
 
 				foreach ( $successful_updates['theme'] as $item ) {
+<<<<<<< HEAD
 					if ( $item->item->current_version ) {
 						$body[] = sprintf(
 							/* translators: 1: Theme name, 2: Current version number, 3: New version number. */
@@ -1185,6 +1236,14 @@ class WP_Automatic_Updater {
 							$item->item->new_version
 						);
 					}
+=======
+					$body[] = sprintf(
+						/* translators: 1: Theme name, 2: Version number. */
+						__( '- %1$s version %2$s' ),
+						$item->name,
+						$item->item->new_version
+					);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 					unset( $past_failure_emails[ $item->item->theme ] );
 				}

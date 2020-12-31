@@ -191,8 +191,11 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 		 */
 		do_action( 'rest_after_insert_attachment', $attachment, $request, true );
 
+<<<<<<< HEAD
 		wp_after_insert_post( $attachment, false, null );
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
 			// Set a custom header with the attachment_id.
 			// Used by the browser/client to resume creating image sub-sizes after a PHP fatal error.
@@ -272,7 +275,11 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 		}
 
 		// $post_parent is inherited from $attachment['post_parent'].
+<<<<<<< HEAD
 		$id = wp_insert_attachment( wp_slash( (array) $attachment ), $file, 0, true, false );
+=======
+		$id = wp_insert_attachment( wp_slash( (array) $attachment ), $file, 0, true );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( is_wp_error( $id ) ) {
 			if ( 'db_update_error' === $id->get_error_code() ) {
@@ -321,8 +328,12 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 			);
 		}
 
+<<<<<<< HEAD
 		$attachment_before = get_post( $request['id'] );
 		$response          = parent::update_item( $request );
+=======
+		$response = parent::update_item( $request );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( is_wp_error( $response ) ) {
 			return $response;
@@ -348,8 +359,11 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php */
 		do_action( 'rest_after_insert_attachment', $attachment, $request, false );
 
+<<<<<<< HEAD
 		wp_after_insert_post( $attachment, true, $attachment_before );
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$response = $this->prepare_item_for_response( $attachment, $request );
 		$response = rest_ensure_response( $response );
 
@@ -504,10 +518,17 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 		if ( $crop ) {
 			$size = $image_editor->get_size();
 
+<<<<<<< HEAD
 			$crop_x = round( ( $size['width'] * (float) $request['x'] ) / 100.0 );
 			$crop_y = round( ( $size['height'] * (float) $request['y'] ) / 100.0 );
 			$width  = round( ( $size['width'] * (float) $request['width'] ) / 100.0 );
 			$height = round( ( $size['height'] * (float) $request['height'] ) / 100.0 );
+=======
+			$crop_x = round( ( $size['width'] * floatval( $request['x'] ) ) / 100.0 );
+			$crop_y = round( ( $size['height'] * floatval( $request['y'] ) ) / 100.0 );
+			$width  = round( ( $size['width'] * floatval( $request['width'] ) ) / 100.0 );
+			$height = round( ( $size['height'] * floatval( $request['height'] ) ) / 100.0 );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 			$result = $image_editor->crop( $crop_x, $crop_y, $width, $height );
 

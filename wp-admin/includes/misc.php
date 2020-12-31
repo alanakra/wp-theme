@@ -121,7 +121,11 @@ function insert_with_markers( $filename, $marker, $insertion ) {
 		if ( $perms ) {
 			chmod( $filename, $perms | 0644 );
 		}
+<<<<<<< HEAD
 	} elseif ( ! is_writable( $filename ) ) {
+=======
+	} elseif ( ! is_writeable( $filename ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return false;
 	}
 
@@ -1246,7 +1250,11 @@ function heartbeat_autosave( $response, $data ) {
 				'message' => __( 'Error while saving.' ),
 			);
 		} else {
+<<<<<<< HEAD
 			/* translators: Draft saved date format, see https://www.php.net/manual/datetime.format.php */
+=======
+			/* translators: Draft saved date format, see https://www.php.net/date */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$draft_saved_date_format = __( 'g:i:s a' );
 			$response['wp_autosave'] = array(
 				'success' => true,

@@ -2,12 +2,26 @@
  * Colors
  */
 /**
+<<<<<<< HEAD
+=======
+ * Deprecated colors.
+ * Please avoid using these.
+ */
+/**
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Breakpoints & Media Queries
  */
 /**
  * Colors
  */
 /**
+<<<<<<< HEAD
+=======
+ * Deprecated colors.
+ * Please avoid using these.
+ */
+/**
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Fonts & basic variables.
  */
 /**
@@ -30,9 +44,12 @@
  * Border radii.
  */
 /**
+<<<<<<< HEAD
  * Block paddings.
  */
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Breakpoint mixins
  */
 /**
@@ -99,7 +116,11 @@
   min-width: 150px;
   max-width: 500px; }
   .block-editor-format-toolbar__link-container-value.has-invalid-link {
+<<<<<<< HEAD
     color: #cc1818; }
+=======
+    color: #d94f4f; }
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 .components-inline-color__indicator {
   position: absolute;

@@ -233,7 +233,11 @@
 #dashboard_right_now .search-engines-info:before {
 	color: #606a73;
 	font: normal 20px/1 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	display: inline-block;
 	padding: 0 0 0 10px;
 	position: relative;

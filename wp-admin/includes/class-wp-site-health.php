@@ -106,8 +106,13 @@ class WP_Site_Health {
 		if ( 'site-health' === $screen->id && ! isset( $_GET['tab'] ) ) {
 			$tests = WP_Site_Health::get_tests();
 
+<<<<<<< HEAD
 			// Don't run https test on development environments.
 			if ( $this->is_development_environment() ) {
+=======
+			// Don't run https test on localhost.
+			if ( 'localhost' === preg_replace( '|https?://|', '', get_site_url() ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				unset( $tests['direct']['https_status'] );
 			}
 
@@ -133,9 +138,13 @@ class WP_Site_Health {
 				if ( is_string( $test['test'] ) ) {
 					$health_check_js_variables['site_status']['async'][] = array(
 						'test'      => $test['test'],
+<<<<<<< HEAD
 						'has_rest'  => ( isset( $test['has_rest'] ) ? $test['has_rest'] : false ),
 						'completed' => false,
 						'headers'   => isset( $test['headers'] ) ? $test['headers'] : array(),
+=======
+						'completed' => false,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					);
 				}
 			}
@@ -154,7 +163,11 @@ class WP_Site_Health {
 	 */
 	private function perform_test( $callback ) {
 		/**
+<<<<<<< HEAD
 		 * Filters the output of a finished Site Health test.
+=======
+		 * Filter the output of a finished Site Health test.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @since 5.3.0
 		 *
@@ -731,7 +744,11 @@ class WP_Site_Health {
 				)
 			),
 			'actions'     => sprintf(
+<<<<<<< HEAD
 				'<p><a href="%s" target="_blank" rel="noopener">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+=======
+				'<p><a href="%s" target="_blank" rel="noopener noreferrer">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				esc_url( wp_get_update_php_url() ),
 				__( 'Learn more about updating PHP' ),
 				/* translators: Accessibility text. */
@@ -843,7 +860,11 @@ class WP_Site_Health {
 					__( 'The WordPress Hosting Team maintains a list of those modules, both recommended and required, in <a href="%1$s" %2$s>the team handbook%3$s</a>.' ),
 					/* translators: Localized team handbook, if one exists. */
 					esc_url( __( 'https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions' ) ),
+<<<<<<< HEAD
 					'target="_blank" rel="noopener"',
+=======
+					'target="_blank" rel="noopener noreferrer"',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					sprintf(
 						' <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span>',
 						/* translators: Accessibility text. */
@@ -1160,7 +1181,11 @@ class WP_Site_Health {
 				__( 'The SQL server is a required piece of software for the database WordPress uses to store all your site&#8217;s content and settings.' )
 			),
 			'actions'     => sprintf(
+<<<<<<< HEAD
 				'<p><a href="%s" target="_blank" rel="noopener">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+=======
+				'<p><a href="%s" target="_blank" rel="noopener noreferrer">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				/* translators: Localized version of WordPress requirements if one exists. */
 				esc_url( __( 'https://wordpress.org/about/requirements/' ) ),
 				__( 'Learn more about what WordPress requires to run.' ),
@@ -1397,7 +1422,11 @@ class WP_Site_Health {
 			);
 
 			$result['actions'] = sprintf(
+<<<<<<< HEAD
 				'<p><a href="%s" target="_blank" rel="noopener">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+=======
+				'<p><a href="%s" target="_blank" rel="noopener noreferrer">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				/* translators: Localized Support reference. */
 				esc_url( __( 'https://wordpress.org/support' ) ),
 				__( 'Get help resolving this issue.' ),
@@ -1435,7 +1464,11 @@ class WP_Site_Health {
 				__( 'Debug mode is often enabled to gather more details about an error or site failure, but may contain sensitive information which should not be available on a publicly available website.' )
 			),
 			'actions'     => sprintf(
+<<<<<<< HEAD
 				'<p><a href="%s" target="_blank" rel="noopener">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+=======
+				'<p><a href="%s" target="_blank" rel="noopener noreferrer">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				/* translators: Documentation explaining debugging in WordPress. */
 				esc_url( __( 'https://wordpress.org/support/article/debugging-in-wordpress/' ) ),
 				__( 'Learn more about debugging in WordPress.' ),
@@ -1466,11 +1499,14 @@ class WP_Site_Health {
 
 				$result['status'] = 'critical';
 
+<<<<<<< HEAD
 				// On development environments, set the status to recommended.
 				if ( $this->is_development_environment() ) {
 					$result['status'] = 'recommended';
 				}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$result['description'] .= sprintf(
 					'<p>%s</p>',
 					sprintf(
@@ -1509,7 +1545,11 @@ class WP_Site_Health {
 				__( 'An HTTPS connection is a more secure way of browsing the web. Many services now have HTTPS as a requirement. HTTPS allows you to take advantage of new features that can increase site speed, improve search rankings, and gain the trust of your visitors by helping to protect their online privacy.' )
 			),
 			'actions'     => sprintf(
+<<<<<<< HEAD
 				'<p><a href="%s" target="_blank" rel="noopener">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+=======
+				'<p><a href="%s" target="_blank" rel="noopener noreferrer">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				/* translators: Documentation explaining HTTPS and why it should be used. */
 				esc_url( __( 'https://wordpress.org/support/article/why-should-i-use-https/' ) ),
 				__( 'Learn more about why you should use HTTPS' ),
@@ -1861,7 +1901,11 @@ class WP_Site_Health {
 			$hosts = explode( ',', WP_ACCESSIBLE_HOSTS );
 		}
 
+<<<<<<< HEAD
 		if ( $blocked && 0 === count( $hosts ) ) {
+=======
+		if ( $blocked && 0 === sizeof( $hosts ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$result['status'] = 'critical';
 
 			$result['label'] = __( 'HTTP requests are blocked' );
@@ -1876,7 +1920,11 @@ class WP_Site_Health {
 			);
 		}
 
+<<<<<<< HEAD
 		if ( $blocked && 0 < count( $hosts ) ) {
+=======
+		if ( $blocked && 0 < sizeof( $hosts ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$result['status'] = 'recommended';
 
 			$result['label'] = __( 'HTTP requests are partially blocked' );
@@ -2080,6 +2128,7 @@ class WP_Site_Health {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Tests if the Authorization header has the expected values.
 	 *
 	 * @since 5.6.0
@@ -2136,6 +2185,8 @@ class WP_Site_Health {
 	}
 
 	/**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * Return a set of tests that belong to the site status page.
 	 *
 	 * Each site status test is defined here, they may be `direct` tests, that run on page load, or `async` tests
@@ -2143,7 +2194,10 @@ class WP_Site_Health {
 	 * experiences.
 	 *
 	 * @since 5.2.0
+<<<<<<< HEAD
 	 * @since 5.6.0 Added support for `has_rest` and `permissions`.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @return array The list of tests to run.
 	 */
@@ -2217,6 +2271,7 @@ class WP_Site_Health {
 			),
 			'async'  => array(
 				'dotorg_communication' => array(
+<<<<<<< HEAD
 					'label'             => __( 'Communication with WordPress.org' ),
 					'test'              => rest_url( 'wp-site-health/v1/tests/dotorg-communication' ),
 					'has_rest'          => true,
@@ -2240,6 +2295,18 @@ class WP_Site_Health {
 					'has_rest'  => true,
 					'headers'   => array( 'Authorization' => 'Basic ' . base64_encode( 'user:pwd' ) ),
 					'skip_cron' => true,
+=======
+					'label' => __( 'Communication with WordPress.org' ),
+					'test'  => 'dotorg_communication',
+				),
+				'background_updates'   => array(
+					'label' => __( 'Background updates' ),
+					'test'  => 'background_updates',
+				),
+				'loopback_requests'    => array(
+					'label' => __( 'Loopback request' ),
+					'test'  => 'loopback_requests',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				),
 			),
 		);
@@ -2266,8 +2333,11 @@ class WP_Site_Health {
 		 * to complete should run asynchronously, to avoid extended loading periods within wp-admin.
 		 *
 		 * @since 5.2.0
+<<<<<<< HEAD
 		 * @since 5.6.0 Added the `async_direct_test` array key.
 		 *              Added the `skip_cron` array key.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @param array $test_type {
 		 *     An associative array, where the `$test_type` is either `direct` or
@@ -2278,6 +2348,7 @@ class WP_Site_Health {
 		 *         Plugins and themes are encouraged to prefix test identifiers with their slug
 		 *         to avoid any collisions between tests.
 		 *
+<<<<<<< HEAD
 		 *         @type string   $label             A friendly label for your test to identify it by.
 		 *         @type mixed    $test              A callable to perform a direct test, or a string AJAX action
 		 *                                           to be called to perform an async test.
@@ -2286,6 +2357,11 @@ class WP_Site_Health {
 		 *         @type callable $async_direct_test A manner of directly calling the test marked as asynchronous,
 		 *                                           as the scheduled event can not authenticate, and endpoints
 		 *                                           may require authentication.
+=======
+		 *         @type string $label A friendly label for your test to identify it by.
+		 *         @type mixed  $test  A callable to perform a direct test, or a string Ajax action to be called
+		 *                             to perform an async test.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *     }
 		 * }
 		 */
@@ -2465,8 +2541,18 @@ class WP_Site_Health {
 			'requires_php' => '5.6.20',
 		);
 
+<<<<<<< HEAD
 		$test_plugins_enabled = wp_is_auto_update_forced_for_item( 'plugin', true, $mock_plugin );
 		$test_themes_enabled  = wp_is_auto_update_forced_for_item( 'theme', true, $mock_theme );
+=======
+		$type = 'plugin';
+		/** This filter is documented in wp-admin/includes/class-wp-automatic-updater.php */
+		$test_plugins_enabled = apply_filters( "auto_update_{$type}", true, $mock_plugin );
+
+		$type = 'theme';
+		/** This filter is documented in wp-admin/includes/class-wp-automatic-updater.php */
+		$test_themes_enabled = apply_filters( "auto_update_{$type}", true, $mock_theme );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		$ui_enabled_for_plugins = wp_is_auto_update_enabled_for_type( 'plugin' );
 		$ui_enabled_for_themes  = wp_is_auto_update_enabled_for_type( 'theme' );
@@ -2598,8 +2684,13 @@ class WP_Site_Health {
 			'critical'    => 0,
 		);
 
+<<<<<<< HEAD
 		// Don't run https test on development environments.
 		if ( $this->is_development_environment() ) {
+=======
+		// Don't run https test on localhost.
+		if ( 'localhost' === preg_replace( '|https?://|', '', get_site_url() ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			unset( $tests['direct']['https_status'] );
 		}
 
@@ -2623,6 +2714,7 @@ class WP_Site_Health {
 		}
 
 		foreach ( $tests['async'] as $test ) {
+<<<<<<< HEAD
 			if ( ! empty( $test['skip_cron'] ) ) {
 				continue;
 			}
@@ -2639,6 +2731,12 @@ class WP_Site_Health {
 				if ( isset( $test['has_rest'] ) && $test['has_rest'] ) {
 					$result_fetch = wp_remote_get(
 						$test['test'],
+=======
+			if ( is_string( $test['test'] ) ) {
+				if ( isset( $test['has_rest'] ) && $test['has_rest'] ) {
+					$result_fetch = wp_remote_post(
+						rest_url( $test['test'] ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						array(
 							'body' => array(
 								'_wpnonce' => wp_create_nonce( 'wp_rest' ),
@@ -2657,7 +2755,11 @@ class WP_Site_Health {
 					);
 				}
 
+<<<<<<< HEAD
 				if ( ! is_wp_error( $result_fetch ) && 200 === wp_remote_retrieve_response_code( $result_fetch ) ) {
+=======
+				if ( ! is_wp_error( $result_fetch ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					$result = json_decode( wp_remote_retrieve_body( $result_fetch ), true );
 				} else {
 					$result = false;
@@ -2686,6 +2788,7 @@ class WP_Site_Health {
 
 		set_transient( 'health-check-site-status-result', wp_json_encode( $site_status ) );
 	}
+<<<<<<< HEAD
 
 	/**
 	 * Checks if the current environment type is set to 'development' or 'local'.
@@ -2698,4 +2801,6 @@ class WP_Site_Health {
 		return in_array( wp_get_environment_type(), array( 'development', 'local' ), true );
 	}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }

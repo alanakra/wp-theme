@@ -325,7 +325,11 @@ function category_description( $category = 0 ) {
  *                                           of the option elements. Accepts any valid term field: 'term_id', 'name',
  *                                           'slug', 'term_group', 'term_taxonomy_id', 'taxonomy', 'description',
  *                                           'parent', 'count'. Default 'term_id'.
+<<<<<<< HEAD
  *     @type string|array $taxonomy          Name of the taxonomy or taxonomies to retrieve. Default 'category'.
+=======
+ *     @type string|array $taxonomy          Name of the category or categories to retrieve. Default 'category'.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *     @type bool         $hide_if_empty     True to skip generating markup if no categories are found.
  *                                           Default false (create select element even if no categories are found).
  *     @type bool         $required          Whether the `<select>` element should have the HTML5 'required' attribute.
@@ -433,7 +437,11 @@ function wp_dropdown_categories( $args = '' ) {
 
 			/** This filter is documented in wp-includes/category-template.php */
 			$show_option_all = apply_filters( 'list_cats', $parsed_args['show_option_all'], null );
+<<<<<<< HEAD
 			$selected        = ( '0' === (string) $parsed_args['selected'] ) ? " selected='selected'" : '';
+=======
+			$selected        = ( '0' === strval( $parsed_args['selected'] ) ) ? " selected='selected'" : '';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$output         .= "\t<option value='0'$selected>$show_option_all</option>\n";
 		}
 
@@ -512,7 +520,10 @@ function wp_dropdown_categories( $args = '' ) {
  *     @type string       $style                 The style used to display the categories list. If 'list', categories
  *                                               will be output as an unordered list. If left empty or another value,
  *                                               categories will be output separated by `<br>` tags. Default 'list'.
+<<<<<<< HEAD
  *     @type string       $taxonomy              Name of the taxonomy to retrieve. Default 'category'.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *     @type string       $title_li              Text to use for the list title `<li>` element. Pass an empty string
  *                                               to disable. Default 'Categories'.
  *     @type bool|int     $use_desc_for_title    Whether to use the category description as the title attribute.
@@ -737,7 +748,11 @@ function wp_tag_cloud( $args = '' ) {
 		if ( 'edit' === $args['link'] ) {
 			$link = get_edit_term_link( $tag->term_id, $tag->taxonomy, $args['post_type'] );
 		} else {
+<<<<<<< HEAD
 			$link = get_term_link( (int) $tag->term_id, $tag->taxonomy );
+=======
+			$link = get_term_link( intval( $tag->term_id ), $tag->taxonomy );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		if ( is_wp_error( $link ) ) {
@@ -1010,11 +1025,19 @@ function wp_generate_tag_cloud( $tags, $args = '' ) {
 			 * Note: this is redundant but doesn't harm.
 			 */
 			$return  = "<ul class='wp-tag-cloud' role='list'>\n\t<li>";
+<<<<<<< HEAD
 			$return .= implode( "</li>\n\t<li>", $a );
 			$return .= "</li>\n</ul>\n";
 			break;
 		default:
 			$return = implode( $args['separator'], $a );
+=======
+			$return .= join( "</li>\n\t<li>", $a );
+			$return .= "</li>\n</ul>\n";
+			break;
+		default:
+			$return = join( $args['separator'], $a );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			break;
 	}
 
@@ -1153,9 +1176,14 @@ function get_tag_link( $tag ) {
  *
  * @since 2.3.0
  *
+<<<<<<< HEAD
  * @param int|WP_Post $post_id Post ID or object.
  * @return WP_Term[]|false|WP_Error Array of WP_Term objects on success, false if there are no terms
  *                                  or the post does not exist, WP_Error on failure.
+=======
+ * @param int $post_id Post ID.
+ * @return array|false|WP_Error Array of tag objects on success, false on failure.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function get_the_tags( $post_id = 0 ) {
 	$terms = get_the_terms( $post_id, 'post_tag' );
@@ -1167,8 +1195,12 @@ function get_the_tags( $post_id = 0 ) {
 	 *
 	 * @see get_the_terms()
 	 *
+<<<<<<< HEAD
 	 * @param WP_Term[]|false|WP_Error $terms Array of WP_Term objects on success, false if there are no terms
 	 *                                        or the post does not exist, WP_Error on failure.
+=======
+	 * @param WP_Term[] $terms An array of tags for the given post.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	return apply_filters( 'get_the_tags', $terms );
 }
@@ -1349,7 +1381,11 @@ function get_the_term_list( $post_id, $taxonomy, $before = '', $sep = '', $after
 	 */
 	$term_links = apply_filters( "term_links-{$taxonomy}", $links );  // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 
+<<<<<<< HEAD
 	return $before . implode( $sep, $term_links ) . $after;
+=======
+	return $before . join( $sep, $term_links ) . $after;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**

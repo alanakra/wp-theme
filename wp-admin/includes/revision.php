@@ -275,7 +275,11 @@ function wp_prepare_revisions_for_js( $post, $selected_revision_id, $from = null
 	 * If we only have one revision, the initial revision is missing; This happens
 	 * when we have an autsosave and the user has clicked 'View the Autosave'
 	 */
+<<<<<<< HEAD
 	if ( 1 === count( $revisions ) ) {
+=======
+	if ( 1 === sizeof( $revisions ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$revisions[ $post->ID ] = array(
 			'id'         => $post->ID,
 			'title'      => get_the_title( $post->ID ),

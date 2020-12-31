@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * PHPMailer RFC821 SMTP email transport class.
  * PHP Version 5.5.
@@ -10,7 +13,11 @@
  * @author    Jim Jagielski (jimjag) <jimjag@gmail.com>
  * @author    Andy Prevost (codeworxtech) <codeworxtech@users.sourceforge.net>
  * @author    Brent R. Matzelle (original founder)
+<<<<<<< HEAD
  * @copyright 2012 - 2020 Marcus Bointon
+=======
+ * @copyright 2012 - 2019 Marcus Bointon
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @copyright 2010 - 2012 Jim Jagielski
  * @copyright 2004 - 2009 Andy Prevost
  * @license   http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
@@ -35,7 +42,11 @@ class SMTP
      *
      * @var string
      */
+<<<<<<< HEAD
     const VERSION = '6.2.0';
+=======
+    const VERSION = '6.1.6';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
     /**
      * SMTP line break constant.
@@ -312,6 +323,15 @@ class SMTP
      */
     public function connect($host, $port = null, $timeout = 30, $options = [])
     {
+<<<<<<< HEAD
+=======
+        static $streamok;
+        //This is enabled by default since 5.0.0 but some providers disable it
+        //Check this once and cache the result
+        if (null === $streamok) {
+            $streamok = function_exists('stream_socket_client');
+        }
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         // Clear errors to avoid confusion
         $this->setError('');
         // Make sure we are __not__ connected
@@ -330,6 +350,7 @@ class SMTP
             (count($options) > 0 ? var_export($options, true) : 'array()'),
             self::DEBUG_CONNECTION
         );
+<<<<<<< HEAD
 
         $this->smtp_conn = $this->getSMTPConnection($host, $port, $timeout, $options);
 
@@ -366,12 +387,18 @@ class SMTP
             $streamok = function_exists('stream_socket_client');
         }
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         $errno = 0;
         $errstr = '';
         if ($streamok) {
             $socket_context = stream_context_create($options);
             set_error_handler([$this, 'errorHandler']);
+<<<<<<< HEAD
             $connection = stream_socket_client(
+=======
+            $this->smtp_conn = stream_socket_client(
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
                 $host . ':' . $port,
                 $errno,
                 $errstr,
@@ -387,7 +414,11 @@ class SMTP
                 self::DEBUG_CONNECTION
             );
             set_error_handler([$this, 'errorHandler']);
+<<<<<<< HEAD
             $connection = fsockopen(
+=======
+            $this->smtp_conn = fsockopen(
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
                 $host,
                 $port,
                 $errno,
@@ -396,9 +427,14 @@ class SMTP
             );
             restore_error_handler();
         }
+<<<<<<< HEAD
 
         // Verify we connected properly
         if (!is_resource($connection)) {
+=======
+        // Verify we connected properly
+        if (!is_resource($this->smtp_conn)) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             $this->setError(
                 'Failed to connect to server',
                 '',
@@ -413,6 +449,7 @@ class SMTP
 
             return false;
         }
+<<<<<<< HEAD
 
         // SMTP server can take longer to respond, give longer timeout for first read
         // Windows does not have support for this timeout function
@@ -426,6 +463,24 @@ class SMTP
         }
 
         return $connection;
+=======
+        $this->edebug('Connection: opened', self::DEBUG_CONNECTION);
+        // SMTP server can take longer to respond, give longer timeout for first read
+        // Windows does not have support for this timeout function
+        if (strpos(PHP_OS, 'WIN') !== 0) {
+            $max = (int) ini_get('max_execution_time');
+            // Don't bother if unlimited
+            if (0 !== $max && $timeout > $max) {
+                @set_time_limit($timeout);
+            }
+            stream_set_timeout($this->smtp_conn, $timeout, 0);
+        }
+        // Get any announcement
+        $announce = $this->get_lines();
+        $this->edebug('SERVER -> CLIENT: ' . $announce, self::DEBUG_SERVER);
+
+        return true;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     }
 
     /**
@@ -540,12 +595,20 @@ class SMTP
                     return false;
                 }
                 // Send encoded username and password
+<<<<<<< HEAD
                 if (
                     !$this->sendCommand(
                         'User & Password',
                         base64_encode("\0" . $username . "\0" . $password),
                         235
                     )
+=======
+                if (!$this->sendCommand(
+                    'User & Password',
+                    base64_encode("\0" . $username . "\0" . $password),
+                    235
+                )
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
                 ) {
                     return false;
                 }
@@ -1088,10 +1151,15 @@ class SMTP
     {
         //If SMTP transcripts are left enabled, or debug output is posted online
         //it can leak credentials, so hide credentials in all but lowest level
+<<<<<<< HEAD
         if (
             self::DEBUG_LOWLEVEL > $this->do_debug &&
             in_array($command, ['User & Password', 'Username', 'Password'], true)
         ) {
+=======
+        if (self::DEBUG_LOWLEVEL > $this->do_debug &&
+            in_array($command, ['User & Password', 'Username', 'Password'], true)) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             $this->edebug('CLIENT -> SERVER: [credentials hidden]', self::DEBUG_CLIENT);
         } else {
             $this->edebug('CLIENT -> SERVER: ' . $data, self::DEBUG_CLIENT);
@@ -1198,6 +1266,7 @@ class SMTP
         $selW = null;
         while (is_resource($this->smtp_conn) && !feof($this->smtp_conn)) {
             //Must pass vars in here as params are by reference
+<<<<<<< HEAD
             //solution for signals inspired by https://github.com/symfony/symfony/pull/6540
             set_error_handler([$this, 'errorHandler']);
             $n = stream_select($selR, $selW, $selW, $this->Timelimit);
@@ -1226,13 +1295,19 @@ class SMTP
             }
 
             if (!$n) {
+=======
+            if (!stream_select($selR, $selW, $selW, $this->Timelimit)) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
                 $this->edebug(
                     'SMTP -> get_lines(): select timed-out in (' . $this->Timelimit . ' sec)',
                     self::DEBUG_LOWLEVEL
                 );
                 break;
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             //Deliberate noise suppression - errors are handled afterwards
             $str = @fgets($this->smtp_conn, self::MAX_REPLY_LENGTH);
             $this->edebug('SMTP INBOUND: "' . trim($str) . '"', self::DEBUG_LOWLEVEL);

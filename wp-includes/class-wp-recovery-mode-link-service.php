@@ -114,7 +114,11 @@ class WP_Recovery_Mode_Link_Service {
 		);
 
 		/**
+<<<<<<< HEAD
 		 * Filters the URL to begin recovery mode.
+=======
+		 * Filter the URL to begin recovery mode.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @since 5.2.0
 		 *

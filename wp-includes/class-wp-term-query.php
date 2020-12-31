@@ -100,7 +100,11 @@ class WP_Term_Query {
 	 *                                                - term fields ('name', 'slug', 'term_group', 'term_id', 'id',
 	 *                                                  'description', 'parent', 'term_order'). Unless `$object_ids`
 	 *                                                  is not empty, 'term_order' is treated the same as 'term_id'.
+<<<<<<< HEAD
 	 *                                                - 'count' to use the number of objects associated with the term.
+=======
+	 *                                                - 'count' for term taxonomy count.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *                                                - 'include' to match the 'order' of the $include param.
 	 *                                                - 'slug__in' to match the 'order' of the $slug param.
 	 *                                                - 'meta_value', 'meta_value_num'.
@@ -258,7 +262,11 @@ class WP_Term_Query {
 		$query['offset'] = absint( $query['offset'] );
 
 		// 'parent' overrides 'child_of'.
+<<<<<<< HEAD
 		if ( 0 < (int) $query['parent'] ) {
+=======
+		if ( 0 < intval( $query['parent'] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$query['child_of'] = false;
 		}
 
@@ -321,9 +329,15 @@ class WP_Term_Query {
 		 *
 		 * @since 4.6.0
 		 *
+<<<<<<< HEAD
 		 * @param WP_Term_Query $this Current instance of WP_Term_Query (passed by reference).
 		 */
 		do_action_ref_array( 'pre_get_terms', array( &$this ) );
+=======
+		 * @param WP_Term_Query $this Current instance of WP_Term_Query.
+		 */
+		do_action( 'pre_get_terms', $this );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		$taxonomies = (array) $args['taxonomy'];
 
@@ -346,7 +360,11 @@ class WP_Term_Query {
 		}
 
 		// 'parent' overrides 'child_of'.
+<<<<<<< HEAD
 		if ( 0 < (int) $args['parent'] ) {
+=======
+		if ( 0 < intval( $args['parent'] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$args['child_of'] = false;
 		}
 
@@ -443,7 +461,11 @@ class WP_Term_Query {
 					(array) get_terms(
 						array(
 							'taxonomy'   => reset( $taxonomies ),
+<<<<<<< HEAD
 							'child_of'   => (int) $extrunk,
+=======
+							'child_of'   => intval( $extrunk ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 							'fields'     => 'ids',
 							'hide_empty' => 0,
 						)
@@ -688,9 +710,15 @@ class WP_Term_Query {
 		$this->terms = null;
 
 		/**
+<<<<<<< HEAD
 		 * Filters the terms array before the query takes place.
 		 *
 		 * Return a non-null value to bypass WordPress' default term queries.
+=======
+		 * Filter the terms array before the query takes place.
+		 *
+		 * Return a non-null value to bypass WordPress's default term queries.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @since 5.3.0
 		 *

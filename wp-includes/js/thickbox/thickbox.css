@@ -136,7 +136,11 @@
 .tb-close-icon:before {
 	content: "\f158";
 	font: normal 20px/29px dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

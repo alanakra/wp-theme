@@ -8,7 +8,11 @@
  */
 
 /**
+<<<<<<< HEAD
  * Helper class to be used only by back compat functions.
+=======
+ * Helper class to be used only by back compat functions
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @since 3.1.0
  */
@@ -16,6 +20,7 @@ class _WP_List_Table_Compat extends WP_List_Table {
 	public $_screen;
 	public $_columns;
 
+<<<<<<< HEAD
 	/**
 	 * Constructor.
 	 *
@@ -25,6 +30,8 @@ class _WP_List_Table_Compat extends WP_List_Table {
 	 * @param string[]         $columns An array of columns with column IDs as the keys
 	 *                                  and translated column names as the values.
 	 */
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	public function __construct( $screen, $columns = array() ) {
 		if ( is_string( $screen ) ) {
 			$screen = convert_to_screen( $screen );
@@ -39,10 +46,13 @@ class _WP_List_Table_Compat extends WP_List_Table {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Gets a list of all, hidden, and sortable columns.
 	 *
 	 * @since 3.1.0
 	 *
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return array
 	 */
 	protected function get_column_info() {
@@ -55,10 +65,13 @@ class _WP_List_Table_Compat extends WP_List_Table {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Gets a list of columns.
 	 *
 	 * @since 3.1.0
 	 *
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return array
 	 */
 	public function get_columns() {

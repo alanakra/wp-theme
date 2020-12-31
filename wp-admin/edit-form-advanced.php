@@ -44,6 +44,7 @@ wp_enqueue_script( 'post' );
 $_wp_editor_expand   = false;
 $_content_editor_dfw = false;
 
+<<<<<<< HEAD
 if ( post_type_supports( $post_type, 'editor' )
 	&& ! wp_is_mobile()
 	&& ! ( $is_IE && preg_match( '/MSIE [5678]/', $_SERVER['HTTP_USER_AGENT'] ) )
@@ -62,6 +63,24 @@ if ( post_type_supports( $post_type, 'editor' )
 		$_content_editor_dfw = true;
 		$_wp_editor_expand   = ( 'on' === get_user_setting( 'editor_expand', 'on' ) );
 	}
+=======
+/**
+ * Filters whether to enable the 'expand' functionality in the post editor.
+ *
+ * @since 4.0.0
+ * @since 4.1.0 Added the `$post_type` parameter.
+ *
+ * @param bool   $expand    Whether to enable the 'expand' functionality. Default true.
+ * @param string $post_type Post type.
+ */
+if ( post_type_supports( $post_type, 'editor' ) && ! wp_is_mobile() &&
+	! ( $is_IE && preg_match( '/MSIE [5678]/', $_SERVER['HTTP_USER_AGENT'] ) ) &&
+	apply_filters( 'wp_editor_expand', true, $post_type ) ) {
+
+	wp_enqueue_script( 'editor-expand' );
+	$_content_editor_dfw = true;
+	$_wp_editor_expand   = ( 'on' === get_user_setting( 'editor_expand', 'on' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 if ( wp_is_mobile() ) {
@@ -171,9 +190,15 @@ if ( $viewable ) {
 $scheduled_date = sprintf(
 	/* translators: Publish box date string. 1: Date, 2: Time. */
 	__( '%1$s at %2$s' ),
+<<<<<<< HEAD
 	/* translators: Publish box date format, see https://www.php.net/manual/datetime.format.php */
 	date_i18n( _x( 'M j, Y', 'publish box date format' ), strtotime( $post->post_date ) ),
 	/* translators: Publish box time format, see https://www.php.net/manual/datetime.format.php */
+=======
+	/* translators: Publish box date format, see https://www.php.net/date */
+	date_i18n( _x( 'M j, Y', 'publish box date format' ), strtotime( $post->post_date ) ),
+	/* translators: Publish box time format, see https://www.php.net/date */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	date_i18n( _x( 'H:i', 'publish box time format' ), strtotime( $post->post_date ) )
 );
 

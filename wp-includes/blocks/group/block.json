@@ -1,14 +1,20 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	"name": "core/group",
 	"category": "design",
 	"attributes": {
 		"tagName": {
 			"type": "string",
 			"default": "div"
+<<<<<<< HEAD
 		},
 		"templateLock": {
 			"type": "string"
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 	},
 	"supports": {
@@ -18,12 +24,19 @@
 		],
 		"anchor": true,
 		"html": false,
+<<<<<<< HEAD
 		"color": {
 			"gradients": true,
 			"link": true
 		},
 		"spacing": {
 			"padding": true
+=======
+		"lightBlockWrapper": true,
+		"__experimentalColor": {
+			"gradients": true,
+			"linkColor": true
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 	}
 }

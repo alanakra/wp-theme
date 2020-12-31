@@ -51,7 +51,11 @@ class WP_REST_Block_Renderer_Controller extends WP_REST_Controller {
 					'args'                => array(
 						'context'    => $this->get_context_param( array( 'default' => 'view' ) ),
 						'attributes' => array(
+<<<<<<< HEAD
 							'description'       => __( 'Attributes for the block.' ),
+=======
+							'description'       => __( 'Attributes for the block' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 							'type'              => 'object',
 							'default'           => array(),
 							'validate_callback' => static function ( $value, $request ) {
@@ -109,7 +113,11 @@ class WP_REST_Block_Renderer_Controller extends WP_REST_Controller {
 	public function get_item_permissions_check( $request ) {
 		global $post;
 
+<<<<<<< HEAD
 		$post_id = isset( $request['post_id'] ) ? (int) $request['post_id'] : 0;
+=======
+		$post_id = isset( $request['post_id'] ) ? intval( $request['post_id'] ) : 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( 0 < $post_id ) {
 			$post = get_post( $post_id );
@@ -149,7 +157,11 @@ class WP_REST_Block_Renderer_Controller extends WP_REST_Controller {
 	public function get_item( $request ) {
 		global $post;
 
+<<<<<<< HEAD
 		$post_id = isset( $request['post_id'] ) ? (int) $request['post_id'] : 0;
+=======
+		$post_id = isset( $request['post_id'] ) ? intval( $request['post_id'] ) : 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( 0 < $post_id ) {
 			$post = get_post( $post_id );

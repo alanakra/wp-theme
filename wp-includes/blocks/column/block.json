@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	"name": "core/column",
 	"category": "text",
 	"parent": [
@@ -10,15 +13,26 @@
 			"type": "string"
 		},
 		"width": {
+<<<<<<< HEAD
 			"type": "string"
 		},
 		"templateLock": {
 			"type": "string"
+=======
+			"type": "number",
+			"min": 0,
+			"max": 100
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 	},
 	"supports": {
 		"anchor": true,
 		"reusable": false,
+<<<<<<< HEAD
 		"html": false
+=======
+		"html": false,
+		"lightBlockWrapper": true
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 }

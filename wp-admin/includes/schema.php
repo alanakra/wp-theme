@@ -422,11 +422,19 @@ function populate_options( array $options = array() ) {
 		'default_ping_status'             => 'open',
 		'default_pingback_flag'           => 1,
 		'posts_per_page'                  => 10,
+<<<<<<< HEAD
 		/* translators: Default date format, see https://www.php.net/manual/datetime.format.php */
 		'date_format'                     => __( 'F j, Y' ),
 		/* translators: Default time format, see https://www.php.net/manual/datetime.format.php */
 		'time_format'                     => __( 'g:i a' ),
 		/* translators: Links last updated date format, see https://www.php.net/manual/datetime.format.php */
+=======
+		/* translators: Default date format, see https://www.php.net/date */
+		'date_format'                     => __( 'F j, Y' ),
+		/* translators: Default time format, see https://www.php.net/date */
+		'time_format'                     => __( 'g:i a' ),
+		/* translators: Links last updated date format, see https://www.php.net/date */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		'links_updated_date_format'       => __( 'F j, Y g:i a' ),
 		'comment_moderation'              => 0,
 		'moderation_notify'               => 1,
@@ -535,6 +543,7 @@ function populate_options( array $options = array() ) {
 		'disallowed_keys'                 => '',
 		'comment_previously_approved'     => 1,
 		'auto_plugin_theme_update_emails' => array(),
+<<<<<<< HEAD
 
 		// 5.6.0
 		'auto_update_core_dev'            => 'enabled',
@@ -542,6 +551,8 @@ function populate_options( array $options = array() ) {
 		// Default to enabled for new installs.
 		// See https://core.trac.wordpress.org/ticket/51742.
 		'auto_update_core_major'          => 'enabled',
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	);
 
 	// 3.3.0

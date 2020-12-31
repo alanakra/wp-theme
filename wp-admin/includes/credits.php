@@ -11,6 +11,7 @@
  * Retrieve the contributor credits.
  *
  * @since 3.2.0
+<<<<<<< HEAD
  * @since 5.6.0 Added the `$version` and `$locale` parameters.
  *
  * @param string $version WordPress version. Defaults to the current version.
@@ -28,15 +29,33 @@ function wp_credits( $version = '', $locale = '' ) {
 	if ( ! $locale ) {
 		$locale = get_user_locale();
 	}
+=======
+ *
+ * @return array|false A list of all of the contributors, or false on error.
+ */
+function wp_credits() {
+	// Include an unmodified $wp_version.
+	require ABSPATH . WPINC . '/version.php';
+
+	$locale = get_user_locale();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	$results = get_site_transient( 'wordpress_credits_' . $locale );
 
 	if ( ! is_array( $results )
+<<<<<<< HEAD
 		|| false !== strpos( $version, '-' )
 		|| ( isset( $results['data']['version'] ) && strpos( $version, $results['data']['version'] ) !== 0 )
 	) {
 		$url     = "http://api.wordpress.org/core/credits/1.1/?version={$version}&locale={$locale}";
 		$options = array( 'user-agent' => 'WordPress/' . $version . '; ' . home_url( '/' ) );
+=======
+		|| false !== strpos( $wp_version, '-' )
+		|| ( isset( $results['data']['version'] ) && strpos( $wp_version, $results['data']['version'] ) !== 0 )
+	) {
+		$url     = "http://api.wordpress.org/core/credits/1.1/?version={$wp_version}&locale={$locale}";
+		$options = array( 'user-agent' => 'WordPress/' . $wp_version . '; ' . home_url( '/' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( wp_http_supports( array( 'ssl' ) ) ) {
 			$url = set_url_scheme( $url, 'https' );

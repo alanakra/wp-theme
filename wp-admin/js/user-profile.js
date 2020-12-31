@@ -14,30 +14,50 @@
 		$toggleButton,
 		$submitButtons,
 		$submitButton,
+<<<<<<< HEAD
 		currentPass,
 		$passwordWrapper;
+=======
+		currentPass;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	function generatePassword() {
 		if ( typeof zxcvbn !== 'function' ) {
 			setTimeout( generatePassword, 50 );
 			return;
+<<<<<<< HEAD
 		} else if ( ! $pass1.val() || $passwordWrapper.hasClass( 'is-open' ) ) {
 			// zxcvbn loaded before user entered password, or generating new password.
 			$pass1.val( $pass1.data( 'pw' ) );
 			$pass1.trigger( 'pwupdate' );
 			showOrHideWeakPasswordCheckbox();
 		} else {
+=======
+		} else if ( ! $pass1.val() ) {
+			// zxcvbn loaded before user entered password.
+			$pass1.val( $pass1.data( 'pw' ) );
+			$pass1.trigger( 'pwupdate' );
+			showOrHideWeakPasswordCheckbox();
+		}
+		else {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			// zxcvbn loaded after the user entered password, check strength.
 			check_pass_strength();
 			showOrHideWeakPasswordCheckbox();
 		}
 
+<<<<<<< HEAD
 		// Install screen.
 		if ( 1 !== parseInt( $toggleButton.data( 'start-masked' ), 10 ) ) {
 			// Show the password not masked if admin_password hasn't been posted yet.
 			$pass1.attr( 'type', 'text' );
 		} else {
 			// Otherwise, mask the password.
+=======
+		if ( 1 !== parseInt( $toggleButton.data( 'start-masked' ), 10 ) ) {
+			$pass1.attr( 'type', 'text' );
+		} else {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$toggleButton.trigger( 'click' );
 		}
 
@@ -59,7 +79,10 @@
 
 			currentPass = $pass1.val();
 
+<<<<<<< HEAD
 			// Refresh password strength area.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$pass1.removeClass( 'short bad good strong' );
 			showOrHideWeakPasswordCheckbox();
 		} );
@@ -88,11 +111,25 @@
 				$pass1.attr( 'type', 'password' );
 				resetToggle( true );
 			}
+<<<<<<< HEAD
+=======
+
+			$pass1.focus();
+
+			if ( ! _.isUndefined( $pass1[0].setSelectionRange ) ) {
+				$pass1[0].setSelectionRange( 0, 100 );
+			}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		});
 	}
 
 	function bindPasswordForm() {
+<<<<<<< HEAD
 		var $generateButton,
+=======
+		var $passwordWrapper,
+			$generateButton,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$cancelButton;
 
 		$pass1Row = $( '.user-pass1-wrap, .user-pass-wrap' );
@@ -120,7 +157,11 @@
 			$pass1 = $( '#user_pass' );
 		}
 
+<<<<<<< HEAD
 		/*
+=======
+		/**
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 * Fix a LastPass mismatch issue, LastPass only changes pass2.
 		 *
 		 * This fixes the issue by copying any changes from the hidden
@@ -146,20 +187,33 @@
 
 		bindToggleButton();
 
+<<<<<<< HEAD
+=======
+		if ( $generateButton.length ) {
+			$passwordWrapper.hide();
+		}
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$generateButton.show();
 		$generateButton.on( 'click', function () {
 			updateLock = true;
 
+<<<<<<< HEAD
 			// Make sure the password fields are shown.
 			$generateButton.attr( 'aria-expanded', 'true' );
 			$passwordWrapper
 				.show()
 				.addClass( 'is-open' );
+=======
+			$generateButton.hide();
+			$passwordWrapper.show();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 			// Enable the inputs when showing.
 			$pass1.attr( 'disabled', false );
 			$pass2.attr( 'disabled', false );
 
+<<<<<<< HEAD
 			// Set the password to the generated value.
 			generatePassword();
 
@@ -167,20 +221,46 @@
 			resetToggle ( false );
 
 			// Generate the next password and cache.
-			wp.ajax.post( 'generate-password' )
-				.done( function( data ) {
-					$pass1.data( 'pw', data );
-				} );
+=======
+			if ( $pass1.val().length === 0 ) {
+				generatePassword();
+			}
 		} );
 
 		$cancelButton = $pass1Row.find( 'button.wp-cancel-pw' );
 		$cancelButton.on( 'click', function () {
 			updateLock = false;
 
+			// Clear any entered password.
+			$pass1.val( '' );
+
+			// Generate a new password.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
+			wp.ajax.post( 'generate-password' )
+				.done( function( data ) {
+					$pass1.data( 'pw', data );
+				} );
+<<<<<<< HEAD
+		} );
+
+		$cancelButton = $pass1Row.find( 'button.wp-cancel-pw' );
+		$cancelButton.on( 'click', function () {
+			updateLock = false;
+=======
+
+			$generateButton.show().focus();
+			$passwordWrapper.hide();
+
+			$weakRow.hide( 0, function () {
+				$weakCheckbox.removeProp( 'checked' );
+			} );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
+
 			// Disable the inputs when hiding to prevent autofill and submission.
 			$pass1.prop( 'disabled', true );
 			$pass2.prop( 'disabled', true );
 
+<<<<<<< HEAD
 			// Clear password field and update the UI.
 			$pass1.val( '' ).trigger( 'pwupdate' );
 			resetToggle( false );
@@ -192,6 +272,15 @@
 
 			// Stop an empty password from being submitted as a change.
 			$submitButtons.prop( 'disabled', false );
+=======
+			resetToggle( false );
+
+			if ( $pass1Row.closest( 'form' ).is( '#your-profile' ) ) {
+				// Clear password field to prevent update.
+				$pass1.val( '' ).trigger( 'pwupdate' );
+				$submitButtons.prop( 'disabled', false );
+			}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		} );
 
 		$pass1Row.closest( 'form' ).on( 'submit', function () {
@@ -207,7 +296,11 @@
 		var pass1 = $('#pass1').val(), strength;
 
 		$('#pass-strength-result').removeClass('short bad good strong empty');
+<<<<<<< HEAD
 		if ( ! pass1 || '' ===  pass1.trim() ) {
+=======
+		if ( ! pass1 ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$( '#pass-strength-result' ).addClass( 'empty' ).html( '&nbsp;' );
 			return;
 		}
@@ -391,7 +484,11 @@
 
 	window.generatePassword = generatePassword;
 
+<<<<<<< HEAD
 	// Warn the user if password was generated but not saved.
+=======
+	/* Warn the user if password was generated but not saved */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$( window ).on( 'beforeunload', function () {
 		if ( true === updateLock ) {
 			return __( 'Your new password has not been saved.' );

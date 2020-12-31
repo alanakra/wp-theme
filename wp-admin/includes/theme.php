@@ -649,7 +649,11 @@ function wp_prepare_themes_for_js( $themes = null ) {
 
 	$updates    = array();
 	$no_updates = array();
+<<<<<<< HEAD
 	if ( ! is_multisite() && current_user_can( 'update_themes' ) ) {
+=======
+	if ( current_user_can( 'update_themes' ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$updates_transient = get_site_transient( 'update_themes' );
 		if ( isset( $updates_transient->response ) ) {
 			$updates = $updates_transient->response;
@@ -716,7 +720,13 @@ function wp_prepare_themes_for_js( $themes = null ) {
 			);
 		}
 
+<<<<<<< HEAD
 		$auto_update_forced = wp_is_auto_update_forced_for_item( 'theme', null, $auto_update_filter_payload );
+=======
+		$type = 'theme';
+		/** This filter is documented in wp-admin/includes/class-wp-automatic-updater.php */
+		$auto_update_forced = apply_filters( "auto_update_{$type}", null, $auto_update_filter_payload );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		$prepared_themes[ $slug ] = array(
 			'id'             => $slug,
@@ -746,7 +756,11 @@ function wp_prepare_themes_for_js( $themes = null ) {
 			'actions'        => array(
 				'activate'   => current_user_can( 'switch_themes' ) ? wp_nonce_url( admin_url( 'themes.php?action=activate&amp;stylesheet=' . $encoded_slug ), 'switch-theme_' . $slug ) : null,
 				'customize'  => $customize_action,
+<<<<<<< HEAD
 				'delete'     => ( ! is_multisite() && current_user_can( 'delete_themes' ) ) ? wp_nonce_url( admin_url( 'themes.php?action=delete&amp;stylesheet=' . $encoded_slug ), 'delete-theme_' . $slug ) : null,
+=======
+				'delete'     => current_user_can( 'delete_themes' ) ? wp_nonce_url( admin_url( 'themes.php?action=delete&amp;stylesheet=' . $encoded_slug ), 'delete-theme_' . $slug ) : null,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				'autoupdate' => wp_is_auto_update_enabled_for_type( 'theme' ) && ! is_multisite() && current_user_can( 'update_themes' )
 					? wp_nonce_url( admin_url( 'themes.php?action=' . $auto_update_action . '&amp;stylesheet=' . $encoded_slug ), 'updates' )
 					: null,

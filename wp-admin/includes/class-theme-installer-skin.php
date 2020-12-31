@@ -155,13 +155,21 @@ class Theme_Installer_Skin extends WP_Upgrader_Skin {
 			$install_actions['themes_page'] = sprintf(
 				'<a href="%s" target="_parent">%s</a>',
 				self_admin_url( 'theme-install.php' ),
+<<<<<<< HEAD
 				__( 'Go to Theme Installer' )
+=======
+				__( 'Return to Theme Installer' )
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			);
 		} elseif ( current_user_can( 'switch_themes' ) || current_user_can( 'edit_theme_options' ) ) {
 			$install_actions['themes_page'] = sprintf(
 				'<a href="%s" target="_parent">%s</a>',
 				self_admin_url( 'themes.php' ),
+<<<<<<< HEAD
 				__( 'Go to Themes page' )
+=======
+				__( 'Return to Themes page' )
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			);
 		}
 

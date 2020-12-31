@@ -105,7 +105,11 @@ function wp_version_check( $extra_stats = array(), $force_check = false ) {
 	);
 
 	/**
+<<<<<<< HEAD
 	 * Filters the query arguments sent as part of the core version check.
+=======
+	 * Filter the query arguments sent as part of the core version check.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * WARNING: Changing this data may result in your site not receiving security updates.
 	 * Please exercise extreme caution.
@@ -136,11 +140,14 @@ function wp_version_check( $extra_stats = array(), $force_check = false ) {
 		$post_body = array_merge( $post_body, $extra_stats );
 	}
 
+<<<<<<< HEAD
 	// Allow for WP_AUTO_UPDATE_CORE to specify beta/RC releases.
 	if ( defined( 'WP_AUTO_UPDATE_CORE' ) && in_array( WP_AUTO_UPDATE_CORE, array( 'beta', 'rc' ), true ) ) {
 		$query['channel'] = WP_AUTO_UPDATE_CORE;
 	}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$url      = 'http://api.wordpress.org/core/version-check/1.7/?' . http_build_query( $query, null, '&' );
 	$http_url = $url;
 	$ssl      = wp_http_supports( array( 'ssl' ) );
@@ -327,7 +334,11 @@ function wp_update_plugins( $extra_stats = array() ) {
 		foreach ( $plugins as $file => $p ) {
 			$new_option->checked[ $file ] = $p['Version'];
 
+<<<<<<< HEAD
 			if ( ! isset( $current->checked[ $file ] ) || (string) $current->checked[ $file ] !== (string) $p['Version'] ) {
+=======
+			if ( ! isset( $current->checked[ $file ] ) || strval( $current->checked[ $file ] ) !== strval( $p['Version'] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$plugin_changed = true;
 			}
 		}
@@ -532,7 +543,11 @@ function wp_update_themes( $extra_stats = array() ) {
 		$theme_changed = false;
 
 		foreach ( $checked as $slug => $v ) {
+<<<<<<< HEAD
 			if ( ! isset( $last_update->checked[ $slug ] ) || (string) $last_update->checked[ $slug ] !== (string) $v ) {
+=======
+			if ( ! isset( $last_update->checked[ $slug ] ) || strval( $last_update->checked[ $slug ] ) !== strval( $v ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$theme_changed = true;
 			}
 		}

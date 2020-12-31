@@ -33,7 +33,10 @@ function register_core_block_types_from_metadata() {
 		'code',
 		'column',
 		'columns',
+<<<<<<< HEAD
 		'embed',
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		'file',
 		'gallery',
 		'group',

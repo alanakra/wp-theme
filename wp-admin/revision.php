@@ -107,7 +107,11 @@ switch ( $action ) {
 		$post_title     = '<a href="' . $post_edit_link . '">' . _draft_or_post_title() . '</a>';
 		/* translators: %s: Post title. */
 		$h1             = sprintf( __( 'Compare Revisions of &#8220;%s&#8221;' ), $post_title );
+<<<<<<< HEAD
 		$return_to_post = '<a href="' . $post_edit_link . '">' . __( '&larr; Go to editor' ) . '</a>';
+=======
+		$return_to_post = '<a href="' . $post_edit_link . '">' . __( '&larr; Return to editor' ) . '</a>';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$title          = __( 'Revisions' );
 
 		$redirect = false;

@@ -37,7 +37,11 @@ class WP_Importer {
 			if ( ! empty( $results ) ) {
 				foreach ( $results as $r ) {
 					// Set permalinks into array.
+<<<<<<< HEAD
 					$hashtable[ $r->meta_value ] = (int) $r->post_id;
+=======
+					$hashtable[ $r->meta_value ] = intval( $r->post_id );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				}
 			}
 		} while ( count( $results ) == $limit );
@@ -69,7 +73,11 @@ class WP_Importer {
 		$result = $wpdb->get_results( $sql );
 
 		if ( ! empty( $result ) ) {
+<<<<<<< HEAD
 			$count = (int) $result[0]->cnt;
+=======
+			$count = intval( $result[0]->cnt );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		// Unset to save memory.
@@ -106,11 +114,19 @@ class WP_Importer {
 				foreach ( $results as $r ) {
 					// Explode comment_agent key.
 					list ( $ca_bid, $source_comment_id ) = explode( '-', $r->comment_agent );
+<<<<<<< HEAD
 					$source_comment_id                   = (int) $source_comment_id;
 
 					// Check if this comment came from this blog.
 					if ( $bid == $ca_bid ) {
 						$hashtable[ $source_comment_id ] = (int) $r->comment_ID;
+=======
+					$source_comment_id                   = intval( $source_comment_id );
+
+					// Check if this comment came from this blog.
+					if ( $bid == $ca_bid ) {
+						$hashtable[ $source_comment_id ] = intval( $r->comment_ID );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					}
 				}
 			}
@@ -261,7 +277,11 @@ class WP_Importer {
 	 * @since 3.0.0
 	 *
 	 * @global wpdb  $wpdb       WordPress database abstraction object.
+<<<<<<< HEAD
 	 * @global int[] $wp_actions
+=======
+	 * @global array $wp_actions
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function stop_the_insanity() {
 		global $wpdb, $wp_actions;
@@ -291,7 +311,11 @@ function get_cli_args( $param, $required = false ) {
 	$last_arg = null;
 	$return   = null;
 
+<<<<<<< HEAD
 	$il = count( $args );
+=======
+	$il = sizeof( $args );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	for ( $i = 1, $il; $i < $il; $i++ ) {
 		if ( (bool) preg_match( '/^--(.+)/', $args[ $i ], $match ) ) {

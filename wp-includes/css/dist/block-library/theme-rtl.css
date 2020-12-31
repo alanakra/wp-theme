@@ -2,12 +2,26 @@
  * Colors
  */
 /**
+<<<<<<< HEAD
+=======
+ * Deprecated colors.
+ * Please avoid using these.
+ */
+/**
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Breakpoints & Media Queries
  */
 /**
  * Colors
  */
 /**
+<<<<<<< HEAD
+=======
+ * Deprecated colors.
+ * Please avoid using these.
+ */
+/**
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Fonts & basic variables.
  */
 /**
@@ -30,9 +44,12 @@
  * Border radii.
  */
 /**
+<<<<<<< HEAD
  * Block paddings.
  */
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Breakpoint mixins
  */
 /**
@@ -69,34 +86,55 @@
   display: none; }
 
 .wp-block-audio figcaption {
+<<<<<<< HEAD
   color: #555;
+=======
+  color: #555d66;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   font-size: 13px;
   text-align: center; }
 
 .wp-block-code {
   font-family: Menlo, Consolas, monaco, monospace;
+<<<<<<< HEAD
   font-size: 0.9em;
+=======
+  font-size: 15px;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   color: #1e1e1e;
   padding: 0.8em 1em;
   border: 1px solid #ddd;
   border-radius: 4px; }
 
 .wp-block-embed figcaption {
+<<<<<<< HEAD
   color: #555;
+=======
+  color: #555d66;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   font-size: 13px;
   text-align: center; }
 
 .blocks-gallery-caption {
+<<<<<<< HEAD
   color: #555;
+=======
+  color: #555d66;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   font-size: 13px;
   text-align: center; }
 
 .wp-block-image figcaption {
+<<<<<<< HEAD
   color: #555;
+=======
+  color: #555d66;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   font-size: 13px;
   text-align: center; }
 
 .wp-block-pullquote {
+<<<<<<< HEAD
   border-top: 4px solid #555;
   border-bottom: 4px solid #555;
   margin-bottom: 1.75em;
@@ -106,6 +144,17 @@
     color: #555;
     text-transform: uppercase;
     font-size: 0.8125em;
+=======
+  border-top: 4px solid #555d66;
+  border-bottom: 4px solid #555d66;
+  margin-bottom: 28px;
+  color: #40464d; }
+  .wp-block-pullquote cite,
+  .wp-block-pullquote footer, .wp-block-pullquote__citation {
+    color: #40464d;
+    text-transform: uppercase;
+    font-size: 13px;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     font-style: normal; }
 
 .wp-block-navigation ul,
@@ -116,6 +165,7 @@
   margin: 0; }
 
 .wp-block-quote {
+<<<<<<< HEAD
   border-right: 0.25em solid #000;
   margin: 0 0 1.75em 0;
   padding-right: 1em; }
@@ -132,6 +182,24 @@
     padding-right: 0;
     padding-left: 1em; }
   .wp-block-quote.has-text-align-center {
+=======
+  border-right: 4px solid #000;
+  margin: 0 0 28px 0;
+  padding-right: 1em; }
+  .wp-block-quote cite,
+  .wp-block-quote footer, .wp-block-quote__citation {
+    color: #6c7781;
+    font-size: 13px;
+    margin-top: 1em;
+    position: relative;
+    font-style: normal; }
+  .wp-block-quote.has-text-align-right, .wp-block-quote.has-text-align-right {
+    border-right: none;
+    border-left: 4px solid #000;
+    padding-right: 0;
+    padding-left: 1em; }
+  .wp-block-quote.has-text-align-center, .wp-block-quote.has-text-align-center {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     border: none;
     padding-right: 0; }
   .wp-block-quote.is-style-large, .wp-block-quote.is-large {
@@ -147,10 +215,16 @@
 
 .wp-block-separator {
   border: none;
+<<<<<<< HEAD
   border-bottom: 2px solid currentColor;
   margin-right: auto;
   margin-left: auto;
   opacity: 0.4; }
+=======
+  border-bottom: 2px solid #8f98a1;
+  margin-right: auto;
+  margin-left: auto; }
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
     max-width: 100px; }
   .wp-block-separator.has-background:not(.is-style-dots) {
@@ -171,11 +245,16 @@
     border: 1px solid;
     word-break: normal; }
   .wp-block-table figcaption {
+<<<<<<< HEAD
     color: #555;
+=======
+    color: #555d66;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     font-size: 13px;
     text-align: center; }
 
 .wp-block-video figcaption {
+<<<<<<< HEAD
   color: #555;
   font-size: 13px;
   text-align: center; }
@@ -185,5 +264,11 @@
   margin-top: 0;
   margin-bottom: 0; }
 
+=======
+  color: #555d66;
+  font-size: 13px;
+  text-align: center; }
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 #end-resizable-editor-section {
   display: none; }

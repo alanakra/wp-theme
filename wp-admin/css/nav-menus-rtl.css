@@ -446,7 +446,11 @@ ul.add-menu-item-tabs li {
 	padding: 10px 15px;
 	height: auto;
 	min-height: 20px;
+<<<<<<< HEAD
 	max-width: 382px;
+=======
+	width: 382px;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	line-height: 2.30769230;
 	overflow: hidden;
 	word-wrap: break-word;
@@ -640,8 +644,13 @@ body.menu-max-depth-11 { min-width: 1280px !important; }
 
 .menu-item-settings {
 	display: block;
+<<<<<<< HEAD
 	max-width: 392px;
 	padding: 10px;
+=======
+	width: 402px;
+	padding: 10px 10px 10px 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	position: relative;
 	z-index: 10; /* Keep .item-title's shadow from appearing on top of .menu-item-settings */
 	border: 1px solid #ccd0d4;
@@ -711,6 +720,7 @@ body.menu-max-depth-11 { min-width: 1280px !important; }
 }
 
 .description-thin {
+<<<<<<< HEAD
 	width: calc(50% - 5px);
 }
 
@@ -720,6 +730,13 @@ body.menu-max-depth-11 { min-width: 1280px !important; }
 
 .description-wide {
 	width: 100%;
+=======
+	width: 190px;
+}
+
+.description-wide {
+	width: 390px;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 .menu-item-actions {
@@ -764,11 +781,16 @@ body.menu-max-depth-11 { min-width: 1280px !important; }
 /* =Media Queries
 -------------------------------------------------------------- */
 
+<<<<<<< HEAD
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
+=======
+@media only screen and (min-width: 769px) and (max-width: 1000px){
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	body.menu-max-depth-0 {
 		min-width: 0 !important;
 	}
 
+<<<<<<< HEAD
 	#menu-management-liquid {
 		width: 100%;
 	}
@@ -776,6 +798,19 @@ body.menu-max-depth-11 { min-width: 1280px !important; }
 	.nav-menus-php #post-body-content {
 		min-width: 0;
 	}
+=======
+	#menu-management-liquid{
+		width: 100%;
+	}
+
+	.nav-menus-php #post-body-content{
+		min-width: 0;
+	}
+
+	.menu-item-bar .menu-item-handle{
+		width: 90%;
+	}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 @media screen and (max-width: 782px) {

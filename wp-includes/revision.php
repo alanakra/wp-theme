@@ -227,8 +227,11 @@ function wp_save_post_revision( $post_id ) {
  *
  * @since 2.6.0
  *
+<<<<<<< HEAD
  * @global wpdb $wpdb WordPress database abstraction object.
  *
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param int $post_id The post ID.
  * @param int $user_id Optional The post author ID.
  * @return WP_Post|false The autosaved data or false on failure or when no autosave exists.
@@ -547,7 +550,11 @@ function wp_revisions_to_keep( $post ) {
 	if ( true === $num ) {
 		$num = -1;
 	} else {
+<<<<<<< HEAD
 		$num = (int) $num;
+=======
+		$num = intval( $num );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	if ( ! post_type_supports( $post->post_type, 'revisions' ) ) {
@@ -678,12 +685,20 @@ function _wp_preview_post_thumbnail_filter( $value, $post_id, $meta_key ) {
 		return $value;
 	}
 
+<<<<<<< HEAD
 	$thumbnail_id = (int) $_REQUEST['_thumbnail_id'];
+=======
+	$thumbnail_id = intval( $_REQUEST['_thumbnail_id'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	if ( $thumbnail_id <= 0 ) {
 		return '';
 	}
 
+<<<<<<< HEAD
 	return (string) $thumbnail_id;
+=======
+	return strval( $thumbnail_id );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**

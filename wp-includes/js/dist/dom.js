@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["dom"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 493);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 462);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,7 +98,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["dom"] =
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 493:
+=======
+/***/ 462:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -124,11 +132,14 @@ __webpack_require__.d(__webpack_exports__, "unwrap", function() { return /* reex
 __webpack_require__.d(__webpack_exports__, "replaceTag", function() { return /* reexport */ replaceTag; });
 __webpack_require__.d(__webpack_exports__, "wrap", function() { return /* reexport */ wrap; });
 __webpack_require__.d(__webpack_exports__, "__unstableStripHTML", function() { return /* reexport */ __unstableStripHTML; });
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "isEmpty", function() { return /* reexport */ isEmpty; });
 __webpack_require__.d(__webpack_exports__, "removeInvalidHTML", function() { return /* reexport */ removeInvalidHTML; });
 __webpack_require__.d(__webpack_exports__, "getPhrasingContentSchema", function() { return /* reexport */ getPhrasingContentSchema; });
 __webpack_require__.d(__webpack_exports__, "isPhrasingContent", function() { return /* reexport */ isPhrasingContent; });
 __webpack_require__.d(__webpack_exports__, "isTextContent", function() { return /* reexport */ isTextContent; });
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // NAMESPACE OBJECT: ./node_modules/@wordpress/dom/build-module/focusable.js
 var focusable_namespaceObject = {};
@@ -206,7 +217,11 @@ function isValidFocusableArea(element) {
     return false;
   }
 
+<<<<<<< HEAD
   var img = element.ownerDocument.querySelector('img[usemap="#' + map.name + '"]');
+=======
+  var img = document.querySelector('img[usemap="#' + map.name + '"]');
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   return !!img && isVisible(img);
 }
 /**
@@ -395,8 +410,14 @@ function tabbable_find(context) {
  *                          to the active element.
  */
 
+<<<<<<< HEAD
 function findPrevious(element) {
   var focusables = find(element.ownerDocument.body);
+=======
+function findPrevious() {
+  var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.activeElement;
+  var focusables = find(document.body);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var index = focusables.indexOf(element); // Remove all focusables after and including `element`.
 
   focusables.length = index;
@@ -409,8 +430,14 @@ function findPrevious(element) {
  *                          to the active element.
  */
 
+<<<<<<< HEAD
 function findNext(element) {
   var focusables = find(element.ownerDocument.body);
+=======
+function findNext() {
+  var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.activeElement;
+  var focusables = find(document.body);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var index = focusables.indexOf(element); // Remove all focusables before and inside `element`.
 
   var remaining = focusables.slice(index + 1).filter(function (node) {
@@ -419,6 +446,7 @@ function findNext(element) {
   return Object(external_this_lodash_["first"])(filterTabbable(remaining));
 }
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(5);
 
@@ -588,12 +616,15 @@ function isTextContent(node) {
   return textContentSchema.hasOwnProperty(tag) || tag === 'span';
 }
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom.js
 /**
  * External dependencies
  */
 
 /**
+<<<<<<< HEAD
  * Internal dependencies
  */
 
@@ -602,6 +633,19 @@ function isTextContent(node) {
 function getComputedStyle(node) {
   return node.ownerDocument.defaultView.getComputedStyle(node);
 }
+=======
+ * Browser dependencies
+ */
+
+var _window = window,
+    DOMParser = _window.DOMParser,
+    getComputedStyle = _window.getComputedStyle;
+var _window$Node = window.Node,
+    TEXT_NODE = _window$Node.TEXT_NODE,
+    ELEMENT_NODE = _window$Node.ELEMENT_NODE,
+    DOCUMENT_POSITION_PRECEDING = _window$Node.DOCUMENT_POSITION_PRECEDING,
+    DOCUMENT_POSITION_FOLLOWING = _window$Node.DOCUMENT_POSITION_FOLLOWING;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Returns true if the given selection object is in the forward direction, or
  * false otherwise.
@@ -613,7 +657,10 @@ function getComputedStyle(node) {
  * @return {boolean} Whether the selection is forward.
  */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 function isSelectionForward(selection) {
   var anchorNode = selection.anchorNode,
       focusNode = selection.focusNode,
@@ -626,11 +673,19 @@ function isSelectionForward(selection) {
   // Compare whether anchor node precedes focus node. If focus node (where
   // end of selection occurs) is after the anchor node, it is forward.
 
+<<<<<<< HEAD
   if (position & anchorNode.DOCUMENT_POSITION_PRECEDING) {
     return false;
   }
 
   if (position & anchorNode.DOCUMENT_POSITION_FOLLOWING) {
+=======
+  if (position & DOCUMENT_POSITION_PRECEDING) {
+    return false;
+  }
+
+  if (position & DOCUMENT_POSITION_FOLLOWING) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     return true;
   }
   /* eslint-enable no-bitwise */
@@ -675,9 +730,13 @@ function isEdge(container, isReverse, onlyVertical) {
     return true;
   }
 
+<<<<<<< HEAD
   var ownerDocument = container.ownerDocument;
   var defaultView = ownerDocument.defaultView;
   var selection = defaultView.getSelection();
+=======
+  var selection = window.getSelection();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
   if (!selection.rangeCount) {
     return false;
@@ -698,7 +757,11 @@ function isEdge(container, isReverse, onlyVertical) {
     return false;
   }
 
+<<<<<<< HEAD
   var computedStyle = getComputedStyle(container);
+=======
+  var computedStyle = window.getComputedStyle(container);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var lineHeight = parseInt(computedStyle.lineHeight, 10) || 0; // Only consider the multiline selection at the edge if the direction is
   // towards the edge.
 
@@ -734,7 +797,11 @@ function isEdge(container, isReverse, onlyVertical) {
 
   var x = isReverseDir ? containerRect.left + 1 : containerRect.right - 1;
   var y = isReverse ? containerRect.top + buffer : containerRect.bottom - buffer;
+<<<<<<< HEAD
   var testRange = hiddenCaretRangeFromPoint(ownerDocument, x, y, container);
+=======
+  var testRange = hiddenCaretRangeFromPoint(document, x, y, container);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
   if (!testRange) {
     return false;
@@ -787,13 +854,21 @@ function getRectangleFromRange(range) {
   }
 
   var _range = range,
+<<<<<<< HEAD
       startContainer = _range.startContainer;
   var ownerDocument = startContainer.ownerDocument; // Correct invalid "BR" ranges. The cannot contain any children.
+=======
+      startContainer = _range.startContainer; // Correct invalid "BR" ranges. The cannot contain any children.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
   if (startContainer.nodeName === 'BR') {
     var parentNode = startContainer.parentNode;
     var index = Array.from(parentNode.childNodes).indexOf(startContainer);
+<<<<<<< HEAD
     range = ownerDocument.createRange();
+=======
+    range = document.createRange();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     range.setStart(parentNode, index);
     range.setEnd(parentNode, index);
   }
@@ -805,7 +880,11 @@ function getRectangleFromRange(range) {
   // See: https://stackoverflow.com/a/6847328/995445
 
   if (!rect) {
+<<<<<<< HEAD
     var padNode = ownerDocument.createTextNode("\u200B"); // Do not modify the live range.
+=======
+    var padNode = document.createTextNode("\u200B"); // Do not modify the live range.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
     range = range.cloneRange();
     range.insertNode(padNode);
@@ -818,6 +897,7 @@ function getRectangleFromRange(range) {
 /**
  * Get the rectangle for the selection in a container.
  *
+<<<<<<< HEAD
  * @param {Window} win The window of the selection.
  *
  * @return {?DOMRect} The rectangle.
@@ -825,6 +905,13 @@ function getRectangleFromRange(range) {
 
 function computeCaretRect(win) {
   var selection = win.getSelection();
+=======
+ * @return {?DOMRect} The rectangle.
+ */
+
+function computeCaretRect() {
+  var selection = window.getSelection();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var range = selection.rangeCount ? selection.getRangeAt(0) : null;
 
   if (!range) {
@@ -875,10 +962,15 @@ function placeCaretAtHorizontalEdge(container, isReverse) {
     return;
   }
 
+<<<<<<< HEAD
   var ownerDocument = container.ownerDocument;
   var defaultView = ownerDocument.defaultView;
   var selection = defaultView.getSelection();
   var range = ownerDocument.createRange();
+=======
+  var selection = window.getSelection();
+  var range = document.createRange();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   range.selectNodeContents(rangeTarget);
   range.collapse(!isReverse);
   selection.removeAllRanges();
@@ -890,9 +982,15 @@ function placeCaretAtHorizontalEdge(container, isReverse) {
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/API/Document/caretRangeFromPoint
  *
+<<<<<<< HEAD
  * @param {Document} doc  The document of the range.
  * @param {number}   x    Horizontal position within the current viewport.
  * @param {number}   y    Vertical position within the current viewport.
+=======
+ * @param {Document} doc The document of the range.
+ * @param {number}    x   Horizontal position within the current viewport.
+ * @param {number}    y   Vertical position within the current viewport.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @return {?Range} The best range for the given point.
  */
@@ -975,9 +1073,13 @@ function placeCaretAtVerticalEdge(container, isReverse, rect) {
   var editableRect = container.getBoundingClientRect();
   var x = rect.left;
   var y = isReverse ? editableRect.bottom - buffer : editableRect.top + buffer;
+<<<<<<< HEAD
   var ownerDocument = container.ownerDocument;
   var defaultView = ownerDocument.defaultView;
   var range = hiddenCaretRangeFromPoint(ownerDocument, x, y, container);
+=======
+  var range = hiddenCaretRangeFromPoint(document, x, y, container);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
   if (!range || !container.contains(range.startContainer)) {
     if (mayUseScroll && (!range || !range.startContainer || !range.startContainer.contains(container))) {
@@ -992,7 +1094,11 @@ function placeCaretAtVerticalEdge(container, isReverse, rect) {
     return;
   }
 
+<<<<<<< HEAD
   var selection = defaultView.getSelection();
+=======
+  var selection = window.getSelection();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   selection.removeAllRanges();
   selection.addRange(range);
   container.focus(); // Editable was already focussed, it goes back to old range...
@@ -1040,6 +1146,7 @@ function isNumberInput(element) {
  *
  * See: https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection#Related_objects.
  *
+<<<<<<< HEAD
  * @param {Document} doc The document to check.
  *
  * @return {boolean} True if there is selection, false if not.
@@ -1047,6 +1154,13 @@ function isNumberInput(element) {
 
 function documentHasTextSelection(doc) {
   var selection = doc.defaultView.getSelection();
+=======
+ * @return {boolean} True if there is selection, false if not.
+ */
+
+function documentHasTextSelection() {
+  var selection = window.getSelection();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var range = selection.rangeCount ? selection.getRangeAt(0) : null;
   return range && !range.collapsed;
 }
@@ -1090,19 +1204,28 @@ function inputFieldHasUncollapsedSelection(element) {
  * ranges of text across elements and any selection inside <input> and
  * <textarea> elements.
  *
+<<<<<<< HEAD
  * @param {Document} doc The document to check.
  *
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @return {boolean} Whether there is any sort of "selection" in the document.
  */
 
 
+<<<<<<< HEAD
 function documentHasUncollapsedSelection(doc) {
   return documentHasTextSelection(doc) || inputFieldHasUncollapsedSelection(doc.activeElement);
+=======
+function documentHasUncollapsedSelection() {
+  return documentHasTextSelection() || inputFieldHasUncollapsedSelection(document.activeElement);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Check whether the current document has a selection. This checks for both
  * focus in an input field and general text selection.
  *
+<<<<<<< HEAD
  * @param {Document} doc The document to check.
  *
  * @return {boolean} True if there is selection, false if not.
@@ -1110,6 +1233,13 @@ function documentHasUncollapsedSelection(doc) {
 
 function documentHasSelection(doc) {
   return isTextField(doc.activeElement) || isNumberInput(doc.activeElement) || documentHasTextSelection(doc);
+=======
+ * @return {boolean} True if there is selection, false if not.
+ */
+
+function documentHasSelection() {
+  return isTextField(document.activeElement) || isNumberInput(document.activeElement) || documentHasTextSelection();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 /**
  * Check whether the contents of the element have been entirely selected.
@@ -1129,9 +1259,13 @@ function isEntirelySelected(element) {
     return true;
   }
 
+<<<<<<< HEAD
   var ownerDocument = element.ownerDocument;
   var defaultView = ownerDocument.defaultView;
   var selection = defaultView.getSelection();
+=======
+  var selection = window.getSelection();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var range = selection.rangeCount ? selection.getRangeAt(0) : null;
 
   if (!range) {
@@ -1148,7 +1282,11 @@ function isEntirelySelected(element) {
   }
 
   var lastChild = element.lastChild;
+<<<<<<< HEAD
   var lastChildContentLength = lastChild.nodeType === lastChild.TEXT_NODE ? lastChild.data.length : lastChild.childNodes.length;
+=======
+  var lastChildContentLength = lastChild.nodeType === TEXT_NODE ? lastChild.data.length : lastChild.childNodes.length;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   return startContainer === element.firstChild && endContainer === element.lastChild && startOffset === 0 && endOffset === lastChildContentLength;
 }
 /**
@@ -1167,8 +1305,13 @@ function getScrollContainer(node) {
 
   if (node.scrollHeight > node.clientHeight) {
     // ...except when overflow is defined to be hidden or visible
+<<<<<<< HEAD
     var _getComputedStyle = getComputedStyle(node),
         overflowY = _getComputedStyle.overflowY;
+=======
+    var _window$getComputedSt = window.getComputedStyle(node),
+        overflowY = _window$getComputedSt.overflowY;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
     if (/(auto|scroll)/.test(overflowY)) {
       return node;
@@ -1196,7 +1339,11 @@ function getOffsetParent(node) {
   var closestElement;
 
   while (closestElement = node.parentNode) {
+<<<<<<< HEAD
     if (closestElement.nodeType === closestElement.ELEMENT_NODE) {
+=======
+    if (closestElement.nodeType === ELEMENT_NODE) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
       break;
     }
   }
@@ -1303,6 +1450,7 @@ function wrap(newNode, referenceNode) {
  */
 
 function __unstableStripHTML(html) {
+<<<<<<< HEAD
   var document = new window.DOMParser().parseFromString(html, 'text/html');
   return document.body.textContent || '';
 }
@@ -1476,6 +1624,11 @@ function removeInvalidHTML(HTML, schema, inline) {
   cleanNodeList(doc.body.childNodes, doc, schema, inline);
   return doc.body.innerHTML;
 }
+=======
+  var document = new DOMParser().parseFromString(html, 'text/html');
+  return document.body.textContent || '';
+}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/index.js
 /**
@@ -1495,6 +1648,7 @@ var build_module_focus = {
 
 
 
+<<<<<<< HEAD
 
 /***/ }),
 
@@ -1518,6 +1672,8 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ })
 
 /******/ });

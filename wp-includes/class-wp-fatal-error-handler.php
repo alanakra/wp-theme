@@ -181,11 +181,19 @@ class WP_Fatal_Error_Handler {
 		}
 
 		if ( true === $handled && wp_is_recovery_mode() ) {
+<<<<<<< HEAD
 			$message = __( 'There has been a critical error on this website, putting it in recovery mode. Please check the Themes and Plugins screens for more details. If you just installed or updated a theme or plugin, check the relevant page for that first.' );
 		} elseif ( is_protected_endpoint() ) {
 			$message = __( 'There has been a critical error on this website. Please check your site admin email inbox for instructions.' );
 		} else {
 			$message = __( 'There has been a critical error on this website.' );
+=======
+			$message = __( 'There has been a critical error on your website, putting it in recovery mode. Please check the Themes and Plugins screens for more details. If you just installed or updated a theme or plugin, check the relevant page for that first.' );
+		} elseif ( is_protected_endpoint() ) {
+			$message = __( 'There has been a critical error on your website. Please check your site admin email inbox for instructions.' );
+		} else {
+			$message = __( 'There has been a critical error on your website.' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		$message = sprintf(

@@ -651,9 +651,13 @@ function activate_plugin( $plugin, $redirect = '', $network_wide = false, $silen
 		return $requirements;
 	}
 
+<<<<<<< HEAD
 	if ( $network_wide && ! isset( $current[ $plugin ] )
 		|| ! $network_wide && ! in_array( $plugin, $current, true )
 	) {
+=======
+	if ( ( $network_wide && ! isset( $current[ $plugin ] ) ) || ( ! $network_wide && ! in_array( $plugin, $current, true ) ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( ! empty( $redirect ) ) {
 			// We'll override this later if the plugin can be included without fatal error.
 			wp_redirect( add_query_arg( '_error_nonce', wp_create_nonce( 'plugin-activation-error_' . $plugin ), $redirect ) );
@@ -766,7 +770,11 @@ function deactivate_plugins( $plugins, $silent = false, $network_wide = null ) {
 			continue;
 		}
 
+<<<<<<< HEAD
 		$network_deactivating = ( false !== $network_wide ) && is_plugin_active_for_network( $plugin );
+=======
+		$network_deactivating = false !== $network_wide && is_plugin_active_for_network( $plugin );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( ! $silent ) {
 			/**
@@ -980,7 +988,11 @@ function delete_plugins( $plugins, $deprecated = '' ) {
 
 		// If plugin is in its own directory, recursively delete the directory.
 		// Base check on if plugin includes directory separator AND that it's not the root plugin folder.
+<<<<<<< HEAD
 		if ( strpos( $plugin_file, '/' ) && $this_plugin_dir !== $plugins_dir ) {
+=======
+		if ( strpos( $plugin_file, '/' ) && $this_plugin_dir != $plugins_dir ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$deleted = $wp_filesystem->delete( $this_plugin_dir, true );
 		} else {
 			$deleted = $wp_filesystem->delete( $plugins_dir . $plugin_file );
@@ -1152,8 +1164,13 @@ function validate_plugin_requirements( $plugin ) {
 	$compatible_wp  = is_wp_version_compatible( $requirements['requires'] );
 	$compatible_php = is_php_version_compatible( $requirements['requires_php'] );
 
+<<<<<<< HEAD
 	$php_update_message = '</p><p>' . sprintf(
 		/* translators: %s: URL to Update PHP page. */
+=======
+	/* translators: %s: URL to Update PHP page. */
+	$php_update_message = '</p><p>' . sprintf(
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		__( '<a href="%s">Learn more about updating PHP</a>.' ),
 		esc_url( wp_get_update_php_url() )
 	);
@@ -1416,9 +1433,15 @@ function add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, 
 	 * parent file someone is trying to link back to the parent manually. In
 	 * this case, don't automatically add a link back to avoid duplication.
 	 */
+<<<<<<< HEAD
 	if ( ! isset( $submenu[ $parent_slug ] ) && $menu_slug !== $parent_slug ) {
 		foreach ( (array) $menu as $parent_menu ) {
 			if ( $parent_menu[2] === $parent_slug && current_user_can( $parent_menu[1] ) ) {
+=======
+	if ( ! isset( $submenu[ $parent_slug ] ) && $menu_slug != $parent_slug ) {
+		foreach ( (array) $menu as $parent_menu ) {
+			if ( $parent_menu[2] == $parent_slug && current_user_can( $parent_menu[1] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$submenu[ $parent_slug ][] = array_slice( $parent_menu, 0, 4 );
 			}
 		}
@@ -1769,7 +1792,11 @@ function remove_menu_page( $menu_slug ) {
 	global $menu;
 
 	foreach ( $menu as $i => $item ) {
+<<<<<<< HEAD
 		if ( $menu_slug === $item[2] ) {
+=======
+		if ( $menu_slug == $item[2] ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			unset( $menu[ $i ] );
 			return $item;
 		}
@@ -1797,7 +1824,11 @@ function remove_submenu_page( $menu_slug, $submenu_slug ) {
 	}
 
 	foreach ( $submenu[ $menu_slug ] as $i => $item ) {
+<<<<<<< HEAD
 		if ( $submenu_slug === $item[2] ) {
+=======
+		if ( $submenu_slug == $item[2] ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			unset( $submenu[ $menu_slug ][ $i ] );
 			return $item;
 		}
@@ -1824,7 +1855,10 @@ function menu_page_url( $menu_slug, $echo = true ) {
 
 	if ( isset( $_parent_pages[ $menu_slug ] ) ) {
 		$parent_slug = $_parent_pages[ $menu_slug ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( $parent_slug && ! isset( $_parent_pages[ $parent_slug ] ) ) {
 			$url = admin_url( add_query_arg( 'page', $menu_slug, $parent_slug ) );
 		} else {
@@ -1873,12 +1907,16 @@ function get_admin_page_parent( $parent = '' ) {
 		if ( isset( $_wp_real_parent_file[ $parent ] ) ) {
 			$parent = $_wp_real_parent_file[ $parent ];
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return $parent;
 	}
 
 	if ( 'admin.php' === $pagenow && isset( $plugin_page ) ) {
 		foreach ( (array) $menu as $parent_menu ) {
+<<<<<<< HEAD
 			if ( $parent_menu[2] === $plugin_page ) {
 				$parent_file = $plugin_page;
 
@@ -1886,27 +1924,46 @@ function get_admin_page_parent( $parent = '' ) {
 					$parent_file = $_wp_real_parent_file[ $parent_file ];
 				}
 
+=======
+			if ( $parent_menu[2] == $plugin_page ) {
+				$parent_file = $plugin_page;
+				if ( isset( $_wp_real_parent_file[ $parent_file ] ) ) {
+					$parent_file = $_wp_real_parent_file[ $parent_file ];
+				}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				return $parent_file;
 			}
 		}
 		if ( isset( $_wp_menu_nopriv[ $plugin_page ] ) ) {
 			$parent_file = $plugin_page;
+<<<<<<< HEAD
 
 			if ( isset( $_wp_real_parent_file[ $parent_file ] ) ) {
 					$parent_file = $_wp_real_parent_file[ $parent_file ];
 			}
 
+=======
+			if ( isset( $_wp_real_parent_file[ $parent_file ] ) ) {
+					$parent_file = $_wp_real_parent_file[ $parent_file ];
+			}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return $parent_file;
 		}
 	}
 
 	if ( isset( $plugin_page ) && isset( $_wp_submenu_nopriv[ $pagenow ][ $plugin_page ] ) ) {
 		$parent_file = $pagenow;
+<<<<<<< HEAD
 
 		if ( isset( $_wp_real_parent_file[ $parent_file ] ) ) {
 			$parent_file = $_wp_real_parent_file[ $parent_file ];
 		}
 
+=======
+		if ( isset( $_wp_real_parent_file[ $parent_file ] ) ) {
+			$parent_file = $_wp_real_parent_file[ $parent_file ];
+		}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return $parent_file;
 	}
 
@@ -1915,6 +1972,7 @@ function get_admin_page_parent( $parent = '' ) {
 			if ( isset( $_wp_real_parent_file[ $parent ] ) ) {
 				$parent = $_wp_real_parent_file[ $parent ];
 			}
+<<<<<<< HEAD
 
 			if ( ! empty( $typenow ) && "$pagenow?post_type=$typenow" === $submenu_array[2] ) {
 				$parent_file = $parent;
@@ -1925,6 +1983,15 @@ function get_admin_page_parent( $parent = '' ) {
 				$parent_file = $parent;
 				return $parent;
 			} elseif ( isset( $plugin_page ) && $plugin_page === $submenu_array[2] ) {
+=======
+			if ( ! empty( $typenow ) && ( "$pagenow?post_type=$typenow" === $submenu_array[2] ) ) {
+				$parent_file = $parent;
+				return $parent;
+			} elseif ( $submenu_array[2] == $pagenow && empty( $typenow ) && ( empty( $parent_file ) || false === strpos( $parent_file, '?' ) ) ) {
+				$parent_file = $parent;
+				return $parent;
+			} elseif ( isset( $plugin_page ) && ( $plugin_page == $submenu_array[2] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$parent_file = $parent;
 				return $parent;
 			}
@@ -1966,10 +2033,17 @@ function get_admin_page_title() {
 	if ( empty( $parent ) ) {
 		foreach ( (array) $menu as $menu_array ) {
 			if ( isset( $menu_array[3] ) ) {
+<<<<<<< HEAD
 				if ( $menu_array[2] === $pagenow ) {
 					$title = $menu_array[3];
 					return $menu_array[3];
 				} elseif ( isset( $plugin_page ) && $plugin_page === $menu_array[2] && $hook === $menu_array[5] ) {
+=======
+				if ( $menu_array[2] == $pagenow ) {
+					$title = $menu_array[3];
+					return $menu_array[3];
+				} elseif ( isset( $plugin_page ) && ( $plugin_page == $menu_array[2] ) && ( $hook == $menu_array[5] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					$title = $menu_array[3];
 					return $menu_array[3];
 				}
@@ -1981,6 +2055,7 @@ function get_admin_page_title() {
 	} else {
 		foreach ( array_keys( $submenu ) as $parent ) {
 			foreach ( $submenu[ $parent ] as $submenu_array ) {
+<<<<<<< HEAD
 				if ( isset( $plugin_page )
 					&& $plugin_page === $submenu_array[2]
 					&& ( $pagenow === $parent
@@ -1988,12 +2063,27 @@ function get_admin_page_title() {
 						|| $plugin_page === $hook
 						|| 'admin.php' === $pagenow && $parent1 !== $submenu_array[2]
 						|| ! empty( $typenow ) && "$pagenow?post_type=$typenow" === $parent )
+=======
+				if ( isset( $plugin_page ) &&
+					( $plugin_page == $submenu_array[2] ) &&
+					(
+						( $parent == $pagenow ) ||
+						( $parent == $plugin_page ) ||
+						( $plugin_page == $hook ) ||
+						( 'admin.php' === $pagenow && $parent1 != $submenu_array[2] ) ||
+						( ! empty( $typenow ) && $parent == $pagenow . '?post_type=' . $typenow )
+					)
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					) {
 						$title = $submenu_array[3];
 						return $submenu_array[3];
 				}
 
+<<<<<<< HEAD
 				if ( $submenu_array[2] !== $pagenow || isset( $_GET['page'] ) ) { // Not the current page.
+=======
+				if ( $submenu_array[2] != $pagenow || isset( $_GET['page'] ) ) { // Not the current page.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					continue;
 				}
 
@@ -2008,11 +2098,18 @@ function get_admin_page_title() {
 		}
 		if ( empty( $title ) ) {
 			foreach ( $menu as $menu_array ) {
+<<<<<<< HEAD
 				if ( isset( $plugin_page )
 					&& $plugin_page === $menu_array[2]
 					&& 'admin.php' === $pagenow
 					&& $parent1 === $menu_array[2]
 				) {
+=======
+				if ( isset( $plugin_page ) &&
+					( $plugin_page == $menu_array[2] ) &&
+					( 'admin.php' === $pagenow ) &&
+					( $parent1 == $menu_array[2] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						$title = $menu_array[3];
 						return $menu_array[3];
 				}
@@ -2125,7 +2222,10 @@ function user_can_access_admin_page() {
 		if ( isset( $plugin_page ) && isset( $_wp_menu_nopriv[ $plugin_page ] ) ) {
 			return false;
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		foreach ( array_keys( $_wp_submenu_nopriv ) as $key ) {
 			if ( isset( $_wp_submenu_nopriv[ $key ][ $pagenow ] ) ) {
 				return false;
@@ -2134,27 +2234,58 @@ function user_can_access_admin_page() {
 				return false;
 			}
 		}
+<<<<<<< HEAD
 
 		return true;
 	}
 
 	if ( isset( $plugin_page ) && $plugin_page === $parent && isset( $_wp_menu_nopriv[ $plugin_page ] ) ) {
+=======
+		return true;
+	}
+
+	if ( isset( $plugin_page ) && ( $plugin_page == $parent ) && isset( $_wp_menu_nopriv[ $plugin_page ] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return false;
 	}
 
 	if ( isset( $submenu[ $parent ] ) ) {
 		foreach ( $submenu[ $parent ] as $submenu_array ) {
+<<<<<<< HEAD
 			if ( isset( $plugin_page ) && $submenu_array[2] === $plugin_page ) {
 				return current_user_can( $submenu_array[1] );
 			} elseif ( $submenu_array[2] === $pagenow ) {
 				return current_user_can( $submenu_array[1] );
+=======
+			if ( isset( $plugin_page ) && ( $submenu_array[2] == $plugin_page ) ) {
+				if ( current_user_can( $submenu_array[1] ) ) {
+					return true;
+				} else {
+					return false;
+				}
+			} elseif ( $submenu_array[2] == $pagenow ) {
+				if ( current_user_can( $submenu_array[1] ) ) {
+					return true;
+				} else {
+					return false;
+				}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 		}
 	}
 
 	foreach ( $menu as $menu_array ) {
+<<<<<<< HEAD
 		if ( $menu_array[2] === $parent ) {
 			return current_user_can( $menu_array[1] );
+=======
+		if ( $menu_array[2] == $parent ) {
+			if ( current_user_can( $menu_array[1] ) ) {
+				return true;
+			} else {
+				return false;
+			}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 	}
 
@@ -2190,7 +2321,11 @@ function option_update_filter( $options ) {
 /**
  * Adds an array of options to the list of allowed options.
  *
+<<<<<<< HEAD
  * @since 5.5.0
+=======
+ * @since 2.7.0
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @global array $allowed_options
  *

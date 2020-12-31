@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["a11y"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 492);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 459);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,14 +98,22 @@ this["wp"] = this["wp"] || {}; this["wp"]["a11y"] =
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 275:
+=======
+/***/ 261:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["wp"]["domReady"]; }());
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 492:
+=======
+/***/ 459:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -113,7 +125,11 @@ __webpack_require__.d(__webpack_exports__, "setup", function() { return /* bindi
 __webpack_require__.d(__webpack_exports__, "speak", function() { return /* binding */ speak; });
 
 // EXTERNAL MODULE: external {"this":["wp","domReady"]}
+<<<<<<< HEAD
 var external_this_wp_domReady_ = __webpack_require__(275);
+=======
+var external_this_wp_domReady_ = __webpack_require__(261);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 var external_this_wp_domReady_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_domReady_);
 
 // EXTERNAL MODULE: external {"this":["wp","i18n"]}

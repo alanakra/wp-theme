@@ -356,6 +356,7 @@ final class WP_Hook implements Iterator, ArrayAccess {
 	/**
 	 * Normalizes filters set up before WordPress has initialized to WP_Hook objects.
 	 *
+<<<<<<< HEAD
 	 * The `$filters` parameter should be an array keyed by hook name, with values
 	 * containing either:
 	 *
@@ -380,6 +381,11 @@ final class WP_Hook implements Iterator, ArrayAccess {
 	 * @since 4.7.0
 	 *
 	 * @param array $filters Filters to normalize. See documentation above for details.
+=======
+	 * @since 4.7.0
+	 *
+	 * @param array $filters Filters to normalize.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return WP_Hook[] Array of normalized filters.
 	 */
 	public static function build_preinitialized_hooks( $filters ) {
@@ -511,7 +517,11 @@ final class WP_Hook implements Iterator, ArrayAccess {
 	 *
 	 * @link https://www.php.net/manual/en/iterator.valid.php
 	 *
+<<<<<<< HEAD
 	 * @return bool Whether the current position is valid.
+=======
+	 * @return boolean
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function valid() {
 		return key( $this->callbacks ) !== null;

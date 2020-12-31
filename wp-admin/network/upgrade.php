@@ -45,7 +45,11 @@ $action = isset( $_GET['action'] ) ? $_GET['action'] : 'show';
 
 switch ( $action ) {
 	case 'upgrade':
+<<<<<<< HEAD
 		$n = ( isset( $_GET['n'] ) ) ? (int) $_GET['n'] : 0;
+=======
+		$n = ( isset( $_GET['n'] ) ) ? intval( $_GET['n'] ) : 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( $n < 5 ) {
 			/**

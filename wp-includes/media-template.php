@@ -160,7 +160,11 @@ function wp_print_media_templates() {
 		/* translators: 1: Link to tutorial, 2: Additional link attributes, 3: Accessibility text. */
 		__( '<a href="%1$s" %2$s>Describe the purpose of the image%3$s</a>. Leave empty if the image is purely decorative.' ),
 		esc_url( 'https://www.w3.org/WAI/tutorials/images/decision-tree' ),
+<<<<<<< HEAD
 		'target="_blank" rel="noopener"',
+=======
+		'target="_blank" rel="noopener noreferrer"',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		sprintf(
 			'<span class="screen-reader-text"> %s</span>',
 			/* translators: Accessibility text. */
@@ -309,10 +313,17 @@ function wp_print_media_templates() {
 
 	<?php // Template for the view switchers, used for example in the Media Grid. ?>
 	<script type="text/html" id="tmpl-media-library-view-switcher">
+<<<<<<< HEAD
 		<a href="<?php echo esc_url( add_query_arg( 'mode', 'list', admin_url( 'upload.php' ) ) ); ?>" class="view-list">
 			<span class="screen-reader-text"><?php _e( 'List view' ); ?></span>
 		</a>
 		<a href="<?php echo esc_url( add_query_arg( 'mode', 'grid', admin_url( 'upload.php' ) ) ); ?>" class="view-grid current" aria-current="page">
+=======
+		<a href="<?php echo esc_url( add_query_arg( 'mode', 'list', $_SERVER['REQUEST_URI'] ) ); ?>" class="view-list">
+			<span class="screen-reader-text"><?php _e( 'List view' ); ?></span>
+		</a>
+		<a href="<?php echo esc_url( add_query_arg( 'mode', 'grid', $_SERVER['REQUEST_URI'] ) ); ?>" class="view-grid current" aria-current="page">
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			<span class="screen-reader-text"><?php _e( 'Grid view' ); ?></span>
 		</a>
 	</script>
@@ -366,7 +377,11 @@ function wp_print_media_templates() {
 				<# } #>
 
 				<# if ( 'audio' === data.type ) { #>
+<<<<<<< HEAD
 				<div class="wp-media-wrapper wp-audio">
+=======
+				<div class="wp-media-wrapper">
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					<audio style="visibility: hidden" controls class="wp-audio-shortcode" width="100%" preload="none">
 						<source type="{{ data.mime }}" src="{{ data.url }}"/>
 					</audio>
@@ -405,6 +420,7 @@ function wp_print_media_templates() {
 			</span>
 			<div class="details">
 				<h2 class="screen-reader-text"><?php _e( 'Details' ); ?></h2>
+<<<<<<< HEAD
 				<div class="uploaded"><strong><?php _e( 'Uploaded on:' ); ?></strong> {{ data.dateFormatted }}</div>
 				<div class="uploaded-by">
 					<strong><?php _e( 'Uploaded by:' ); ?></strong>
@@ -426,6 +442,12 @@ function wp_print_media_templates() {
 				<# } #>
 				<div class="filename"><strong><?php _e( 'File name:' ); ?></strong> {{ data.filename }}</div>
 				<div class="file-type"><strong><?php _e( 'File type:' ); ?></strong> {{ data.mime }}</div>
+=======
+				<div class="filename"><strong><?php _e( 'File name:' ); ?></strong> {{ data.filename }}</div>
+				<div class="filename"><strong><?php _e( 'File type:' ); ?></strong> {{ data.mime }}</div>
+				<div class="uploaded"><strong><?php _e( 'Uploaded on:' ); ?></strong> {{ data.dateFormatted }}</div>
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				<div class="file-size"><strong><?php _e( 'File size:' ); ?></strong> {{ data.filesizeHumanReadable }}</div>
 				<# if ( 'image' === data.type && ! data.uploading ) { #>
 					<# if ( data.width && data.height ) { #>
@@ -459,10 +481,13 @@ function wp_print_media_templates() {
 					</div>
 				<# } #>
 
+<<<<<<< HEAD
 				<# if ( data.mediaStates ) { #>
 					<div class="media-states"><strong><?php _e( 'Used as:' ); ?></strong> {{ data.mediaStates }}</div>
 				<# } #>
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				<div class="compat-meta">
 					<# if ( data.compat && data.compat.meta ) { #>
 						{{{ data.compat.meta }}}
@@ -506,11 +531,32 @@ function wp_print_media_templates() {
 					<label for="attachment-details-two-column-description" class="name"><?php _e( 'Description' ); ?></label>
 					<textarea id="attachment-details-two-column-description" {{ maybeReadOnly }}>{{ data.description }}</textarea>
 				</span>
+<<<<<<< HEAD
+=======
+				<span class="setting">
+					<span class="name"><?php _e( 'Uploaded By' ); ?></span>
+					<span class="value">{{ data.authorName }}</span>
+				</span>
+				<# if ( data.uploadedToTitle ) { #>
+					<span class="setting">
+						<span class="name"><?php _e( 'Uploaded To' ); ?></span>
+						<# if ( data.uploadedToLink ) { #>
+							<span class="value"><a href="{{ data.uploadedToLink }}">{{ data.uploadedToTitle }}</a></span>
+						<# } else { #>
+							<span class="value">{{ data.uploadedToTitle }}</span>
+						<# } #>
+					</span>
+				<# } #>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				<span class="setting" data-setting="url">
 					<label for="attachment-details-two-column-copy-link" class="name"><?php _e( 'File URL:' ); ?></label>
 					<input type="text" class="attachment-details-copy-link" id="attachment-details-two-column-copy-link" value="{{ data.url }}" readonly />
 					<span class="copy-to-clipboard-container">
+<<<<<<< HEAD
 						<button type="button" class="button button-small copy-attachment-url" data-clipboard-target="#attachment-details-two-column-copy-link"><?php _e( 'Copy URL to clipboard' ); ?></button>
+=======
+						<button type="button" class="button button-small copy-attachment-url" data-clipboard-target="#attachment-details-two-column-copy-link"><?php _e( 'Copy URL' ); ?></button>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						<span class="success hidden" aria-hidden="true"><?php _e( 'Copied!' ); ?></span>
 					</span>
 				</span>
@@ -518,6 +564,7 @@ function wp_print_media_templates() {
 			</div>
 
 			<div class="actions">
+<<<<<<< HEAD
 				<# if ( data.link ) { #>
 					<a class="view-attachment" href="{{ data.link }}"><?php _e( 'View attachment page' ); ?></a>
 				<# } #>
@@ -531,6 +578,13 @@ function wp_print_media_templates() {
 					<# if ( data.link || data.can.save ) { #>
 						<span class="links-separator">|</span>
 					<# } #>
+=======
+				<a class="view-attachment" href="{{ data.link }}"><?php _e( 'View attachment page' ); ?></a>
+				<# if ( data.can.save ) { #> |
+					<a href="{{ data.editLink }}"><?php _e( 'Edit more details' ); ?></a>
+				<# } #>
+				<# if ( ! data.uploading && data.can.remove ) { #> |
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					<?php if ( MEDIA_TRASH ) : ?>
 						<# if ( 'trash' === data.status ) { #>
 							<button type="button" class="button-link untrash-attachment"><?php _e( 'Restore from Trash' ); ?></button>
@@ -551,7 +605,11 @@ function wp_print_media_templates() {
 			<div class="thumbnail">
 				<# if ( data.uploading ) { #>
 					<div class="media-progress-bar"><div style="width: {{ data.percent }}%"></div></div>
+<<<<<<< HEAD
 				<# } else if ( 'image' === data.type && data.size && data.size.url ) { #>
+=======
+				<# } else if ( 'image' === data.type && data.sizes ) { #>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					<div class="centered">
 						<img src="{{ data.size.url }}" draggable="false" alt="" />
 					</div>
@@ -610,6 +668,7 @@ function wp_print_media_templates() {
 			</span>
 		</h2>
 		<div class="attachment-info">
+<<<<<<< HEAD
 
 			<# if ( 'audio' === data.type ) { #>
 				<div class="wp-media-wrapper wp-audio">
@@ -645,6 +704,17 @@ function wp_print_media_templates() {
 				</div>
 			<# } #>
 
+=======
+			<div class="thumbnail thumbnail-{{ data.type }}">
+				<# if ( data.uploading ) { #>
+					<div class="media-progress-bar"><div></div></div>
+				<# } else if ( 'image' === data.type && data.sizes ) { #>
+					<img src="{{ data.size.url }}" draggable="false" alt="" />
+				<# } else { #>
+					<img src="{{ data.icon }}" class="icon" draggable="false" alt="" />
+				<# } #>
+			</div>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			<div class="details">
 				<div class="filename">{{ data.filename }}</div>
 				<div class="uploaded">{{ data.dateFormatted }}</div>
@@ -677,10 +747,13 @@ function wp_print_media_templates() {
 					</div>
 				<# } #>
 
+<<<<<<< HEAD
 				<# if ( data.mediaStates ) { #>
 					<div class="media-states"><strong><?php _e( 'Used as:' ); ?></strong> {{ data.mediaStates }}</div>
 				<# } #>
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				<# if ( ! data.uploading && data.can.remove ) { #>
 					<?php if ( MEDIA_TRASH ) : ?>
 					<# if ( 'trash' === data.status ) { #>
@@ -739,7 +812,11 @@ function wp_print_media_templates() {
 			<label for="attachment-details-copy-link" class="name"><?php _e( 'File URL:' ); ?></label>
 			<input type="text" class="attachment-details-copy-link" id="attachment-details-copy-link" value="{{ data.url }}" readonly />
 			<div class="copy-to-clipboard-container">
+<<<<<<< HEAD
 				<button type="button" class="button button-small copy-attachment-url" data-clipboard-target="#attachment-details-copy-link"><?php _e( 'Copy URL to clipboard' ); ?></button>
+=======
+				<button type="button" class="button button-small copy-attachment-url" data-clipboard-target="#attachment-details-copy-link"><?php _e( 'Copy URL' ); ?></button>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				<span class="success hidden" aria-hidden="true"><?php _e( 'Copied!' ); ?></span>
 			</div>
 		</span>

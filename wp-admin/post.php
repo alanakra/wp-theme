@@ -291,6 +291,7 @@ switch ( $action ) {
 			wp_die( __( 'Error in restoring the item from Trash.' ) );
 		}
 
+<<<<<<< HEAD
 		$sendback = add_query_arg(
 			array(
 				'untrashed' => 1,
@@ -299,6 +300,9 @@ switch ( $action ) {
 			$sendback
 		);
 		wp_redirect( $sendback );
+=======
+		wp_redirect( add_query_arg( 'untrashed', 1, $sendback ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		exit;
 
 	case 'delete':

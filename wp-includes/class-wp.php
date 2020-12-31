@@ -83,7 +83,11 @@ class WP {
 	public $did_permalink = false;
 
 	/**
+<<<<<<< HEAD
 	 * Adds a query variable to the list of public query variables.
+=======
+	 * Add name to list of public query variables.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 2.1.0
 	 *
@@ -107,7 +111,11 @@ class WP {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Sets the value of a query variable.
+=======
+	 * Set the value of a query variable.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 2.3.0
 	 *
@@ -119,7 +127,11 @@ class WP {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Parses the request to find the correct WordPress query.
+=======
+	 * Parse request to find correct WordPress query.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * Sets up the query variables based on the request. There are also many
 	 * filters and actions that can be used to further manipulate the result.

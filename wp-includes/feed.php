@@ -789,6 +789,10 @@ function fetch_feed( $url ) {
 		require_once ABSPATH . WPINC . '/class-simplepie.php';
 	}
 
+<<<<<<< HEAD
+=======
+	require_once ABSPATH . WPINC . '/class-wp-feed-cache.php';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	require_once ABSPATH . WPINC . '/class-wp-feed-cache-transient.php';
 	require_once ABSPATH . WPINC . '/class-wp-simplepie-file.php';
 	require_once ABSPATH . WPINC . '/class-wp-simplepie-sanitize-kses.php';
@@ -800,6 +804,7 @@ function fetch_feed( $url ) {
 	// constructor sets it before we have a chance to set the sanitization class.
 	$feed->sanitize = new WP_SimplePie_Sanitize_KSES();
 
+<<<<<<< HEAD
 	// Register the cache handler using the recommended method for SimplePie 1.3 or later.
 	if ( method_exists( 'SimplePie_Cache', 'register' ) ) {
 		SimplePie_Cache::register( 'wp_transient', 'WP_Feed_Cache_Transient' );
@@ -810,6 +815,9 @@ function fetch_feed( $url ) {
 		$feed->set_cache_class( 'WP_Feed_Cache' );
 	}
 
+=======
+	$feed->set_cache_class( 'WP_Feed_Cache' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$feed->set_file_class( 'WP_SimplePie_File' );
 
 	$feed->set_feed_url( $url );

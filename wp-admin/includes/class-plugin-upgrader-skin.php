@@ -22,7 +22,11 @@ class Plugin_Upgrader_Skin extends WP_Upgrader_Skin {
 	 *
 	 * @since 2.8.0
 	 *
+<<<<<<< HEAD
 	 * @var string
+=======
+	 * @var object
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public $plugin = '';
 
@@ -98,7 +102,11 @@ class Plugin_Upgrader_Skin extends WP_Upgrader_Skin {
 			'plugins_page'    => sprintf(
 				'<a href="%s" target="_parent">%s</a>',
 				self_admin_url( 'plugins.php' ),
+<<<<<<< HEAD
 				__( 'Go to Plugins page' )
+=======
+				__( 'Return to Plugins page' )
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			),
 		);
 

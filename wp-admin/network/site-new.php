@@ -145,7 +145,35 @@ if ( isset( $_REQUEST['action'] ) && 'add-site' === $_REQUEST['action'] ) {
 			update_user_option( $user_id, 'primary_blog', $id, true );
 		}
 
+<<<<<<< HEAD
 		wpmu_new_site_admin_notification( $id, $user_id );
+=======
+		wp_mail(
+			get_site_option( 'admin_email' ),
+			sprintf(
+				/* translators: New site notification email subject. %s: Network title. */
+				__( '[%s] New Site Created' ),
+				get_network()->site_name
+			),
+			sprintf(
+				/* translators: New site notification email. 1: User login, 2: Site URL, 3: Site title. */
+				__(
+					'New site created by %1$s
+
+Address: %2$s
+Name: %3$s'
+				),
+				$current_user->user_login,
+				get_site_url( $id ),
+				wp_unslash( $title )
+			),
+			sprintf(
+				'From: "%1$s" <%2$s>',
+				_x( 'Site Admin', 'email "From" field' ),
+				get_site_option( 'admin_email' )
+			)
+		);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		wpmu_welcome_notification( $id, $user_id, $password, $title, array( 'public' => 1 ) );
 		wp_redirect(
 			add_query_arg(

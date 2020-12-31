@@ -874,32 +874,55 @@ class WP_Date_Query {
 			if ( preg_match( '/^(\d{4})$/', $datetime, $matches ) ) {
 				// Y
 				$datetime = array(
+<<<<<<< HEAD
 					'year' => (int) $matches[1],
+=======
+					'year' => intval( $matches[1] ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				);
 
 			} elseif ( preg_match( '/^(\d{4})\-(\d{2})$/', $datetime, $matches ) ) {
 				// Y-m
 				$datetime = array(
+<<<<<<< HEAD
 					'year'  => (int) $matches[1],
 					'month' => (int) $matches[2],
+=======
+					'year'  => intval( $matches[1] ),
+					'month' => intval( $matches[2] ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				);
 
 			} elseif ( preg_match( '/^(\d{4})\-(\d{2})\-(\d{2})$/', $datetime, $matches ) ) {
 				// Y-m-d
 				$datetime = array(
+<<<<<<< HEAD
 					'year'  => (int) $matches[1],
 					'month' => (int) $matches[2],
 					'day'   => (int) $matches[3],
+=======
+					'year'  => intval( $matches[1] ),
+					'month' => intval( $matches[2] ),
+					'day'   => intval( $matches[3] ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				);
 
 			} elseif ( preg_match( '/^(\d{4})\-(\d{2})\-(\d{2}) (\d{2}):(\d{2})$/', $datetime, $matches ) ) {
 				// Y-m-d H:i
 				$datetime = array(
+<<<<<<< HEAD
 					'year'   => (int) $matches[1],
 					'month'  => (int) $matches[2],
 					'day'    => (int) $matches[3],
 					'hour'   => (int) $matches[4],
 					'minute' => (int) $matches[5],
+=======
+					'year'   => intval( $matches[1] ),
+					'month'  => intval( $matches[2] ),
+					'day'    => intval( $matches[3] ),
+					'hour'   => intval( $matches[4] ),
+					'minute' => intval( $matches[5] ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				);
 			}
 

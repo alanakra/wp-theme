@@ -90,7 +90,11 @@ final class WP_Customize_Custom_CSS_Setting extends WP_Customize_Setting {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Filters `wp_get_custom_css` for applying the customized value.
+=======
+	 * Filter `wp_get_custom_css` for applying the customized value.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * This is used in the preview when `wp_get_custom_css()` is called for rendering the styles.
 	 *

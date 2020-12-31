@@ -324,6 +324,7 @@ class WP_REST_Request implements ArrayAccess {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Checks if the request has specified a JSON content-type.
 	 *
 	 * @since 5.6.0
@@ -337,6 +338,8 @@ class WP_REST_Request implements ArrayAccess {
 	}
 
 	/**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * Retrieves the parameter priority order.
 	 *
 	 * Used when checking parameters in get_param().
@@ -348,7 +351,12 @@ class WP_REST_Request implements ArrayAccess {
 	protected function get_parameter_order() {
 		$order = array();
 
+<<<<<<< HEAD
 		if ( $this->is_json_content_type() ) {
+=======
+		$content_type = $this->get_content_type();
+		if ( isset( $content_type['value'] ) && 'application/json' === $content_type['value'] ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$order[] = 'JSON';
 		}
 
@@ -670,7 +678,13 @@ class WP_REST_Request implements ArrayAccess {
 		$this->parsed_json = true;
 
 		// Check that we actually got JSON.
+<<<<<<< HEAD
 		if ( ! $this->is_json_content_type() ) {
+=======
+		$content_type = $this->get_content_type();
+
+		if ( empty( $content_type ) || 'application/json' !== $content_type['value'] ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return true;
 		}
 
@@ -868,9 +882,19 @@ class WP_REST_Request implements ArrayAccess {
 		$attributes = $this->get_attributes();
 		$required   = array();
 
+<<<<<<< HEAD
 		$args = empty( $attributes['args'] ) ? array() : $attributes['args'];
 
 		foreach ( $args as $key => $arg ) {
+=======
+		// No arguments set, skip validation.
+		if ( empty( $attributes['args'] ) ) {
+			return true;
+		}
+
+		foreach ( $attributes['args'] as $key => $arg ) {
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$param = $this->get_param( $key );
 			if ( isset( $arg['required'] ) && true === $arg['required'] && null === $param ) {
 				$required[] = $key;
@@ -896,7 +920,11 @@ class WP_REST_Request implements ArrayAccess {
 		 */
 		$invalid_params = array();
 
+<<<<<<< HEAD
 		foreach ( $args as $key => $arg ) {
+=======
+		foreach ( $attributes['args'] as $key => $arg ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 			$param = $this->get_param( $key );
 
@@ -925,6 +953,7 @@ class WP_REST_Request implements ArrayAccess {
 			);
 		}
 
+<<<<<<< HEAD
 		if ( isset( $attributes['validate_callback'] ) ) {
 			$valid_check = call_user_func( $attributes['validate_callback'], $this );
 
@@ -939,6 +968,10 @@ class WP_REST_Request implements ArrayAccess {
 		}
 
 		return true;
+=======
+		return true;
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	/**

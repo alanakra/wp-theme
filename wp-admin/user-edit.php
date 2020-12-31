@@ -27,10 +27,13 @@ if ( ! $user_id && IS_PROFILE_PAGE ) {
 
 wp_enqueue_script( 'user-profile' );
 
+<<<<<<< HEAD
 if ( wp_is_application_passwords_available_for_user( $user_id ) ) {
 	wp_enqueue_script( 'application-passwords' );
 }
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 if ( IS_PROFILE_PAGE ) {
 	$title = __( 'Profile' );
 } else {
@@ -202,7 +205,11 @@ switch ( $action ) {
 	<p><strong><?php _e( 'User updated.' ); ?></strong></p>
 	<?php endif; ?>
 			<?php if ( $wp_http_referer && false === strpos( $wp_http_referer, 'user-new.php' ) && ! IS_PROFILE_PAGE ) : ?>
+<<<<<<< HEAD
 	<p><a href="<?php echo esc_url( wp_validate_redirect( esc_url_raw( $wp_http_referer ), self_admin_url( 'users.php' ) ) ); ?>"><?php _e( '&larr; Go to Users' ); ?></a></p>
+=======
+	<p><a href="<?php echo esc_url( wp_validate_redirect( esc_url_raw( $wp_http_referer ), self_admin_url( 'users.php' ) ) ); ?>"><?php _e( '&larr; Back to Users' ); ?></a></p>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	<?php endif; ?>
 </div>
 		<?php endif; ?>
@@ -632,7 +639,11 @@ endif;
 	<th><label for="pass1"><?php _e( 'New Password' ); ?></label></th>
 	<td>
 		<input class="hidden" value=" " /><!-- #24364 workaround -->
+<<<<<<< HEAD
 		<button type="button" class="button wp-generate-pw hide-if-no-js" aria-expanded="false"><?php _e( 'Set New Password' ); ?></button>
+=======
+		<button type="button" class="button wp-generate-pw hide-if-no-js"><?php _e( 'Generate Password' ); ?></button>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		<div class="wp-pwd hide-if-js">
 			<span class="password-input-wrapper">
 				<input type="password" name="pass1" id="pass1" class="regular-text" value="" autocomplete="off" data-pw="<?php echo esc_attr( wp_generate_password( 24 ) ); ?>" aria-describedby="pass-strength-result" />
@@ -652,12 +663,17 @@ endif;
 <tr class="user-pass2-wrap hide-if-js">
 	<th scope="row"><label for="pass2"><?php _e( 'Repeat New Password' ); ?></label></th>
 	<td>
+<<<<<<< HEAD
 	<input name="pass2" type="password" id="pass2" class="regular-text" value="" autocomplete="off" aria-describedby="pass2-desc" />
 			<?php if ( IS_PROFILE_PAGE ) : ?>
 				<p class="description" id="pass2-desc"><?php _e( 'Type your new password again.' ); ?></p>
 			<?php else : ?>
 				<p class="description" id="pass2-desc"><?php _e( 'Type the new password again.' ); ?></p>
 			<?php endif; ?>
+=======
+	<input name="pass2" type="password" id="pass2" class="regular-text" value="" autocomplete="off" />
+	<p class="description"><?php _e( 'Type your new password again.' ); ?></p>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	</td>
 </tr>
 <tr class="pw-weak">
@@ -665,7 +681,11 @@ endif;
 	<td>
 		<label>
 			<input type="checkbox" name="pw_weak" class="pw-checkbox" />
+<<<<<<< HEAD
 			<span id="pw-weak-text-label"><?php _e( 'Confirm use of weak password' ); ?></span>
+=======
+			<span id="pw-weak-text-label"><?php _e( 'Confirm use of potentially weak password' ); ?></span>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		</label>
 	</td>
 </tr>
@@ -710,6 +730,7 @@ endif;
 
 	</table>
 
+<<<<<<< HEAD
 
 		<?php if ( wp_is_application_passwords_available_for_user( $user_id ) ) : ?>
 	<div class="application-passwords hide-if-no-js" id="application-passwords-section">
@@ -777,6 +798,8 @@ endif;
 	</div>
 <?php endif; ?>
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		<?php
 		if ( IS_PROFILE_PAGE ) {
 			/**
@@ -862,6 +885,7 @@ endif;
 		document.getElementById('pass1').focus();
 	}
 </script>
+<<<<<<< HEAD
 
 <?php if ( isset( $application_passwords_list_table ) ) : ?>
 	<script type="text/html" id="tmpl-new-application-password">
@@ -889,5 +913,7 @@ endif;
 		<?php $application_passwords_list_table->print_js_template_row(); ?>
 	</script>
 <?php endif; ?>
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 <?php
 require_once ABSPATH . 'wp-admin/admin-footer.php';

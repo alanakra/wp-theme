@@ -720,6 +720,7 @@ class getid3_lib
 	 */
 	public static function XML2array($XMLstring) {
 		if (function_exists('simplexml_load_string') && function_exists('libxml_disable_entity_loader')) {
+<<<<<<< HEAD
 			if (PHP_VERSION_ID < 80000) {
 				// http://websec.io/2012/08/27/Preventing-XEE-in-PHP.html
 				// https://core.trac.wordpress.org/changeset/29378
@@ -732,6 +733,14 @@ class getid3_lib
 			if (PHP_VERSION_ID < 80000 && isset($loader)) {
 				libxml_disable_entity_loader($loader);
 			}
+=======
+			// http://websec.io/2012/08/27/Preventing-XEE-in-PHP.html
+			// https://core.trac.wordpress.org/changeset/29378
+			$loader = libxml_disable_entity_loader(true);
+			$XMLobject = simplexml_load_string($XMLstring, 'SimpleXMLElement', LIBXML_NOENT);
+			$return = self::SimpleXMLelement2array($XMLobject);
+			libxml_disable_entity_loader($loader);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return $return;
 		}
 		return false;

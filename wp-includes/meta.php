@@ -722,7 +722,11 @@ function get_metadata_by_mid( $meta_type, $meta_id ) {
 		return false;
 	}
 
+<<<<<<< HEAD
 	$meta_id = (int) $meta_id;
+=======
+	$meta_id = intval( $meta_id );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	if ( $meta_id <= 0 ) {
 		return false;
 	}
@@ -786,7 +790,11 @@ function update_metadata_by_mid( $meta_type, $meta_id, $meta_value, $meta_key = 
 		return false;
 	}
 
+<<<<<<< HEAD
 	$meta_id = (int) $meta_id;
+=======
+	$meta_id = intval( $meta_id );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	if ( $meta_id <= 0 ) {
 		return false;
 	}
@@ -901,7 +909,11 @@ function delete_metadata_by_mid( $meta_type, $meta_id ) {
 		return false;
 	}
 
+<<<<<<< HEAD
 	$meta_id = (int) $meta_id;
+=======
+	$meta_id = intval( $meta_id );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	if ( $meta_id <= 0 ) {
 		return false;
 	}
@@ -1055,14 +1067,22 @@ function update_meta_cache( $meta_type, $object_ids ) {
 	}
 
 	// Get meta info.
+<<<<<<< HEAD
 	$id_list   = implode( ',', $non_cached_ids );
+=======
+	$id_list   = join( ',', $non_cached_ids );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$id_column = ( 'user' === $meta_type ) ? 'umeta_id' : 'meta_id';
 
 	$meta_list = $wpdb->get_results( "SELECT $column, meta_key, meta_value FROM $table WHERE $column IN ($id_list) ORDER BY $id_column ASC", ARRAY_A );
 
 	if ( ! empty( $meta_list ) ) {
 		foreach ( $meta_list as $metarow ) {
+<<<<<<< HEAD
 			$mpid = (int) $metarow[ $column ];
+=======
+			$mpid = intval( $metarow[ $column ] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$mkey = $metarow['meta_key'];
 			$mval = $metarow['meta_value'];
 

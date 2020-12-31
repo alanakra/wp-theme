@@ -2,6 +2,7 @@
 get_header();
 ?>
 
+<<<<<<< HEAD
 
 <?php
 
@@ -54,5 +55,10 @@ $description_list_2 = json_encode( showSkill( 'description_list_2' ) , JSON_UNES
   setTimeout(showQualities(descriptionList, descriptionList2), 2000);
 
 </script>
+=======
+<h1><?php get_field('name') ?></h1>
+<h2><?php get_field('description') ?></h2>
+<h3><?php get_field('content') ?> <span id="accroche1"><?php get_field('description_list') ?></span> <span id="accroche2"><?php get_field('description_list_2') ?></span></h3>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 <?php get_footer() ?>

@@ -143,6 +143,7 @@ $core_actions_post = array(
 );
 
 // Deprecated.
+<<<<<<< HEAD
 $core_actions_post_deprecated = array(
 	'wp-fullscreen-save-post',
 	'press-this-save-post',
@@ -152,6 +153,9 @@ $core_actions_post_deprecated = array(
 	'health-check-background-updates',
 	'health-check-loopback-requests',
 );
+=======
+$core_actions_post_deprecated = array( 'wp-fullscreen-save-post', 'press-this-save-post', 'press-this-add-category' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 $core_actions_post            = array_merge( $core_actions_post, $core_actions_post_deprecated );
 
 // Register core Ajax calls.

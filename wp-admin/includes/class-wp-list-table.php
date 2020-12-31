@@ -43,7 +43,11 @@ class WP_List_Table {
 	 * The current screen.
 	 *
 	 * @since 3.1.0
+<<<<<<< HEAD
 	 * @var WP_Screen
+=======
+	 * @var object
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	protected $screen;
 
@@ -419,6 +423,7 @@ class WP_List_Table {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieves the list of bulk actions available for this table.
 	 *
 	 * The format is an associative array where each element represents either a top level option value and label, or
@@ -442,6 +447,14 @@ class WP_List_Table {
 	 *
 	 * @since 3.1.0
 	 * @since 5.6.0 A bulk action can now contain an array of options in order to create an optgroup.
+=======
+	 * Gets the list of bulk actions available on this table.
+	 *
+	 * The format is an associative array:
+	 * - `'option_name' => 'option_title'`
+	 *
+	 * @since 3.1.0
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @return array
 	 */
@@ -462,6 +475,7 @@ class WP_List_Table {
 			$this->_actions = $this->get_bulk_actions();
 
 			/**
+<<<<<<< HEAD
 			 * Filters the items in the bulk actions menu of the list table.
 			 *
 			 * The dynamic portion of the hook name, `$this->screen->id`, refers
@@ -471,6 +485,16 @@ class WP_List_Table {
 			 * @since 5.6.0 A bulk action can now contain an array of options in order to create an optgroup.
 			 *
 			 * @param array $actions An array of the available bulk actions.
+=======
+			 * Filters the list table bulk actions drop-down.
+			 *
+			 * The dynamic portion of the hook name, `$this->screen->id`, refers
+			 * to the ID of the current screen, usually a string.
+			 *
+			 * @since 3.1.0
+			 *
+			 * @param string[] $actions An array of the available bulk actions.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			 */
 			$this->_actions = apply_filters( "bulk_actions-{$this->screen->id}", $this->_actions ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 
@@ -487,6 +511,7 @@ class WP_List_Table {
 		echo '<select name="action' . $two . '" id="bulk-action-selector-' . esc_attr( $which ) . "\">\n";
 		echo '<option value="-1">' . __( 'Bulk actions' ) . "</option>\n";
 
+<<<<<<< HEAD
 		foreach ( $this->_actions as $key => $value ) {
 			if ( is_array( $value ) ) {
 				echo "\t" . '<optgroup label="' . esc_attr( $key ) . '">' . "\n";
@@ -502,6 +527,12 @@ class WP_List_Table {
 
 				echo "\t" . '<option value="' . esc_attr( $key ) . '"' . $class . '>' . $value . "</option>\n";
 			}
+=======
+		foreach ( $this->_actions as $name => $title ) {
+			$class = 'edit' === $name ? ' class="hide-if-no-js"' : '';
+
+			echo "\t" . '<option value="' . $name . '"' . $class . '>' . $title . "</option>\n";
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		echo "</select>\n";
@@ -976,7 +1007,11 @@ class WP_List_Table {
 		if ( ! empty( $infinite_scroll ) ) {
 			$pagination_links_class .= ' hide-if-js';
 		}
+<<<<<<< HEAD
 		$output .= "\n<span class='$pagination_links_class'>" . implode( "\n", $page_links ) . '</span>';
+=======
+		$output .= "\n<span class='$pagination_links_class'>" . join( "\n", $page_links ) . '</span>';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( $total_pages ) {
 			$page_class = $total_pages < 2 ? ' one-page' : '';
@@ -1073,7 +1108,11 @@ class WP_List_Table {
 		// If the primary column doesn't exist,
 		// fall back to the first non-checkbox column.
 		if ( ! isset( $columns[ $default ] ) ) {
+<<<<<<< HEAD
 			$default = self::get_default_primary_column_name();
+=======
+			$default = WP_List_Table::get_default_primary_column_name();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		/**
@@ -1094,7 +1133,11 @@ class WP_List_Table {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Gets a list of all, hidden, and sortable columns, with filter applied.
+=======
+	 * Gets a list of all, hidden and sortable columns, with filter applied.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 3.1.0
 	 *
@@ -1121,7 +1164,11 @@ class WP_List_Table {
 		 * Filters the list table sortable columns for a specific screen.
 		 *
 		 * The dynamic portion of the hook name, `$this->screen->id`, refers
+<<<<<<< HEAD
 		 * to the ID of the current screen.
+=======
+		 * to the ID of the current screen, usually a string.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @since 3.1.0
 		 *
@@ -1242,7 +1289,11 @@ class WP_List_Table {
 			$id    = $with_id ? "id='$column_key'" : '';
 
 			if ( ! empty( $class ) ) {
+<<<<<<< HEAD
 				$class = "class='" . implode( ' ', $class ) . "'";
+=======
+				$class = "class='" . join( ' ', $class ) . "'";
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 
 			echo "<$tag $scope $id $class>$column_display_name</$tag>";
@@ -1372,7 +1423,11 @@ class WP_List_Table {
 	 *
 	 * @since 3.1.0
 	 *
+<<<<<<< HEAD
 	 * @param object|array $item The current item
+=======
+	 * @param object $item The current item
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function single_row( $item ) {
 		echo '<tr>';
@@ -1381,13 +1436,21 @@ class WP_List_Table {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * @param object|array $item
+=======
+	 * @param object $item
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param string $column_name
 	 */
 	protected function column_default( $item, $column_name ) {}
 
 	/**
+<<<<<<< HEAD
 	 * @param object|array $item
+=======
+	 * @param object $item
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	protected function column_cb( $item ) {}
 
@@ -1396,7 +1459,11 @@ class WP_List_Table {
 	 *
 	 * @since 3.1.0
 	 *
+<<<<<<< HEAD
 	 * @param object|array $item The current item.
+=======
+	 * @param object $item The current item.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	protected function single_row_columns( $item ) {
 		list( $columns, $hidden, $sortable, $primary ) = $this->get_column_info();
@@ -1448,9 +1515,15 @@ class WP_List_Table {
 	 *
 	 * @since 4.3.0
 	 *
+<<<<<<< HEAD
 	 * @param object|array $item        The item being acted upon.
 	 * @param string       $column_name Current column name.
 	 * @param string       $primary     Primary column name.
+=======
+	 * @param object $item        The item being acted upon.
+	 * @param string $column_name Current column name.
+	 * @param string $primary     Primary column name.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return string The row actions HTML, or an empty string
 	 *                if the current column is not the primary column.
 	 */

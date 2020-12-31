@@ -15,7 +15,11 @@
  *
  * @global array $wp_registered_widgets
  * @global array $wp_registered_widget_controls
+<<<<<<< HEAD
  * @global callable[] $wp_dashboard_control_callbacks
+=======
+ * @global array $wp_dashboard_control_callbacks
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function wp_dashboard_setup() {
 	global $wp_registered_widgets, $wp_registered_widget_controls, $wp_dashboard_control_callbacks;
@@ -157,9 +161,14 @@ function wp_dashboard_setup() {
  * Adds a new dashboard widget.
  *
  * @since 2.7.0
+<<<<<<< HEAD
  * @since 5.6.0 The `$context` and `$priority` parameters were added.
  *
  * @global callable[] $wp_dashboard_control_callbacks
+=======
+ *
+ * @global array $wp_dashboard_control_callbacks
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @param string   $widget_id        Widget ID  (used in the 'id' attribute for the widget).
  * @param string   $widget_name      Title of the widget.
@@ -168,12 +177,17 @@ function wp_dashboard_setup() {
  * @param callable $control_callback Optional. Function that outputs controls for the widget. Default null.
  * @param array    $callback_args    Optional. Data that should be set as the $args property of the widget array
  *                                   (which is the second parameter passed to your callback). Default null.
+<<<<<<< HEAD
  * @param string   $context          Optional. The context within the screen where the box should display.
  *                                   Accepts 'normal', 'side', 'column3', or 'column4'. Default 'normal'.
  * @param string   $priority         Optional. The priority within the context where the box should show.
  *                                   Accepts 'high', 'core', 'default', or 'low'. Default 'core'.
  */
 function wp_add_dashboard_widget( $widget_id, $widget_name, $callback, $control_callback = null, $callback_args = null, $context = 'normal', $priority = 'core' ) {
+=======
+ */
+function wp_add_dashboard_widget( $widget_id, $widget_name, $callback, $control_callback = null, $callback_args = null ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$screen = get_current_screen();
 	global $wp_dashboard_control_callbacks;
 
@@ -199,16 +213,27 @@ function wp_add_dashboard_widget( $widget_id, $widget_name, $callback, $control_
 
 	$side_widgets = array( 'dashboard_quick_press', 'dashboard_primary' );
 
+<<<<<<< HEAD
 	if ( in_array( $widget_id, $side_widgets, true ) ) {
 		$context = 'side';
+=======
+	$location = 'normal';
+	if ( in_array( $widget_id, $side_widgets, true ) ) {
+		$location = 'side';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	$high_priority_widgets = array( 'dashboard_browser_nag', 'dashboard_php_nag' );
 
+<<<<<<< HEAD
+=======
+	$priority = 'core';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	if ( in_array( $widget_id, $high_priority_widgets, true ) ) {
 		$priority = 'high';
 	}
 
+<<<<<<< HEAD
 	if ( empty( $context ) ) {
 		$context = 'normal';
 	}
@@ -217,6 +242,9 @@ function wp_add_dashboard_widget( $widget_id, $widget_name, $callback, $control_
 	}
 
 	add_meta_box( $widget_id, $widget_name, $callback, $screen, $context, $priority, $callback_args );
+=======
+	add_meta_box( $widget_id, $widget_name, $callback, $screen, $location, $priority, $callback_args );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**
@@ -616,7 +644,11 @@ function wp_dashboard_recent_drafts( $drafts = false ) {
 	echo '<h2 class="hide-if-no-js">' . __( 'Your Recent Drafts' ) . "</h2>\n<ul>";
 
 	/* translators: Maximum number of words used in a preview of a draft on the dashboard. */
+<<<<<<< HEAD
 	$draft_length = (int) _x( '10', 'draft_length' );
+=======
+	$draft_length = intval( _x( '10', 'draft_length' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	$drafts = array_slice( $drafts, 0, 3 );
 	foreach ( $drafts as $draft ) {
@@ -938,7 +970,11 @@ function wp_dashboard_recent_posts( $args ) {
 		'post_status'    => $args['status'],
 		'orderby'        => 'date',
 		'order'          => $args['order'],
+<<<<<<< HEAD
 		'posts_per_page' => (int) $args['max'],
+=======
+		'posts_per_page' => intval( $args['max'] ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		'no_found_rows'  => true,
 		'cache_results'  => false,
 		'perm'           => ( 'future' === $args['status'] ) ? 'editable' : 'readable',
@@ -975,10 +1011,17 @@ function wp_dashboard_recent_posts( $args ) {
 			} elseif ( gmdate( 'Y-m-d', $time ) == $tomorrow ) {
 				$relative = __( 'Tomorrow' );
 			} elseif ( gmdate( 'Y', $time ) !== $year ) {
+<<<<<<< HEAD
 				/* translators: Date and time format for recent posts on the dashboard, from a different calendar year, see https://www.php.net/manual/datetime.format.php */
 				$relative = date_i18n( __( 'M jS Y' ), $time );
 			} else {
 				/* translators: Date and time format for recent posts on the dashboard, see https://www.php.net/manual/datetime.format.php */
+=======
+				/* translators: Date and time format for recent posts on the dashboard, from a different calendar year, see https://www.php.net/date */
+				$relative = date_i18n( __( 'M jS Y' ), $time );
+			} else {
+				/* translators: Date and time format for recent posts on the dashboard, see https://www.php.net/date */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$relative = date_i18n( __( 'M jS' ), $time );
 			}
 
@@ -1047,7 +1090,11 @@ function wp_dashboard_recent_comments( $total_items = 5 ) {
 	}
 
 	if ( $comments ) {
+<<<<<<< HEAD
 		echo '<div id="latest-comments" class="activity-block table-view-list">';
+=======
+		echo '<div id="latest-comments" class="activity-block">';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		echo '<h3>' . __( 'Recent Comments' ) . '</h3>';
 
 		echo '<ul id="the-comment-list" data-wp-lists="list:comment">';
@@ -1149,7 +1196,11 @@ function wp_dashboard_cached_rss_widget( $widget_id, $callback, $check_urls = ar
  *
  * @since 2.5.0
  *
+<<<<<<< HEAD
  * @global callable[] $wp_dashboard_control_callbacks
+=======
+ * @global array $wp_dashboard_control_callbacks
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @param int $widget_control_id Registered Widget ID.
  */
@@ -1462,7 +1513,11 @@ function wp_dashboard_primary() {
 			 * @param string $title Title attribute for the widget's primary link.
 			 */
 			'title'        => apply_filters( 'dashboard_primary_title', __( 'WordPress Blog' ) ),
+<<<<<<< HEAD
 			'items'        => 2,
+=======
+			'items'        => 1,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			'show_summary' => 0,
 			'show_author'  => 0,
 			'show_date'    => 0,
@@ -1761,7 +1816,11 @@ function wp_dashboard_php_nag() {
 	<p class="button-container">
 		<?php
 		printf(
+<<<<<<< HEAD
 			'<a class="button button-primary" href="%1$s" target="_blank" rel="noopener">%2$s <span class="screen-reader-text">%3$s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a>',
+=======
+			'<a class="button button-primary" href="%1$s" target="_blank" rel="noopener noreferrer">%2$s <span class="screen-reader-text">%3$s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a>',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			esc_url( wp_get_update_php_url() ),
 			__( 'Learn more about updating PHP' ),
 			/* translators: Accessibility text. */

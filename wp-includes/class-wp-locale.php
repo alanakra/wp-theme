@@ -359,11 +359,19 @@ class WP_Locale {
 	 * @since 3.6.0
 	 */
 	public function _strings_for_pot() {
+<<<<<<< HEAD
 		/* translators: Localized date format, see https://www.php.net/manual/datetime.format.php */
 		__( 'F j, Y' );
 		/* translators: Localized time format, see https://www.php.net/manual/datetime.format.php */
 		__( 'g:i a' );
 		/* translators: Localized date and time format, see https://www.php.net/manual/datetime.format.php */
+=======
+		/* translators: Localized date format, see https://www.php.net/date */
+		__( 'F j, Y' );
+		/* translators: Localized time format, see https://www.php.net/date */
+		__( 'g:i a' );
+		/* translators: Localized date and time format, see https://www.php.net/date */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		__( 'F j, Y g:i a' );
 	}
 }

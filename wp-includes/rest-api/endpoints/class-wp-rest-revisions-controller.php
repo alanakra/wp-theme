@@ -621,7 +621,11 @@ class WP_REST_Revisions_Controller extends WP_REST_Controller {
 		}
 
 		/**
+<<<<<<< HEAD
 		 * Filters a revision returned from the REST API.
+=======
+		 * Filters a revision returned from the API.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * Allows modification of the revision right before it is returned.
 		 *

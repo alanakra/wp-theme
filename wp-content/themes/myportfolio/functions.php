@@ -7,6 +7,7 @@ add_action('wp_enqueue_scripts','add_global_style');
 add_action('wp_enqueue_scripts','add_specific_style');
 add_action('wp_enqueue_scripts','add_script');
 add_action( 'init', 'create_custom_post_type' );
+// add_action('acf/init', 'my_acf_init');
 
 // Add global stylesheet
 function add_global_style(){

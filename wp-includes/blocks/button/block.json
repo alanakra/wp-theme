@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	"name": "core/button",
 	"category": "design",
 	"parent": [
@@ -59,6 +62,10 @@
 		"align": true,
 		"alignWide": false,
 		"reusable": false,
+<<<<<<< HEAD
 		"__experimentalSelector": ".wp-block-button > a"
+=======
+		"lightBlockWrapper": true
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 }

@@ -103,8 +103,13 @@ class WP_MS_Sites_List_Table extends WP_List_Table {
 		}
 
 		$args = array(
+<<<<<<< HEAD
 			'number'     => (int) $per_page,
 			'offset'     => (int) ( ( $pagenum - 1 ) * $per_page ),
+=======
+			'number'     => intval( $per_page ),
+			'offset'     => intval( ( $pagenum - 1 ) * $per_page ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			'network_id' => get_current_network_id(),
 		);
 
@@ -332,9 +337,13 @@ class WP_MS_Sites_List_Table extends WP_List_Table {
 			 * @param string $which The location of the extra table nav markup: 'top' or 'bottom'.
 			 */
 			do_action( 'restrict_manage_sites', $which );
+<<<<<<< HEAD
 
 			$output = ob_get_clean();
 
+=======
+			$output = ob_get_clean();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			if ( ! empty( $output ) ) {
 				echo $output;
 				submit_button( __( 'Filter' ), '', 'filter_action', false, array( 'id' => 'site-query-submit' ) );
@@ -620,13 +629,21 @@ class WP_MS_Sites_List_Table extends WP_List_Table {
 
 		$site_status = isset( $_REQUEST['status'] ) ? wp_unslash( trim( $_REQUEST['status'] ) ) : '';
 		foreach ( $this->status_list as $status => $col ) {
+<<<<<<< HEAD
 			if ( ( 1 === (int) $_site->{$status} ) && ( $site_status !== $status ) ) {
+=======
+			if ( ( 1 === intval( $_site->{$status} ) ) && ( $site_status !== $status ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$site_states[ $col[0] ] = $col[1];
 			}
 		}
 
 		/**
+<<<<<<< HEAD
 		 * Filters the default site display states for items in the Sites list table.
+=======
+		 * Filter the default site display states for items in the Sites list table.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @since 5.3.0
 		 *
@@ -664,7 +681,11 @@ class WP_MS_Sites_List_Table extends WP_List_Table {
 	 *
 	 * @since 4.3.0
 	 *
+<<<<<<< HEAD
 	 * @param array  $blog        Site being acted upon.
+=======
+	 * @param object $blog        Site being acted upon.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param string $column_name Current column name.
 	 * @param string $primary     Primary column name.
 	 * @return string Row actions output for sites in Multisite, or an empty string

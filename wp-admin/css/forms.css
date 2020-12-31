@@ -172,7 +172,11 @@ input[type="radio"]:checked::before {
 	display: inline-block;
 	vertical-align: middle;
 	width: 1rem;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -238,12 +242,19 @@ textarea[readonly] {
 	color: #72777c;
 }
 
+<<<<<<< HEAD
 .form-invalid .form-required,
 .form-invalid .form-required:focus,
 .form-invalid.form-required input,
 .form-invalid.form-required input:focus,
 .form-invalid.form-required select,
 .form-invalid.form-required select:focus {
+=======
+.form-invalid input,
+.form-invalid input:focus,
+.form-invalid select,
+.form-invalid select:focus {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	border-color: #dc3232 !important;
 	box-shadow: 0 0 2px rgba(204, 0, 0, 0.8);
 }
@@ -535,6 +546,7 @@ fieldset label,
 	margin: 0 0 1em;
 }
 
+<<<<<<< HEAD
 .wp-generate-pw {
 	margin-top: 1em;
 }
@@ -543,6 +555,8 @@ fieldset label,
 	margin-top: 1em;
 }
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 #misc-publishing-actions label {
 	vertical-align: baseline;
 }
@@ -766,7 +780,11 @@ ul#add-to-blog-users {
 	display: inline-block;
 }
 
+<<<<<<< HEAD
 .form-table td fieldset p label {
+=======
+.form-table td fieldset p label { 
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	margin-top: 0 !important;
 }
 
@@ -851,6 +869,7 @@ table.form-table td .updated p {
 	cursor: pointer;
 }
 
+<<<<<<< HEAD
 .create-application-password .form-field {
 	max-width: 25em;
 }
@@ -881,6 +900,8 @@ table.form-table td .updated p {
 	display: block !important;
 }
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /*------------------------------------------------------------------------------
   19.0 - Tools
 ------------------------------------------------------------------------------*/
@@ -1334,7 +1355,11 @@ table.form-table td .updated p {
 	display: inline-block;
 	font: normal 20px/1 dashicons;
 	margin: 3px 5px 0 -2px;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	vertical-align: top;

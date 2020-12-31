@@ -59,7 +59,11 @@ if ( isset( $_REQUEST['action'] ) && 'adduser' === $_REQUEST['action'] ) {
 	}
 
 	// Adding an existing user to this blog.
+<<<<<<< HEAD
 	$new_user_email = array();
+=======
+	$new_user_email = $user_details->user_email;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$redirect       = 'user-new.php';
 	$username       = $user_details->user_login;
 	$user_id        = $user_details->ID;
@@ -100,7 +104,11 @@ if ( isset( $_REQUEST['action'] ) && 'adduser' === $_REQUEST['action'] ) {
 			$role  = $roles[ $_REQUEST['role'] ];
 
 			/**
+<<<<<<< HEAD
 			 * Fires immediately after an existing user is invited to join the site, but before the notification is sent.
+=======
+			 * Fires immediately after a user is invited to join a site, but before the notification is sent.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			 *
 			 * @since 4.4.0
 			 *
@@ -123,6 +131,7 @@ Please click the following link to confirm the invite:
 %4$s'
 			);
 
+<<<<<<< HEAD
 			$new_user_email['to']      = $user_details->user_email;
 			$new_user_email['subject'] = sprintf(
 				/* translators: Joining confirmation notification email subject. %s: Site title. */
@@ -163,6 +172,22 @@ Please click the following link to confirm the invite:
 				$new_user_email['subject'],
 				$new_user_email['message'],
 				$new_user_email['headers']
+=======
+			wp_mail(
+				$new_user_email,
+				sprintf(
+					/* translators: Joining confirmation notification email subject. %s: Site title. */
+					__( '[%s] Joining Confirmation' ),
+					wp_specialchars_decode( get_option( 'blogname' ) )
+				),
+				sprintf(
+					$message,
+					get_option( 'blogname' ),
+					home_url(),
+					wp_specialchars_decode( translate_user_role( $role['name'] ) ),
+					home_url( "/newbloguser/$newuser_key/" )
+				)
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			);
 
 			if ( $switched_locale ) {
@@ -560,8 +585,13 @@ if ( current_user_can( 'create_users' ) ) {
 		</th>
 		<td>
 			<input class="hidden" value=" " /><!-- #24364 workaround -->
+<<<<<<< HEAD
 			<button type="button" class="button wp-generate-pw hide-if-no-js"><?php _e( 'Generate password' ); ?></button>
 			<div class="wp-pwd">
+=======
+			<button type="button" class="button wp-generate-pw hide-if-no-js"><?php _e( 'Show password' ); ?></button>
+			<div class="wp-pwd hide-if-js">
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				<?php $initial_password = wp_generate_password( 24 ); ?>
 				<span class="password-input-wrapper">
 					<input type="password" name="pass1" id="pass1" class="regular-text" autocomplete="off" data-reveal="1" data-pw="<?php echo esc_attr( $initial_password ); ?>" aria-describedby="pass-strength-result" />
@@ -570,6 +600,13 @@ if ( current_user_can( 'create_users' ) ) {
 					<span class="dashicons dashicons-hidden" aria-hidden="true"></span>
 					<span class="text"><?php _e( 'Hide' ); ?></span>
 				</button>
+<<<<<<< HEAD
+=======
+				<button type="button" class="button wp-cancel-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Cancel password change' ); ?>">
+					<span class="dashicons dashicons-no" aria-hidden="true"></span>
+					<span class="text"><?php _e( 'Cancel' ); ?></span>
+				</button>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				<div style="display:none" id="pass-strength-result" aria-live="polite"></div>
 			</div>
 		</td>
@@ -577,8 +614,12 @@ if ( current_user_can( 'create_users' ) ) {
 	<tr class="form-field form-required user-pass2-wrap hide-if-js">
 		<th scope="row"><label for="pass2"><?php _e( 'Repeat Password' ); ?> <span class="description"><?php _e( '(required)' ); ?></span></label></th>
 		<td>
+<<<<<<< HEAD
 		<input name="pass2" type="password" id="pass2" autocomplete="off" aria-describedby="pass2-desc" />
 		<p class="description" id="pass2-desc"><?php _e( 'Type the password again.' ); ?></p>
+=======
+		<input name="pass2" type="password" id="pass2" autocomplete="off" />
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		</td>
 	</tr>
 	<tr class="pw-weak">
@@ -604,7 +645,11 @@ if ( current_user_can( 'create_users' ) ) {
 		<td><select name="role" id="role">
 			<?php
 			if ( ! $new_user_role ) {
+<<<<<<< HEAD
 				$new_user_role = get_option( 'default_role' );
+=======
+				$new_user_role = ! empty( $current_role ) ? $current_role : get_option( 'default_role' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 			wp_dropdown_roles( $new_user_role );
 			?>

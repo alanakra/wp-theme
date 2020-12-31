@@ -13,11 +13,27 @@
  * @return string Returns the tag cloud for selected taxonomy.
  */
 function render_block_core_tag_cloud( $attributes ) {
+<<<<<<< HEAD
 	$args      = array(
+=======
+	$class = isset( $attributes['align'] ) ?
+		"wp-block-tag-cloud align{$attributes['align']}" :
+		'wp-block-tag-cloud';
+
+	if ( isset( $attributes['className'] ) ) {
+		$class .= ' ' . $attributes['className'];
+	}
+
+	$args = array(
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		'echo'       => false,
 		'taxonomy'   => $attributes['taxonomy'],
 		'show_count' => $attributes['showTagCounts'],
 	);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$tag_cloud = wp_tag_cloud( $args );
 
 	if ( ! $tag_cloud ) {
@@ -31,11 +47,17 @@ function render_block_core_tag_cloud( $attributes ) {
 		);
 	}
 
+<<<<<<< HEAD
 	$wrapper_attributes = get_block_wrapper_attributes();
 
 	return sprintf(
 		'<p %1$s>%2$s</p>',
 		$wrapper_attributes,
+=======
+	return sprintf(
+		'<p class="%1$s">%2$s</p>',
+		esc_attr( $class ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$tag_cloud
 	);
 }

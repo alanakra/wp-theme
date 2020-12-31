@@ -510,13 +510,22 @@ class Theme_Upgrader extends WP_Upgrader {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Checks that the package source contains a valid theme.
 	 *
 	 * Hooked to the {@see 'upgrader_source_selection'} filter by Theme_Upgrader::install().
+=======
+	 * Check that the package source contains a valid theme.
+	 *
+	 * Hooked to the {@see 'upgrader_source_selection'} filter by Theme_Upgrader::install().
+	 * It will return an error if the theme doesn't have style.css or index.php
+	 * files.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 3.3.0
 	 *
 	 * @global WP_Filesystem_Base $wp_filesystem WordPress filesystem subclass.
+<<<<<<< HEAD
 	 * @global string             $wp_version    The WordPress version string.
 	 *
 	 * @param string $source The path to the downloaded package source.
@@ -524,6 +533,14 @@ class Theme_Upgrader extends WP_Upgrader {
 	 */
 	public function check_package( $source ) {
 		global $wp_filesystem, $wp_version;
+=======
+	 *
+	 * @param string $source The full path to the package source.
+	 * @return string|WP_Error The source or a WP_Error.
+	 */
+	public function check_package( $source ) {
+		global $wp_filesystem;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		$this->new_theme_data = array();
 
@@ -605,7 +622,11 @@ class Theme_Upgrader extends WP_Upgrader {
 			$error = sprintf(
 				/* translators: 1: Current WordPress version, 2: Version required by the uploaded theme. */
 				__( 'Your WordPress version is %1$s, however the uploaded theme requires %2$s.' ),
+<<<<<<< HEAD
 				$wp_version,
+=======
+				$GLOBALS['wp_version'],
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$requires_wp
 			);
 

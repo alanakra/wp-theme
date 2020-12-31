@@ -200,6 +200,7 @@ class WP_Network_Query {
 		$network_data = null;
 
 		/**
+<<<<<<< HEAD
 		 * Filters the network data before the query takes place.
 		 *
 		 * Return a non-null value to bypass WordPress' default network queries.
@@ -225,6 +226,20 @@ class WP_Network_Query {
 		 *              of the current WP_Network_Query instance.
 		 *
 		 * @param array|int|null   $network_data Return an array of network data to short-circuit WP's network query,
+=======
+		 * Filter the network data before the query takes place.
+		 *
+		 * Return a non-null value to bypass WordPress's default network queries.
+		 *
+		 * The expected return type from this filter depends on the value passed in the request query_vars.
+		 * When `$this->query_vars['count']` is set, the filter should return the network count as an int.
+		 * When `'ids' === $this->query_vars['fields']`, the filter should return an array of network IDs.
+		 * Otherwise the filter should return an array of WP_Network objects.
+		 *
+		 * @since 5.2.0
+		 *
+		 * @param array|null       $network_data Return an array of network data to short-circuit WP's network query,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *                                       the network count as an integer if `$this->query_vars['count']` is set,
 		 *                                       or null to allow WP to run its normal queries.
 		 * @param WP_Network_Query $this         The WP_Network_Query instance, passed by reference.
@@ -232,10 +247,13 @@ class WP_Network_Query {
 		$network_data = apply_filters_ref_array( 'networks_pre_query', array( $network_data, &$this ) );
 
 		if ( null !== $network_data ) {
+<<<<<<< HEAD
 			if ( is_array( $network_data ) && ! $this->query_vars['count'] ) {
 				$this->networks = $network_data;
 			}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return $network_data;
 		}
 
@@ -274,7 +292,11 @@ class WP_Network_Query {
 		// If querying for a count only, there's nothing more to do.
 		if ( $this->query_vars['count'] ) {
 			// $network_ids is actually a count in this case.
+<<<<<<< HEAD
 			return (int) $network_ids;
+=======
+			return intval( $network_ids );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		$network_ids = array_map( 'intval', $network_ids );
@@ -483,7 +505,11 @@ class WP_Network_Query {
 		$this->request = "{$this->sql_clauses['select']} {$this->sql_clauses['from']} {$where} {$this->sql_clauses['groupby']} {$this->sql_clauses['orderby']} {$this->sql_clauses['limits']}";
 
 		if ( $this->query_vars['count'] ) {
+<<<<<<< HEAD
 			return (int) $wpdb->get_var( $this->request );
+=======
+			return intval( $wpdb->get_var( $this->request ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		$network_ids = $wpdb->get_col( $this->request );

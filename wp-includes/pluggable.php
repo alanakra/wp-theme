@@ -2540,7 +2540,11 @@ if ( ! function_exists( 'wp_rand' ) ) :
 			$value = $min + ( $max - $min + 1 ) * $value / ( $max_random_number + 1 );
 		}
 
+<<<<<<< HEAD
 		return abs( (int) $value );
+=======
+		return abs( intval( $value ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 endif;
 
@@ -2723,7 +2727,11 @@ if ( ! function_exists( 'get_avatar' ) ) :
 			esc_attr( $args['alt'] ),
 			esc_url( $url ),
 			esc_url( $url2x ) . ' 2x',
+<<<<<<< HEAD
 			esc_attr( implode( ' ', $class ) ),
+=======
+			esc_attr( join( ' ', $class ) ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			(int) $args['height'],
 			(int) $args['width'],
 			$extra_attr

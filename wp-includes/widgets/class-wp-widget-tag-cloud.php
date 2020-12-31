@@ -90,6 +90,7 @@ class WP_Widget_Tag_Cloud extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 
+<<<<<<< HEAD
 		$format = current_theme_supports( 'html5', 'navigation-widgets' ) ? 'html5' : 'xhtml';
 
 		/** This filter is documented in wp-includes/widgets/class-wp-nav-menu-widget.php */
@@ -102,16 +103,21 @@ class WP_Widget_Tag_Cloud extends WP_Widget {
 			echo '<nav role="navigation" aria-label="' . esc_attr( $aria_label ) . '">';
 		}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		echo '<div class="tagcloud">';
 
 		echo $tag_cloud;
 
 		echo "</div>\n";
+<<<<<<< HEAD
 
 		if ( 'html5' === $format ) {
 			echo '</nav>';
 		}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		echo $args['after_widget'];
 	}
 

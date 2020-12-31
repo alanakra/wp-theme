@@ -53,7 +53,11 @@ get_current_screen()->set_screen_reader_content(
 	)
 );
 
+<<<<<<< HEAD
 $id = isset( $_REQUEST['id'] ) ? (int) $_REQUEST['id'] : 0;
+=======
+$id = isset( $_REQUEST['id'] ) ? intval( $_REQUEST['id'] ) : 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 if ( isset( $_GET['action'] ) ) {
 	/** This action is documented in wp-admin/network/edit.php */
@@ -371,6 +375,7 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 
 <?php
 if ( isset( $_REQUEST['s'] ) && strlen( $_REQUEST['s'] ) ) {
+<<<<<<< HEAD
 	echo '<span class="subtitle">';
 	printf(
 		/* translators: %s: Search query. */
@@ -378,6 +383,10 @@ if ( isset( $_REQUEST['s'] ) && strlen( $_REQUEST['s'] ) ) {
 		'<strong>' . esc_html( $s ) . '</strong>'
 	);
 	echo '</span>';
+=======
+	/* translators: %s: Search query. */
+	printf( '<span class="subtitle">' . __( 'Search results for &#8220;%s&#8221;' ) . '</span>', esc_html( $s ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 ?>
 

@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * PHPMailer Exception class.
  * PHP Version 5.5.
@@ -10,7 +13,11 @@
  * @author    Jim Jagielski (jimjag) <jimjag@gmail.com>
  * @author    Andy Prevost (codeworxtech) <codeworxtech@users.sourceforge.net>
  * @author    Brent R. Matzelle (original founder)
+<<<<<<< HEAD
  * @copyright 2012 - 2020 Marcus Bointon
+=======
+ * @copyright 2012 - 2017 Marcus Bointon
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @copyright 2010 - 2012 Jim Jagielski
  * @copyright 2004 - 2009 Andy Prevost
  * @license   http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License

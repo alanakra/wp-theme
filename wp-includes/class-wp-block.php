@@ -213,6 +213,7 @@ class WP_Block {
 		}
 
 		if ( $is_dynamic ) {
+<<<<<<< HEAD
 			$global_post = $post;
 			$parent      = WP_Block_Supports::$block_to_render;
 
@@ -223,6 +224,11 @@ class WP_Block {
 			WP_Block_Supports::$block_to_render = $parent;
 
 			$post = $global_post;
+=======
+			$global_post   = $post;
+			$block_content = (string) call_user_func( $this->block_type->render_callback, $this->attributes, $block_content, $this );
+			$post          = $global_post;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		if ( ! empty( $this->block_type->script ) ) {

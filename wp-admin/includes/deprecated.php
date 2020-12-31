@@ -981,8 +981,12 @@ function type_url_form_file() {
  * @deprecated 3.3.0 Use WP_Screen::add_help_tab()
  * @see WP_Screen::add_help_tab()
  *
+<<<<<<< HEAD
  * @param string    $screen The handle for the screen to add help to. This is usually
  *                          the hook name returned by the `add_*_page()` functions.
+=======
+ * @param string    $screen The handle for the screen to add help to. This is usually the hook name returned by the add_*_page() functions.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param string    $help   The content of an 'Overview' help tab.
  */
 function add_contextual_help( $screen, $help ) {
@@ -1086,7 +1090,11 @@ function _media_button($title, $icon, $type, $id) {
  * @see get_post()
  *
  * @param int $id
+<<<<<<< HEAD
  * @return WP_Post
+=======
+ * @return object
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function get_post_to_edit( $id ) {
 	_deprecated_function( __FUNCTION__, '3.5.0', 'get_post()' );

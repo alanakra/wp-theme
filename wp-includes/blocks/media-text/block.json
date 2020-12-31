@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	"name": "core/media-text",
 	"category": "media",
 	"attributes": {
@@ -64,9 +67,12 @@
 			"type": "number",
 			"default": 50
 		},
+<<<<<<< HEAD
 		"mediaSizeSlug": {
 			"type": "string"
 		},
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		"isStackedOnMobile": {
 			"type": "boolean",
 			"default": true
@@ -83,11 +89,23 @@
 	},
 	"supports": {
 		"anchor": true,
+<<<<<<< HEAD
 		"align": [ "wide", "full" ],
 		"html": false,
 		"color": {
 			"gradients": true,
 			"link": true
+=======
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false,
+		"lightBlockWrapper": true,
+		"__experimentalColor": {
+			"gradients": true,
+			"linkColor": true
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 	}
 }

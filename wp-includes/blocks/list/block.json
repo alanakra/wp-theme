@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	"name": "core/list",
 	"category": "text",
 	"attributes": {
@@ -12,7 +15,14 @@
 			"source": "html",
 			"selector": "ol,ul",
 			"multiline": "li",
+<<<<<<< HEAD
 			"__unstableMultilineWrapperTags": [ "ol", "ul" ],
+=======
+			"__unstableMultilineWrapperTags": [
+				"ol",
+				"ul"
+			],
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			"default": ""
 		},
 		"type": {
@@ -28,9 +38,14 @@
 	"supports": {
 		"anchor": true,
 		"className": false,
+<<<<<<< HEAD
 		"color": {
 			"gradients": true
 		},
 		"__unstablePasteTextInline": true
+=======
+		"__unstablePasteTextInline": true,
+		"lightBlockWrapper": true
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 }

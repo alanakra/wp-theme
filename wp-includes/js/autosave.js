@@ -30,8 +30,13 @@ window.autosave = function() {
 	 * 		disableButtons: disableButtons,
 	 * 		enableButtons: enableButtons,
 	 * 		local: ({hasStorage, getSavedPostData, save, suspend, resume}|*),
+<<<<<<< HEAD
 	 * 		server: ({tempBlockSave, triggerSave, postChanged, suspend, resume}|*)
 	 * 	}}
+=======
+	 * 		server: ({tempBlockSave, triggerSave, postChanged, suspend, resume}|*)}
+	 * 	}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * 	The object with all functions for autosave.
 	 */
 	function autosave() {

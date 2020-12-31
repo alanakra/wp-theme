@@ -79,6 +79,7 @@ function render_block_core_rss( $attributes ) {
 		$list_items .= "<li class='wp-block-rss__item'>{$title}{$date}{$author}{$excerpt}</li>";
 	}
 
+<<<<<<< HEAD
 	$classnames = array();
 	if ( isset( $attributes['blockLayout'] ) && 'grid' === $attributes['blockLayout'] ) {
 		$classnames[] = 'is-grid';
@@ -90,6 +91,26 @@ function render_block_core_rss( $attributes ) {
 	$wrapper_attributes = get_block_wrapper_attributes( array( 'class' => implode( ' ', $classnames ) ) );
 
 	return sprintf( '<ul %s>%s</ul>', $wrapper_attributes, $list_items );
+=======
+	$class = 'wp-block-rss';
+	if ( isset( $attributes['align'] ) ) {
+		$class .= ' align' . $attributes['align'];
+	}
+
+	if ( isset( $attributes['blockLayout'] ) && 'grid' === $attributes['blockLayout'] ) {
+		$class .= ' is-grid';
+	}
+
+	if ( isset( $attributes['columns'] ) && 'grid' === $attributes['blockLayout'] ) {
+		$class .= ' columns-' . $attributes['columns'];
+	}
+
+	if ( isset( $attributes['className'] ) ) {
+		$class .= ' ' . $attributes['className'];
+	}
+
+	return sprintf( '<ul class="%s">%s</ul>', esc_attr( $class ), $list_items );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**

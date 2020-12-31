@@ -1303,7 +1303,11 @@ function get_category_children( $id, $before = '/', $after = '', $visited = arra
  *
  * @link https://developer.wordpress.org/reference/functions/get_all_category_ids/
  *
+<<<<<<< HEAD
  * @return int[] List of all of the category IDs.
+=======
+ * @return object List of all of the category IDs.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function get_all_category_ids() {
 	_deprecated_function( __FUNCTION__, '4.0.0', 'get_terms()' );
@@ -1911,7 +1915,10 @@ function get_attachment_icon_src( $id = 0, $fullsize = false ) {
 	} elseif ( $src = wp_mime_type_icon( $post->ID ) ) {
 		// No thumb, no image. We'll look for a mime-related icon instead.
 
+<<<<<<< HEAD
 		/** This filter is documented in wp-includes/post.php */
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$icon_dir = apply_filters( 'icon_dir', get_template_directory() . '/images' );
 		$src_file = $icon_dir . '/' . wp_basename($src);
 	}
@@ -3197,8 +3204,12 @@ function _get_post_ancestors( &$post ) {
  * @see wp_get_image_editor()
  *
  * @param string $file Filename of the image to load.
+<<<<<<< HEAD
  * @return resource|GdImage|string The resulting image resource or GdImage instance on success,
  *                                 error string on failure.
+=======
+ * @return resource The resulting image resource on success, Error string on failure.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function wp_load_image( $file ) {
 	_deprecated_function( __FUNCTION__, '3.5.0', 'wp_get_image_editor()' );
@@ -3219,7 +3230,11 @@ function wp_load_image( $file ) {
 
 	$image = imagecreatefromstring( file_get_contents( $file ) );
 
+<<<<<<< HEAD
 	if ( ! is_gd_image( $image ) ) {
+=======
+	if ( ! is_resource( $image ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		/* translators: %s: File name. */
 		return sprintf( __( 'File &#8220;%s&#8221; is not an image.' ), $file );
 	}
@@ -3566,7 +3581,11 @@ function preview_theme_ob_filter_callback( $matches ) {
 /**
  * Formats text for the rich text editor.
  *
+<<<<<<< HEAD
  * The {@see 'richedit_pre'} filter is applied here. If `$text` is empty the filter will
+=======
+ * The {@see 'richedit_pre'} filter is applied here. If $text is empty the filter will
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * be applied to an empty string.
  *
  * @since 2.0.0
@@ -4102,6 +4121,7 @@ function remove_option_whitelist( $del_options, $options = '' ) {
 
 	return remove_allowed_options( $del_options, $options );
 }
+<<<<<<< HEAD
 
 /**
  * Adds slashes to only string values in an array of values.
@@ -4135,3 +4155,5 @@ function wp_slash_strings_only( $value ) {
 function addslashes_strings_only( $value ) {
 	return is_string( $value ) ? addslashes( $value ) : $value;
 }
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89

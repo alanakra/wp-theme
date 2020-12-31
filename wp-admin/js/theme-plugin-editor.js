@@ -1023,4 +1023,8 @@ wp.themePluginEditor.l10n = wp.themePluginEditor.l10n || {
 	}
 };
 
+<<<<<<< HEAD
 wp.themePluginEditor.l10n = window.wp.deprecateL10nObject( 'wp.themePluginEditor.l10n', wp.themePluginEditor.l10n, '5.5.0' );
+=======
+wp.themePluginEditor.l10n = window.wp.deprecateL10nObject( 'wp.themePluginEditor.l10n', wp.themePluginEditor.l10n );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89

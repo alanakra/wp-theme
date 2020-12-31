@@ -23,6 +23,7 @@ class WP_SimplePie_File extends SimplePie_File {
 	 * @since 3.2.0 Updated to use a PHP5 constructor.
 	 *
 	 * @param string       $url             Remote file URL.
+<<<<<<< HEAD
 	 * @param int          $timeout         Optional. How long the connection should stay open in seconds.
 	 *                                      Default 10.
 	 * @param int          $redirects       Optional. The number of allowed redirects. Default 5.
@@ -30,6 +31,15 @@ class WP_SimplePie_File extends SimplePie_File {
 	 *                                      Default null.
 	 * @param string       $useragent       Optional. User-agent value sent. Default null.
 	 * @param bool         $force_fsockopen Optional. Whether to force opening internet or unix domain socket
+=======
+	 * @param integer      $timeout         Optional. How long the connection should stay open in seconds.
+	 *                                      Default 10.
+	 * @param integer      $redirects       Optional. The number of allowed redirects. Default 5.
+	 * @param string|array $headers         Optional. Array or string of headers to send with the request.
+	 *                                      Default null.
+	 * @param string       $useragent       Optional. User-agent value sent. Default null.
+	 * @param boolean      $force_fsockopen Optional. Whether to force opening internet or unix domain socket
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *                                      connection or not. Default false.
 	 */
 	public function __construct( $url, $timeout = 10, $redirects = 5, $headers = null, $useragent = null, $force_fsockopen = false ) {

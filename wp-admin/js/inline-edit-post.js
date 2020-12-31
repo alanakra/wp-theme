@@ -329,11 +329,14 @@ window.wp = window.wp || {};
 				textarea = $('textarea.tax_input_' + taxname, editRow),
 				comma = wp.i18n._x( ',', 'tag delimiter' ).trim();
 
+<<<<<<< HEAD
 			// Ensure the textarea exists.
 			if ( ! textarea.length ) {
 				return;
 			}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			terms.find( 'img' ).replaceWith( function() { return this.alt; } );
 			terms = terms.text();
 
@@ -425,6 +428,10 @@ window.wp = window.wp || {};
 					$error = $errorNotice.find( '.error' );
 
 				$( 'table.widefat .spinner' ).removeClass( 'is-active' );
+<<<<<<< HEAD
+=======
+				$( '.ac_results' ).hide();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 				if (r) {
 					if ( -1 !== r.indexOf( '<tr' ) ) {
@@ -470,6 +477,10 @@ window.wp = window.wp || {};
 
 		if ( id ) {
 			$( '.spinner', $tableWideFat ).removeClass( 'is-active' );
+<<<<<<< HEAD
+=======
+			$( '.ac_results' ).hide();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 			if ( 'bulk-edit' === id ) {
 

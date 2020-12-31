@@ -8,7 +8,11 @@
  */
 
 /**
+<<<<<<< HEAD
  * Upgrader Skin for Automatic WordPress Upgrades.
+=======
+ * Upgrader Skin for Automatic WordPress Upgrades
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * This skin is designed to be used when no output is intended, all output
  * is captured and stored for the caller to process and log/email/discard.
@@ -52,22 +56,30 @@ class Automatic_Upgrader_Skin extends WP_Upgrader_Skin {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieves the upgrade messages.
 	 *
 	 * @since 3.7.0
 	 *
 	 * @return array Messages during an upgrade.
+=======
+	 * @return array
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function get_upgrade_messages() {
 		return $this->messages;
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Stores a message about the upgrade.
 	 *
 	 * @since 3.7.0
 	 *
 	 * @param string|array|WP_Error $data    Message data.
+=======
+	 * @param string|array|WP_Error $data
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param mixed                 ...$args Optional text replacements.
 	 */
 	public function feedback( $data, ...$args ) {
@@ -111,18 +123,24 @@ class Automatic_Upgrader_Skin extends WP_Upgrader_Skin {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Creates a new output buffer.
 	 *
 	 * @since 3.7.0
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function header() {
 		ob_start();
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieves the buffered content, deletes the buffer, and processes the output.
 	 *
 	 * @since 3.7.0
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function footer() {
 		$output = ob_get_clean();

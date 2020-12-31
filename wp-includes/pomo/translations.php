@@ -12,8 +12,13 @@ require_once __DIR__ . '/entry.php';
 
 if ( ! class_exists( 'Translations', false ) ) :
 	class Translations {
+<<<<<<< HEAD
 		public $entries = array();
 		public $headers = array();
+=======
+		var $entries = array();
+		var $headers = array();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		/**
 		 * Add entry to the PO structure
@@ -116,7 +121,11 @@ if ( ! class_exists( 'Translations', false ) ) :
 		 * This function should be overridden by the subclasses. For example MO/PO can derive the logic
 		 * from their headers.
 		 *
+<<<<<<< HEAD
 		 * @param int $count number of items
+=======
+		 * @param integer $count number of items
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		function select_plural_form( $count ) {
 			return 1 == $count ? 0 : 1;
@@ -301,8 +310,13 @@ if ( ! class_exists( 'NOOP_Translations', false ) ) :
 	 * Provides the same interface as Translations, but doesn't do anything
 	 */
 	class NOOP_Translations {
+<<<<<<< HEAD
 		public $entries = array();
 		public $headers = array();
+=======
+		var $entries = array();
+		var $headers = array();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		function add_entry( $entry ) {
 			return true;

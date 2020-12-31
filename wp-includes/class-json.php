@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 _deprecated_file( basename( __FILE__ ), '5.3.0', '', 'The PHP native JSON extension is now a requirement.' );
+=======
+_deprecated_file( basename( __FILE__ ), '5.3.0', null, 'The PHP native JSON extension is now a requirement.' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 if ( ! class_exists( 'Services_JSON' ) ) :
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
@@ -579,7 +583,11 @@ class Services_JSON
             return $encoded_value;
         }
 
+<<<<<<< HEAD
         return $this->_encode((string) $name) . ':' . $encoded_value;
+=======
+        return $this->_encode(strval($name)) . ':' . $encoded_value;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     }
 
    /**
@@ -918,7 +926,11 @@ class Services_JSON
 
         if (class_exists('pear')) {
             return PEAR::isError($data, $code);
+<<<<<<< HEAD
         } elseif (is_object($data) && ($data instanceof services_json_error ||
+=======
+        } elseif (is_object($data) && (get_class($data) == 'services_json_error' ||
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
                                  is_subclass_of($data, 'services_json_error'))) {
             return true;
         }

@@ -363,16 +363,27 @@
 			 * @param {string} parentModel      The parent model.
 			 * @param {number} modelId          The model ID if the object to request
 			 * @param {string} modelName        The model name to use when constructing the model.
+<<<<<<< HEAD
 			 * @param {string} embedSourcePoint Where to check the embedded object for _embed data.
+=======
+			 * @param {string} embedSourcePoint Where to check the embedds object for _embed data.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			 * @param {string} embedCheckField  Which model field to check to see if the model has data.
 			 *
 			 * @return {Deferred.promise}        A promise which resolves to the constructed model.
 			 */
 			buildModelGetter = function( parentModel, modelId, modelName, embedSourcePoint, embedCheckField ) {
+<<<<<<< HEAD
 				var getModel, embeddedObjects, attributes, deferred;
 
 				deferred        = jQuery.Deferred();
 				embeddedObjects = parentModel.get( '_embedded' ) || {};
+=======
+				var getModel, embeddeds, attributes, deferred;
+
+				deferred  = jQuery.Deferred();
+				embeddeds = parentModel.get( '_embedded' ) || {};
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 				// Verify that we have a valid object id.
 				if ( ! _.isNumber( modelId ) || 0 === modelId ) {
@@ -381,8 +392,13 @@
 				}
 
 				// If we have embedded object data, use that when constructing the getModel.
+<<<<<<< HEAD
 				if ( embeddedObjects[ embedSourcePoint ] ) {
 					attributes = _.findWhere( embeddedObjects[ embedSourcePoint ], { id: modelId } );
+=======
+				if ( embeddeds[ embedSourcePoint ] ) {
+					attributes = _.findWhere( embeddeds[ embedSourcePoint ], { id: modelId } );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				}
 
 				// Otherwise use the modelId.
@@ -416,8 +432,13 @@
 			 *
 			 * @param {string} parentModel      The parent model.
 			 * @param {string} collectionName   The name to use when constructing the collection.
+<<<<<<< HEAD
 			 * @param {string} embedSourcePoint Where to check the embedded object for _embed data.
 			 * @param {string} embedIndex       An additional optional index for the _embed data.
+=======
+			 * @param {string} embedSourcePoint Where to check the embedds object for _embed data.
+			 * @param {string} embedIndex       An addiitonal optional index for the _embed data.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			 *
 			 * @return {Deferred.promise} A promise which resolves to the constructed collection.
 			 */
@@ -425,19 +446,32 @@
 				/**
 				 * Returns a promise that resolves to the requested collection
 				 *
+<<<<<<< HEAD
 				 * Uses the embedded data if available, otherwise fetches the
+=======
+				 * Uses the embedded data if available, otherwises fetches the
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				 * data from the server.
 				 *
 				 * @return {Deferred.promise} promise Resolves to a wp.api.collections[ collectionName ]
 				 * collection.
 				 */
+<<<<<<< HEAD
 				var postId, embeddedObjects, getObjects,
+=======
+				var postId, embeddeds, getObjects,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					classProperties = '',
 					properties      = '',
 					deferred        = jQuery.Deferred();
 
+<<<<<<< HEAD
 				postId          = parentModel.get( 'id' );
 				embeddedObjects = parentModel.get( '_embedded' ) || {};
+=======
+				postId    = parentModel.get( 'id' );
+				embeddeds = parentModel.get( '_embedded' ) || {};
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 				// Verify that we have a valid post ID.
 				if ( ! _.isNumber( postId ) || 0 === postId ) {
@@ -446,17 +480,29 @@
 				}
 
 				// If we have embedded getObjects data, use that when constructing the getObjects.
+<<<<<<< HEAD
 				if ( ! _.isUndefined( embedSourcePoint ) && ! _.isUndefined( embeddedObjects[ embedSourcePoint ] ) ) {
+=======
+				if ( ! _.isUndefined( embedSourcePoint ) && ! _.isUndefined( embeddeds[ embedSourcePoint ] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 					// Some embeds also include an index offset, check for that.
 					if ( _.isUndefined( embedIndex ) ) {
 
 						// Use the embed source point directly.
+<<<<<<< HEAD
 						properties = embeddedObjects[ embedSourcePoint ];
 					} else {
 
 						// Add the index to the embed source point.
 						properties = embeddedObjects[ embedSourcePoint ][ embedIndex ];
+=======
+						properties = embeddeds[ embedSourcePoint ];
+					} else {
+
+						// Add the index to the embed source point.
+						properties = embeddeds[ embedSourcePoint ][ embedIndex ];
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					}
 				} else {
 
@@ -1057,7 +1103,11 @@
 					};
 				}
 
+<<<<<<< HEAD
 				// Continue by calling Backbone's sync.
+=======
+				// Continue by calling Bacckbone's sync.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				return Backbone.sync( method, model, options );
 			},
 
@@ -1412,11 +1462,16 @@
 						// Function that returns a constructed url passed on the parent.
 						url: function() {
 							return routeModel.get( 'apiRoot' ) + routeModel.get( 'versionString' ) +
+<<<<<<< HEAD
 								parentName + '/' +
 								( ( _.isUndefined( this.parent ) || '' === this.parent ) ?
 									( _.isUndefined( this.get( 'parent_post' ) ) ? '' : this.get( 'parent_post' ) + '/' ) :
 									this.parent + '/' ) +
 								routeName;
+=======
+									parentName + '/' + this.parent + '/' +
+									routeName;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						},
 
 						// Specify the model that this collection contains.

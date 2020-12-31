@@ -798,9 +798,12 @@ $_old_files = array(
 	'wp-admin/css/ie.min.css',
 	'wp-admin/css/ie-rtl.css',
 	'wp-admin/css/ie-rtl.min.css',
+<<<<<<< HEAD
 	// 5.6
 	'wp-includes/js/jquery/ui/position.min.js',
 	'wp-includes/js/jquery/ui/widget.min.js',
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 );
 
 /**
@@ -838,7 +841,10 @@ $_new_bundled_files = array(
 	'themes/twentyseventeen/' => '4.7',
 	'themes/twentynineteen/'  => '5.0',
 	'themes/twentytwenty/'    => '5.3',
+<<<<<<< HEAD
 	'themes/twentytwentyone/' => '5.6',
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 );
 
 /**

@@ -109,8 +109,13 @@ class WP_Widget_Links extends WP_Widget {
 			$instance['orderby'] = $new_instance['orderby'];
 		}
 
+<<<<<<< HEAD
 		$instance['category'] = (int) $new_instance['category'];
 		$instance['limit']    = ! empty( $new_instance['limit'] ) ? (int) $new_instance['limit'] : -1;
+=======
+		$instance['category'] = intval( $new_instance['category'] );
+		$instance['limit']    = ! empty( $new_instance['limit'] ) ? intval( $new_instance['limit'] ) : -1;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		return $instance;
 	}
@@ -138,7 +143,11 @@ class WP_Widget_Links extends WP_Widget {
 			)
 		);
 		$link_cats = get_terms( array( 'taxonomy' => 'link_category' ) );
+<<<<<<< HEAD
 		$limit     = (int) $instance['limit'];
+=======
+		$limit     = intval( $instance['limit'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( ! $limit ) {
 			$limit = -1;
 		}
@@ -148,7 +157,11 @@ class WP_Widget_Links extends WP_Widget {
 			<select class="widefat" id="<?php echo $this->get_field_id( 'category' ); ?>" name="<?php echo $this->get_field_name( 'category' ); ?>">
 				<option value=""><?php _ex( 'All Links', 'links widget' ); ?></option>
 				<?php foreach ( $link_cats as $link_cat ) : ?>
+<<<<<<< HEAD
 					<option value="<?php echo (int) $link_cat->term_id; ?>" <?php selected( $instance['category'], $link_cat->term_id ); ?>>
+=======
+					<option value="<?php echo intval( $link_cat->term_id ); ?>" <?php selected( $instance['category'], $link_cat->term_id ); ?>>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						<?php echo esc_html( $link_cat->name ); ?>
 					</option>
 				<?php endforeach; ?>
@@ -181,7 +194,11 @@ class WP_Widget_Links extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'limit' ); ?>"><?php _e( 'Number of links to show:' ); ?></label>
+<<<<<<< HEAD
 			<input id="<?php echo $this->get_field_id( 'limit' ); ?>" name="<?php echo $this->get_field_name( 'limit' ); ?>" type="text" value="<?php echo ( -1 !== $limit ) ? (int) $limit : ''; ?>" size="3" />
+=======
+			<input id="<?php echo $this->get_field_id( 'limit' ); ?>" name="<?php echo $this->get_field_name( 'limit' ); ?>" type="text" value="<?php echo ( -1 !== $limit ) ? intval( $limit ) : ''; ?>" size="3" />
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		</p>
 		<?php
 	}

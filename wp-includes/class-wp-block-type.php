@@ -17,6 +17,7 @@
 class WP_Block_Type {
 
 	/**
+<<<<<<< HEAD
 	 * Block API version.
 	 *
 	 * @since 5.6.0
@@ -25,6 +26,8 @@ class WP_Block_Type {
 	public $api_version = 1;
 
 	/**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * Block type key.
 	 *
 	 * @since 5.0.0
@@ -200,7 +203,11 @@ class WP_Block_Type {
 	 *
 	 * @since 5.0.0
 	 *
+<<<<<<< HEAD
 	 * @return bool Whether block type is dynamic.
+=======
+	 * @return boolean Whether block type is dynamic.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function is_dynamic() {
 		return is_callable( $this->render_callback );
@@ -217,7 +224,11 @@ class WP_Block_Type {
 	 */
 	public function prepare_attributes_for_render( $attributes ) {
 		// If there are no attribute definitions for the block type, skip
+<<<<<<< HEAD
 		// processing and return verbatim.
+=======
+		// processing and return vebatim.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( ! isset( $this->attributes ) ) {
 			return $attributes;
 		}
@@ -235,7 +246,11 @@ class WP_Block_Type {
 			// its default, if one exists. This occurs by virtue of the missing
 			// attributes loop immediately following. If there is not a default
 			// assigned, the attribute value should remain unset.
+<<<<<<< HEAD
 			$is_valid = rest_validate_value_from_schema( $value, $schema, $attribute_name );
+=======
+			$is_valid = rest_validate_value_from_schema( $value, $schema );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			if ( is_wp_error( $is_valid ) ) {
 				unset( $attributes[ $attribute_name ] );
 			}

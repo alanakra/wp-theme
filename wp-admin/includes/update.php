@@ -240,6 +240,7 @@ function core_update_footer( $msg = '' ) {
 		$cur->current = '';
 	}
 
+<<<<<<< HEAD
 	if ( ! isset( $cur->response ) ) {
 		$cur->response = '';
 	}
@@ -251,6 +252,14 @@ function core_update_footer( $msg = '' ) {
 
 	if ( $is_development_version && 'latest' === $cur->response ) {
 		$cur->response = 'development';
+=======
+	if ( ! isset( $cur->url ) ) {
+		$cur->url = '';
+	}
+
+	if ( ! isset( $cur->response ) ) {
+		$cur->response = '';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	switch ( $cur->response ) {
@@ -1051,6 +1060,7 @@ function wp_is_auto_update_enabled_for_type( $type ) {
 }
 
 /**
+<<<<<<< HEAD
  * Checks whether auto-updates are forced for an item.
  *
  * @since 5.6.0
@@ -1067,6 +1077,8 @@ function wp_is_auto_update_forced_for_item( $type, $update, $item ) {
 }
 
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Determines the appropriate auto-update message to be displayed.
  *
  * @since 5.5.0
@@ -1080,7 +1092,11 @@ function wp_get_auto_update_message() {
 	if ( false === $next_update_time ) {
 		$message = __( 'Automatic update not scheduled. There may be a problem with WP-Cron.' );
 	} else {
+<<<<<<< HEAD
 		$time_to_next_update = human_time_diff( (int) $next_update_time );
+=======
+		$time_to_next_update = human_time_diff( intval( $next_update_time ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		// See if cron is overdue.
 		$overdue = ( time() - $next_update_time ) > 0;

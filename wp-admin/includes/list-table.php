@@ -33,7 +33,10 @@ function _get_list_table( $class, $args = array() ) {
 		'WP_Themes_List_Table'                        => 'themes',
 		'WP_Theme_Install_List_Table'                 => array( 'themes', 'theme-install' ),
 		'WP_Plugins_List_Table'                       => 'plugins',
+<<<<<<< HEAD
 		'WP_Application_Passwords_List_Table'         => 'application-passwords',
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		// Network Admin.
 		'WP_MS_Sites_List_Table'                      => 'ms-sites',
@@ -71,10 +74,16 @@ function _get_list_table( $class, $args = array() ) {
  *
  * @since 2.7.0
  *
+<<<<<<< HEAD
  * @param string    $screen The handle for the screen to register column headers for. This is
  *                          usually the hook name returned by the `add_*_page()` functions.
  * @param string[] $columns An array of columns with column IDs as the keys and translated
  *                          column names as the values.
+=======
+ * @param string   $screen  The handle for the screen to add help to. This is usually the hook name returned by the
+ *                          add_*_page() functions.
+ * @param string[] $columns An array of columns with column IDs as the keys and translated column names as the values.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function register_column_headers( $screen, $columns ) {
 	new _WP_List_Table_Compat( $screen, $columns );

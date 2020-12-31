@@ -17,7 +17,11 @@ if ( ! current_user_can( 'manage_sites' ) ) {
 get_current_screen()->add_help_tab( get_site_screen_help_tab_args() );
 get_current_screen()->set_help_sidebar( get_site_screen_help_sidebar_content() );
 
+<<<<<<< HEAD
 $id = isset( $_REQUEST['id'] ) ? (int) $_REQUEST['id'] : 0;
+=======
+$id = isset( $_REQUEST['id'] ) ? intval( $_REQUEST['id'] ) : 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 if ( ! $id ) {
 	wp_die( __( 'Invalid site ID.' ) );

@@ -192,7 +192,11 @@ function get_approved_comments( $post_id, $args = array() ) {
  *                                       respectively. Default OBJECT.
  * @return WP_Comment|array|null Depends on $output value.
  */
+<<<<<<< HEAD
 function get_comment( $comment = null, $output = OBJECT ) {
+=======
+function get_comment( &$comment = null, $output = OBJECT ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	if ( empty( $comment ) && isset( $GLOBALS['comment'] ) ) {
 		$comment = $GLOBALS['comment'];
 	}
@@ -1254,7 +1258,11 @@ function wp_get_comment_fields_max_lengths() {
 
 			if ( ! is_array( $col_length ) && (int) $col_length > 0 ) {
 				$max_length = (int) $col_length;
+<<<<<<< HEAD
 			} elseif ( is_array( $col_length ) && isset( $col_length['length'] ) && (int) $col_length['length'] > 0 ) {
+=======
+			} elseif ( is_array( $col_length ) && isset( $col_length['length'] ) && intval( $col_length['length'] ) > 0 ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$max_length = (int) $col_length['length'];
 
 				if ( ! empty( $col_length['type'] ) && 'byte' === $col_length['type'] ) {
@@ -2188,6 +2196,7 @@ function wp_new_comment( $commentdata, $wp_error = false ) {
 
 	$prefiltered_user_id = ( isset( $commentdata['user_id'] ) ) ? (int) $commentdata['user_id'] : 0;
 
+<<<<<<< HEAD
 	if ( ! isset( $commentdata['comment_author_IP'] ) ) {
 		$commentdata['comment_author_IP'] = $_SERVER['REMOTE_ADDR'];
 	}
@@ -2196,11 +2205,16 @@ function wp_new_comment( $commentdata, $wp_error = false ) {
 		$commentdata['comment_agent'] = isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '';
 	}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	/**
 	 * Filters a comment's data before it is sanitized and inserted into the database.
 	 *
 	 * @since 1.5.0
+<<<<<<< HEAD
 	 * @since 5.6.0 Comment data includes the `comment_agent` and `comment_author_IP` values.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @param array $commentdata Comment data.
 	 */
@@ -2220,8 +2234,19 @@ function wp_new_comment( $commentdata, $wp_error = false ) {
 
 	$commentdata['comment_parent'] = ( 'approved' === $parent_status || 'unapproved' === $parent_status ) ? $commentdata['comment_parent'] : 0;
 
+<<<<<<< HEAD
 	$commentdata['comment_author_IP'] = preg_replace( '/[^0-9a-fA-F:., ]/', '', $commentdata['comment_author_IP'] );
 
+=======
+	if ( ! isset( $commentdata['comment_author_IP'] ) ) {
+		$commentdata['comment_author_IP'] = $_SERVER['REMOTE_ADDR'];
+	}
+	$commentdata['comment_author_IP'] = preg_replace( '/[^0-9a-fA-F:., ]/', '', $commentdata['comment_author_IP'] );
+
+	if ( ! isset( $commentdata['comment_agent'] ) ) {
+		$commentdata['comment_agent'] = isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '';
+	}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$commentdata['comment_agent'] = substr( $commentdata['comment_agent'], 0, 254 );
 
 	if ( empty( $commentdata['comment_date'] ) ) {
@@ -2401,8 +2426,13 @@ function wp_set_comment_status( $comment_id, $comment_status, $wp_error = false 
 	$comment = get_comment( $comment_old->comment_ID );
 
 	/**
+<<<<<<< HEAD
 	 * Fires immediately after transitioning a comment's status from one to another in the database
 	 * and removing the comment from the object cache, but prior to all status transition hooks.
+=======
+	 * Fires immediately before transitioning a comment's status from one to another
+	 * in the database.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 1.5.0
 	 *
@@ -2800,6 +2830,7 @@ function discover_pingback_server_uri( $url, $deprecated = '' ) {
  * Perform all pingbacks, enclosures, trackbacks, and send to pingback services.
  *
  * @since 2.1.0
+<<<<<<< HEAD
  * @since 5.6.0 Introduced `do_all_pings` action hook for individual services.
  */
 function do_all_pings() {
@@ -2817,6 +2848,15 @@ function do_all_pings() {
  * @since 5.6.0
  */
 function do_all_pingbacks() {
+=======
+ *
+ * @global wpdb $wpdb WordPress database abstraction object.
+ */
+function do_all_pings() {
+	global $wpdb;
+
+	// Do pingbacks.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$pings = get_posts(
 		array(
 			'post_type'        => get_post_types(),
@@ -2831,6 +2871,7 @@ function do_all_pingbacks() {
 		delete_post_meta( $ping, '_pingme' );
 		pingback( null, $ping );
 	}
+<<<<<<< HEAD
 }
 
 /**
@@ -2839,6 +2880,10 @@ function do_all_pingbacks() {
  * @since 5.6.0
  */
 function do_all_enclosures() {
+=======
+
+	// Do enclosures.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$enclosures = get_posts(
 		array(
 			'post_type'        => get_post_types(),
@@ -2853,6 +2898,7 @@ function do_all_enclosures() {
 		delete_post_meta( $enclosure, '_encloseme' );
 		do_enclose( null, $enclosure );
 	}
+<<<<<<< HEAD
 }
 
 /**
@@ -2861,6 +2907,10 @@ function do_all_enclosures() {
  * @since 5.6.0
  */
 function do_all_trackbacks() {
+=======
+
+	// Do trackbacks.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$trackbacks = get_posts(
 		array(
 			'post_type'        => get_post_types(),
@@ -2875,6 +2925,12 @@ function do_all_trackbacks() {
 		delete_post_meta( $trackback, '_trackbackme' );
 		do_trackbacks( $trackback );
 	}
+<<<<<<< HEAD
+=======
+
+	// Do Update Services/Generic Pings.
+	generic_ping();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**
@@ -3254,7 +3310,11 @@ function _prime_comment_caches( $comment_ids, $update_meta_cache = true ) {
 
 	$non_cached_ids = _get_non_cached_ids( $comment_ids, 'comment' );
 	if ( ! empty( $non_cached_ids ) ) {
+<<<<<<< HEAD
 		$fresh_comments = $wpdb->get_results( sprintf( "SELECT $wpdb->comments.* FROM $wpdb->comments WHERE comment_ID IN (%s)", implode( ',', array_map( 'intval', $non_cached_ids ) ) ) );
+=======
+		$fresh_comments = $wpdb->get_results( sprintf( "SELECT $wpdb->comments.* FROM $wpdb->comments WHERE comment_ID IN (%s)", join( ',', array_map( 'intval', $non_cached_ids ) ) ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		update_comment_cache( $fresh_comments, $update_meta_cache );
 	}
@@ -3647,7 +3707,11 @@ function wp_comments_personal_data_exporter( $email_address, $page = 1 ) {
 				case 'comment_link':
 					$value = get_comment_link( $comment->comment_ID );
 					$value = sprintf(
+<<<<<<< HEAD
 						'<a href="%s" target="_blank" rel="noopener">%s</a>',
+=======
+						'<a href="%s" target="_blank" rel="noreferrer noopener">%s</a>',
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						esc_url( $value ),
 						esc_html( $value )
 					);

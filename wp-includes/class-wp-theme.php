@@ -59,7 +59,10 @@ final class WP_Theme implements ArrayAccess {
 		'twentyseventeen' => 'Twenty Seventeen',
 		'twentynineteen'  => 'Twenty Nineteen',
 		'twentytwenty'    => 'Twenty Twenty',
+<<<<<<< HEAD
 		'twentytwentyone' => 'Twenty Twenty-One',
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	);
 
 	/**

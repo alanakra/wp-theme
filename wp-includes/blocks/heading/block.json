@@ -1,9 +1,16 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
 	"name": "core/heading",
 	"category": "text",
 	"attributes": {
 		"textAlign": {
+=======
+	"name": "core/heading",
+	"category": "text",
+	"attributes": {
+		"align": {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			"type": "string"
 		},
 		"content": {
@@ -21,6 +28,7 @@
 		}
 	},
 	"supports": {
+<<<<<<< HEAD
 		"align": [ "wide", "full" ],
 		"anchor": true,
 		"className": false,
@@ -29,6 +37,16 @@
 		},
 		"fontSize": true,
 		"lineHeight": true,
+=======
+		"anchor": true,
+		"className": false,
+		"lightBlockWrapper": true,
+		"__experimentalColor": {
+			"linkColor": true
+		},
+		"__experimentalFontSize": true,
+		"__experimentalLineHeight": true,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		"__experimentalSelector": {
 			"core/heading/h1": "h1",
 			"core/heading/h2": "h2",

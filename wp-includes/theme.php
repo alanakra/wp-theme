@@ -1024,8 +1024,11 @@ function get_theme_mod( $name, $default = false ) {
 	if ( is_string( $default ) ) {
 		// Only run the replacement if an sprintf() string format pattern was found.
 		if ( preg_match( '#(?<!%)%(?:\d+\$?)?s#', $default ) ) {
+<<<<<<< HEAD
 			// Remove a single trailing percent sign.
 			$default = preg_replace( '#(?<!%)%$#', '', $default );
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$default = sprintf( $default, get_template_directory_uri(), get_stylesheet_directory_uri() );
 		}
 	}
@@ -1038,11 +1041,17 @@ function get_theme_mod( $name, $default = false ) {
  * Updates theme modification value for the current theme.
  *
  * @since 2.1.0
+<<<<<<< HEAD
  * @since 5.6.0 A return value was added.
  *
  * @param string $name  Theme modification name.
  * @param mixed  $value Theme modification value.
  * @return bool True if the value was updated, false otherwise.
+=======
+ *
+ * @param string $name  Theme modification name.
+ * @param mixed  $value Theme modification value.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function set_theme_mod( $name, $value ) {
 	$mods      = get_theme_mods();
@@ -1063,8 +1072,12 @@ function set_theme_mod( $name, $value ) {
 	$mods[ $name ] = apply_filters( "pre_set_theme_mod_{$name}", $value, $old_value );
 
 	$theme = get_option( 'stylesheet' );
+<<<<<<< HEAD
 
 	return update_option( "theme_mods_$theme", $mods );
+=======
+	update_option( "theme_mods_$theme", $mods );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**
@@ -1090,9 +1103,13 @@ function remove_theme_mod( $name ) {
 		remove_theme_mods();
 		return;
 	}
+<<<<<<< HEAD
 
 	$theme = get_option( 'stylesheet' );
 
+=======
+	$theme = get_option( 'stylesheet' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	update_option( "theme_mods_$theme", $mods );
 }
 
@@ -1109,7 +1126,10 @@ function remove_theme_mods() {
 	if ( false === $theme_name ) {
 		$theme_name = wp_get_theme()->get( 'Name' );
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	delete_option( 'mods_' . $theme_name );
 }
 
@@ -2155,7 +2175,11 @@ function get_theme_starter_content() {
 				'text',
 				array(
 					'title'  => _x( 'Find Us', 'Theme starter content' ),
+<<<<<<< HEAD
 					'text'   => implode(
+=======
+					'text'   => join(
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						'',
 						array(
 							'<strong>' . _x( 'Address', 'Theme starter content' ) . "</strong>\n",
@@ -2481,7 +2505,10 @@ function get_theme_starter_content() {
  *              by adding it to the function signature.
  * @since 5.5.0 The `core-block-patterns` feature was added and is enabled by default.
  * @since 5.5.0 The `custom-logo` feature now also accepts 'unlink-homepage-logo'.
+<<<<<<< HEAD
  * @since 5.6.0 The `post-formats` feature warns if no array is passed.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @global array $_wp_theme_features
  *
@@ -2524,9 +2551,12 @@ function add_theme_support( $feature, ...$args ) {
 				unset( $post_formats['standard'] );
 
 				$args[0] = array_intersect( $args[0], array_keys( $post_formats ) );
+<<<<<<< HEAD
 			} else {
 				_doing_it_wrong( "add_theme_support( 'post-formats' )", __( 'You need to pass an array of post formats.' ), '5.6.0' );
 				return false;
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 			break;
 

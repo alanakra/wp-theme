@@ -86,6 +86,7 @@ function wp_fix_server_vars() {
 		$_SERVER['PHP_SELF'] = preg_replace( '/(\?.*)?$/', '', $_SERVER['REQUEST_URI'] );
 		$PHP_SELF            = $_SERVER['PHP_SELF'];
 	}
+<<<<<<< HEAD
 
 	wp_populate_basic_auth_from_authorization_header();
 }
@@ -127,6 +128,8 @@ function wp_populate_basic_auth_from_authorization_header() {
 	// Now shove them in the proper keys where we're expecting later on.
 	$_SERVER['PHP_AUTH_USER'] = $user;
 	$_SERVER['PHP_AUTH_PW']   = $pass;
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**
@@ -153,11 +156,15 @@ function wp_check_php_mysql_versions() {
 		exit( 1 );
 	}
 
+<<<<<<< HEAD
 	if ( ! extension_loaded( 'mysql' ) && ! extension_loaded( 'mysqli' ) && ! extension_loaded( 'mysqlnd' )
 		// This runs before default constants are defined, so we can't assume WP_CONTENT_DIR is set yet.
 		&& ( defined( 'WP_CONTENT_DIR' ) && ! file_exists( WP_CONTENT_DIR . '/db.php' )
 			|| ! file_exists( ABSPATH . 'wp-content/db.php' ) )
 	) {
+=======
+	if ( ! extension_loaded( 'mysql' ) && ! extension_loaded( 'mysqli' ) && ! extension_loaded( 'mysqlnd' ) && ! file_exists( WP_CONTENT_DIR . '/db.php' ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		require_once ABSPATH . WPINC . '/functions.php';
 		wp_load_translations_early();
 		$args = array(
@@ -179,7 +186,11 @@ function wp_check_php_mysql_versions() {
  * The type can be set via the `WP_ENVIRONMENT_TYPE` global system variable,
  * or a constant of the same name.
  *
+<<<<<<< HEAD
  * Possible values are 'local', 'development', 'staging', and 'production'.
+=======
+ * Possible values include 'local', 'development', 'staging', 'production'.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * If not set, the type defaults to 'production'.
  *
  * @since 5.5.0
@@ -1491,6 +1502,7 @@ function wp_doing_cron() {
 }
 
 /**
+<<<<<<< HEAD
  * Checks whether the given variable is a WordPress Error.
  *
  * Returns whether `$thing` is an instance of the `WP_Error` class.
@@ -1515,6 +1527,19 @@ function is_wp_error( $thing ) {
 	}
 
 	return $is_wp_error;
+=======
+ * Check whether variable is a WordPress Error.
+ *
+ * Returns true if $thing is an object of the WP_Error class.
+ *
+ * @since 2.1.0
+ *
+ * @param mixed $thing Check if unknown variable is a WP_Error object.
+ * @return bool True, if WP_Error. False, if not WP_Error.
+ */
+function is_wp_error( $thing ) {
+	return ( $thing instanceof WP_Error );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /**
@@ -1595,11 +1620,19 @@ function wp_finalize_scraping_edited_file_errors( $scrape_key ) {
  */
 function wp_is_json_request() {
 
+<<<<<<< HEAD
 	if ( isset( $_SERVER['HTTP_ACCEPT'] ) && wp_is_json_media_type( $_SERVER['HTTP_ACCEPT'] ) ) {
 		return true;
 	}
 
 	if ( isset( $_SERVER['CONTENT_TYPE'] ) && wp_is_json_media_type( $_SERVER['CONTENT_TYPE'] ) ) {
+=======
+	if ( isset( $_SERVER['HTTP_ACCEPT'] ) && false !== strpos( $_SERVER['HTTP_ACCEPT'], 'application/json' ) ) {
+		return true;
+	}
+
+	if ( isset( $_SERVER['CONTENT_TYPE'] ) && 'application/json' === $_SERVER['CONTENT_TYPE'] ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return true;
 	}
 
@@ -1636,6 +1669,7 @@ function wp_is_jsonp_request() {
 }
 
 /**
+<<<<<<< HEAD
  * Checks whether a string is a valid JSON Media Type.
  *
  * @since 5.6.0
@@ -1654,6 +1688,8 @@ function wp_is_json_media_type( $media_type ) {
 }
 
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Checks whether current request is an XML request, or is expecting an XML response.
  *
  * @since 5.2.0

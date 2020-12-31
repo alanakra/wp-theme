@@ -10,7 +10,11 @@
 require_once __DIR__ . '/admin.php';
 
 if ( ! current_user_can( 'manage_privacy_options' ) ) {
+<<<<<<< HEAD
 	wp_die( __( 'Sorry, you are not allowed to manage privacy options on this site.' ) );
+=======
+	wp_die( __( 'Sorry, you are not allowed to manage privacy on this site.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 if ( ! class_exists( 'WP_Privacy_Policy_Content' ) ) {

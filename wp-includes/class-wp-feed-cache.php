@@ -5,6 +5,7 @@
  * @package WordPress
  * @subpackage Feed
  * @since 4.7.0
+<<<<<<< HEAD
  * @deprecated 5.6.0
  */
 
@@ -15,6 +16,10 @@ _deprecated_file(
 	__( 'This file is only loaded for backward compatibility with SimplePie 1.2.x. Please consider switching to a recent SimplePie version.' )
 );
 
+=======
+ */
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Core class used to implement a feed cache.
  *

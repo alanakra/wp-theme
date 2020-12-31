@@ -17,7 +17,11 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 	/**
 	 * GD Resource.
 	 *
+<<<<<<< HEAD
 	 * @var resource|GdImage
+=======
+	 * @var resource
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	protected $image;
 
@@ -93,6 +97,7 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 		// Set artificially high because GD uses uncompressed images in memory.
 		wp_raise_memory_limit( 'image' );
 
+<<<<<<< HEAD
 		$file_contents = @file_get_contents( $this->file );
 
 		if ( ! $file_contents ) {
@@ -102,11 +107,19 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 		$this->image = @imagecreatefromstring( $file_contents );
 
 		if ( ! is_gd_image( $this->image ) ) {
+=======
+		$this->image = @imagecreatefromstring( file_get_contents( $this->file ) );
+
+		if ( ! is_resource( $this->image ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return new WP_Error( 'invalid_image', __( 'File is not an image.' ), $this->file );
 		}
 
 		$size = @getimagesize( $this->file );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( ! $size ) {
 			return new WP_Error( 'invalid_image', __( 'Could not read image size.' ), $this->file );
 		}
@@ -145,11 +158,19 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 
 	/**
 	 * Resizes current image.
+<<<<<<< HEAD
 	 *
 	 * Wraps `::_resize()` which returns a GD resource or GdImage instance.
 	 *
 	 * At minimum, either a height or width must be provided. If one of the two is set
 	 * to null, the resize will maintain aspect ratio according to the provided dimension.
+=======
+	 * Wraps _resize, since _resize returns a GD Resource.
+	 *
+	 * At minimum, either a height or width must be provided.
+	 * If one of the two is set to null, the resize will
+	 * maintain aspect ratio according to the provided dimension.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 3.5.0
 	 *
@@ -165,7 +186,11 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 
 		$resized = $this->_resize( $max_w, $max_h, $crop );
 
+<<<<<<< HEAD
 		if ( is_gd_image( $resized ) ) {
+=======
+		if ( is_resource( $resized ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			imagedestroy( $this->image );
 			$this->image = $resized;
 			return true;
@@ -181,7 +206,11 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 	 * @param int        $max_w
 	 * @param int        $max_h
 	 * @param bool|array $crop
+<<<<<<< HEAD
 	 * @return resource|GdImage|WP_Error
+=======
+	 * @return resource|WP_Error
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	protected function _resize( $max_w, $max_h, $crop = false ) {
 		$dims = image_resize_dimensions( $this->size['width'], $this->size['height'], $max_w, $max_h, $crop );
@@ -195,7 +224,11 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 		$resized = wp_imagecreatetruecolor( $dst_w, $dst_h );
 		imagecopyresampled( $resized, $this->image, $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h );
 
+<<<<<<< HEAD
 		if ( is_gd_image( $resized ) ) {
+=======
+		if ( is_resource( $resized ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$this->update_size( $dst_w, $dst_h );
 			return $resized;
 		}
@@ -323,6 +356,7 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 			$dst_h = $src_h;
 		}
 
+<<<<<<< HEAD
 		foreach ( array( $src_w, $src_h, $dst_w, $dst_h ) as $value ) {
 			if ( ! is_numeric( $value ) || (int) $value <= 0 ) {
 				return new WP_Error( 'image_crop_error', __( 'Image crop failed.' ), $this->file );
@@ -330,6 +364,9 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 		}
 
 		$dst = wp_imagecreatetruecolor( (int) $dst_w, (int) $dst_h );
+=======
+		$dst = wp_imagecreatetruecolor( $dst_w, $dst_h );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( $src_abs ) {
 			$src_w -= $src_x;
@@ -340,9 +377,15 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 			imageantialias( $dst, true );
 		}
 
+<<<<<<< HEAD
 		imagecopyresampled( $dst, $this->image, 0, 0, (int) $src_x, (int) $src_y, (int) $dst_w, (int) $dst_h, (int) $src_w, (int) $src_h );
 
 		if ( is_gd_image( $dst ) ) {
+=======
+		imagecopyresampled( $dst, $this->image, 0, 0, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h );
+
+		if ( is_resource( $dst ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			imagedestroy( $this->image );
 			$this->image = $dst;
 			$this->update_size();
@@ -366,7 +409,11 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 			$transparency = imagecolorallocatealpha( $this->image, 255, 255, 255, 127 );
 			$rotated      = imagerotate( $this->image, $angle, $transparency );
 
+<<<<<<< HEAD
 			if ( is_gd_image( $rotated ) ) {
+=======
+			if ( is_resource( $rotated ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				imagealphablending( $rotated, true );
 				imagesavealpha( $rotated, true );
 				imagedestroy( $this->image );
@@ -375,7 +422,10 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 				return true;
 			}
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return new WP_Error( 'image_rotate_error', __( 'Image rotate failed.' ), $this->file );
 	}
 
@@ -393,7 +443,11 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 		$h   = $this->size['height'];
 		$dst = wp_imagecreatetruecolor( $w, $h );
 
+<<<<<<< HEAD
 		if ( is_gd_image( $dst ) ) {
+=======
+		if ( is_resource( $dst ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$sx = $vert ? ( $w - 1 ) : 0;
 			$sy = $horz ? ( $h - 1 ) : 0;
 			$sw = $vert ? -$w : $w;
@@ -405,7 +459,10 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 				return true;
 			}
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return new WP_Error( 'image_flip_error', __( 'Image flip failed.' ), $this->file );
 	}
 
@@ -430,9 +487,15 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * @param resource|GdImage $image
 	 * @param string|null      $filename
 	 * @param string|null      $mime_type
+=======
+	 * @param resource    $image
+	 * @param string|null $filename
+	 * @param string|null $mime_type
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return array|WP_Error
 	 */
 	protected function _save( $image, $filename = null, $mime_type = null ) {

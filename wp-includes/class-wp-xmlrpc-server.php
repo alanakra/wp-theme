@@ -743,8 +743,13 @@ class wp_xmlrpc_server extends IXR_Server {
 	/**
 	 * Prepares taxonomy data for return in an XML-RPC object.
 	 *
+<<<<<<< HEAD
 	 * @param WP_Taxonomy $taxonomy The unprepared taxonomy data.
 	 * @param array       $fields   The subset of taxonomy fields to return.
+=======
+	 * @param object $taxonomy The unprepared taxonomy data.
+	 * @param array  $fields   The subset of taxonomy fields to return.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return array The prepared taxonomy data.
 	 */
 	protected function _prepare_taxonomy( $taxonomy, $fields ) {
@@ -798,6 +803,7 @@ class wp_xmlrpc_server extends IXR_Server {
 		}
 
 		// For integers which may be larger than XML-RPC supports ensure we return strings.
+<<<<<<< HEAD
 		$_term['term_id']          = (string) $_term['term_id'];
 		$_term['term_group']       = (string) $_term['term_group'];
 		$_term['term_taxonomy_id'] = (string) $_term['term_taxonomy_id'];
@@ -805,6 +811,15 @@ class wp_xmlrpc_server extends IXR_Server {
 
 		// Count we are happy to return as an integer because people really shouldn't use terms that much.
 		$_term['count'] = (int) $_term['count'];
+=======
+		$_term['term_id']          = strval( $_term['term_id'] );
+		$_term['term_group']       = strval( $_term['term_group'] );
+		$_term['term_taxonomy_id'] = strval( $_term['term_taxonomy_id'] );
+		$_term['parent']           = strval( $_term['parent'] );
+
+		// Count we are happy to return as an integer because people really shouldn't use terms that much.
+		$_term['count'] = intval( $_term['count'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		// Get term meta.
 		$_term['custom_fields'] = $this->get_term_custom_fields( $_term['term_id'] );
@@ -856,7 +871,11 @@ class wp_xmlrpc_server extends IXR_Server {
 	 */
 	protected function _prepare_post( $post, $fields ) {
 		// Holds the data for this post. built up based on $fields.
+<<<<<<< HEAD
 		$_post = array( 'post_id' => (string) $post['ID'] );
+=======
+		$_post = array( 'post_id' => strval( $post['ID'] ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		// Prepare common post fields.
 		$post_fields = array(
@@ -872,11 +891,19 @@ class wp_xmlrpc_server extends IXR_Server {
 			'post_password'     => $post['post_password'],
 			'post_excerpt'      => $post['post_excerpt'],
 			'post_content'      => $post['post_content'],
+<<<<<<< HEAD
 			'post_parent'       => (string) $post['post_parent'],
 			'post_mime_type'    => $post['post_mime_type'],
 			'link'              => get_permalink( $post['ID'] ),
 			'guid'              => $post['guid'],
 			'menu_order'        => (int) $post['menu_order'],
+=======
+			'post_parent'       => strval( $post['post_parent'] ),
+			'post_mime_type'    => $post['post_mime_type'],
+			'link'              => get_permalink( $post['ID'] ),
+			'guid'              => $post['guid'],
+			'menu_order'        => intval( $post['menu_order'] ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			'comment_status'    => $post['comment_status'],
 			'ping_status'       => $post['ping_status'],
 			'sticky'            => ( 'post' === $post['post_type'] && is_sticky( $post['ID'] ) ),
@@ -1003,13 +1030,22 @@ class wp_xmlrpc_server extends IXR_Server {
 	/**
 	 * Prepares media item data for return in an XML-RPC object.
 	 *
+<<<<<<< HEAD
 	 * @param WP_Post $media_item     The unprepared media item data.
 	 * @param string  $thumbnail_size The image size to use for the thumbnail URL.
+=======
+	 * @param object $media_item     The unprepared media item data.
+	 * @param string $thumbnail_size The image size to use for the thumbnail URL.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return array The prepared media item data.
 	 */
 	protected function _prepare_media_item( $media_item, $thumbnail_size = 'thumbnail' ) {
 		$_media_item = array(
+<<<<<<< HEAD
 			'attachment_id'    => (string) $media_item->ID,
+=======
+			'attachment_id'    => strval( $media_item->ID ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			'date_created_gmt' => $this->_convert_date_gmt( $media_item->post_date_gmt, $media_item->post_date ),
 			'parent'           => $media_item->post_parent,
 			'link'             => wp_get_attachment_url( $media_item->ID ),
@@ -1032,9 +1068,15 @@ class wp_xmlrpc_server extends IXR_Server {
 		 *
 		 * @since 3.4.0
 		 *
+<<<<<<< HEAD
 		 * @param array   $_media_item    An array of media item data.
 		 * @param WP_Post $media_item     Media item object.
 		 * @param string  $thumbnail_size Image size.
+=======
+		 * @param array  $_media_item    An array of media item data.
+		 * @param object $media_item     Media item object.
+		 * @param string $thumbnail_size Image size.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		return apply_filters( 'xmlrpc_prepare_media_item', $_media_item, $media_item, $thumbnail_size );
 	}
@@ -1042,7 +1084,11 @@ class wp_xmlrpc_server extends IXR_Server {
 	/**
 	 * Prepares page data for return in an XML-RPC object.
 	 *
+<<<<<<< HEAD
 	 * @param WP_Post $page The unprepared page data.
+=======
+	 * @param object $page The unprepared page data.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return array The prepared page data.
 	 */
 	protected function _prepare_page( $page ) {
@@ -1122,7 +1168,11 @@ class wp_xmlrpc_server extends IXR_Server {
 	/**
 	 * Prepares comment data for return in an XML-RPC object.
 	 *
+<<<<<<< HEAD
 	 * @param WP_Comment $comment The unprepared comment data.
+=======
+	 * @param object $comment The unprepared comment data.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return array The prepared comment data.
 	 */
 	protected function _prepare_comment( $comment ) {
@@ -1174,7 +1224,11 @@ class wp_xmlrpc_server extends IXR_Server {
 	 * @return array The prepared user data.
 	 */
 	protected function _prepare_user( $user, $fields ) {
+<<<<<<< HEAD
 		$_user = array( 'user_id' => (string) $user->ID );
+=======
+		$_user = array( 'user_id' => strval( $user->ID ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		$user_fields = array(
 			'username'     => $user->user_login,
@@ -1307,7 +1361,10 @@ class wp_xmlrpc_server extends IXR_Server {
 	 * @since 3.4.0
 	 *
 	 * @param int $count Number to compare to one.
+<<<<<<< HEAD
 	 * @return bool True if the number is greater than one, false otherwise.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	private function _is_greater_than_one( $count ) {
 		return $count > 1;
@@ -1647,7 +1704,11 @@ class wp_xmlrpc_server extends IXR_Server {
 			}
 		}
 
+<<<<<<< HEAD
 		return (string) $post_ID;
+=======
+		return strval( $post_ID );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	/**
@@ -2094,7 +2155,11 @@ class wp_xmlrpc_server extends IXR_Server {
 			$this->set_term_custom_fields( $term['term_id'], $content_struct['custom_fields'] );
 		}
 
+<<<<<<< HEAD
 		return (string) $term['term_id'];
+=======
+		return strval( $term['term_id'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	/**
@@ -3891,9 +3956,19 @@ class wp_xmlrpc_server extends IXR_Server {
 			return new IXR_Error( 403, __( 'Sorry, you are not allowed to comment on this post.' ) );
 		}
 
+<<<<<<< HEAD
 		$comment = array(
 			'comment_post_ID' => $post_id,
 			'comment_content' => trim( $content_struct['content'] ),
+=======
+		if ( empty( $content_struct['content'] ) ) {
+			return new IXR_Error( 403, __( 'Comment is required.' ) );
+		}
+
+		$comment = array(
+			'comment_post_ID' => $post_id,
+			'comment_content' => $content_struct['content'],
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		);
 
 		if ( $logged_in ) {
@@ -3934,6 +4009,7 @@ class wp_xmlrpc_server extends IXR_Server {
 
 		$comment['comment_parent'] = isset( $content_struct['comment_parent'] ) ? absint( $content_struct['comment_parent'] ) : 0;
 
+<<<<<<< HEAD
 		/** This filter is documented in wp-includes/comment.php */
 		$allow_empty = apply_filters( 'allow_empty_comment', false, $comment );
 
@@ -3941,6 +4017,8 @@ class wp_xmlrpc_server extends IXR_Server {
 			return new IXR_Error( 403, __( 'Comment is required.' ) );
 		}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		/** This action is documented in wp-includes/class-wp-xmlrpc-server.php */
 		do_action( 'xmlrpc_call', 'wp.newComment' );
 
@@ -5584,7 +5662,11 @@ class wp_xmlrpc_server extends IXR_Server {
 		 */
 		do_action( 'xmlrpc_call_success_mw_newPost', $post_ID, $args ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.NotLowercase
 
+<<<<<<< HEAD
 		return (string) $post_ID;
+=======
+		return strval( $post_ID );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	/**
@@ -5592,8 +5674,13 @@ class wp_xmlrpc_server extends IXR_Server {
 	 *
 	 * @since 2.8.0
 	 *
+<<<<<<< HEAD
 	 * @param int   $post_ID   Post ID.
 	 * @param array $enclosure Enclosure data.
+=======
+	 * @param integer $post_ID   Post ID.
+	 * @param array   $enclosure Enclosure data.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function add_enclosure_if_new( $post_ID, $enclosure ) {
 		if ( is_array( $enclosure ) && isset( $enclosure['url'] ) && isset( $enclosure['length'] ) && isset( $enclosure['type'] ) ) {
@@ -6573,7 +6660,11 @@ class wp_xmlrpc_server extends IXR_Server {
 		do_action( 'xmlrpc_call', 'mt.getPostCategories' );
 
 		$categories = array();
+<<<<<<< HEAD
 		$catids     = wp_get_post_categories( (int) $post_ID );
+=======
+		$catids     = wp_get_post_categories( intval( $post_ID ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		// First listed category will be the primary category.
 		$isPrimary = true;
 		foreach ( $catids as $catid ) {
@@ -6830,7 +6921,11 @@ class wp_xmlrpc_server extends IXR_Server {
 			$post_ID = (int) $blah[1];
 		} elseif ( isset( $urltest['fragment'] ) ) {
 			// An #anchor is there, it's either...
+<<<<<<< HEAD
 			if ( (int) $urltest['fragment'] ) {
+=======
+			if ( intval( $urltest['fragment'] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				// ...an integer #XXXX (simplest case),
 				$post_ID = (int) $urltest['fragment'];
 			} elseif ( preg_match( '/post-[0-9]+/', $urltest['fragment'] ) ) {

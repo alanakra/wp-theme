@@ -234,7 +234,11 @@ function wp_list_bookmarks( $args = '' ) {
 		$parsed_args['class'] = explode( ' ', $parsed_args['class'] );
 	}
 	$parsed_args['class'] = array_map( 'sanitize_html_class', $parsed_args['class'] );
+<<<<<<< HEAD
 	$parsed_args['class'] = trim( implode( ' ', $parsed_args['class'] ) );
+=======
+	$parsed_args['class'] = trim( join( ' ', $parsed_args['class'] ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	if ( $parsed_args['categorize'] ) {
 		$cats = get_terms(

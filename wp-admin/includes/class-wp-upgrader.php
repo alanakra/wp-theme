@@ -344,12 +344,20 @@ class WP_Upgrader {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Flatten the results of WP_Filesystem_Base::dirlist() for iterating over.
+=======
+	 * Flatten the results of WP_Filesystem::dirlist() for iterating over.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 4.9.0
 	 * @access protected
 	 *
+<<<<<<< HEAD
 	 * @param array  $nested_files Array of files as returned by WP_Filesystem_Base::dirlist().
+=======
+	 * @param array  $nested_files Array of files as returned by WP_Filesystem::dirlist().
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param string $path         Relative path to prepend to child nodes. Optional.
 	 * @return array A flattened array of the $nested_files specified.
 	 */

@@ -262,7 +262,11 @@ class WP_REST_Response extends WP_HTTP_Response {
 		);
 
 		/**
+<<<<<<< HEAD
 		 * Filters extra CURIEs available on REST API responses.
+=======
+		 * Filters extra CURIEs available on API responses.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * CURIEs allow a shortened version of URI relations. This allows a more
 		 * usable form for custom relations than using the full URI. These work
@@ -284,7 +288,11 @@ class WP_REST_Response extends WP_HTTP_Response {
 		 *
 		 * @since 4.5.0
 		 *
+<<<<<<< HEAD
 		 * @param array $additional Additional CURIEs to register with the REST API.
+=======
+		 * @param array $additional Additional CURIEs to register with the API.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		$additional = apply_filters( 'rest_response_link_curies', array() );
 

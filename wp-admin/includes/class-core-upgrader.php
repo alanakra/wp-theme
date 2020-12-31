@@ -279,21 +279,33 @@ class Core_Upgrader extends WP_Upgrader {
 		$current_is_development_version = (bool) strpos( $wp_version, '-' );
 
 		// Defaults:
+<<<<<<< HEAD
 		$upgrade_dev   = get_site_option( 'auto_update_core_dev', 'enabled' ) === 'enabled';
 		$upgrade_minor = get_site_option( 'auto_update_core_minor', 'enabled' ) === 'enabled';
 		$upgrade_major = get_site_option( 'auto_update_core_major', 'unset' ) === 'enabled';
 
 		// WP_AUTO_UPDATE_CORE = true (all), 'beta', 'rc', 'minor', false.
+=======
+		$upgrade_dev   = true;
+		$upgrade_minor = true;
+		$upgrade_major = false;
+
+		// WP_AUTO_UPDATE_CORE = true (all), 'minor', false.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( defined( 'WP_AUTO_UPDATE_CORE' ) ) {
 			if ( false === WP_AUTO_UPDATE_CORE ) {
 				// Defaults to turned off, unless a filter allows it.
 				$upgrade_dev   = false;
 				$upgrade_minor = false;
 				$upgrade_major = false;
+<<<<<<< HEAD
 			} elseif ( true === WP_AUTO_UPDATE_CORE
 				|| 'beta' === WP_AUTO_UPDATE_CORE
 				|| 'rc' === WP_AUTO_UPDATE_CORE
 			) {
+=======
+			} elseif ( true === WP_AUTO_UPDATE_CORE ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				// ALL updates for core.
 				$upgrade_dev   = true;
 				$upgrade_minor = true;

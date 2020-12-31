@@ -543,7 +543,11 @@ function wpmu_validate_user_signup( $user_name, $user_email ) {
 
 	// Has someone already signed up for this username?
 	$signup = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->signups WHERE user_login = %s", $user_name ) );
+<<<<<<< HEAD
 	if ( $signup instanceof stdClass ) {
+=======
+	if ( null != $signup ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$registered_at = mysql2date( 'U', $signup->registered );
 		$now           = time();
 		$diff          = $now - $registered_at;
@@ -556,7 +560,11 @@ function wpmu_validate_user_signup( $user_name, $user_email ) {
 	}
 
 	$signup = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->signups WHERE user_email = %s", $user_email ) );
+<<<<<<< HEAD
 	if ( $signup instanceof stdClass ) {
+=======
+	if ( null != $signup ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$diff = time() - mysql2date( 'U', $signup->registered );
 		// If registered more than two days ago, cancel registration and let this signup go through.
 		if ( $diff > 2 * DAY_IN_SECONDS ) {
@@ -708,7 +716,11 @@ function wpmu_validate_blog_signup( $blogname, $blog_title, $user = '' ) {
 		$mydomain = $blogname . '.' . preg_replace( '|^www\.|', '', $domain );
 		$path     = $base;
 	} else {
+<<<<<<< HEAD
 		$mydomain = $domain;
+=======
+		$mydomain = "$domain";
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$path     = $base . $blogname . '/';
 	}
 	if ( domain_exists( $mydomain, $path, $current_network->id ) ) {
@@ -724,7 +736,11 @@ function wpmu_validate_blog_signup( $blogname, $blog_title, $user = '' ) {
 	// Has someone already signed up for this domain?
 	// TODO: Check email too?
 	$signup = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->signups WHERE domain = %s AND path = %s", $mydomain, $path ) );
+<<<<<<< HEAD
 	if ( $signup instanceof stdClass ) {
+=======
+	if ( ! empty( $signup ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$diff = time() - mysql2date( 'U', $signup->registered );
 		// If registered more than two days ago, cancel registration and let this signup go through.
 		if ( $diff > 2 * DAY_IN_SECONDS ) {
@@ -1575,7 +1591,11 @@ function domain_exists( $domain, $path, $network_id = 1 ) {
 }
 
 /**
+<<<<<<< HEAD
  * Notifies the site administrator that their site activation was successful.
+=======
+ * Notify a user that their blog activation has been successful.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * Filter {@see 'wpmu_welcome_notification'} to disable or bypass.
  *
@@ -1584,26 +1604,45 @@ function domain_exists( $domain, $path, $network_id = 1 ) {
  *
  * @since MU (3.0.0)
  *
+<<<<<<< HEAD
  * @param int    $blog_id  Site ID.
  * @param int    $user_id  User ID.
  * @param string $password User password, or "N/A" if the user account is not new.
  * @param string $title    Site title.
  * @param array  $meta     Optional. Signup meta data. By default, contains the requested privacy setting and lang_id.
  * @return bool Whether the email notification was sent.
+=======
+ * @param int    $blog_id  Blog ID.
+ * @param int    $user_id  User ID.
+ * @param string $password User password.
+ * @param string $title    Site title.
+ * @param array  $meta     Optional. Signup meta data. By default, contains the requested privacy setting and lang_id.
+ * @return bool
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function wpmu_welcome_notification( $blog_id, $user_id, $password, $title, $meta = array() ) {
 	$current_network = get_network();
 
 	/**
+<<<<<<< HEAD
 	 * Filters whether to bypass the welcome email sent to the site administrator after site activation.
+=======
+	 * Filters whether to bypass the welcome email after site activation.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * Returning false disables the welcome email.
 	 *
 	 * @since MU (3.0.0)
 	 *
+<<<<<<< HEAD
 	 * @param int|bool $blog_id  Site ID.
 	 * @param int      $user_id  User ID of the site administrator.
 	 * @param string   $password User password, or "N/A" if the user account is not new.
+=======
+	 * @param int|bool $blog_id  Blog ID.
+	 * @param int      $user_id  User ID.
+	 * @param string   $password User password.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param string   $title    Site title.
 	 * @param array    $meta     Signup meta data. By default, contains the requested privacy setting and lang_id.
 	 */
@@ -1645,16 +1684,26 @@ We hope you enjoy your new site. Thanks!
 	$welcome_email = str_replace( 'PASSWORD', $password, $welcome_email );
 
 	/**
+<<<<<<< HEAD
 	 * Filters the content of the welcome email sent to the site administrator after site activation.
+=======
+	 * Filters the content of the welcome email after site activation.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * Content should be formatted for transmission via wp_mail().
 	 *
 	 * @since MU (3.0.0)
 	 *
 	 * @param string $welcome_email Message body of the email.
+<<<<<<< HEAD
 	 * @param int    $blog_id       Site ID.
 	 * @param int    $user_id       User ID of the site administrator.
 	 * @param string $password      User password, or "N/A" if the user account is not new.
+=======
+	 * @param int    $blog_id       Blog ID.
+	 * @param int    $user_id       User ID.
+	 * @param string $password      User password.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param string $title         Site title.
 	 * @param array  $meta          Signup meta data. By default, contains the requested privacy setting and lang_id.
 	 */
@@ -1678,7 +1727,11 @@ We hope you enjoy your new site. Thanks!
 	$subject = __( 'New %1$s Site: %2$s' );
 
 	/**
+<<<<<<< HEAD
 	 * Filters the subject of the welcome email sent to the site administrator after site activation.
+=======
+	 * Filters the subject of the welcome email after site activation.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since MU (3.0.0)
 	 *
@@ -1696,6 +1749,7 @@ We hope you enjoy your new site. Thanks!
 }
 
 /**
+<<<<<<< HEAD
  * Notifies the Multisite network administrator that a new site was created.
  *
  * Filter {@see 'send_new_site_email'} to disable or bypass.
@@ -1810,6 +1864,8 @@ Name: %3$s'
 }
 
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Notify a user that their account activation has been successful.
  *
  * Filter {@see 'wpmu_welcome_user_notification'} to disable or bypass.
@@ -2084,7 +2140,11 @@ function global_terms( $term_id, $deprecated = '' ) {
 		return $term_id;
 	}
 
+<<<<<<< HEAD
 	$term_id = (int) $term_id;
+=======
+	$term_id = intval( $term_id );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$c       = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->terms WHERE term_id = %d", $term_id ) );
 
 	$global_id = $wpdb->get_var( $wpdb->prepare( "SELECT cat_ID FROM $wpdb->sitecategories WHERE category_nicename = %s", $c->slug ) );
@@ -2275,7 +2335,11 @@ function maybe_add_existing_user_to_blog() {
 		wp_die(
 			sprintf(
 				/* translators: %s: Home URL. */
+<<<<<<< HEAD
 				__( 'An error occurred adding you to this site. Go to the <a href="%s">homepage</a>.' ),
+=======
+				__( 'An error occurred adding you to this site. Back to the <a href="%s">homepage</a>.' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				home_url()
 			)
 		);
@@ -2629,7 +2693,10 @@ function get_space_used() {
 	 * @param int|false $space_used The amount of used space, in megabytes. Default false.
 	 */
 	$space_used = apply_filters( 'pre_get_space_used', false );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	if ( false === $space_used ) {
 		$upload_dir = wp_upload_dir();
 		$space_used = get_dirsize( $upload_dir['basedir'] ) / MB_IN_BYTES;
@@ -2950,6 +3017,7 @@ All at ###SITENAME###
 	 * @since 4.9.0
 	 *
 	 * @param array $email_change_email {
+<<<<<<< HEAD
 	 *     Used to build wp_mail().
 	 *
 	 *     @type string $to      The intended recipient.
@@ -2962,6 +3030,20 @@ All at ###SITENAME###
 	 *         - ###SITEURL###   The URL to the site.
 	 *     @type string $headers Headers.
 	 * }
+=======
+	 *            Used to build wp_mail().
+	 *
+	 *            @type string $to      The intended recipient.
+	 *            @type string $subject The subject of the email.
+	 *            @type string $message The content of the email.
+	 *                The following strings have a special meaning and will get replaced dynamically:
+	 *                - ###OLD_EMAIL### The old network admin email address.
+	 *                - ###NEW_EMAIL### The new network admin email address.
+	 *                - ###SITENAME###  The name of the network.
+	 *                - ###SITEURL###   The URL to the site.
+	 *            @type string $headers Headers.
+	 *        }
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param string $old_email  The old network admin email address.
 	 * @param string $new_email  The new network admin email address.
 	 * @param int    $network_id ID of the network.

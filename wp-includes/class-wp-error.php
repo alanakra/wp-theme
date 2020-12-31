@@ -2,6 +2,11 @@
 /**
  * WordPress Error API.
  *
+<<<<<<< HEAD
+=======
+ * Contains the WP_Error class and the is_wp_error() function.
+ *
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @package WordPress
  */
 
@@ -25,7 +30,11 @@ class WP_Error {
 	public $errors = array();
 
 	/**
+<<<<<<< HEAD
 	 * Stores the most recently added data for each error code.
+=======
+	 * Stores the list of data for error codes.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 2.1.0
 	 * @var array
@@ -33,6 +42,7 @@ class WP_Error {
 	public $error_data = array();
 
 	/**
+<<<<<<< HEAD
 	 * Stores previously added data added for error codes, oldest-to-newest by code.
 	 *
 	 * @since 5.6.0
@@ -42,6 +52,9 @@ class WP_Error {
 
 	/**
 	 * Initializes the error.
+=======
+	 * Initialize the error.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * If `$code` is empty, the other parameters will be ignored.
 	 * When `$code` is not empty, `$message` will be used even if
@@ -62,11 +75,23 @@ class WP_Error {
 			return;
 		}
 
+<<<<<<< HEAD
 		$this->add( $code, $message, $data );
 	}
 
 	/**
 	 * Retrieves all error codes.
+=======
+		$this->errors[ $code ][] = $message;
+
+		if ( ! empty( $data ) ) {
+			$this->error_data[ $code ] = $data;
+		}
+	}
+
+	/**
+	 * Retrieve all error codes.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 2.1.0
 	 *
@@ -81,7 +106,11 @@ class WP_Error {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieves the first error code available.
+=======
+	 * Retrieve first error code available.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 2.1.0
 	 *
@@ -98,12 +127,20 @@ class WP_Error {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieves all error messages, or the error messages for the given error code.
+=======
+	 * Retrieve all error messages or error messages matching code.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 2.1.0
 	 *
 	 * @param string|int $code Optional. Retrieve messages matching code, if exists.
+<<<<<<< HEAD
 	 * @return array Error strings on success, or empty array if there are none.
+=======
+	 * @return array Error strings on success, or empty array on failure (if using code parameter).
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function get_error_messages( $code = '' ) {
 		// Return all messages if no code specified.
@@ -124,7 +161,11 @@ class WP_Error {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Gets a single error message.
+=======
+	 * Get single error message.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * This will get the first message available for the code. If no code is
 	 * given then the first code available will be used.
@@ -132,7 +173,11 @@ class WP_Error {
 	 * @since 2.1.0
 	 *
 	 * @param string|int $code Optional. Error code to retrieve message.
+<<<<<<< HEAD
 	 * @return string The error message.
+=======
+	 * @return string
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function get_error_message( $code = '' ) {
 		if ( empty( $code ) ) {
@@ -146,7 +191,11 @@ class WP_Error {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieves the most recently added error data for an error code.
+=======
+	 * Retrieve error data for error code.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 2.1.0
 	 *
@@ -164,11 +213,19 @@ class WP_Error {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Verifies if the instance contains errors.
 	 *
 	 * @since 5.1.0
 	 *
 	 * @return bool If the instance contains errors.
+=======
+	 * Verify if the instance contains errors.
+	 *
+	 * @since 5.1.0
+	 *
+	 * @return bool
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function has_errors() {
 		if ( ! empty( $this->errors ) ) {
@@ -178,7 +235,11 @@ class WP_Error {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Adds an error or appends an additional message to an existing error.
+=======
+	 * Add an error or append additional message to an existing error.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 2.1.0
 	 *
@@ -188,6 +249,7 @@ class WP_Error {
 	 */
 	public function add( $code, $message, $data = '' ) {
 		$this->errors[ $code ][] = $message;
+<<<<<<< HEAD
 
 		if ( ! empty( $data ) ) {
 			$this->add_data( $data, $code );
@@ -211,6 +273,19 @@ class WP_Error {
 	 *
 	 * @since 2.1.0
 	 * @since 5.6.0 Errors can now contain more than one item of error data. {@see WP_Error::$additional_data}.
+=======
+		if ( ! empty( $data ) ) {
+			$this->error_data[ $code ] = $data;
+		}
+	}
+
+	/**
+	 * Add data for error code.
+	 *
+	 * The error code can only contain one error data.
+	 *
+	 * @since 2.1.0
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @param mixed      $data Error data.
 	 * @param string|int $code Error code.
@@ -220,14 +295,18 @@ class WP_Error {
 			$code = $this->get_error_code();
 		}
 
+<<<<<<< HEAD
 		if ( isset( $this->error_data[ $code ] ) ) {
 			$this->additional_data[ $code ][] = $this->error_data[ $code ];
 		}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$this->error_data[ $code ] = $data;
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Retrieves all error data for an error code in the order in which the data was added.
 	 *
 	 * @since 5.6.0
@@ -254,6 +333,8 @@ class WP_Error {
 	}
 
 	/**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * Removes the specified error.
 	 *
 	 * This function removes all error messages associated with the specified
@@ -266,6 +347,7 @@ class WP_Error {
 	public function remove( $code ) {
 		unset( $this->errors[ $code ] );
 		unset( $this->error_data[ $code ] );
+<<<<<<< HEAD
 		unset( $this->additional_data[ $code ] );
 	}
 
@@ -309,5 +391,7 @@ class WP_Error {
 				$to->add_data( $data, $code );
 			}
 		}
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 }

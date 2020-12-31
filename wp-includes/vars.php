@@ -134,7 +134,11 @@ $is_IIS = ! $is_apache && ( strpos( $_SERVER['SERVER_SOFTWARE'], 'Microsoft-IIS'
  *
  * @global bool $is_iis7
  */
+<<<<<<< HEAD
 $is_iis7 = $is_IIS && (int) substr( $_SERVER['SERVER_SOFTWARE'], strpos( $_SERVER['SERVER_SOFTWARE'], 'Microsoft-IIS/' ) + 14 ) >= 7;
+=======
+$is_iis7 = $is_IIS && intval( substr( $_SERVER['SERVER_SOFTWARE'], strpos( $_SERVER['SERVER_SOFTWARE'], 'Microsoft-IIS/' ) + 14 ) ) >= 7;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 /**
  * Test if the current browser runs on a mobile device (smart phone, tablet, etc.)

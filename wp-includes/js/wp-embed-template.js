@@ -137,7 +137,13 @@
 			return;
 		}
 
+<<<<<<< HEAD
 		// Send this document's height to the parent (embedding) site.
+=======
+		/**
+		 * Send this document's height to the parent (embedding) site.
+		 */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		sendEmbedMessage( 'height', Math.ceil( document.body.getBoundingClientRect().height ) );
 
 		// Send the document's height again after the featured image has been loaded.
@@ -159,12 +165,18 @@
 				href = target.parentElement.getAttribute( 'href' );
 			}
 
+<<<<<<< HEAD
 			// Only catch clicks from the primary mouse button, without any modifiers.
 			if ( event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ) {
 				return;
 			}
 
 			// Send link target to the parent (embedding) site.
+=======
+			/**
+			 * Send link target to the parent (embedding) site.
+			 */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			if ( href ) {
 				sendEmbedMessage( 'link', href );
 				e.preventDefault();

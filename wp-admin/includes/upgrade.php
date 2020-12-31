@@ -586,18 +586,30 @@ function wp_install_maybe_enable_pretty_permalinks() {
 
 if ( ! function_exists( 'wp_new_blog_notification' ) ) :
 	/**
+<<<<<<< HEAD
 	 * Notifies the site admin that the installation of WordPress is complete.
 	 *
 	 * Sends an email to the new administrator that the installation is complete
+=======
+	 * Notifies the site admin that the setup is complete.
+	 *
+	 * Sends an email with wp_mail to the new administrator that the site setup is complete,
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * and provides them with a record of their login credentials.
 	 *
 	 * @since 2.1.0
 	 *
 	 * @param string $blog_title Site title.
+<<<<<<< HEAD
 	 * @param string $blog_url   Site URL.
 	 * @param int    $user_id    Administrator's user ID.
 	 * @param string $password   Administrator's password. Note that a placeholder message is
 	 *                           usually passed instead of the actual password.
+=======
+	 * @param string $blog_url   Site url.
+	 * @param int    $user_id    User ID.
+	 * @param string $password   User's Password.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	function wp_new_blog_notification( $blog_title, $blog_url, $user_id, $password ) {
 		$user      = new WP_User( $user_id );
@@ -630,6 +642,7 @@ https://wordpress.org/
 			$login_url
 		);
 
+<<<<<<< HEAD
 		$installed_email = array(
 			'to'      => $email,
 			'subject' => __( 'New WordPress Site' ),
@@ -664,6 +677,9 @@ https://wordpress.org/
 			$installed_email['message'],
 			$installed_email['headers']
 		);
+=======
+		wp_mail( $email, __( 'New WordPress Site' ), $message );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 endif;
 
@@ -874,10 +890,13 @@ function upgrade_all() {
 		upgrade_550();
 	}
 
+<<<<<<< HEAD
 	if ( $wp_current_db_version < 49752 ) {
 		upgrade_560();
 	}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	maybe_disable_link_manager();
 
 	maybe_disable_automattic_widgets();
@@ -1026,8 +1045,13 @@ function upgrade_110() {
 	if ( ! $got_gmt_fields ) {
 
 		// Add or subtract time to all dates, to get GMT dates.
+<<<<<<< HEAD
 		$add_hours   = (int) $diff_gmt_weblogger;
 		$add_minutes = (int) ( 60 * ( $diff_gmt_weblogger - $add_hours ) );
+=======
+		$add_hours   = intval( $diff_gmt_weblogger );
+		$add_minutes = intval( 60 * ( $diff_gmt_weblogger - $add_hours ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$wpdb->query( "UPDATE $wpdb->posts SET post_date_gmt = DATE_ADD(post_date, INTERVAL '$add_hours:$add_minutes' HOUR_MINUTE)" );
 		$wpdb->query( "UPDATE $wpdb->posts SET post_modified = post_date" );
 		$wpdb->query( "UPDATE $wpdb->posts SET post_modified_gmt = DATE_ADD(post_modified, INTERVAL '$add_hours:$add_minutes' HOUR_MINUTE) WHERE post_modified != '0000-00-00 00:00:00'" );
@@ -1116,7 +1140,11 @@ function upgrade_130() {
 			$limit    = $option->dupes - 1;
 			$dupe_ids = $wpdb->get_col( $wpdb->prepare( "SELECT option_id FROM $wpdb->options WHERE option_name = %s LIMIT %d", $option->option_name, $limit ) );
 			if ( $dupe_ids ) {
+<<<<<<< HEAD
 				$dupe_ids = implode( ',', $dupe_ids );
+=======
+				$dupe_ids = join( ',', $dupe_ids );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$wpdb->query( "DELETE FROM $wpdb->options WHERE option_id IN ($dupe_ids)" );
 			}
 		}
@@ -2052,7 +2080,11 @@ function upgrade_430_fix_comments() {
 		return;
 	}
 
+<<<<<<< HEAD
 	$allowed_length = (int) $content_length['length'] - 10;
+=======
+	$allowed_length = intval( $content_length['length'] ) - 10;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	$comments = $wpdb->get_results(
 		"SELECT `comment_ID` FROM `{$wpdb->comments}`
@@ -2241,6 +2273,7 @@ function upgrade_550() {
 }
 
 /**
+<<<<<<< HEAD
  * Executes changes made in WordPress 5.6.0.
  *
  * @ignore
@@ -2295,6 +2328,8 @@ function upgrade_560() {
 }
 
 /**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * Executes network-level upgrade routines.
  *
  * @since 3.0.0

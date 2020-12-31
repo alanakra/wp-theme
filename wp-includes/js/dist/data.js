@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["data"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 475);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 442);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,6 +98,7 @@ this["wp"] = this["wp"] || {}; this["wp"]["data"] =
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 10:
 /***/ (function(module, exports) {
 
@@ -102,6 +107,9 @@ this["wp"] = this["wp"] || {}; this["wp"]["data"] =
 /***/ }),
 
 /***/ 108:
+=======
+/***/ 126:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -416,7 +424,45 @@ module.exports = EquivalentKeyMap;
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 12:
+=======
+/***/ 127:
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ 13:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["React"]; }());
+
+/***/ }),
+
+/***/ 14:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -455,7 +501,11 @@ function _iterableToArrayLimit(arr, i) {
   return _arr;
 }
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+<<<<<<< HEAD
 var unsupportedIterableToArray = __webpack_require__(31);
+=======
+var unsupportedIterableToArray = __webpack_require__(29);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
 var nonIterableRest = __webpack_require__(39);
@@ -471,6 +521,7 @@ function _slicedToArray(arr, i) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 121:
 /***/ (function(module, exports) {
 
@@ -506,12 +557,16 @@ module.exports = g;
 /***/ }),
 
 /***/ 152:
+=======
+/***/ 150:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["wp"]["priorityQueue"]; }());
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 153:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -570,6 +625,9 @@ var useCallback = useCallbackOne;
 /***/ }),
 
 /***/ 154:
+=======
+/***/ 151:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports) {
 
 module.exports = isPromise;
@@ -582,7 +640,11 @@ function isPromise(obj) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 169:
+=======
+/***/ 163:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports) {
 
 function combineReducers( reducers ) {
@@ -641,7 +703,11 @@ module.exports = combineReducers;
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 17:
+=======
+/***/ 18:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -650,7 +716,11 @@ module.exports = combineReducers;
 __webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _toConsumableArray; });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+<<<<<<< HEAD
 var arrayLikeToArray = __webpack_require__(27);
+=======
+var arrayLikeToArray = __webpack_require__(26);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
 
@@ -658,10 +728,17 @@ function _arrayWithoutHoles(arr) {
   if (Array.isArray(arr)) return Object(arrayLikeToArray["a" /* default */])(arr);
 }
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
+<<<<<<< HEAD
 var iterableToArray = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
 var unsupportedIterableToArray = __webpack_require__(31);
+=======
+var iterableToArray = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+var unsupportedIterableToArray = __webpack_require__(29);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
 function _nonIterableSpread() {
@@ -678,6 +755,7 @@ function _toConsumableArray(arr) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 2:
 /***/ (function(module, exports) {
 
@@ -697,6 +775,13 @@ function _toConsumableArray(arr) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(291);
+=======
+/***/ 196:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(275);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /* global window */
 
 
@@ -715,11 +800,33 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
+<<<<<<< HEAD
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(121), __webpack_require__(444)(module)))
 
 /***/ }),
 
 /***/ 27:
+=======
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(127), __webpack_require__(412)(module)))
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["lodash"]; }());
+
+/***/ }),
+
+/***/ 24:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["regeneratorRuntime"]; }());
+
+/***/ }),
+
+/***/ 26:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -736,14 +843,22 @@ function _arrayLikeToArray(arr, len) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 290:
+=======
+/***/ 274:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["wp"]["reduxRoutine"]; }());
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 291:
+=======
+/***/ 275:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -769,11 +884,16 @@ function symbolObservablePonyfill(root) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 31:
+=======
+/***/ 29:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
 
 function _unsupportedIterableToArray(o, minLen) {
@@ -783,10 +903,22 @@ function _unsupportedIterableToArray(o, minLen) {
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+=======
+/* harmony import */ var _arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 36:
 /***/ (function(module, exports) {
 
@@ -795,6 +927,9 @@ function _unsupportedIterableToArray(o, minLen) {
 /***/ }),
 
 /***/ 37:
+=======
+/***/ 35:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -805,6 +940,16 @@ function _iterableToArray(iter) {
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ 37:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["deprecated"]; }());
+
+/***/ }),
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ 38:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -827,7 +972,11 @@ function _nonIterableRest() {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 444:
+=======
+/***/ 412:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -858,6 +1007,7 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 45:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -902,6 +1052,9 @@ function _asyncToGenerator(fn) {
 /***/ }),
 
 /***/ 475:
+=======
+/***/ 442:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -917,11 +1070,18 @@ __webpack_require__.d(__webpack_exports__, "RegistryConsumer", function() { retu
 __webpack_require__.d(__webpack_exports__, "useRegistry", function() { return /* reexport */ useRegistry; });
 __webpack_require__.d(__webpack_exports__, "useSelect", function() { return /* reexport */ useSelect; });
 __webpack_require__.d(__webpack_exports__, "useDispatch", function() { return /* reexport */ use_dispatch; });
+<<<<<<< HEAD
+=======
+__webpack_require__.d(__webpack_exports__, "__unstableUseDispatchWithMap", function() { return /* reexport */ use_dispatch_with_map; });
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 __webpack_require__.d(__webpack_exports__, "AsyncModeProvider", function() { return /* reexport */ async_mode_provider_context; });
 __webpack_require__.d(__webpack_exports__, "createRegistry", function() { return /* reexport */ createRegistry; });
 __webpack_require__.d(__webpack_exports__, "createRegistrySelector", function() { return /* reexport */ createRegistrySelector; });
 __webpack_require__.d(__webpack_exports__, "createRegistryControl", function() { return /* reexport */ createRegistryControl; });
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "controls", function() { return /* reexport */ controls_controls; });
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 __webpack_require__.d(__webpack_exports__, "plugins", function() { return /* reexport */ plugins_namespaceObject; });
 __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return /* reexport */ turbo_combine_reducers_default.a; });
 __webpack_require__.d(__webpack_exports__, "select", function() { return /* binding */ build_module_select; });
@@ -953,6 +1113,7 @@ __webpack_require__.d(actions_namespaceObject, "invalidateResolutionForStoreSele
 // NAMESPACE OBJECT: ./node_modules/@wordpress/data/build-module/plugins/index.js
 var plugins_namespaceObject = {};
 __webpack_require__.r(plugins_namespaceObject);
+<<<<<<< HEAD
 __webpack_require__.d(plugins_namespaceObject, "controls", function() { return plugins_controls; });
 __webpack_require__.d(plugins_namespaceObject, "persistence", function() { return plugins_persistence; });
 
@@ -962,6 +1123,17 @@ var turbo_combine_reducers_default = /*#__PURE__*/__webpack_require__.n(turbo_co
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
 var slicedToArray = __webpack_require__(12);
+=======
+__webpack_require__.d(plugins_namespaceObject, "controls", function() { return controls; });
+__webpack_require__.d(plugins_namespaceObject, "persistence", function() { return plugins_persistence; });
+
+// EXTERNAL MODULE: ./node_modules/turbo-combine-reducers/index.js
+var turbo_combine_reducers = __webpack_require__(163);
+var turbo_combine_reducers_default = /*#__PURE__*/__webpack_require__.n(turbo_combine_reducers);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
+var slicedToArray = __webpack_require__(14);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(5);
@@ -974,6 +1146,7 @@ var memize = __webpack_require__(60);
 var memize_default = /*#__PURE__*/__webpack_require__.n(memize);
 
 // EXTERNAL MODULE: external {"this":"regeneratorRuntime"}
+<<<<<<< HEAD
 var external_this_regeneratorRuntime_ = __webpack_require__(20);
 var external_this_regeneratorRuntime_default = /*#__PURE__*/__webpack_require__.n(external_this_regeneratorRuntime_);
 
@@ -982,6 +1155,16 @@ var asyncToGenerator = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/symbol-observable/es/index.js
 var es = __webpack_require__(201);
+=======
+var external_this_regeneratorRuntime_ = __webpack_require__(24);
+var external_this_regeneratorRuntime_default = /*#__PURE__*/__webpack_require__.n(external_this_regeneratorRuntime_);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
+var asyncToGenerator = __webpack_require__(50);
+
+// EXTERNAL MODULE: ./node_modules/symbol-observable/es/index.js
+var es = __webpack_require__(196);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // CONCATENATED MODULE: ./node_modules/redux/es/redux.js
 
@@ -1634,6 +1817,7 @@ if (false) {}
 
 
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: ./node_modules/equivalent-key-map/equivalent-key-map.js
 var equivalent_key_map = __webpack_require__(108);
 var equivalent_key_map_default = /*#__PURE__*/__webpack_require__.n(equivalent_key_map);
@@ -1887,6 +2071,14 @@ var builtinControls = (_builtinControls = {}, Object(defineProperty["a" /* defau
 
 // EXTERNAL MODULE: ./node_modules/is-promise/index.js
 var is_promise = __webpack_require__(154);
+=======
+// EXTERNAL MODULE: external {"this":["wp","reduxRoutine"]}
+var external_this_wp_reduxRoutine_ = __webpack_require__(274);
+var external_this_wp_reduxRoutine_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_reduxRoutine_);
+
+// EXTERNAL MODULE: ./node_modules/is-promise/index.js
+var is_promise = __webpack_require__(151);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 var is_promise_default = /*#__PURE__*/__webpack_require__.n(is_promise);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/promise-middleware.js
@@ -1918,6 +2110,12 @@ var promise_middleware_promiseMiddleware = function promiseMiddleware() {
 
 /* harmony default export */ var promise_middleware = (promise_middleware_promiseMiddleware);
 
+<<<<<<< HEAD
+=======
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
+var toConsumableArray = __webpack_require__(18);
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/resolvers-cache-middleware.js
 
 
@@ -1975,6 +2173,13 @@ var resolvers_cache_middleware_createResolversCacheMiddleware = function createR
 
 /* harmony default export */ var resolvers_cache_middleware = (resolvers_cache_middleware_createResolversCacheMiddleware);
 
+<<<<<<< HEAD
+=======
+// EXTERNAL MODULE: ./node_modules/equivalent-key-map/equivalent-key-map.js
+var equivalent_key_map = __webpack_require__(126);
+var equivalent_key_map_default = /*#__PURE__*/__webpack_require__.n(equivalent_key_map);
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/namespace-store/metadata/utils.js
 
 
@@ -2011,7 +2216,11 @@ var utils_onSubKey = function onSubKey(actionProperty) {
         return state;
       }
 
+<<<<<<< HEAD
       return _objectSpread(_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, key, nextKeyState));
+=======
+      return _objectSpread({}, state, Object(defineProperty["a" /* default */])({}, key, nextKeyState));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     };
   };
 };
@@ -2039,7 +2248,11 @@ var utils_onSubKey = function onSubKey(actionProperty) {
  * @return {Object} Next state.
  */
 
+<<<<<<< HEAD
 var subKeysIsResolved = utils_onSubKey('selectorName')(function () {
+=======
+var subKeysIsResolved = Object(external_this_lodash_["flowRight"])([utils_onSubKey('selectorName')])(function () {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new equivalent_key_map_default.a();
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
@@ -2276,7 +2489,10 @@ function namespace_store_objectSpread(target) { for (var i = 1; i < arguments.le
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * WordPress dependencies
  */
@@ -2291,6 +2507,7 @@ function namespace_store_objectSpread(target) { for (var i = 1; i < arguments.le
 
 
 
+<<<<<<< HEAD
 
 /**
  * Create a cache to track whether resolvers started running or not.
@@ -2318,6 +2535,8 @@ function createResolversCache() {
     }
   };
 }
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * @typedef {WPDataRegistry} WPDataRegistry
  */
@@ -2334,6 +2553,7 @@ function createResolversCache() {
  * @return {Object} Store Object.
  */
 
+<<<<<<< HEAD
 
 function createNamespace(key, options, registry) {
   var reducer = options.reducer;
@@ -2342,6 +2562,14 @@ function createNamespace(key, options, registry) {
   var resolvers;
   var actions = mapActions(namespace_store_objectSpread(namespace_store_objectSpread({}, actions_namespaceObject), options.actions), store);
   var selectors = mapSelectors(namespace_store_objectSpread(namespace_store_objectSpread({}, Object(external_this_lodash_["mapValues"])(selectors_namespaceObject, function (selector) {
+=======
+function createNamespace(key, options, registry) {
+  var reducer = options.reducer;
+  var store = createReduxStore(key, options, registry);
+  var resolvers;
+  var actions = mapActions(namespace_store_objectSpread({}, actions_namespaceObject, {}, options.actions), store);
+  var selectors = mapSelectors(namespace_store_objectSpread({}, Object(external_this_lodash_["mapValues"])(selectors_namespaceObject, function (selector) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     return function (state) {
       for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
         args[_key - 1] = arguments[_key];
@@ -2349,7 +2577,11 @@ function createNamespace(key, options, registry) {
 
       return selector.apply(void 0, [state.metadata].concat(args));
     };
+<<<<<<< HEAD
   })), Object(external_this_lodash_["mapValues"])(options.selectors, function (selector) {
+=======
+  }), {}, Object(external_this_lodash_["mapValues"])(options.selectors, function (selector) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     if (selector.isRegistrySelector) {
       selector.registry = registry;
     }
@@ -2364,7 +2596,11 @@ function createNamespace(key, options, registry) {
   })), store);
 
   if (options.resolvers) {
+<<<<<<< HEAD
     var result = mapResolvers(options.resolvers, selectors, store, resolversCache);
+=======
+    var result = mapResolvers(options.resolvers, selectors, store);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     resolvers = result.resolvers;
     selectors = result.selectors;
   }
@@ -2429,12 +2665,24 @@ function createNamespace(key, options, registry) {
  */
 
 function createReduxStore(key, options, registry) {
+<<<<<<< HEAD
   var controls = namespace_store_objectSpread(namespace_store_objectSpread({}, options.controls), builtinControls);
 
   var normalizedControls = Object(external_this_lodash_["mapValues"])(controls, function (control) {
     return control.isRegistryControl ? control(registry) : control;
   });
   var middlewares = [resolvers_cache_middleware(registry, key), promise_middleware, external_this_wp_reduxRoutine_default()(normalizedControls)];
+=======
+  var middlewares = [resolvers_cache_middleware(registry, key), promise_middleware];
+
+  if (options.controls) {
+    var normalizedControls = Object(external_this_lodash_["mapValues"])(options.controls, function (control) {
+      return control.isRegistryControl ? control(registry) : control;
+    });
+    middlewares.push(external_this_wp_reduxRoutine_default()(normalizedControls));
+  }
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var enhancers = [applyMiddleware.apply(void 0, middlewares)];
 
   if (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__) {
@@ -2461,6 +2709,10 @@ function createReduxStore(key, options, registry) {
  *                           public facing API. Selectors will get passed the
  *                           state as first argument.
  * @param {Object} store     The store to which the selectors should be mapped.
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @return {Object} Selectors mapped to the provided store.
  */
 
@@ -2515,6 +2767,7 @@ function mapActions(actions, store) {
  * Resolvers are side effects invoked once per argument set of a given selector call,
  * used in ensuring that the data needs for the selector are satisfied.
  *
+<<<<<<< HEAD
  * @param {Object} resolvers      Resolvers to register.
  * @param {Object} selectors      The current selectors to be modified.
  * @param {Object} store          The redux store to which the resolvers should be mapped.
@@ -2535,6 +2788,21 @@ function mapResolvers(resolvers, selectors, store, resolversCache) {
       // copy the enumerable properties of the resolver function
       fulfill: resolver // add the fulfill method
 
+=======
+ * @param {Object} resolvers   Resolvers to register.
+ * @param {Object} selectors   The current selectors to be modified.
+ * @param {Object} store       The redux store to which the resolvers should be mapped.
+ * @return {Object}            An object containing updated selectors and resolvers.
+ */
+
+
+function mapResolvers(resolvers, selectors, store) {
+  var mappedResolvers = Object(external_this_lodash_["mapValues"])(resolvers, function (resolver) {
+    var _resolver$fulfill = resolver.fulfill,
+        resolverFulfill = _resolver$fulfill === void 0 ? resolver : _resolver$fulfill;
+    return namespace_store_objectSpread({}, resolver, {
+      fulfill: resolverFulfill
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     });
   });
 
@@ -2556,6 +2824,7 @@ function mapResolvers(resolvers, selectors, store, resolversCache) {
       }
 
       function _fulfillSelector() {
+<<<<<<< HEAD
         _fulfillSelector = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee2() {
           var state, _store$__unstableOrig, metadata;
 
@@ -2571,11 +2840,29 @@ function mapResolvers(resolvers, selectors, store, resolversCache) {
                   }
 
                   return _context2.abrupt("return");
+=======
+        _fulfillSelector = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee() {
+          var state, _store$__unstableOrig, metadata;
+
+          return external_this_regeneratorRuntime_default.a.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  state = store.getState();
+
+                  if (!(typeof resolver.isFulfilled === 'function' && resolver.isFulfilled.apply(resolver, [state].concat(args)))) {
+                    _context.next = 3;
+                    break;
+                  }
+
+                  return _context.abrupt("return");
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
                 case 3:
                   _store$__unstableOrig = store.__unstableOriginalGetState(), metadata = _store$__unstableOrig.metadata;
 
                   if (!hasStartedResolution(metadata, selectorName, args)) {
+<<<<<<< HEAD
                     _context2.next = 6;
                     break;
                   }
@@ -2611,6 +2898,28 @@ function mapResolvers(resolvers, selectors, store, resolversCache) {
               }
             }
           }, _callee2);
+=======
+                    _context.next = 6;
+                    break;
+                  }
+
+                  return _context.abrupt("return");
+
+                case 6:
+                  store.dispatch(startResolution(selectorName, args));
+                  _context.next = 9;
+                  return fulfillResolver.apply(void 0, [store, mappedResolvers, selectorName].concat(args));
+
+                case 9:
+                  store.dispatch(finishResolution(selectorName, args));
+
+                case 10:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         }));
         return _fulfillSelector.apply(this, arguments);
       }
@@ -2643,21 +2952,34 @@ function fulfillResolver(_x, _x2, _x3) {
 }
 
 function _fulfillResolver() {
+<<<<<<< HEAD
   _fulfillResolver = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee3(store, resolvers, selectorName) {
+=======
+  _fulfillResolver = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee2(store, resolvers, selectorName) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     var resolver,
         _len4,
         args,
         _key4,
         action,
+<<<<<<< HEAD
         _args3 = arguments;
 
     return external_this_regeneratorRuntime_default.a.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
+=======
+        _args2 = arguments;
+
+    return external_this_regeneratorRuntime_default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           case 0:
             resolver = Object(external_this_lodash_["get"])(resolvers, [selectorName]);
 
             if (resolver) {
+<<<<<<< HEAD
               _context3.next = 3;
               break;
             }
@@ -2667,24 +2989,50 @@ function _fulfillResolver() {
           case 3:
             for (_len4 = _args3.length, args = new Array(_len4 > 3 ? _len4 - 3 : 0), _key4 = 3; _key4 < _len4; _key4++) {
               args[_key4 - 3] = _args3[_key4];
+=======
+              _context2.next = 3;
+              break;
+            }
+
+            return _context2.abrupt("return");
+
+          case 3:
+            for (_len4 = _args2.length, args = new Array(_len4 > 3 ? _len4 - 3 : 0), _key4 = 3; _key4 < _len4; _key4++) {
+              args[_key4 - 3] = _args2[_key4];
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             }
 
             action = resolver.fulfill.apply(resolver, args);
 
             if (!action) {
+<<<<<<< HEAD
               _context3.next = 8;
               break;
             }
 
             _context3.next = 8;
+=======
+              _context2.next = 8;
+              break;
+            }
+
+            _context2.next = 8;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             return store.dispatch(action);
 
           case 8:
           case "end":
+<<<<<<< HEAD
             return _context3.stop();
         }
       }
     }, _callee3);
+=======
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   }));
   return _fulfillResolver.apply(this, arguments);
 }
@@ -2724,12 +3072,20 @@ function createCoreDataStore(registry) {
   return {
     getSelectors: function getSelectors() {
       return ['getIsResolving', 'hasStartedResolution', 'hasFinishedResolution', 'isResolving', 'getCachedResolvers'].reduce(function (memo, selectorName) {
+<<<<<<< HEAD
         return store_objectSpread(store_objectSpread({}, memo), {}, Object(defineProperty["a" /* default */])({}, selectorName, getCoreDataSelector(selectorName)));
+=======
+        return store_objectSpread({}, memo, Object(defineProperty["a" /* default */])({}, selectorName, getCoreDataSelector(selectorName)));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
       }, {});
     },
     getActions: function getActions() {
       return ['startResolution', 'finishResolution', 'invalidateResolution', 'invalidateResolutionForStore', 'invalidateResolutionForStoreSelector'].reduce(function (memo, actionName) {
+<<<<<<< HEAD
         return store_objectSpread(store_objectSpread({}, memo), {}, Object(defineProperty["a" /* default */])({}, actionName, getCoreDataAction(actionName)));
+=======
+        return store_objectSpread({}, memo, Object(defineProperty["a" /* default */])({}, actionName, getCoreDataAction(actionName)));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
       }, {});
     },
     subscribe: function subscribe() {
@@ -2993,7 +3349,11 @@ function createRegistry() {
 
 
   function use(plugin, options) {
+<<<<<<< HEAD
     registry = registry_objectSpread(registry_objectSpread({}, registry), plugin(registry, options));
+=======
+    registry = registry_objectSpread({}, registry, {}, plugin(registry, options));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     return registry;
   }
 
@@ -3021,7 +3381,11 @@ function createRegistry() {
 /* harmony default export */ var default_registry = (createRegistry());
 
 // EXTERNAL MODULE: external {"this":["wp","deprecated"]}
+<<<<<<< HEAD
 var external_this_wp_deprecated_ = __webpack_require__(36);
+=======
+var external_this_wp_deprecated_ = __webpack_require__(37);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 var external_this_wp_deprecated_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_deprecated_);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/plugins/controls/index.js
@@ -3029,7 +3393,11 @@ var external_this_wp_deprecated_default = /*#__PURE__*/__webpack_require__.n(ext
  * WordPress dependencies
  */
 
+<<<<<<< HEAD
 /* harmony default export */ var plugins_controls = (function (registry) {
+=======
+/* harmony default export */ var controls = (function (registry) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   external_this_wp_deprecated_default()('wp.data.plugins.controls', {
     hint: 'The controls plugins is now baked-in.'
   });
@@ -3194,7 +3562,11 @@ function createPersistenceInterface(options) {
 
 
   function setData(key, value) {
+<<<<<<< HEAD
     data = persistence_objectSpread(persistence_objectSpread({}, data), {}, Object(defineProperty["a" /* default */])({}, key, value));
+=======
+    data = persistence_objectSpread({}, data, Object(defineProperty["a" /* default */])({}, key, value));
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     storage.setItem(storageKey, JSON.stringify(data));
   }
 
@@ -3288,7 +3660,11 @@ function persistencePlugin(registry, pluginOptions) {
           initialState = persistedState;
         }
 
+<<<<<<< HEAD
         options = persistence_objectSpread(persistence_objectSpread({}, options), {}, {
+=======
+        options = persistence_objectSpread({}, options, {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
           initialState: initialState
         });
       }
@@ -3370,6 +3746,7 @@ var esm_extends = __webpack_require__(8);
 var external_this_wp_element_ = __webpack_require__(0);
 
 // EXTERNAL MODULE: external {"this":["wp","compose"]}
+<<<<<<< HEAD
 var external_this_wp_compose_ = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/use-memo-one/dist/use-memo-one.esm.js
@@ -3377,6 +3754,60 @@ var use_memo_one_esm = __webpack_require__(153);
 
 // EXTERNAL MODULE: external {"this":["wp","priorityQueue"]}
 var external_this_wp_priorityQueue_ = __webpack_require__(152);
+=======
+var external_this_wp_compose_ = __webpack_require__(9);
+
+// EXTERNAL MODULE: external {"this":"React"}
+var external_this_React_ = __webpack_require__(13);
+
+// CONCATENATED MODULE: ./node_modules/use-memo-one/dist/use-memo-one.esm.js
+
+
+function areInputsEqual(newInputs, lastInputs) {
+  if (newInputs.length !== lastInputs.length) {
+    return false;
+  }
+
+  for (var i = 0; i < newInputs.length; i++) {
+    if (newInputs[i] !== lastInputs[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function useMemoOne(getResult, inputs) {
+  var initial = Object(external_this_React_["useState"])(function () {
+    return {
+      inputs: inputs,
+      result: getResult()
+    };
+  })[0];
+  var committed = Object(external_this_React_["useRef"])(initial);
+  var isInputMatch = Boolean(inputs && committed.current.inputs && areInputsEqual(inputs, committed.current.inputs));
+  var cache = isInputMatch ? committed.current : {
+    inputs: inputs,
+    result: getResult()
+  };
+  Object(external_this_React_["useEffect"])(function () {
+    committed.current = cache;
+  }, [cache]);
+  return cache.result;
+}
+function useCallbackOne(callback, inputs) {
+  return useMemoOne(function () {
+    return callback;
+  }, inputs);
+}
+var useMemo = useMemoOne;
+var useCallback = useCallbackOne;
+
+
+
+// EXTERNAL MODULE: external {"this":["wp","priorityQueue"]}
+var external_this_wp_priorityQueue_ = __webpack_require__(150);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 // EXTERNAL MODULE: external {"this":["wp","isShallowEqual"]}
 var external_this_wp_isShallowEqual_ = __webpack_require__(64);
@@ -3634,7 +4065,11 @@ function useSelect(_mapSelect, deps) {
   // We use the cache-stable `useMemoOne` to avoid
   // losing queues.
 
+<<<<<<< HEAD
   var queueContext = Object(use_memo_one_esm["a" /* useMemoOne */])(function () {
+=======
+  var queueContext = useMemoOne(function () {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     return {
       queue: true
     };
@@ -4065,6 +4500,60 @@ var use_dispatch_useDispatch = function useDispatch(storeName) {
 
 /* harmony default export */ var use_dispatch = (use_dispatch_useDispatch);
 
+<<<<<<< HEAD
+=======
+// CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/factory.js
+/**
+ * Internal dependencies
+ */
+
+/** @typedef {import('./registry').WPDataRegistry} WPDataRegistry */
+
+/**
+ * Mark a selector as a registry selector.
+ *
+ * @param {Function} registrySelector Function receiving a registry object and returning a state selector.
+ *
+ * @return {Function} marked registry selector.
+ */
+
+function createRegistrySelector(registrySelector) {
+  var selector = function selector() {
+    return registrySelector(selector.registry.select).apply(void 0, arguments);
+  };
+  /**
+   * Flag indicating to selector registration mapping that the selector should
+   * be mapped as a registry selector.
+   *
+   * @type {boolean}
+   */
+
+
+  selector.isRegistrySelector = true;
+  /**
+   * Registry on which to call `select`, stubbed for non-standard usage to
+   * use the default registry.
+   *
+   * @type {WPDataRegistry}
+   */
+
+  selector.registry = default_registry;
+  return selector;
+}
+/**
+ * Mark a control as a registry control.
+ *
+ * @param {Function} registryControl Function receiving a registry object and returning a control.
+ *
+ * @return {Function} marked registry control.
+ */
+
+function createRegistryControl(registryControl) {
+  registryControl.isRegistryControl = true;
+  return registryControl;
+}
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/index.js
 /**
  * External dependencies
@@ -4085,7 +4574,10 @@ var use_dispatch_useDispatch = function useDispatch(storeName) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /**
  * Object of available plugins to use with a registry.
  *
@@ -4265,6 +4757,52 @@ function _defineProperty(obj, key, value) {
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ 50:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _asyncToGenerator; });
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+/***/ }),
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4463,6 +5001,16 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
+<<<<<<< HEAD
+=======
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["compose"]; }());
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ })
 
 /******/ });

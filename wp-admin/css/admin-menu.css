@@ -49,7 +49,11 @@
 .icon16:before {
 	color: #82878c; /* same as new icons */
 	font: normal 20px/1 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	padding: 6px 0;
 	height: 34px;
 	width: 20px;
@@ -346,6 +350,7 @@
 }
 
 #adminmenu div.wp-menu-name {
+<<<<<<< HEAD
 	padding: 8px 8px 8px 36px;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
@@ -354,6 +359,9 @@
 	-ms-hyphens: auto;
 	-webkit-hyphens: auto;
 	hyphens: auto;
+=======
+	padding: 8px 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 #adminmenu div.wp-menu-image {
@@ -591,7 +599,11 @@ ul#adminmenu > li.current > a.current:after {
 	top: 7px;
 	text-align: center;
 	font: normal 20px/1 dashicons !important;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -689,7 +701,11 @@ li#wp-admin-bar-menu-toggle {
 	}
 
 	.auto-fold #adminmenu a.menu-top {
+<<<<<<< HEAD
 		min-height: 34px;
+=======
+		height: 34px;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	.auto-fold #adminmenu li.wp-menu-open {
@@ -790,6 +806,10 @@ li#wp-admin-bar-menu-toggle {
 	/* Restore the menu names */
 	.auto-fold #adminmenu .wp-menu-name {
 		position: static;
+<<<<<<< HEAD
+=======
+		margin-left: 35px;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	/* Switch the arrow side */

@@ -260,7 +260,11 @@ function get_blog_details( $fields = null, $get_all = true ) {
 	 * @since MU (3.0.0)
 	 * @deprecated 4.7.0 Use {@see 'site_details'} instead.
 	 *
+<<<<<<< HEAD
 	 * @param WP_Site $details The blog details.
+=======
+	 * @param object $details The blog details.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	$details = apply_filters_deprecated( 'blog_details', array( $details ), '4.7.0', 'site_details' );
 

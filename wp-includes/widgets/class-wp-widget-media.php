@@ -96,8 +96,13 @@ abstract class WP_Widget_Media extends WP_Widget {
 	 *
 	 * @since 4.8.0
 	 *
+<<<<<<< HEAD
 	 * @param int $number Optional. The unique order number of this widget instance
 	 *                    compared to other instances of the same class. Default -1.
+=======
+	 * @param integer $number Optional. The unique order number of this widget instance
+	 *                        compared to other instances of the same class. Default -1.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function _register_one( $number = -1 ) {
 		parent::_register_one( $number );
@@ -208,7 +213,11 @@ abstract class WP_Widget_Media extends WP_Widget {
 		}
 		$tokens = array_map( 'sanitize_html_class', $tokens );
 		$tokens = array_filter( $tokens );
+<<<<<<< HEAD
 		return implode( ' ', $tokens );
+=======
+		return join( ' ', $tokens );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	/**
@@ -343,7 +352,11 @@ abstract class WP_Widget_Media extends WP_Widget {
 				class="media-widget-instance-property"
 				name="<?php echo esc_attr( $this->get_field_name( $name ) ); ?>"
 				id="<?php echo esc_attr( $this->get_field_id( $name ) ); // Needed specifically by wpWidgets.appendTitle(). ?>"
+<<<<<<< HEAD
 				value="<?php echo esc_attr( is_array( $value ) ? implode( ',', $value ) : (string) $value ); ?>"
+=======
+				value="<?php echo esc_attr( is_array( $value ) ? join( ',', $value ) : strval( $value ) ); ?>"
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			/>
 			<?php
 		endforeach;

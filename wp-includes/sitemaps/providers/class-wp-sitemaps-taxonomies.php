@@ -38,7 +38,11 @@ class WP_Sitemaps_Taxonomies extends WP_Sitemaps_Provider {
 		$taxonomies = array_filter( $taxonomies, 'is_taxonomy_viewable' );
 
 		/**
+<<<<<<< HEAD
 		 * Filters the list of taxonomy object subtypes available within the sitemap.
+=======
+		 * Filter the list of taxonomy object subtypes available within the sitemap.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @since 5.5.0
 		 *
@@ -99,6 +103,7 @@ class WP_Sitemaps_Taxonomies extends WP_Sitemaps_Provider {
 
 		if ( ! empty( $taxonomy_terms->terms ) ) {
 			foreach ( $taxonomy_terms->terms as $term ) {
+<<<<<<< HEAD
 				$term_link = get_term_link( $term, $taxonomy );
 
 				if ( is_wp_error( $term_link ) ) {
@@ -107,6 +112,10 @@ class WP_Sitemaps_Taxonomies extends WP_Sitemaps_Provider {
 
 				$sitemap_entry = array(
 					'loc' => $term_link,
+=======
+				$sitemap_entry = array(
+					'loc' => get_term_link( $term ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				);
 
 				/**
@@ -156,7 +165,11 @@ class WP_Sitemaps_Taxonomies extends WP_Sitemaps_Provider {
 			return $max_num_pages;
 		}
 
+<<<<<<< HEAD
 		$term_count = wp_count_terms( $this->get_taxonomies_query_args( $taxonomy ) );
+=======
+		$term_count = wp_count_terms( $taxonomy, $this->get_taxonomies_query_args( $taxonomy ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		return (int) ceil( $term_count / wp_sitemaps_get_max_urls( $this->object_type ) );
 	}

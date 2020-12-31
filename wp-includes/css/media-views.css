@@ -254,7 +254,11 @@
 .media-modal-close .media-modal-icon:before {
 	content: "\f158";
 	font: normal 20px/1 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -474,9 +478,13 @@
 .attachment-details .copy-to-clipboard-container .success {
 	padding: 0;
 	min-height: 0;
+<<<<<<< HEAD
 	line-height: 2.18181818;
 	text-align: left;
 	color: #40860a;
+=======
+	text-align: left;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 
 .compat-item label span {
@@ -1765,6 +1773,7 @@
 	padding-bottom: 11px;
 }
 
+<<<<<<< HEAD
 .attachment-info .wp-media-wrapper {
 	margin-bottom: 8px;
 }
@@ -1773,6 +1782,8 @@
 	margin-top: 13px;
 }
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 .attachment-info .filename {
 	font-weight: 600;
 	color: #444;
@@ -2173,7 +2184,11 @@
 
 .image-details .advanced-toggle:after {
 	font: normal 20px/1 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	vertical-align: top;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

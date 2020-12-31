@@ -171,7 +171,11 @@ class WP_Customize_Nav_Menu_Item_Setting extends WP_Customize_Setting {
 			throw new Exception( "Illegal widget setting ID: $id" );
 		}
 
+<<<<<<< HEAD
 		$this->post_id = (int) $matches['id'];
+=======
+		$this->post_id = intval( $matches['id'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		add_action( 'wp_update_nav_menu_item', array( $this, 'flush_cached_value' ), 10, 2 );
 
 		parent::__construct( $manager, $id, $args );
@@ -368,7 +372,11 @@ class WP_Customize_Nav_Menu_Item_Setting extends WP_Customize_Setting {
 
 		foreach ( array( 'object_id', 'menu_item_parent', 'nav_menu_term_id' ) as $key ) {
 			if ( ! is_int( $this->value[ $key ] ) ) {
+<<<<<<< HEAD
 				$this->value[ $key ] = (int) $this->value[ $key ];
+=======
+				$this->value[ $key ] = intval( $this->value[ $key ] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 		}
 		foreach ( array( 'classes', 'xfn' ) as $key ) {
@@ -605,11 +613,14 @@ class WP_Customize_Nav_Menu_Item_Setting extends WP_Customize_Setting {
 			$item->post_title = $item->title;
 		}
 
+<<<<<<< HEAD
 		// 'classes' should be an array, as in wp_setup_nav_menu_item().
 		if ( isset( $item->classes ) && is_scalar( $item->classes ) ) {
 			$item->classes = explode( ' ', $item->classes );
 		}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$item->ID    = $this->post_id;
 		$item->db_id = $this->post_id;
 		$post        = new WP_Post( (object) $item );
@@ -689,11 +700,19 @@ class WP_Customize_Nav_Menu_Item_Setting extends WP_Customize_Setting {
 		);
 		$menu_item_value             = array_merge( $default, $menu_item_value );
 		$menu_item_value             = wp_array_slice_assoc( $menu_item_value, array_keys( $default ) );
+<<<<<<< HEAD
 		$menu_item_value['position'] = (int) $menu_item_value['position'];
 
 		foreach ( array( 'object_id', 'menu_item_parent', 'nav_menu_term_id' ) as $key ) {
 			// Note we need to allow negative-integer IDs for previewed objects not inserted yet.
 			$menu_item_value[ $key ] = (int) $menu_item_value[ $key ];
+=======
+		$menu_item_value['position'] = intval( $menu_item_value['position'] );
+
+		foreach ( array( 'object_id', 'menu_item_parent', 'nav_menu_term_id' ) as $key ) {
+			// Note we need to allow negative-integer IDs for previewed objects not inserted yet.
+			$menu_item_value[ $key ] = intval( $menu_item_value[ $key ] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		foreach ( array( 'type', 'object', 'target' ) as $key ) {
@@ -803,7 +822,11 @@ class WP_Customize_Nav_Menu_Item_Setting extends WP_Customize_Setting {
 					return;
 				}
 
+<<<<<<< HEAD
 				if ( (int) $value['nav_menu_term_id'] !== $nav_menu_setting->previous_term_id ) {
+=======
+				if ( intval( $value['nav_menu_term_id'] ) !== $nav_menu_setting->previous_term_id ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					$this->update_status = 'error';
 					$this->update_error  = new WP_Error( 'unexpected_previous_term_id' );
 					return;
@@ -829,7 +852,11 @@ class WP_Customize_Nav_Menu_Item_Setting extends WP_Customize_Setting {
 					return;
 				}
 
+<<<<<<< HEAD
 				if ( (int) $value['menu_item_parent'] !== $parent_nav_menu_item_setting->previous_post_id ) {
+=======
+				if ( intval( $value['menu_item_parent'] ) !== $parent_nav_menu_item_setting->previous_post_id ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					$this->update_status = 'error';
 					$this->update_error  = new WP_Error( 'unexpected_previous_post_id' );
 					return;

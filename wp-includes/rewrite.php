@@ -143,9 +143,15 @@ function add_rewrite_rule( $regex, $query, $after = 'bottom' ) {
 /**
  * Add a new rewrite tag (like %postname%).
  *
+<<<<<<< HEAD
  * The `$query` parameter is optional. If it is omitted you must ensure that you call
  * this on, or before, the {@see 'init'} hook. This is because `$query` defaults to
  * `$tag=`, and for this to work a new query var has to be added.
+=======
+ * The $query parameter is optional. If it is omitted you must ensure that
+ * you call this on, or before, the {@see 'init'} hook. This is because $query defaults
+ * to "$tag=", and for this to work a new query var has to be added.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @since 2.1.0
  *
@@ -400,12 +406,20 @@ function wp_resolve_numeric_slug_conflicts( $query_vars = array() ) {
 	// If the date of the post doesn't match the date specified in the URL, resolve to the date archive.
 	if ( preg_match( '/^([0-9]{4})\-([0-9]{2})/', $post->post_date, $matches ) && isset( $query_vars['year'] ) && ( 'monthnum' === $compare || 'day' === $compare ) ) {
 		// $matches[1] is the year the post was published.
+<<<<<<< HEAD
 		if ( (int) $query_vars['year'] !== (int) $matches[1] ) {
+=======
+		if ( intval( $query_vars['year'] ) !== intval( $matches[1] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return $query_vars;
 		}
 
 		// $matches[2] is the month the post was published.
+<<<<<<< HEAD
 		if ( 'day' === $compare && isset( $query_vars['monthnum'] ) && (int) $query_vars['monthnum'] !== (int) $matches[2] ) {
+=======
+		if ( 'day' === $compare && isset( $query_vars['monthnum'] ) && intval( $query_vars['monthnum'] ) !== intval( $matches[2] ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return $query_vars;
 		}
 	}
@@ -437,7 +451,11 @@ function wp_resolve_numeric_slug_conflicts( $query_vars = array() ) {
 
 	// If we've gotten to this point, we have a slug/date clash. First, adjust for nextpage.
 	if ( '' !== $maybe_page ) {
+<<<<<<< HEAD
 		$query_vars['page'] = (int) $maybe_page;
+=======
+		$query_vars['page'] = intval( $maybe_page );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	// Next, unset autodetected date-related query vars.

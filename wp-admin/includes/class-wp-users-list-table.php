@@ -54,7 +54,11 @@ class WP_Users_List_Table extends WP_List_Table {
 		$this->is_site_users = 'site-users-network' === $this->screen->id;
 
 		if ( $this->is_site_users ) {
+<<<<<<< HEAD
 			$this->site_id = isset( $_REQUEST['id'] ) ? (int) $_REQUEST['id'] : 0;
+=======
+			$this->site_id = isset( $_REQUEST['id'] ) ? intval( $_REQUEST['id'] ) : 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 	}
 
@@ -259,7 +263,11 @@ class WP_Users_List_Table extends WP_List_Table {
 	 *
 	 * @since 3.1.0
 	 *
+<<<<<<< HEAD
 	 * @return array Array of bulk action labels keyed by their action.
+=======
+	 * @return string[] Array of bulk action labels keyed by their action.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	protected function get_bulk_actions() {
 		$actions = array();

@@ -5,7 +5,10 @@
 /* global pagenow, ajaxurl, postboxes, wpActiveEditor:true, ajaxWidgets */
 /* global ajaxPopulateWidgets, quickPressLoad,  */
 window.wp = window.wp || {};
+<<<<<<< HEAD
 window.communityEventsData = window.communityEventsData || {};
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 /**
  * Initializes the dashboard widget functionality.
@@ -266,7 +269,11 @@ jQuery(document).ready( function($) {
 jQuery( function( $ ) {
 	'use strict';
 
+<<<<<<< HEAD
 	var communityEventsData = window.communityEventsData,
+=======
+	var communityEventsData = window.communityEventsData || {},
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		dateI18n = wp.date.dateI18n,
 		format = wp.date.format,
 		sprintf = wp.i18n.sprintf,
@@ -467,6 +474,10 @@ jQuery( function( $ ) {
 		renderEventsTemplate: function( templateParams, initiatedBy ) {
 			var template,
 				elementVisibility,
+<<<<<<< HEAD
+=======
+				l10nPlaceholder  = /%(?:\d\$)?s/g, // Match `%s`, `%1$s`, `%2$s`, etc.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$toggleButton    = $( '.community-events-toggle-location' ),
 				$locationMessage = $( '#community-events-location-message' ),
 				$results         = $( '.community-events-results' );
@@ -505,7 +516,11 @@ jQuery( function( $ ) {
 				 * If the API determined the location by geolocating an IP, it will
 				 * provide events, but not a specific location.
 				 */
+<<<<<<< HEAD
 				$locationMessage.text( __( 'Attend an upcoming event near you.' ) );
+=======
+				$locationMessage.text( communityEventsData.l10n.attend_event_near_generic );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 				if ( templateParams.events.length ) {
 					template = wp.template( 'community-events-event-list' );
@@ -532,6 +547,7 @@ jQuery( function( $ ) {
 				}
 
 				if ( 'user' === initiatedBy ) {
+<<<<<<< HEAD
 					wp.a11y.speak(
 						sprintf(
 							/* translators: %s: The name of a city. */
@@ -540,6 +556,9 @@ jQuery( function( $ ) {
 						),
 						'assertive'
 					);
+=======
+					wp.a11y.speak( communityEventsData.l10n.city_updated.replace( l10nPlaceholder, templateParams.location.description ), 'assertive' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				}
 
 				elementVisibility['#community-events-location-message'] = true;
@@ -549,6 +568,7 @@ jQuery( function( $ ) {
 			} else if ( templateParams.unknownCity ) {
 				template = wp.template( 'community-events-could-not-locate' );
 				$( '.community-events-could-not-locate' ).html( template( templateParams ) );
+<<<<<<< HEAD
 				wp.a11y.speak(
 					sprintf(
 						/*
@@ -571,6 +591,9 @@ jQuery( function( $ ) {
 						templateParams.unknownCity
 					)
 				);
+=======
+				wp.a11y.speak( communityEventsData.l10n.could_not_locate_city.replace( l10nPlaceholder, templateParams.unknownCity ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 				elementVisibility['.community-events-errors']           = true;
 				elementVisibility['.community-events-could-not-locate'] = true;
@@ -582,12 +605,20 @@ jQuery( function( $ ) {
 				 * Showing error messages for an event that user isn't aware of
 				 * could be confusing or unnecessarily distracting.
 				 */
+<<<<<<< HEAD
 				wp.a11y.speak( __( 'An error occurred. Please try again.' ) );
+=======
+				wp.a11y.speak( communityEventsData.l10n.error_occurred_please_try_again );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 				elementVisibility['.community-events-errors']         = true;
 				elementVisibility['.community-events-error-occurred'] = true;
 			} else {
+<<<<<<< HEAD
 				$locationMessage.text( __( 'Enter your closest city to find nearby events.' ) );
+=======
+				$locationMessage.text( communityEventsData.l10n.enter_closest_city );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 				elementVisibility['#community-events-location-message'] = true;
 				elementVisibility['.community-events-toggle-location']  = true;
@@ -819,6 +850,7 @@ jQuery( function( $ ) {
 		});
 	}
 });
+<<<<<<< HEAD
 
 /**
  * Removed in 5.6.0, needed for back-compatibility.
@@ -837,3 +869,5 @@ window.communityEventsData.l10n = window.communityEventsData.l10n || {
 };
 
 window.communityEventsData.l10n = window.wp.deprecateL10nObject( 'communityEventsData.l10n', window.communityEventsData.l10n, '5.6.0' );
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89

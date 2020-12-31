@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["shortcode"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 463);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 431);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,7 +98,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["shortcode"] =
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 463:
+=======
+/***/ 431:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

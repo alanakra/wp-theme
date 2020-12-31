@@ -1300,8 +1300,13 @@ final class _WP_Editors {
 
 				'Row'                                  => __( 'Row' ),
 				'Rows'                                 => __( 'Rows' ),
+<<<<<<< HEAD
 				'Column'                               => __( 'Column' ),
 				'Cols'                                 => __( 'Columns' ),
+=======
+				'Column'                               => _x( 'Column', 'table column' ),
+				'Cols'                                 => _x( 'Cols', 'table columns' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				'Cell'                                 => _x( 'Cell', 'table cell' ),
 				'Header cell'                          => __( 'Header cell' ),
 				'Header'                               => _x( 'Header', 'table header' ),

@@ -26,7 +26,11 @@ if ( isset( $_GET['action'] ) ) {
 
 			check_admin_referer( 'deleteuser' );
 
+<<<<<<< HEAD
 			$id = (int) $_GET['id'];
+=======
+			$id = intval( $_GET['id'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			if ( $id > 1 ) {
 				$_POST['allusers'] = array( $id ); // confirm_delete_users() can only handle arrays.
 				$title             = __( 'Users' );
@@ -278,6 +282,7 @@ if ( isset( $_REQUEST['updated'] ) && 'true' == $_REQUEST['updated'] && ! empty(
 	endif;
 
 	if ( strlen( $usersearch ) ) {
+<<<<<<< HEAD
 		echo '<span class="subtitle">';
 		printf(
 			/* translators: %s: Search query. */
@@ -285,6 +290,10 @@ if ( isset( $_REQUEST['updated'] ) && 'true' == $_REQUEST['updated'] && ! empty(
 			'<strong>' . esc_html( $usersearch ) . '</strong>'
 		);
 		echo '</span>';
+=======
+		/* translators: %s: Search query. */
+		printf( '<span class="subtitle">' . __( 'Search results for &#8220;%s&#8221;' ) . '</span>', esc_html( $usersearch ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 	?>
 

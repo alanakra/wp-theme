@@ -75,7 +75,11 @@ final class WP_Recovery_Mode_Email_Service {
 		}
 
 		$err_message = sprintf(
+<<<<<<< HEAD
 			/* translators: 1: Last sent as a human time diff, 2: Wait time as a human time diff. */
+=======
+			/* translators: 1. Last sent as a human time diff, 2. Wait time as a human time diff. */
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			__( 'A recovery link was already sent %1$s ago. Please wait another %2$s before requesting a new email.' ),
 			human_time_diff( $last_sent ),
 			human_time_diff( $last_sent + $rate_limit )
@@ -194,6 +198,7 @@ When seeking help with this issue, you may be asked for some of the following in
 		);
 
 		$email = array(
+<<<<<<< HEAD
 			'to'          => $this->get_recovery_mode_email_address(),
 			/* translators: %s: Site title. */
 			'subject'     => __( '[%s] Your Site is Experiencing a Technical Issue' ),
@@ -217,6 +222,21 @@ When seeking help with this issue, you may be asked for some of the following in
 		 *     @type string|array $headers     Optional. Additional headers.
 		 *     @type string|array $attachments Optional. Files to attach.
 		 * }
+=======
+			'to'      => $this->get_recovery_mode_email_address(),
+			/* translators: %s: Site title. */
+			'subject' => __( '[%s] Your Site is Experiencing a Technical Issue' ),
+			'message' => $message,
+			'headers' => '',
+		);
+
+		/**
+		 * Filter the contents of the Recovery Mode email.
+		 *
+		 * @since 5.2.0
+		 *
+		 * @param array  $email Used to build wp_mail().
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 * @param string $url   URL to enter recovery mode.
 		 */
 		$email = apply_filters( 'recovery_mode_email', $email, $url );
@@ -225,8 +245,12 @@ When seeking help with this issue, you may be asked for some of the following in
 			$email['to'],
 			wp_specialchars_decode( sprintf( $email['subject'], $blogname ) ),
 			$email['message'],
+<<<<<<< HEAD
 			$email['headers'],
 			$email['attachments']
+=======
+			$email['headers']
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		);
 
 		if ( $switched_locale ) {

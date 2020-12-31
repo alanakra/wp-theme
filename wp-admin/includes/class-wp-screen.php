@@ -377,7 +377,11 @@ final class WP_Screen {
 				return $screen;
 			}
 		} else {
+<<<<<<< HEAD
 			$screen     = new self();
+=======
+			$screen     = new WP_Screen();
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$screen->id = $id;
 		}
 
@@ -1113,6 +1117,7 @@ final class WP_Screen {
 		}
 		?>
 		<fieldset class="metabox-prefs">
+<<<<<<< HEAD
 		<legend><?php _e( 'Screen elements' ); ?></legend>
 		<p>
 			<?php _e( 'Some screen elements can be shown or hidden by using the checkboxes.' ); ?>
@@ -1121,6 +1126,11 @@ final class WP_Screen {
 		<?php
 
 		meta_box_prefs( $this );
+=======
+		<legend><?php _e( 'Boxes' ); ?></legend>
+		<?php
+			meta_box_prefs( $this );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		if ( 'dashboard' === $this->id && has_action( 'welcome_panel' ) && current_user_can( 'edit_theme_options' ) ) {
 			if ( isset( $_GET['welcome'] ) ) {

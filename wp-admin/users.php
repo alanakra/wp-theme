@@ -230,7 +230,11 @@ switch ( $wp_list_table->current_action() ) {
 		}
 
 		if ( empty( $_REQUEST['users'] ) ) {
+<<<<<<< HEAD
 			$userids = array( (int) $_REQUEST['user'] );
+=======
+			$userids = array( intval( $_REQUEST['user'] ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		} else {
 			$userids = array_map( 'intval', (array) $_REQUEST['users'] );
 		}
@@ -401,7 +405,11 @@ switch ( $wp_list_table->current_action() ) {
 		}
 
 		if ( empty( $_REQUEST['users'] ) ) {
+<<<<<<< HEAD
 			$userids = array( (int) $_REQUEST['user'] );
+=======
+			$userids = array( intval( $_REQUEST['user'] ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		} else {
 			$userids = $_REQUEST['users'];
 		}
@@ -570,6 +578,7 @@ switch ( $wp_list_table->current_action() ) {
 }
 
 if ( strlen( $usersearch ) ) {
+<<<<<<< HEAD
 	echo '<span class="subtitle">';
 	printf(
 		/* translators: %s: Search query. */
@@ -577,6 +586,10 @@ if ( strlen( $usersearch ) ) {
 		'<strong>' . esc_html( $usersearch ) . '</strong>'
 	);
 	echo '</span>';
+=======
+	/* translators: %s: Search query. */
+	printf( '<span class="subtitle">' . __( 'Search results for &#8220;%s&#8221;' ) . '</span>', esc_html( $usersearch ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 ?>
 
@@ -595,7 +608,11 @@ if ( strlen( $usersearch ) ) {
 		<?php $wp_list_table->display(); ?>
 </form>
 
+<<<<<<< HEAD
 <div class="clear" /></div>
+=======
+<br class="clear" />
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 </div>
 		<?php
 		break;

@@ -8114,7 +8114,11 @@ AttachmentsBrowser = View.extend(/** @lends wp.media.view.AttachmentsBrowser.pro
 	}, 200 ),
 
 	editSelection: function( modal ) {
+<<<<<<< HEAD
 		// When editing a selection, move focus to the "Go to library" button.
+=======
+		// When editing a selection, move focus to the "Return to library" button.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		modal.$( '.media-button-backToLibrary' ).focus();
 	},
 
@@ -9194,7 +9198,10 @@ Details = Attachment.extend(/** @lends wp.media.view.Attachment.Details.prototyp
 			this.moveFocus();
 		}
 	},
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	/**
 	 * Untrashes an attachment.
 	 *
@@ -9254,6 +9261,7 @@ Details = Attachment.extend(/** @lends wp.media.view.Attachment.Details.prototyp
 			this.controller.trigger( 'attachment:details:shift-tab', event );
 			return false;
 		}
+<<<<<<< HEAD
 	},
 
 	render: function() {
@@ -9264,6 +9272,8 @@ Details = Attachment.extend(/** @lends wp.media.view.Attachment.Details.prototyp
 			var el = wp.media.view.MediaDetails.prepareSrc( elem );
 			new window.MediaElementPlayer( el, wp.media.mixin.mejsSettings );
 		} );
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 });
 

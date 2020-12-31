@@ -58,7 +58,10 @@ function render_block_core_latest_posts( $attributes ) {
 	$list_items_markup = '';
 
 	foreach ( $recent_posts as $post ) {
+<<<<<<< HEAD
 		$post_link = esc_url( get_permalink( $post ) );
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		$list_items_markup .= '<li>';
 
@@ -76,6 +79,7 @@ function render_block_core_latest_posts( $attributes ) {
 				$image_classes .= ' align' . $attributes['featuredImageAlign'];
 			}
 
+<<<<<<< HEAD
 			$featured_image = get_the_post_thumbnail(
 				$post,
 				$attributes['featuredImageSizeSlug'],
@@ -94,6 +98,18 @@ function render_block_core_latest_posts( $attributes ) {
 				'<div class="%1$s">%2$s</div>',
 				$image_classes,
 				$featured_image
+=======
+			$list_items_markup .= sprintf(
+				'<div class="%1$s">%2$s</div>',
+				$image_classes,
+				get_the_post_thumbnail(
+					$post,
+					$attributes['featuredImageSizeSlug'],
+					array(
+						'style' => $image_style,
+					)
+				)
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			);
 		}
 
@@ -103,7 +119,11 @@ function render_block_core_latest_posts( $attributes ) {
 		}
 		$list_items_markup .= sprintf(
 			'<a href="%1$s">%2$s</a>',
+<<<<<<< HEAD
 			$post_link,
+=======
+			esc_url( get_permalink( $post ) ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$title
 		);
 
@@ -153,7 +173,14 @@ function render_block_core_latest_posts( $attributes ) {
 
 	remove_filter( 'excerpt_length', 'block_core_latest_posts_get_excerpt_length', 20 );
 
+<<<<<<< HEAD
 	$class = 'wp-block-latest-posts__list';
+=======
+	$class = 'wp-block-latest-posts wp-block-latest-posts__list';
+	if ( isset( $attributes['align'] ) ) {
+		$class .= ' align' . $attributes['align'];
+	}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	if ( isset( $attributes['postLayout'] ) && 'grid' === $attributes['postLayout'] ) {
 		$class .= ' is-grid';
@@ -171,11 +198,21 @@ function render_block_core_latest_posts( $attributes ) {
 		$class .= ' has-author';
 	}
 
+<<<<<<< HEAD
 	$wrapper_attributes = get_block_wrapper_attributes( array( 'class' => $class ) );
 
 	return sprintf(
 		'<ul %1$s>%2$s</ul>',
 		$wrapper_attributes,
+=======
+	if ( isset( $attributes['className'] ) ) {
+		$class .= ' ' . $attributes['className'];
+	}
+
+	return sprintf(
+		'<ul class="%1$s">%2$s</ul>',
+		esc_attr( $class ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$list_items_markup
 	);
 }

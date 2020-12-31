@@ -243,9 +243,13 @@ class WP_Admin_Bar {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Add a group to a toolbar menu node.
 	 *
 	 * Groups can be used to organize toolbar items into distinct sections of a toolbar menu.
+=======
+	 * Add a group to a menu node.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 3.3.0
 	 *
@@ -438,7 +442,11 @@ class WP_Admin_Bar {
 
 		?>
 		<div id="wpadminbar" class="<?php echo $class; ?>">
+<<<<<<< HEAD
 			<?php if ( ! is_admin() && ! did_action( 'wp_body_open' ) ) { ?>
+=======
+			<?php if ( ! is_admin() ) { ?>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1"><?php _e( 'Skip to toolbar' ); ?></a>
 			<?php } ?>
 			<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="<?php esc_attr_e( 'Toolbar' ); ?>">

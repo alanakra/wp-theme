@@ -145,7 +145,11 @@ function network_step1( $errors = false ) {
 			__( 'You cannot use port numbers such as %s.' ),
 			'<code>' . $has_ports . '</code>'
 		) . '</p>';
+<<<<<<< HEAD
 		echo '<a href="' . esc_url( admin_url() ) . '">' . __( 'Go to Dashboard' ) . '</a>';
+=======
+		echo '<a href="' . esc_url( admin_url() ) . '">' . __( 'Return to Dashboard' ) . '</a>';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		echo '</div>';
 		require_once ABSPATH . 'wp-admin/admin-footer.php';
 		die();
@@ -640,7 +644,10 @@ define('BLOG_ID_CURRENT_SITE', 1);
 
 		$htaccess_file = <<<EOF
 RewriteEngine On
+<<<<<<< HEAD
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 RewriteBase {$base}
 RewriteRule ^index\.php$ - [L]
 {$ms_files_rewriting}

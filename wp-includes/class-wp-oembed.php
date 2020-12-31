@@ -237,6 +237,7 @@ class WP_oEmbed {
 	 * @see WP_oEmbed::discover()
 	 *
 	 * @param string       $url  The URL to the content.
+<<<<<<< HEAD
 	 * @param string|array $args {
 	 *     Optional. Additional provider arguments. Default empty.
 	 *
@@ -244,6 +245,9 @@ class WP_oEmbed {
 	 *                          at the given URL for an oEmbed provider when the provider URL
 	 *                          is not found in the built-in providers list. Default true.
 	 * }
+=======
+	 * @param string|array $args Optional provider arguments.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return string|false The oEmbed provider URL on success, false on failure.
 	 */
 	public function get_provider( $url, $args = '' ) {
@@ -334,8 +338,12 @@ class WP_oEmbed {
 	 * @since 4.8.0
 	 *
 	 * @param string       $url  The URL to the content that should be attempted to be embedded.
+<<<<<<< HEAD
 	 * @param string|array $args Optional. Additional arguments for retrieving embed HTML.
 	 *                           See wp_oembed_get() for accepted arguments. Default empty.
+=======
+	 * @param array|string $args Optional. Arguments, usually passed from a shortcode. Default empty.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return object|false The result in the form of an object on success, false on failure.
 	 */
 	public function get_data( $url, $args = '' ) {
@@ -365,10 +373,16 @@ class WP_oEmbed {
 	 * @since 2.9.0
 	 *
 	 * @param string       $url  The URL to the content that should be attempted to be embedded.
+<<<<<<< HEAD
 	 * @param string|array $args Optional. Additional arguments for retrieving embed HTML.
 	 *                           See wp_oembed_get() for accepted arguments. Default empty.
 	 * @return string|false The UNSANITIZED (and potentially unsafe) HTML that should be used to embed
 	 *                      on success, false on failure.
+=======
+	 * @param array|string $args Optional. Arguments, usually passed from a shortcode. Default empty.
+	 * @return string|false The UNSANITIZED (and potentially unsafe) HTML that should be used to embed on success,
+	 *                      false on failure.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function get_html( $url, $args = '' ) {
 		/**
@@ -382,11 +396,18 @@ class WP_oEmbed {
 		 *
 		 * @since 4.5.3
 		 *
+<<<<<<< HEAD
 		 * @param null|string  $result The UNSANITIZED (and potentially unsafe) HTML that should be used to embed.
 		 *                             Default null to continue retrieving the result.
 		 * @param string       $url    The URL to the content that should be attempted to be embedded.
 		 * @param string|array $args   Optional. Additional arguments for retrieving embed HTML.
 		 *                             See wp_oembed_get() for accepted arguments. Default empty.
+=======
+		 * @param null|string $result The UNSANITIZED (and potentially unsafe) HTML that should be used to embed.
+		 *                            Default null to continue retrieving the result.
+		 * @param string      $url    The URL to the content that should be attempted to be embedded.
+		 * @param array       $args   Optional. Arguments, usually passed from a shortcode. Default empty.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		$pre = apply_filters( 'pre_oembed_result', null, $url, $args );
 
@@ -407,8 +428,12 @@ class WP_oEmbed {
 		 *
 		 * @param string|false $data The returned oEmbed HTML (false if unsafe).
 		 * @param string       $url  URL of the content to be embedded.
+<<<<<<< HEAD
 		 * @param string|array $args Optional. Additional arguments for retrieving embed HTML.
 		 *                           See wp_oembed_get() for accepted arguments. Default empty.
+=======
+		 * @param array        $args Optional arguments, usually passed from a shortcode.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		return apply_filters( 'oembed_result', $this->data2html( $data, $url ), $url, $args );
 	}
@@ -510,8 +535,12 @@ class WP_oEmbed {
 	 *
 	 * @param string       $provider The URL to the oEmbed provider.
 	 * @param string       $url      The URL to the content that is desired to be embedded.
+<<<<<<< HEAD
 	 * @param string|array $args     Optional. Additional arguments for retrieving embed HTML.
 	 *                               See wp_oembed_get() for accepted arguments. Default empty.
+=======
+	 * @param array|string $args     Optional. Arguments, usually passed from a shortcode. Default empty.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @return object|false The result in the form of an object on success, false on failure.
 	 */
 	public function fetch( $provider, $url, $args = '' ) {
@@ -530,8 +559,12 @@ class WP_oEmbed {
 		 *
 		 * @param string $provider URL of the oEmbed provider.
 		 * @param string $url      URL of the content to be embedded.
+<<<<<<< HEAD
 		 * @param array  $args     Optional. Additional arguments for retrieving embed HTML.
 		 *                         See wp_oembed_get() for accepted arguments. Default empty.
+=======
+		 * @param array  $args     Optional arguments, usually passed from a shortcode.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		$provider = apply_filters( 'oembed_fetch_url', $provider, $url, $args );
 
@@ -598,6 +631,7 @@ class WP_oEmbed {
 			return false;
 		}
 
+<<<<<<< HEAD
 		if ( PHP_VERSION_ID < 80000 ) {
 			// This function has been deprecated in PHP 8.0 because in libxml 2.9.0, external entity loading
 			// is disabled by default, so this function is no longer needed to protect against XXE attacks.
@@ -605,16 +639,23 @@ class WP_oEmbed {
 			$loader = libxml_disable_entity_loader( true );
 		}
 
+=======
+		$loader = libxml_disable_entity_loader( true );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$errors = libxml_use_internal_errors( true );
 
 		$return = $this->_parse_xml_body( $response_body );
 
 		libxml_use_internal_errors( $errors );
+<<<<<<< HEAD
 
 		if ( PHP_VERSION_ID < 80000 && isset( $loader ) ) {
 			// phpcs:ignore PHPCompatibility.FunctionUse.RemovedFunctions.libxml_disable_entity_loaderDeprecated
 			libxml_disable_entity_loader( $loader );
 		}
+=======
+		libxml_disable_entity_loader( $loader );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		return $return;
 	}

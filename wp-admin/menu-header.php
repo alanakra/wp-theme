@@ -106,7 +106,11 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 			$class[] = esc_attr( $item[4] );
 		}
 
+<<<<<<< HEAD
 		$class     = $class ? ' class="' . implode( ' ', $class ) . '"' : '';
+=======
+		$class     = $class ? ' class="' . join( ' ', $class ) . '"' : '';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$id        = ! empty( $item[5] ) ? ' id="' . preg_replace( '|[^a-zA-Z0-9_:.]|', '-', $item[5] ) . '"' : '';
 		$img       = '';
 		$img_style = '';
@@ -165,9 +169,15 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 					&& ! file_exists( ABSPATH . "/wp-admin/$menu_file" ) )
 			) {
 				$admin_is_parent = true;
+<<<<<<< HEAD
 				echo "<a href='admin.php?page={$submenu_items[0][2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>$title</div></a>";
 			} else {
 				echo "\n\t<a href='{$submenu_items[0][2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>$title</div></a>";
+=======
+				echo "<a href='admin.php?page={$submenu_items[0][2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style>$img</div><div class='wp-menu-name'>$title</div></a>";
+			} else {
+				echo "\n\t<a href='{$submenu_items[0][2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style>$img</div><div class='wp-menu-name'>$title</div></a>";
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 		} elseif ( ! empty( $item[2] ) && current_user_can( $item[1] ) ) {
 			$menu_hook = get_plugin_page_hook( $item[2], 'admin.php' );
@@ -184,9 +194,15 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 					&& ! file_exists( ABSPATH . "/wp-admin/$menu_file" ) )
 			) {
 				$admin_is_parent = true;
+<<<<<<< HEAD
 				echo "\n\t<a href='admin.php?page={$item[2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>{$item[0]}</div></a>";
 			} else {
 				echo "\n\t<a href='{$item[2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>{$item[0]}</div></a>";
+=======
+				echo "\n\t<a href='admin.php?page={$item[2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style>$img</div><div class='wp-menu-name'>{$item[0]}</div></a>";
+			} else {
+				echo "\n\t<a href='{$item[2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style>$img</div><div class='wp-menu-name'>{$item[0]}</div></a>";
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			}
 		}
 
@@ -240,7 +256,11 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 					$class[] = esc_attr( $sub_item[4] );
 				}
 
+<<<<<<< HEAD
 				$class = $class ? ' class="' . implode( ' ', $class ) . '"' : '';
+=======
+				$class = $class ? ' class="' . join( ' ', $class ) . '"' : '';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 				$menu_hook = get_plugin_page_hook( $sub_item[2], $item[2] );
 				$sub_file  = $sub_item[2];

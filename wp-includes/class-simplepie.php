@@ -68,7 +68,11 @@ spl_autoload_register( 'wp_simplepie_autoload' );
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @package SimplePie
+<<<<<<< HEAD
  * @version 1.5.6
+=======
+ * @version 1.5.5
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @copyright 2004-2017 Ryan Parman, Sam Sneddon, Ryan McCue
  * @author Ryan Parman
  * @author Sam Sneddon
@@ -85,7 +89,11 @@ define('SIMPLEPIE_NAME', 'SimplePie');
 /**
  * SimplePie Version
  */
+<<<<<<< HEAD
 define('SIMPLEPIE_VERSION', '1.5.6');
+=======
+define('SIMPLEPIE_VERSION', '1.5.5');
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 /**
  * SimplePie Build

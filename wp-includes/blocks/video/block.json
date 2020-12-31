@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	"name": "core/video",
 	"category": "media",
 	"attributes": {
@@ -60,6 +63,7 @@
 			"source": "attribute",
 			"selector": "video",
 			"attribute": "playsinline"
+<<<<<<< HEAD
 		},
 		"tracks": {
 			"type": "array",
@@ -67,10 +71,17 @@
 				"type": "object"
 			},
 			"default": []
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 	},
 	"supports": {
 		"anchor": true,
+<<<<<<< HEAD
 		"align": true
+=======
+		"align": true,
+		"lightBlockWrapper": true
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 }

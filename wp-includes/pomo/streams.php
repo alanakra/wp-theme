@@ -11,8 +11,13 @@
 if ( ! class_exists( 'POMO_Reader', false ) ) :
 	class POMO_Reader {
 
+<<<<<<< HEAD
 		public $endian = 'little';
 		public $_post  = '';
+=======
+		var $endian = 'little';
+		var $_post  = '';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		/**
 		 * PHP5 constructor.
@@ -62,7 +67,11 @@ if ( ! class_exists( 'POMO_Reader', false ) ) :
 		/**
 		 * Reads an array of 32-bit Integers from the Stream
 		 *
+<<<<<<< HEAD
 		 * @param int $count How many elements should be read
+=======
+		 * @param integer $count How many elements should be read
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 * @return mixed Array of integers or false if there isn't
 		 *  enough data or on error
 		 */
@@ -175,7 +184,11 @@ if ( ! class_exists( 'POMO_FileReader', false ) ) :
 
 		/**
 		 * @param int $pos
+<<<<<<< HEAD
 		 * @return bool
+=======
+		 * @return boolean
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		function seekto( $pos ) {
 			if ( -1 == fseek( $this->_f, $pos, SEEK_SET ) ) {
@@ -226,7 +239,11 @@ if ( ! class_exists( 'POMO_StringReader', false ) ) :
 	 */
 	class POMO_StringReader extends POMO_Reader {
 
+<<<<<<< HEAD
 		public $_str = '';
+=======
+		var $_str = '';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		/**
 		 * PHP5 constructor.

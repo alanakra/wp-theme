@@ -82,12 +82,20 @@ this["wp"] = this["wp"] || {}; this["wp"]["priorityQueue"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 500);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 467);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /******/ })
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
 /***/ 500:
+=======
+/***/ 467:
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -193,6 +201,11 @@ var build_module_createQueue = function createQueue() {
 
   var elementsMap = new WeakMap();
   var isRunning = false;
+<<<<<<< HEAD
+=======
+  /* eslint-disable jsdoc/valid-types */
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   /**
    * Callback to process as much queue as time permits.
    *
@@ -200,6 +213,11 @@ var build_module_createQueue = function createQueue() {
    *                                       animation frame timestamp.
    */
 
+<<<<<<< HEAD
+=======
+  /* eslint-enable */
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
   var runWaitingList = function runWaitingList(deadline) {
     var hasTimeRemaining = typeof deadline === 'number' ? function () {
       return false;

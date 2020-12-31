@@ -71,7 +71,10 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 			'flipimage',
 			'flopimage',
 			'readimage',
+<<<<<<< HEAD
 			'readimageblob',
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		);
 
 		// Now, test for deep requirements within Imagick.
@@ -128,7 +131,11 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 			return true;
 		}
 
+<<<<<<< HEAD
 		if ( ! is_file( $this->file ) && ! wp_is_stream( $this->file ) ) {
+=======
+		if ( ! is_file( $this->file ) && ! preg_match( '|^https?://|', $this->file ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return new WP_Error( 'error_loading_image', __( 'File doesn&#8217;t exist?' ), $this->file );
 		}
 
@@ -141,6 +148,7 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 		try {
 			$this->image    = new Imagick();
 			$file_extension = strtolower( pathinfo( $this->file, PATHINFO_EXTENSION ) );
+<<<<<<< HEAD
 
 			if ( 'pdf' === $file_extension ) {
 				$pdf_loaded = $this->pdf_load_source();
@@ -157,6 +165,18 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 				}
 			}
 
+=======
+			$filename       = $this->file;
+
+			if ( 'pdf' === $file_extension ) {
+				$filename = $this->pdf_setup();
+			}
+
+			// Reading image after Imagick instantiation because `setResolution`
+			// only applies correctly before the image is read.
+			$this->image->readImage( $filename );
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			if ( ! $this->image->valid() ) {
 				return new WP_Error( 'invalid_image', __( 'File is not an image.' ), $this->file );
 			}
@@ -172,7 +192,10 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 		}
 
 		$updated_size = $this->update_size();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( is_wp_error( $updated_size ) ) {
 			return $updated_size;
 		}
@@ -556,7 +579,10 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 		} catch ( Exception $e ) {
 			return new WP_Error( 'image_crop_error', $e->getMessage() );
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return $this->update_size();
 	}
 
@@ -591,7 +617,10 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 		} catch ( Exception $e ) {
 			return new WP_Error( 'image_rotate_error', $e->getMessage() );
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return true;
 	}
 
@@ -688,6 +717,7 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 			$orig_format = $this->image->getImageFormat();
 
 			$this->image->setImageFormat( strtoupper( $this->get_extension( $mime_type ) ) );
+<<<<<<< HEAD
 		} catch ( Exception $e ) {
 			return new WP_Error( 'image_save_error', $e->getMessage(), $filename );
 		}
@@ -698,6 +728,10 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 		}
 
 		try {
+=======
+			$this->make_image( $filename, array( $image, 'writeImage' ), array( $filename ) );
+
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			// Reset original format.
 			$this->image->setImageFormat( $orig_format );
 		} catch ( Exception $e ) {
@@ -720,6 +754,7 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Writes an image to a file or stream.
 	 *
 	 * @since 5.6.0
@@ -770,6 +805,8 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 	}
 
 	/**
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * Streams current image to browser.
 	 *
 	 * @since 3.5.0
@@ -807,6 +844,7 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 	protected function strip_meta() {
 
 		if ( ! is_callable( array( $this->image, 'getImageProfiles' ) ) ) {
+<<<<<<< HEAD
 			return new WP_Error(
 				'image_strip_meta_error',
 				sprintf(
@@ -826,6 +864,15 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 					'<code>Imagick::removeImageProfile()</code>'
 				)
 			);
+=======
+			/* translators: %s: ImageMagick method name. */
+			return new WP_Error( 'image_strip_meta_error', sprintf( __( '%s is required to strip image meta.' ), '<code>Imagick::getImageProfiles()</code>' ) );
+		}
+
+		if ( ! is_callable( array( $this->image, 'removeImageProfile' ) ) ) {
+			/* translators: %s: ImageMagick method name. */
+			return new WP_Error( 'image_strip_meta_error', sprintf( __( '%s is required to strip image meta.' ), '<code>Imagick::removeImageProfile()</code>' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		/*
@@ -873,6 +920,7 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 			// We want the thumbnail to be readable, so increase the rendering DPI.
 			$this->image->setResolution( 128, 128 );
 
+<<<<<<< HEAD
 			// Only load the first page.
 			return $this->file . '[0]';
 		} catch ( Exception $e ) {
@@ -898,10 +946,13 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 		}
 
 		try {
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			// When generating thumbnails from cropped PDF pages, Imagemagick uses the uncropped
 			// area (resulting in unnecessary whitespace) unless the following option is set.
 			$this->image->setOption( 'pdf:use-cropbox', true );
 
+<<<<<<< HEAD
 			// Reading image after Imagick instantiation because `setResolution`
 			// only applies correctly before the image is read.
 			$this->image->readImage( $filename );
@@ -913,6 +964,13 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 		}
 
 		return true;
+=======
+			// Only load the first page.
+			return $this->file . '[0]';
+		} catch ( Exception $e ) {
+			return new WP_Error( 'pdf_setup_failed', $e->getMessage(), $this->file );
+		}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 }

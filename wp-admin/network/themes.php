@@ -89,7 +89,11 @@ if ( $action ) {
 			echo '<div class="wrap">';
 			echo '<h1>' . esc_html( $title ) . '</h1>';
 
+<<<<<<< HEAD
 			$url = self_admin_url( 'update.php?action=update-selected-themes&amp;themes=' . urlencode( implode( ',', $themes ) ) );
+=======
+			$url = self_admin_url( 'update.php?action=update-selected-themes&amp;themes=' . urlencode( join( ',', $themes ) ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$url = wp_nonce_url( $url, 'bulk-update-themes' );
 
 			echo "<iframe src='$url' style='width: 100%; height:100%; min-height:850px;'></iframe>";
@@ -352,6 +356,7 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 
 <?php
 if ( isset( $_REQUEST['s'] ) && strlen( $_REQUEST['s'] ) ) {
+<<<<<<< HEAD
 	echo '<span class="subtitle">';
 	printf(
 		/* translators: %s: Search query. */
@@ -359,6 +364,10 @@ if ( isset( $_REQUEST['s'] ) && strlen( $_REQUEST['s'] ) ) {
 		'<strong>' . esc_html( $s ) . '</strong>'
 	);
 	echo '</span>';
+=======
+	/* translators: %s: Search query. */
+	printf( '<span class="subtitle">' . __( 'Search results for &#8220;%s&#8221;' ) . '</span>', esc_html( $s ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 }
 ?>
 

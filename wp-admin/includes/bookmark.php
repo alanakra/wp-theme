@@ -142,15 +142,20 @@ function get_link_to_edit( $link ) {
 }
 
 /**
+<<<<<<< HEAD
  * Inserts a link into the database, or updates an existing link.
  *
  * Runs all the necessary sanitizing, provides default values if arguments are missing,
  * and finally saves the link.
+=======
+ * Inserts/updates links into/in the database.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @since 2.0.0
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
+<<<<<<< HEAD
  * @param array $linkdata {
  *     Elements that make up the link to insert.
  *
@@ -170,6 +175,9 @@ function get_link_to_edit( $link ) {
  *     @type int    $link_category    Optional. The term ID of the link category.
  *                                    If empty, uses default link category.
  * }
+=======
+ * @param array $linkdata Elements that make up the link to insert.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param bool  $wp_error Optional. Whether to return a WP_Error object on failure. Default false.
  * @return int|WP_Error Value 0 or WP_Error on failure. The link ID on success.
  */
@@ -295,7 +303,11 @@ function wp_set_link_cats( $link_id = 0, $link_categories = array() ) {
  *
  * @since 2.0.0
  *
+<<<<<<< HEAD
  * @param array $linkdata Link data to update. See wp_insert_link() for accepted arguments.
+=======
+ * @param array $linkdata Link data to update.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @return int|WP_Error Value 0 or WP_Error on failure. The updated link ID on success.
  */
 function wp_update_link( $linkdata ) {

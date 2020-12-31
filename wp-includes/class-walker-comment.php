@@ -301,7 +301,11 @@ class Walker_Comment extends Walker {
 		if ( $commenter['comment_author_email'] ) {
 			$moderation_note = __( 'Your comment is awaiting moderation.' );
 		} else {
+<<<<<<< HEAD
 			$moderation_note = __( 'Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.' );
+=======
+			$moderation_note = __( 'Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved.' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 		?>
 		<<?php echo $tag; ?> <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?> id="comment-<?php comment_ID(); ?>">
@@ -333,6 +337,7 @@ class Walker_Comment extends Walker {
 		<br />
 		<?php endif; ?>
 
+<<<<<<< HEAD
 		<div class="comment-meta commentmetadata">
 			<?php
 			printf(
@@ -348,6 +353,17 @@ class Walker_Comment extends Walker {
 
 			edit_comment_link( __( '(Edit)' ), ' &nbsp;&nbsp;', '' );
 			?>
+=======
+		<div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
+			<?php
+				/* translators: 1: Comment date, 2: Comment time. */
+				printf( __( '%1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time() );
+			?>
+				</a>
+				<?php
+				edit_comment_link( __( '(Edit)' ), '&nbsp;&nbsp;', '' );
+				?>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		</div>
 
 		<?php
@@ -405,7 +421,11 @@ class Walker_Comment extends Walker {
 		if ( $commenter['comment_author_email'] ) {
 			$moderation_note = __( 'Your comment is awaiting moderation.' );
 		} else {
+<<<<<<< HEAD
 			$moderation_note = __( 'Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.' );
+=======
+			$moderation_note = __( 'Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved.' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 		?>
 		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
@@ -433,6 +453,7 @@ class Walker_Comment extends Walker {
 					</div><!-- .comment-author -->
 
 					<div class="comment-metadata">
+<<<<<<< HEAD
 						<?php
 						printf(
 							'<a href="%s"><time datetime="%s">%s</time></a>',
@@ -448,6 +469,17 @@ class Walker_Comment extends Walker {
 
 						edit_comment_link( __( 'Edit' ), ' <span class="edit-link">', '</span>' );
 						?>
+=======
+						<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
+							<time datetime="<?php comment_time( 'c' ); ?>">
+								<?php
+									/* translators: 1: Comment date, 2: Comment time. */
+									printf( __( '%1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time() );
+								?>
+							</time>
+						</a>
+						<?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					</div><!-- .comment-metadata -->
 
 					<?php if ( '0' == $comment->comment_approved ) : ?>

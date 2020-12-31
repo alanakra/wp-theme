@@ -489,7 +489,11 @@ function wp_edit_theme_plugin_file( $args ) {
 
 	$previous_content = file_get_contents( $real_file );
 
+<<<<<<< HEAD
 	if ( ! is_writable( $real_file ) ) {
+=======
+	if ( ! is_writeable( $real_file ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		return new WP_Error( 'file_not_writable' );
 	}
 
@@ -510,7 +514,11 @@ function wp_edit_theme_plugin_file( $args ) {
 
 		$scrape_key   = md5( rand() );
 		$transient    = 'scrape_key_' . $scrape_key;
+<<<<<<< HEAD
 		$scrape_nonce = (string) rand();
+=======
+		$scrape_nonce = strval( rand() );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		// It shouldn't take more than 60 seconds to make the two loopback requests.
 		set_transient( $transient, $scrape_nonce, 60 );
 
@@ -928,7 +936,11 @@ function _wp_handle_upload( &$file, $overrides, $time, $action ) {
 	$url = $uploads['url'] . "/$filename";
 
 	if ( is_multisite() ) {
+<<<<<<< HEAD
 		clean_dirsize_cache( $new_file );
+=======
+		delete_transient( 'dirsize_cache' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	/**
@@ -1125,7 +1137,11 @@ function download_url( $url, $timeout = 300, $signature_verification = false ) {
 			}
 
 			/**
+<<<<<<< HEAD
 			 * Filters the URL where the signature for a file is located.
+=======
+			 * Filter the URL where the signature for a file is located.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			 *
 			 * @since 5.2.0
 			 *
@@ -1394,7 +1410,11 @@ function wp_trusted_keys() {
 	// TODO: Add key #2 with longer expiration.
 
 	/**
+<<<<<<< HEAD
 	 * Filters the valid signing keys used to verify the contents of files.
+=======
+	 * Filter the valid signing keys used to verify the contents of files.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 5.2.0
 	 *

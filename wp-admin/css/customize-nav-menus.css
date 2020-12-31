@@ -65,7 +65,10 @@
 
 .wp-customizer .menu-item-bar .menu-item-handle {
 	width: 100%;
+<<<<<<< HEAD
 	max-width: 100%;
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	background: #fff;
 }
 
@@ -323,7 +326,11 @@
 	content: "\f140";
 	display: block;
 	padding: 1px 2px 1px 0px;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	border-radius: 50%;
 	color: #72777c;
 	font: normal 20px/1 dashicons;

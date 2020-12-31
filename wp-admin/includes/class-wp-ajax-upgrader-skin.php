@@ -81,7 +81,11 @@ class WP_Ajax_Upgrader_Skin extends Automatic_Upgrader_Skin {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Stores an error message about the upgrade.
+=======
+	 * Stores a log entry for an error.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 4.6.0
 	 * @since 5.3.0 Formalized the existing `...$args` parameter by adding it
@@ -116,13 +120,21 @@ class WP_Ajax_Upgrader_Skin extends Automatic_Upgrader_Skin {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Stores a message about the upgrade.
+=======
+	 * Stores a log entry.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * @since 4.6.0
 	 * @since 5.3.0 Formalized the existing `...$args` parameter by adding it
 	 *              to the function signature.
 	 *
+<<<<<<< HEAD
 	 * @param string|array|WP_Error $data    Message data.
+=======
+	 * @param string|array|WP_Error $data    Log entry data.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param mixed                 ...$args Optional text replacements.
 	 */
 	public function feedback( $data, ...$args ) {

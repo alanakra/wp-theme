@@ -252,7 +252,11 @@ function get_shortcode_regex( $tagnames = null ) {
 	if ( empty( $tagnames ) ) {
 		$tagnames = array_keys( $shortcode_tags );
 	}
+<<<<<<< HEAD
 	$tagregexp = implode( '|', array_map( 'preg_quote', $tagnames ) );
+=======
+	$tagregexp = join( '|', array_map( 'preg_quote', $tagnames ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	// WARNING! Do not change this regex without changing do_shortcode_tag() and strip_shortcode_tag().
 	// Also, see shortcode_unautop() and shortcode.js.
@@ -292,7 +296,11 @@ function get_shortcode_regex( $tagnames = null ) {
 /**
  * Regular Expression callable for do_shortcode() for calling shortcode hook.
  *
+<<<<<<< HEAD
  * @see get_shortcode_regex() for details of the match array contents.
+=======
+ * @see get_shortcode_regex for details of the match array contents.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @since 2.5.0
  * @access private

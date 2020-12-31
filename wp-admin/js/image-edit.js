@@ -1007,10 +1007,13 @@
 			sel.fh = h;
 			this.addStep({ 'c': sel }, postid, nonce);
 		}
+<<<<<<< HEAD
 
 		// Clear the selection fields after cropping.
 		$('#imgedit-sel-width-' + postid).val('');
 		$('#imgedit-sel-height-' + postid).val('');
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	},
 
 	/**

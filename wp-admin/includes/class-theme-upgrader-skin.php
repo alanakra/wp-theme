@@ -22,7 +22,11 @@ class Theme_Upgrader_Skin extends WP_Upgrader_Skin {
 	 *
 	 * @since 2.8.0
 	 *
+<<<<<<< HEAD
 	 * @var string
+=======
+	 * @var object
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public $theme = '';
 
@@ -124,7 +128,11 @@ class Theme_Upgrader_Skin extends WP_Upgrader_Skin {
 		$update_actions['themes_page'] = sprintf(
 			'<a href="%s" target="_parent">%s</a>',
 			self_admin_url( 'themes.php' ),
+<<<<<<< HEAD
 			__( 'Go to Themes page' )
+=======
+			__( 'Return to Themes page' )
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		);
 
 		/**

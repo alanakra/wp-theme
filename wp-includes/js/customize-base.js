@@ -112,8 +112,13 @@ window.wp = window.wp || {};
 	 * @param object staticProps Properties to apply directly to the class.
 	 * @return child The subclass.
 	 */
+<<<<<<< HEAD
 	api.Class.extend = function( protoProps, staticProps ) {
 		var child = inherits( this, protoProps, staticProps );
+=======
+	api.Class.extend = function( protoProps, classProps ) {
+		var child = inherits( this, protoProps, classProps );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		child.extend = this.extend;
 		return child;
 	};

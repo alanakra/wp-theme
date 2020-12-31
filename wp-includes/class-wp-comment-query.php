@@ -222,7 +222,11 @@ class WP_Comment_Query {
 	 *                                                   Default empty.
 	 *     @type string       $search                    Search term(s) to retrieve matching comments for.
 	 *                                                   Default empty.
+<<<<<<< HEAD
 	 *     @type string|array $status                    Comment statuses to limit results by. Accepts an array
+=======
+	 *     @type string|array $status                    Comment stati to limit results by. Accepts an array
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *                                                   or space/comma-separated list of 'hold' (`comment_status=0`),
 	 *                                                   'approve' (`comment_status=1`), 'all', or a custom
 	 *                                                   comment status. Default 'all'.
@@ -382,6 +386,7 @@ class WP_Comment_Query {
 		$comment_data = null;
 
 		/**
+<<<<<<< HEAD
 		 * Filters the comments data before the query takes place.
 		 *
 		 * Return a non-null value to bypass WordPress' default comment queries.
@@ -405,6 +410,18 @@ class WP_Comment_Query {
 		 * @since 5.3.0
 		 * @since 5.6.0 The returned array of comment data is assigned to the `comments` property
 		 *              of the current WP_Comment_Query instance.
+=======
+		 * Filter the comments data before the query takes place.
+		 *
+		 * Return a non-null value to bypass WordPress's default comment queries.
+		 *
+		 * The expected return type from this filter depends on the value passed in the request query_vars.
+		 * When `$this->query_vars['count']` is set, the filter should return the comment count as an int.
+		 * When `'ids' === $this->query_vars['fields']`, the filter should return an array of comment IDs.
+		 * Otherwise the filter should return an array of WP_Comment objects.
+		 *
+		 * @since 5.3.0
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 *
 		 * @param array|int|null   $comment_data Return an array of comment data to short-circuit WP's comment query,
 		 *                                       the comment count as an integer if `$this->query_vars['count']` is set,
@@ -414,10 +431,13 @@ class WP_Comment_Query {
 		$comment_data = apply_filters_ref_array( 'comments_pre_query', array( $comment_data, &$this ) );
 
 		if ( null !== $comment_data ) {
+<<<<<<< HEAD
 			if ( is_array( $comment_data ) && ! $this->query_vars['count'] ) {
 				$this->comments = $comment_data;
 			}
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return $comment_data;
 		}
 
@@ -456,7 +476,11 @@ class WP_Comment_Query {
 		// If querying for a count only, there's nothing more to do.
 		if ( $this->query_vars['count'] ) {
 			// $comment_ids is actually a count in this case.
+<<<<<<< HEAD
 			return (int) $comment_ids;
+=======
+			return intval( $comment_ids );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		$comment_ids = array_map( 'intval', $comment_ids );
@@ -942,7 +966,11 @@ class WP_Comment_Query {
 		$this->request = "{$this->sql_clauses['select']} {$this->sql_clauses['from']} {$where} {$this->sql_clauses['groupby']} {$this->sql_clauses['orderby']} {$this->sql_clauses['limits']}";
 
 		if ( $this->query_vars['count'] ) {
+<<<<<<< HEAD
 			return (int) $wpdb->get_var( $this->request );
+=======
+			return intval( $wpdb->get_var( $this->request ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		} else {
 			$comment_ids = $wpdb->get_col( $this->request );
 			return array_map( 'intval', $comment_ids );

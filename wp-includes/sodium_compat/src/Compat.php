@@ -44,8 +44,11 @@ class ParagonIE_Sodium_Compat
      */
     public static $fastMult = false;
 
+<<<<<<< HEAD
     const LIBRARY_MAJOR_VERSION = 9;
     const LIBRARY_MINOR_VERSION = 1;
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
     const LIBRARY_VERSION_MAJOR = 9;
     const LIBRARY_VERSION_MINOR = 1;
     const VERSION_STRING = 'polyfill-1.0.8';
@@ -3119,6 +3122,7 @@ class ParagonIE_Sodium_Compat
      * with (sans pwhash and memzero).
      *
      * @return int
+<<<<<<< HEAD
      */
     public static function library_version_major()
     {
@@ -3127,6 +3131,17 @@ class ParagonIE_Sodium_Compat
         }
         if (self::use_fallback('library_version_major')) {
             /** @psalm-suppress UndefinedFunction */
+=======
+     * @psalm-suppress MixedInferredReturnType
+     * @psalm-suppress UndefinedFunction
+     */
+    public static function library_version_major()
+    {
+        if (self::useNewSodiumAPI()) {
+            return sodium_library_version_major();
+        }
+        if (self::use_fallback('library_version_major')) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             return (int) call_user_func('\\Sodium\\library_version_major');
         }
         return self::LIBRARY_VERSION_MAJOR;
@@ -3137,6 +3152,7 @@ class ParagonIE_Sodium_Compat
      * with (sans pwhash and memzero).
      *
      * @return int
+<<<<<<< HEAD
      */
     public static function library_version_minor()
     {
@@ -3145,6 +3161,17 @@ class ParagonIE_Sodium_Compat
         }
         if (self::use_fallback('library_version_minor')) {
             /** @psalm-suppress UndefinedFunction */
+=======
+     * @psalm-suppress MixedInferredReturnType
+     * @psalm-suppress UndefinedFunction
+     */
+    public static function library_version_minor()
+    {
+        if (self::useNewSodiumAPI()) {
+            return sodium_library_version_minor();
+        }
+        if (self::use_fallback('library_version_minor')) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             return (int) call_user_func('\\Sodium\\library_version_minor');
         }
         return self::LIBRARY_VERSION_MINOR;

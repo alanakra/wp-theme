@@ -291,8 +291,13 @@ function wp_stream_image( $image, $mime_type, $attachment_id ) {
 		 * @since 2.9.0
 		 * @deprecated 3.5.0 Use {@see 'image_editor_save_pre'} instead.
 		 *
+<<<<<<< HEAD
 		 * @param resource|GdImage $image         Image resource to be streamed.
 		 * @param int              $attachment_id The attachment post ID.
+=======
+		 * @param resource $image         Image resource to be streamed.
+		 * @param int      $attachment_id The attachment post ID.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		$image = apply_filters_deprecated( 'image_save_pre', array( $image, $attachment_id ), '3.5.0', 'image_editor_save_pre' );
 
@@ -420,6 +425,7 @@ function _image_get_preview_ratio( $w, $h ) {
  * @see WP_Image_Editor::rotate()
  *
  * @ignore
+<<<<<<< HEAD
  * @param resource|GdImage  $img   Image resource.
  * @param float|int         $angle Image rotation angle, in degrees.
  * @return resource|GdImage|false GD image resource or GdImage instance, false otherwise.
@@ -431,11 +437,25 @@ function _rotate_image_resource( $img, $angle ) {
 		$rotated = imagerotate( $img, $angle, 0 );
 
 		if ( is_gd_image( $rotated ) ) {
+=======
+ * @param resource  $img   Image resource.
+ * @param float|int $angle Image rotation angle, in degrees.
+ * @return resource|false GD image resource, false otherwise.
+ */
+function _rotate_image_resource( $img, $angle ) {
+	_deprecated_function( __FUNCTION__, '3.5.0', 'WP_Image_Editor::rotate()' );
+	if ( function_exists( 'imagerotate' ) ) {
+		$rotated = imagerotate( $img, $angle, 0 );
+		if ( is_resource( $rotated ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			imagedestroy( $img );
 			$img = $rotated;
 		}
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	return $img;
 }
 
@@ -447,6 +467,7 @@ function _rotate_image_resource( $img, $angle ) {
  * @see WP_Image_Editor::flip()
  *
  * @ignore
+<<<<<<< HEAD
  * @param resource|GdImage $img  Image resource or GdImage instance.
  * @param bool             $horz Whether to flip horizontally.
  * @param bool             $vert Whether to flip vertically.
@@ -460,6 +481,19 @@ function _flip_image_resource( $img, $horz, $vert ) {
 	$dst = wp_imagecreatetruecolor( $w, $h );
 
 	if ( is_gd_image( $dst ) ) {
+=======
+ * @param resource $img  Image resource.
+ * @param bool     $horz Whether to flip horizontally.
+ * @param bool     $vert Whether to flip vertically.
+ * @return resource (maybe) flipped image resource.
+ */
+function _flip_image_resource( $img, $horz, $vert ) {
+	_deprecated_function( __FUNCTION__, '3.5.0', 'WP_Image_Editor::flip()' );
+	$w   = imagesx( $img );
+	$h   = imagesy( $img );
+	$dst = wp_imagecreatetruecolor( $w, $h );
+	if ( is_resource( $dst ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$sx = $vert ? ( $w - 1 ) : 0;
 		$sy = $horz ? ( $h - 1 ) : 0;
 		$sw = $vert ? -$w : $w;
@@ -470,7 +504,10 @@ function _flip_image_resource( $img, $horz, $vert ) {
 			$img = $dst;
 		}
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	return $img;
 }
 
@@ -480,6 +517,7 @@ function _flip_image_resource( $img, $horz, $vert ) {
  * @since 2.9.0
  *
  * @ignore
+<<<<<<< HEAD
  * @param resource|GdImage $img Image resource or GdImage instance.
  * @param float            $x   Source point x-coordinate.
  * @param float            $y   Source point y-coordinate.
@@ -491,12 +529,27 @@ function _crop_image_resource( $img, $x, $y, $w, $h ) {
 	$dst = wp_imagecreatetruecolor( $w, $h );
 
 	if ( is_gd_image( $dst ) ) {
+=======
+ * @param resource $img Image resource.
+ * @param float    $x   Source point x-coordinate.
+ * @param float    $y   Source point y-coordinate.
+ * @param float    $w   Source width.
+ * @param float    $h   Source height.
+ * @return resource (maybe) cropped image resource.
+ */
+function _crop_image_resource( $img, $x, $y, $w, $h ) {
+	$dst = wp_imagecreatetruecolor( $w, $h );
+	if ( is_resource( $dst ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( imagecopy( $dst, $img, 0, 0, $x, $y, $w, $h ) ) {
 			imagedestroy( $img );
 			$img = $dst;
 		}
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	return $img;
 }
 
@@ -510,7 +563,11 @@ function _crop_image_resource( $img, $x, $y, $w, $h ) {
  * @return WP_Image_Editor WP_Image_Editor instance with changes applied.
  */
 function image_edit_apply_changes( $image, $changes ) {
+<<<<<<< HEAD
 	if ( is_gd_image( $image ) ) {
+=======
+	if ( is_resource( $image ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		/* translators: 1: $image, 2: WP_Image_Editor */
 		_deprecated_argument( __FUNCTION__, '3.5.0', sprintf( __( '%1$s needs to be a %2$s object.' ), '$image', 'WP_Image_Editor' ) );
 	}
@@ -574,7 +631,11 @@ function image_edit_apply_changes( $image, $changes ) {
 		 * @param array           $changes Array of change operations.
 		 */
 		$image = apply_filters( 'wp_image_editor_before_change', $image, $changes );
+<<<<<<< HEAD
 	} elseif ( is_gd_image( $image ) ) {
+=======
+	} elseif ( is_resource( $image ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		/**
 		 * Filters the GD image resource before applying changes to the image.
@@ -582,8 +643,13 @@ function image_edit_apply_changes( $image, $changes ) {
 		 * @since 2.9.0
 		 * @deprecated 3.5.0 Use {@see 'wp_image_editor_before_change'} instead.
 		 *
+<<<<<<< HEAD
 		 * @param resource|GdImage $image   GD image resource or GdImage instance.
 		 * @param array            $changes Array of change operations.
+=======
+		 * @param resource $image   GD image resource.
+		 * @param array    $changes Array of change operations.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		 */
 		$image = apply_filters_deprecated( 'image_edit_before_change', array( $image, $changes ), '3.5.0', 'wp_image_editor_before_change' );
 	}
@@ -786,8 +852,13 @@ function wp_save_image( $post_id ) {
 		return $return;
 	}
 
+<<<<<<< HEAD
 	$fwidth  = ! empty( $_REQUEST['fwidth'] ) ? (int) $_REQUEST['fwidth'] : 0;
 	$fheight = ! empty( $_REQUEST['fheight'] ) ? (int) $_REQUEST['fheight'] : 0;
+=======
+	$fwidth  = ! empty( $_REQUEST['fwidth'] ) ? intval( $_REQUEST['fwidth'] ) : 0;
+	$fheight = ! empty( $_REQUEST['fheight'] ) ? intval( $_REQUEST['fheight'] ) : 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	$target  = ! empty( $_REQUEST['target'] ) ? preg_replace( '/[^a-z0-9_-]+/i', '', $_REQUEST['target'] ) : '';
 	$scale   = ! empty( $_REQUEST['do'] ) && 'scale' === $_REQUEST['do'];
 
@@ -944,8 +1015,13 @@ function wp_save_image( $post_id ) {
 			}
 
 			if ( isset( $_wp_additional_image_sizes[ $size ] ) ) {
+<<<<<<< HEAD
 				$width  = (int) $_wp_additional_image_sizes[ $size ]['width'];
 				$height = (int) $_wp_additional_image_sizes[ $size ]['height'];
+=======
+				$width  = intval( $_wp_additional_image_sizes[ $size ]['width'] );
+				$height = intval( $_wp_additional_image_sizes[ $size ]['height'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				$crop   = ( $nocrop ) ? false : $_wp_additional_image_sizes[ $size ]['crop'];
 			} else {
 				$height = get_option( "{$size}_size_h" );

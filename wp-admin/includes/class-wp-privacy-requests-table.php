@@ -43,7 +43,11 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 			'email'             => __( 'Requester' ),
 			'status'            => __( 'Status' ),
 			'created_timestamp' => __( 'Requested' ),
+<<<<<<< HEAD
 			'next_steps'        => __( 'Next steps' ),
+=======
+			'next_steps'        => __( 'Next Steps' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		);
 		return $columns;
 	}
@@ -206,6 +210,7 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 	 *
 	 * @since 4.9.6
 	 *
+<<<<<<< HEAD
 	 * @return array Array of bulk action labels keyed by their action.
 	 */
 	protected function get_bulk_actions() {
@@ -213,6 +218,14 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 			'resend'   => __( 'Resend confirmation requests' ),
 			'complete' => __( 'Mark requests as completed' ),
 			'delete'   => __( 'Delete requests' ),
+=======
+	 * @return string[] Array of bulk action labels keyed by their action.
+	 */
+	protected function get_bulk_actions() {
+		return array(
+			'delete' => __( 'Delete Requests' ),
+			'resend' => __( 'Resend Confirmation Requests' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		);
 	}
 
@@ -220,12 +233,16 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 	 * Process bulk actions.
 	 *
 	 * @since 4.9.6
+<<<<<<< HEAD
 	 * @since 5.6.0 Added support for the `complete` action.
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function process_bulk_action() {
 		$action      = $this->current_action();
 		$request_ids = isset( $_REQUEST['request_id'] ) ? wp_parse_id_list( wp_unslash( $_REQUEST['request_id'] ) ) : array();
 
+<<<<<<< HEAD
 		if ( empty( $request_ids ) ) {
 			return;
 		}
@@ -288,6 +305,35 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 					$result = _wp_privacy_completed_request( $request_id );
 
 					if ( $result && ! is_wp_error( $result ) ) {
+=======
+		$count = 0;
+
+		if ( $request_ids ) {
+			check_admin_referer( 'bulk-privacy_requests' );
+		}
+
+		switch ( $action ) {
+			case 'delete':
+				foreach ( $request_ids as $request_id ) {
+					if ( wp_delete_post( $request_id, true ) ) {
+						$count ++;
+					}
+				}
+
+				add_settings_error(
+					'bulk_action',
+					'bulk_action',
+					/* translators: %d: Number of requests. */
+					sprintf( _n( 'Deleted %d request', 'Deleted %d requests', $count ), $count ),
+					'success'
+				);
+				break;
+			case 'resend':
+				foreach ( $request_ids as $request_id ) {
+					$resend = _wp_privacy_resend_request( $request_id );
+
+					if ( $resend && ! is_wp_error( $resend ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						$count++;
 					}
 				}
@@ -295,6 +341,7 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 				add_settings_error(
 					'bulk_action',
 					'bulk_action',
+<<<<<<< HEAD
 					sprintf(
 						/* translators: %d: Number of requests. */
 						_n(
@@ -352,6 +399,13 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 				}
 
 				break;
+=======
+					/* translators: %d: Number of requests. */
+					sprintf( _n( 'Re-sent %d request', 'Re-sent %d requests', $count ), $count ),
+					'success'
+				);
+				break;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 	}
 

@@ -907,7 +907,11 @@ i.mce-i-remove {
 	font: normal 20px/1 dashicons;
 	padding: 0;
 	vertical-align: top;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	margin-left: -2px;
@@ -917,7 +921,11 @@ i.mce-i-remove {
 .qt-dfw {
 	font: normal 20px/1 dashicons;
 	vertical-align: top;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -1214,7 +1222,11 @@ i.mce-i-wp_code:before {
 
 .wp-media-buttons .add_media span.wp-media-buttons-icon:before {
 	font: normal 18px/1 dashicons;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -1436,7 +1448,11 @@ i.mce-i-wp_code:before {
 #wp-link-close:before {
 	font: normal 20px/36px dashicons;
 	vertical-align: top;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	width: 36px;

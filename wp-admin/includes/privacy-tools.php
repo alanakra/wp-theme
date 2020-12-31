@@ -13,14 +13,22 @@
  * @access private
  *
  * @param int $request_id Request ID.
+<<<<<<< HEAD
  * @return bool|WP_Error Returns true if sending the email was successful, or a WP_Error object.
+=======
+ * @return bool|WP_Error Returns true/false based on the success of sending the email, or a WP_Error object.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function _wp_privacy_resend_request( $request_id ) {
 	$request_id = absint( $request_id );
 	$request    = get_post( $request_id );
 
 	if ( ! $request || 'user_request' !== $request->post_type ) {
+<<<<<<< HEAD
 		return new WP_Error( 'privacy_request_error', __( 'Invalid user privacy request.' ) );
+=======
+		return new WP_Error( 'privacy_request_error', __( 'Invalid request.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	$result = wp_send_user_request( $request_id );
@@ -28,7 +36,11 @@ function _wp_privacy_resend_request( $request_id ) {
 	if ( is_wp_error( $result ) ) {
 		return $result;
 	} elseif ( ! $result ) {
+<<<<<<< HEAD
 		return new WP_Error( 'privacy_request_error', __( 'Unable to initiate user privacy confirmation request.' ) );
+=======
+		return new WP_Error( 'privacy_request_error', __( 'Unable to initiate confirmation request.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	return true;
@@ -49,7 +61,11 @@ function _wp_privacy_completed_request( $request_id ) {
 	$request    = wp_get_user_request( $request_id );
 
 	if ( ! $request ) {
+<<<<<<< HEAD
 		return new WP_Error( 'privacy_request_error', __( 'Invalid user privacy request.' ) );
+=======
+		return new WP_Error( 'privacy_request_error', __( 'Invalid request.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	update_post_meta( $request_id, '_wp_user_request_completed_timestamp', time() );
@@ -104,7 +120,11 @@ function _wp_personal_data_handle_actions() {
 					add_settings_error(
 						'action_type',
 						'action_type',
+<<<<<<< HEAD
 						__( 'Invalid user privacy action.' ),
+=======
+						__( 'Invalid action.' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						'error'
 					);
 				}
@@ -116,7 +136,11 @@ function _wp_personal_data_handle_actions() {
 					add_settings_error(
 						'action_type',
 						'action_type',
+<<<<<<< HEAD
 						__( 'Invalid user privacy action.' ),
+=======
+						__( 'Invalid action.' ),
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						'error'
 					);
 				}
@@ -279,7 +303,11 @@ function wp_privacy_generate_personal_data_export_group_html( $group_data, $grou
 
 	if ( $groups_count > 1 ) {
 		$group_html .= '<div class="return-to-top">';
+<<<<<<< HEAD
 		$group_html .= '<a href="#top"><span aria-hidden="true">&uarr; </span> ' . esc_html__( 'Go to top' ) . '</a>';
+=======
+		$group_html .= '<a href="#top"><span aria-hidden="true">&uarr; </span> ' . esc_html__( 'Return to top' ) . '</a>';
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$group_html .= '</div>';
 	}
 
@@ -297,20 +325,32 @@ function wp_privacy_generate_personal_data_export_group_html( $group_data, $grou
  */
 function wp_privacy_generate_personal_data_export_file( $request_id ) {
 	if ( ! class_exists( 'ZipArchive' ) ) {
+<<<<<<< HEAD
 		wp_send_json_error( __( 'Unable to generate user privacy export file. ZipArchive not available.' ) );
+=======
+		wp_send_json_error( __( 'Unable to generate export file. ZipArchive not available.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	// Get the request.
 	$request = wp_get_user_request( $request_id );
 
 	if ( ! $request || 'export_personal_data' !== $request->action_name ) {
+<<<<<<< HEAD
 		wp_send_json_error( __( 'Invalid request ID when generating user privacy export file.' ) );
+=======
+		wp_send_json_error( __( 'Invalid request ID when generating export file.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	$email_address = $request->email;
 
 	if ( ! is_email( $email_address ) ) {
+<<<<<<< HEAD
 		wp_send_json_error( __( 'Invalid email address when generating user privacy export file.' ) );
+=======
+		wp_send_json_error( __( 'Invalid email address when generating export file.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	// Create the exports folder if needed.
@@ -318,7 +358,11 @@ function wp_privacy_generate_personal_data_export_file( $request_id ) {
 	$exports_url = wp_privacy_exports_url();
 
 	if ( ! wp_mkdir_p( $exports_dir ) ) {
+<<<<<<< HEAD
 		wp_send_json_error( __( 'Unable to create user privacy export folder.' ) );
+=======
+		wp_send_json_error( __( 'Unable to create export folder.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	// Protect export folder from browsing.
@@ -326,7 +370,11 @@ function wp_privacy_generate_personal_data_export_file( $request_id ) {
 	if ( ! file_exists( $index_pathname ) ) {
 		$file = fopen( $index_pathname, 'w' );
 		if ( false === $file ) {
+<<<<<<< HEAD
 			wp_send_json_error( __( 'Unable to protect user privacy export folder from browsing.' ) );
+=======
+			wp_send_json_error( __( 'Unable to protect export folder from browsing.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 		fwrite( $file, '<!-- Silence is golden. -->' );
 		fclose( $file );
@@ -395,7 +443,11 @@ function wp_privacy_generate_personal_data_export_file( $request_id ) {
 	$file = fopen( $json_report_pathname, 'w' );
 
 	if ( false === $file ) {
+<<<<<<< HEAD
 		wp_send_json_error( __( 'Unable to open user privacy export file (JSON report) for writing.' ) );
+=======
+		wp_send_json_error( __( 'Unable to open export file (JSON report) for writing.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	fwrite( $file, '{' );
@@ -410,7 +462,11 @@ function wp_privacy_generate_personal_data_export_file( $request_id ) {
 	$file = fopen( $html_report_pathname, 'w' );
 
 	if ( false === $file ) {
+<<<<<<< HEAD
 		wp_send_json_error( __( 'Unable to open user privacy export file (HTML report) for writing.' ) );
+=======
+		wp_send_json_error( __( 'Unable to open export file (HTML report) for writing.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	fwrite( $file, "<!DOCTYPE html>\n" );
@@ -504,11 +560,19 @@ function wp_privacy_generate_personal_data_export_file( $request_id ) {
 	$zip = new ZipArchive;
 	if ( true === $zip->open( $archive_pathname, ZipArchive::CREATE ) ) {
 		if ( ! $zip->addFile( $json_report_pathname, 'export.json' ) ) {
+<<<<<<< HEAD
 			$error = __( 'Unable to add data to user privacy export file (JSON format).' );
 		}
 
 		if ( ! $zip->addFile( $html_report_pathname, 'index.html' ) ) {
 			$error = __( 'Unable to add data to user privacy export file (HTML format).' );
+=======
+			$error = __( 'Unable to add data to JSON file.' );
+		}
+
+		if ( ! $zip->addFile( $html_report_pathname, 'index.html' ) ) {
+			$error = __( 'Unable to add data to HTML file.' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		}
 
 		$zip->close();
@@ -529,7 +593,11 @@ function wp_privacy_generate_personal_data_export_file( $request_id ) {
 			do_action( 'wp_privacy_personal_data_export_file_created', $archive_pathname, $archive_url, $html_report_pathname, $request_id, $json_report_pathname );
 		}
 	} else {
+<<<<<<< HEAD
 		$error = __( 'Unable to open user privacy export file (archive) for writing.' );
+=======
+		$error = __( 'Unable to open export file (archive) for writing.' );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	// Remove the JSON file.
@@ -758,7 +826,11 @@ function wp_privacy_process_personal_data_export_page( $response, $exporter_inde
 	$request = wp_get_user_request( $request_id );
 
 	if ( ! $request || 'export_personal_data' !== $request->action_name ) {
+<<<<<<< HEAD
 		wp_send_json_error( __( 'Invalid request ID when merging user privacy exporter data.' ) );
+=======
+		wp_send_json_error( __( 'Invalid request ID when merging exporter data.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	$export_data = array();
@@ -767,11 +839,15 @@ function wp_privacy_process_personal_data_export_page( $response, $exporter_inde
 	if ( 1 === $exporter_index && 1 === $page ) {
 		update_post_meta( $request_id, '_export_data_raw', $export_data );
 	} else {
+<<<<<<< HEAD
 		$accumulated_data = get_post_meta( $request_id, '_export_data_raw', true );
 
 		if ( $accumulated_data ) {
 			$export_data = $accumulated_data;
 		}
+=======
+		$export_data = get_post_meta( $request_id, '_export_data_raw', true );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	// Now, merge the data from the exporter response into the data we have accumulated already.
@@ -909,7 +985,11 @@ function wp_privacy_process_personal_data_erasure_page( $response, $eraser_index
 	$request = wp_get_user_request( $request_id );
 
 	if ( ! $request || 'remove_personal_data' !== $request->action_name ) {
+<<<<<<< HEAD
 		wp_send_json_error( __( 'Invalid request ID when processing user privacy eraser data.' ) );
+=======
+		wp_send_json_error( __( 'Invalid request ID when processing eraser data.' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	}
 
 	/** This filter is documented in wp-admin/includes/ajax-actions.php */

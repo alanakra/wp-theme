@@ -101,16 +101,25 @@ class WP_Plugin_Install_List_Table extends WP_List_Table {
 		if ( 'search' === $tab ) {
 			$tabs['search'] = __( 'Search Results' );
 		}
+<<<<<<< HEAD
 
 		if ( 'beta' === $tab || false !== strpos( get_bloginfo( 'version' ), '-' ) ) {
 			$tabs['beta'] = _x( 'Beta Testing', 'Plugin Installer' );
 		}
 
+=======
+		if ( 'beta' === $tab || false !== strpos( get_bloginfo( 'version' ), '-' ) ) {
+			$tabs['beta'] = _x( 'Beta Testing', 'Plugin Installer' );
+		}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$tabs['featured']    = _x( 'Featured', 'Plugin Installer' );
 		$tabs['popular']     = _x( 'Popular', 'Plugin Installer' );
 		$tabs['recommended'] = _x( 'Recommended', 'Plugin Installer' );
 		$tabs['favorites']   = _x( 'Favorites', 'Plugin Installer' );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		if ( current_user_can( 'upload_plugins' ) ) {
 			// No longer a real tab. Here for filter compatibility.
 			// Gets skipped in get_views().
@@ -430,7 +439,11 @@ class WP_Plugin_Install_List_Table extends WP_List_Table {
 		$a = $plugin_a->$orderby;
 		$b = $plugin_b->$orderby;
 
+<<<<<<< HEAD
 		if ( $a === $b ) {
+=======
+		if ( $a == $b ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			return 0;
 		}
 
@@ -475,7 +488,11 @@ class WP_Plugin_Install_List_Table extends WP_List_Table {
 			}
 
 			// Display the group heading if there is one.
+<<<<<<< HEAD
 			if ( isset( $plugin['group'] ) && $plugin['group'] !== $group ) {
+=======
+			if ( isset( $plugin['group'] ) && $plugin['group'] != $group ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 				if ( isset( $this->groups[ $plugin['group'] ] ) ) {
 					$group_name = $this->groups[ $plugin['group'] ];
 					if ( isset( $plugins_group_titles[ $group_name ] ) ) {
@@ -496,7 +513,10 @@ class WP_Plugin_Install_List_Table extends WP_List_Table {
 
 				$group = $plugin['group'];
 			}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$title = wp_kses( $plugin['name'], $plugins_allowedtags );
 
 			// Remove any HTML from the description.
@@ -747,7 +767,11 @@ class WP_Plugin_Install_List_Table extends WP_List_Table {
 							_nx( '%s+ Million', '%s+ Million', $active_installs_millions, 'Active plugin installations' ),
 							number_format_i18n( $active_installs_millions )
 						);
+<<<<<<< HEAD
 					} elseif ( 0 === $plugin['active_installs'] ) {
+=======
+					} elseif ( 0 == $plugin['active_installs'] ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 						$active_installs_text = _x( 'Less Than 10', 'Active plugin installations' );
 					} else {
 						$active_installs_text = number_format_i18n( $plugin['active_installs'] ) . '+';

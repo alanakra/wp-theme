@@ -1342,7 +1342,11 @@ function wp_title( $sep = '&raquo;', $display = true, $seplocation = '' ) {
 	if ( is_archive() && ! empty( $m ) ) {
 		$my_year  = substr( $m, 0, 4 );
 		$my_month = $wp_locale->get_month( substr( $m, 4, 2 ) );
+<<<<<<< HEAD
 		$my_day   = (int) substr( $m, 6, 2 );
+=======
+		$my_day   = intval( substr( $m, 6, 2 ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$title    = $my_year . ( $my_month ? $t_sep . $my_month : '' ) . ( $my_day ? $t_sep . $my_day : '' );
 	}
 
@@ -2226,7 +2230,11 @@ function get_calendar( $initial = true, $echo = true ) {
 
 	// Let's figure out when we are.
 	if ( ! empty( $monthnum ) && ! empty( $year ) ) {
+<<<<<<< HEAD
 		$thismonth = zeroise( (int) $monthnum, 2 );
+=======
+		$thismonth = zeroise( intval( $monthnum ), 2 );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		$thisyear  = (int) $year;
 	} elseif ( ! empty( $w ) ) {
 		// We need to get the month from MySQL.
@@ -2411,7 +2419,11 @@ function get_calendar( $initial = true, $echo = true ) {
 /**
  * Purge the cached results of get_calendar.
  *
+<<<<<<< HEAD
  * @see get_calendar()
+=======
+ * @see get_calendar
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @since 2.1.0
  */
 function delete_get_calendar_cache() {
@@ -2473,9 +2485,15 @@ function the_date_xml() {
  * @global string $currentday  The day of the current post in the loop.
  * @global string $previousday The day of the previous post in the loop.
  *
+<<<<<<< HEAD
  * @param string $format Optional. PHP date format. Defaults to the 'date_format' option.
  * @param string $before Optional. Output before the date. Default empty.
  * @param string $after  Optional. Output after the date. Default empty.
+=======
+ * @param string $format Optional. PHP date format defaults to the date_format option if not specified.
+ * @param string $before Optional. Output before the date.
+ * @param string $after  Optional. Output after the date.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param bool   $echo   Optional. Whether to echo the date or return it. Default true.
  * @return string|void String if retrieving.
  */
@@ -2495,7 +2513,12 @@ function the_date( $format = '', $before = '', $after = '', $echo = true ) {
 	 * @since 0.71
 	 *
 	 * @param string $the_date The formatted date string.
+<<<<<<< HEAD
 	 * @param string $format   PHP date format.
+=======
+	 * @param string $format   PHP date format. Defaults to 'date_format' option
+	 *                         if not specified.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param string $before   HTML output before the date.
 	 * @param string $after    HTML output after the date.
 	 */
@@ -2516,7 +2539,11 @@ function the_date( $format = '', $before = '', $after = '', $echo = true ) {
  *
  * @since 3.0.0
  *
+<<<<<<< HEAD
  * @param string      $format Optional. PHP date format. Defaults to the 'date_format' option.
+=======
+ * @param string      $format Optional. PHP date format defaults to the date_format option if not specified.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param int|WP_Post $post   Optional. Post ID or WP_Post object. Default current post.
  * @return string|false Date the current post was written. False on failure.
  */
@@ -2537,7 +2564,12 @@ function get_the_date( $format = '', $post = null ) {
 	 * @since 3.0.0
 	 *
 	 * @param string      $the_date The formatted date.
+<<<<<<< HEAD
 	 * @param string      $format   PHP date format.
+=======
+	 * @param string      $format   PHP date format. Defaults to 'date_format' option
+	 *                              if not specified.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param int|WP_Post $post     The post object or ID.
 	 */
 	return apply_filters( 'get_the_date', $the_date, $format, $post );
@@ -2548,9 +2580,15 @@ function get_the_date( $format = '', $post = null ) {
  *
  * @since 2.1.0
  *
+<<<<<<< HEAD
  * @param string $format Optional. PHP date format. Defaults to the 'date_format' option.
  * @param string $before Optional. Output before the date. Default empty.
  * @param string $after  Optional. Output after the date. Default empty.
+=======
+ * @param string $format Optional. PHP date format defaults to the date_format option if not specified.
+ * @param string $before Optional. Output before the date.
+ * @param string $after  Optional. Output after the date.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param bool   $echo   Optional. Whether to echo the date or return it. Default true.
  * @return string|void String if retrieving.
  */
@@ -2562,10 +2600,18 @@ function the_modified_date( $format = '', $before = '', $after = '', $echo = tru
 	 *
 	 * @since 2.1.0
 	 *
+<<<<<<< HEAD
 	 * @param string|false $the_modified_date The last modified date or false if no post is found.
 	 * @param string       $format            PHP date format.
 	 * @param string       $before            HTML output before the date.
 	 * @param string       $after             HTML output after the date.
+=======
+	 * @param string $the_modified_date The last modified date.
+	 * @param string $format            PHP date format. Defaults to 'date_format' option
+	 *                                  if not specified.
+	 * @param string $before            HTML output before the date.
+	 * @param string $after             HTML output after the date.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	$the_modified_date = apply_filters( 'the_modified_date', $the_modified_date, $format, $before, $after );
 
@@ -2583,9 +2629,15 @@ function the_modified_date( $format = '', $before = '', $after = '', $echo = tru
  * @since 2.1.0
  * @since 4.6.0 Added the `$post` parameter.
  *
+<<<<<<< HEAD
  * @param string      $format Optional. PHP date format. Defaults to the 'date_format' option.
  * @param int|WP_Post $post   Optional. Post ID or WP_Post object. Default current post.
  * @return string|int|false Date the current post was modified. False on failure.
+=======
+ * @param string      $format Optional. PHP date format defaults to the date_format option if not specified.
+ * @param int|WP_Post $post   Optional. Post ID or WP_Post object. Default current post.
+ * @return string|false Date the current post was modified. False on failure.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function get_the_modified_date( $format = '', $post = null ) {
 	$post = get_post( $post );
@@ -2605,9 +2657,16 @@ function get_the_modified_date( $format = '', $post = null ) {
 	 * @since 2.1.0
 	 * @since 4.6.0 Added the `$post` parameter.
 	 *
+<<<<<<< HEAD
 	 * @param string|int|false $the_time The formatted date or false if no post is found.
 	 * @param string           $format   PHP date format.
 	 * @param WP_Post|null     $post     WP_Post object or null if no post is found.
+=======
+	 * @param string|bool  $the_time The formatted date or false if no post is found.
+	 * @param string       $format   PHP date format. Defaults to value specified in
+	 *                               'date_format' option.
+	 * @param WP_Post|null $post     WP_Post object or null if no post is found.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	return apply_filters( 'get_the_modified_date', $the_time, $format, $post );
 }
@@ -2617,9 +2676,13 @@ function get_the_modified_date( $format = '', $post = null ) {
  *
  * @since 0.71
  *
+<<<<<<< HEAD
  * @param string $format Optional. Format to use for retrieving the time the post
  *                       was written. Accepts 'G', 'U', or PHP date format.
  *                       Defaults to the 'time_format' option.
+=======
+ * @param string $format Either 'G', 'U', or PHP date format.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function the_time( $format = '' ) {
 	/**
@@ -2628,8 +2691,13 @@ function the_time( $format = '' ) {
 	 * @since 0.71
 	 *
 	 * @param string $get_the_time The formatted time.
+<<<<<<< HEAD
 	 * @param string $format       Format to use for retrieving the time the post
 	 *                             was written. Accepts 'G', 'U', or PHP date format.
+=======
+	 * @param string $format       The time format. Accepts 'G', 'U',
+	 *                             or PHP date format.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	echo apply_filters( 'the_time', get_the_time( $format ), $format );
 }
@@ -2640,8 +2708,13 @@ function the_time( $format = '' ) {
  * @since 1.5.0
  *
  * @param string      $format Optional. Format to use for retrieving the time the post
+<<<<<<< HEAD
  *                            was written. Accepts 'G', 'U', or PHP date format.
  *                            Defaults to the 'time_format' option.
+=======
+ *                            was written. Either 'G', 'U', or PHP date format defaults
+ *                            to the value specified in the time_format option. Default empty.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param int|WP_Post $post   WP_Post object or ID. Default is global `$post` object.
  * @return string|int|false Formatted date string or Unix timestamp if `$format` is 'U' or 'G'.
  *                          False on failure.
@@ -2663,8 +2736,14 @@ function get_the_time( $format = '', $post = null ) {
 	 * @since 1.5.0
 	 *
 	 * @param string      $the_time The formatted time.
+<<<<<<< HEAD
 	 * @param string      $format   Format to use for retrieving the time the post
 	 *                              was written. Accepts 'G', 'U', or PHP date format.
+=======
+	 * @param string      $format   Format to use for retrieving the time the post was written.
+	 *                              Accepts 'G', 'U', or PHP date format value specified
+	 *                              in 'time_format' option. Default empty.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 * @param int|WP_Post $post     WP_Post object or ID.
 	 */
 	return apply_filters( 'get_the_time', $the_time, $format, $post );
@@ -2676,7 +2755,11 @@ function get_the_time( $format = '', $post = null ) {
  * @since 2.0.0
  *
  * @param string      $format    Optional. Format to use for retrieving the time the post
+<<<<<<< HEAD
  *                               was written. Accepts 'G', 'U', or PHP date format. Default 'U'.
+=======
+ *                               was written. Either 'G', 'U', or PHP date format. Default 'U'.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param bool        $gmt       Optional. Whether to retrieve the GMT time. Default false.
  * @param int|WP_Post $post      WP_Post object or ID. Default is global `$post` object.
  * @param bool        $translate Whether to translate the time string. Default false.
@@ -2804,9 +2887,14 @@ function get_post_timestamp( $post = null, $field = 'date' ) {
  *
  * @since 2.0.0
  *
+<<<<<<< HEAD
  * @param string $format Optional. Format to use for retrieving the time the post
  *                       was modified. Accepts 'G', 'U', or PHP date format.
  *                       Defaults to the 'time_format' option.
+=======
+ * @param string $format Optional. Either 'G', 'U', or PHP date format defaults
+ *                       to the value specified in the time_format option.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function the_modified_time( $format = '' ) {
 	/**
@@ -2814,9 +2902,16 @@ function the_modified_time( $format = '' ) {
 	 *
 	 * @since 2.0.0
 	 *
+<<<<<<< HEAD
 	 * @param string|false $get_the_modified_time The formatted time or false if no post is found.
 	 * @param string       $format                Format to use for retrieving the time the post
 	 *                                            was modified. Accepts 'G', 'U', or PHP date format.
+=======
+	 * @param string $get_the_modified_time The formatted time.
+	 * @param string $format                The time format. Accepts 'G', 'U',
+	 *                                      or PHP date format. Defaults to value
+	 *                                      specified in 'time_format' option.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	echo apply_filters( 'the_modified_time', get_the_modified_time( $format ), $format );
 }
@@ -2828,10 +2923,17 @@ function the_modified_time( $format = '' ) {
  * @since 4.6.0 Added the `$post` parameter.
  *
  * @param string      $format Optional. Format to use for retrieving the time the post
+<<<<<<< HEAD
  *                            was modified. Accepts 'G', 'U', or PHP date format.
  *                            Defaults to the 'time_format' option.
  * @param int|WP_Post $post   Optional. Post ID or WP_Post object. Default current post.
  * @return string|int|false Formatted date string or Unix timestamp. False on failure.
+=======
+ *                            was modified. Either 'G', 'U', or PHP date format defaults
+ *                            to the value specified in the time_format option. Default empty.
+ * @param int|WP_Post $post   Optional. Post ID or WP_Post object. Default current post.
+ * @return string|false Formatted date string or Unix timestamp. False on failure.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function get_the_modified_time( $format = '', $post = null ) {
 	$post = get_post( $post );
@@ -2851,10 +2953,18 @@ function get_the_modified_time( $format = '', $post = null ) {
 	 * @since 2.0.0
 	 * @since 4.6.0 Added the `$post` parameter.
 	 *
+<<<<<<< HEAD
 	 * @param string|int|false $the_time The formatted time or false if no post is found.
 	 * @param string           $format   Format to use for retrieving the time the post
 	 *                                   was modified. Accepts 'G', 'U', or PHP date format.
 	 * @param WP_Post|null     $post     WP_Post object or null if no post is found.
+=======
+	 * @param string|bool  $the_time The formatted time or false if no post is found.
+	 * @param string       $format   Format to use for retrieving the time the post was
+	 *                               written. Accepts 'G', 'U', or PHP date format. Defaults
+	 *                               to value specified in 'time_format' option.
+	 * @param WP_Post|null $post     WP_Post object or null if no post is found.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	return apply_filters( 'get_the_modified_time', $the_time, $format, $post );
 }
@@ -2865,7 +2975,11 @@ function get_the_modified_time( $format = '', $post = null ) {
  * @since 2.0.0
  *
  * @param string      $format    Optional. Format to use for retrieving the time the post
+<<<<<<< HEAD
  *                               was modified. Accepts 'G', 'U', or PHP date format. Default 'U'.
+=======
+ *                               was modified. Either 'G', 'U', or PHP date format. Default 'U'.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  * @param bool        $gmt       Optional. Whether to retrieve the GMT time. Default false.
  * @param int|WP_Post $post      WP_Post object or ID. Default is global `$post` object.
  * @param bool        $translate Whether to translate the time string. Default false.
@@ -2908,10 +3022,17 @@ function get_post_modified_time( $format = 'U', $gmt = false, $post = null, $tra
 	 *
 	 * @since 2.8.0
 	 *
+<<<<<<< HEAD
 	 * @param string|int $time   Formatted date string or Unix timestamp if `$format` is 'U' or 'G'.
 	 * @param string     $format Format to use for retrieving the time the post was modified.
 	 *                           Accepts 'G', 'U', or PHP date format. Default 'U'.
 	 * @param bool       $gmt    Whether to retrieve the GMT time. Default false.
+=======
+	 * @param string $time   The formatted time.
+	 * @param string $format Format to use for retrieving the time the post was modified.
+	 *                       Accepts 'G', 'U', or PHP date format. Default 'U'.
+	 * @param bool   $gmt    Whether to retrieve the GMT time. Default false.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	return apply_filters( 'get_post_modified_time', $time, $format, $gmt );
 }
@@ -2956,8 +3077,13 @@ function the_weekday() {
  * @global string    $currentday      The day of the current post in the loop.
  * @global string    $previousweekday The day of the previous post in the loop.
  *
+<<<<<<< HEAD
  * @param string $before Optional. Output before the date. Default empty.
  * @param string $after  Optional. Output after the date. Default empty.
+=======
+ * @param string $before Optional. Output before the date.
+ * @param string $after  Optional. Output after the date.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  */
 function the_weekday_date( $before = '', $after = '' ) {
 	global $wp_locale, $currentday, $previousweekday;
@@ -3152,7 +3278,11 @@ function feed_links_extra( $args = array() ) {
 			$href  = get_term_feed_link( $term->term_id, $term->taxonomy );
 		}
 	} elseif ( is_author() ) {
+<<<<<<< HEAD
 		$author_id = (int) get_query_var( 'author' );
+=======
+		$author_id = intval( get_query_var( 'author' ) );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		$title = sprintf( $args['authortitle'], get_bloginfo( 'name' ), $args['separator'], get_the_author_meta( 'display_name', $author_id ) );
 		$href  = get_author_feed_link( $author_id );
@@ -3197,7 +3327,11 @@ function wlwmanifest_link() {
  *
  *     add_action( 'wp_head', 'noindex' );
  *
+<<<<<<< HEAD
  * @see wp_no_robots()
+=======
+ * @see wp_no_robots
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
  *
  * @since 2.1.0
  */
@@ -3462,7 +3596,11 @@ function user_can_richedit() {
 
 		if ( 'true' === get_user_option( 'rich_editing' ) || ! is_user_logged_in() ) { // Default to 'true' for logged out users.
 			if ( $is_safari ) {
+<<<<<<< HEAD
 				$wp_rich_edit = ! wp_is_mobile() || ( preg_match( '!AppleWebKit/(\d+)!', $_SERVER['HTTP_USER_AGENT'], $match ) && (int) $match[1] >= 534 );
+=======
+				$wp_rich_edit = ! wp_is_mobile() || ( preg_match( '!AppleWebKit/(\d+)!', $_SERVER['HTTP_USER_AGENT'], $match ) && intval( $match[1] ) >= 534 );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			} elseif ( $is_IE ) {
 				$wp_rich_edit = ( strpos( $_SERVER['HTTP_USER_AGENT'], 'Trident/7.0;' ) !== false );
 			} elseif ( $is_gecko || $is_chrome || $is_edge || ( $is_opera && ! wp_is_mobile() ) ) {
@@ -4198,7 +4336,11 @@ function paginate_links( $args = '' ) {
 
 	// Get max pages and current page out of the current query, if available.
 	$total   = isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1;
+<<<<<<< HEAD
 	$current = get_query_var( 'paged' ) ? (int) get_query_var( 'paged' ) : 1;
+=======
+	$current = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 	// Append the format placeholder to the base URL.
 	$pagenum_link = trailingslashit( $url_parts[0] ) . '%_%';
@@ -4348,12 +4490,20 @@ function paginate_links( $args = '' ) {
 
 		case 'list':
 			$r .= "<ul class='page-numbers'>\n\t<li>";
+<<<<<<< HEAD
 			$r .= implode( "</li>\n\t<li>", $page_links );
+=======
+			$r .= join( "</li>\n\t<li>", $page_links );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			$r .= "</li>\n</ul>\n";
 			break;
 
 		default:
+<<<<<<< HEAD
 			$r = implode( "\n", $page_links );
+=======
+			$r = join( "\n", $page_links );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			break;
 	}
 

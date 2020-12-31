@@ -491,8 +491,22 @@ TwoColumn = Details.extend(/** @lends wp.media.view.Attachment.Details.TowColumn
 	/**
 	 * Noop this from parent class, doesn't apply here.
 	 */
+<<<<<<< HEAD
 	toggleSelectionHandler: function() {}
 
+=======
+	toggleSelectionHandler: function() {},
+
+	render: function() {
+		Details.prototype.render.apply( this, arguments );
+
+		wp.media.mixin.removeAllPlayers();
+		this.$( 'audio, video' ).each( function (i, elem) {
+			var el = wp.media.view.MediaDetails.prepareSrc( elem );
+			new window.MediaElementPlayer( el, wp.media.mixin.mejsSettings );
+		} );
+	}
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 });
 
 module.exports = TwoColumn;
@@ -533,7 +547,11 @@ var Router = Backbone.Router.extend(/** @lends wp.media.view.MediaFrame.Manage.R
 		}
 	},
 
+<<<<<<< HEAD
 	// Respond to the search route by filling the search field and triggering the input event.
+=======
+	// Respond to the search route by filling the search field and trigggering the input event.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	search: function( query ) {
 		jQuery( '#media-search-input' ).val( query ).trigger( 'input' );
 	},
@@ -547,9 +565,15 @@ var Router = Backbone.Router.extend(/** @lends wp.media.view.MediaFrame.Manage.R
 
 		// Trigger the media frame to open the correct item.
 		item = library.findWhere( { id: parseInt( query, 10 ) } );
+<<<<<<< HEAD
 
 		if ( item ) {
 			item.set( 'skipHistory', true );
+=======
+		item.set( 'skipHistory', true );
+
+		if ( item ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			frame.trigger( 'edit:attachment', item );
 		} else {
 			item = media.attachment( query );

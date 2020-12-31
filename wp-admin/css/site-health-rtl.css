@@ -15,6 +15,10 @@
 }
 
 .health-check-body h2 {
+<<<<<<< HEAD
+=======
+	padding: 1rem 0;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	line-height: 1.4;
 }
 

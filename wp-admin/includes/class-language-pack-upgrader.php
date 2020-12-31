@@ -309,18 +309,29 @@ class Language_Pack_Upgrader extends WP_Upgrader {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Checks that the package source contains .mo and .po files.
+=======
+	 * Check the package source to make sure there are .mo and .po files.
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 *
 	 * Hooked to the {@see 'upgrader_source_selection'} filter by
 	 * Language_Pack_Upgrader::bulk_upgrade().
 	 *
 	 * @since 3.7.0
 	 *
+<<<<<<< HEAD
 	 * @global WP_Filesystem_Base $wp_filesystem WordPress filesystem subclass.
 	 *
 	 * @param string|WP_Error $source        The path to the downloaded package source.
 	 * @param string          $remote_source Remote file source location.
 	 * @return string|WP_Error The source as passed, or a WP_Error object on failure.
+=======
+	 * @global WP_Filesystem_Base $wp_filesystem Subclass
+	 *
+	 * @param string|WP_Error $source
+	 * @param string          $remote_source
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public function check_package( $source, $remote_source ) {
 		global $wp_filesystem;

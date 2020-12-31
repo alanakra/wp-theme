@@ -752,7 +752,11 @@ class WP_Http {
 		}
 
 		// Cast the Response Code to an int.
+<<<<<<< HEAD
 		$response['code'] = (int) $response['code'];
+=======
+		$response['code'] = intval( $response['code'] );
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 
 		return array(
 			'response' => $response,
@@ -1076,7 +1080,11 @@ class WP_Http {
 	 * @since 3.7.0
 	 *
 	 * @param string $maybe_ip A suspected IP address.
+<<<<<<< HEAD
 	 * @return int|bool Upon success, '4' or '6' to represent a IPv4 or IPv6 address, false upon failure
+=======
+	 * @return integer|bool Upon success, '4' or '6' to represent a IPv4 or IPv6 address, false upon failure
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	 */
 	public static function is_ip_address( $maybe_ip ) {
 		if ( preg_match( '/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/', $maybe_ip ) ) {

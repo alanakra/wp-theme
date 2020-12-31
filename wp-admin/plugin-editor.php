@@ -195,7 +195,11 @@ $content = esc_textarea( $content );
 <h2>
 	<?php
 	if ( is_plugin_active( $plugin ) ) {
+<<<<<<< HEAD
 		if ( is_writable( $real_file ) ) {
+=======
+		if ( is_writeable( $real_file ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			/* translators: %s: Plugin file name. */
 			printf( __( 'Editing %s (active)' ), '<strong>' . esc_html( $file ) . '</strong>' );
 		} else {
@@ -203,7 +207,11 @@ $content = esc_textarea( $content );
 			printf( __( 'Browsing %s (active)' ), '<strong>' . esc_html( $file ) . '</strong>' );
 		}
 	} else {
+<<<<<<< HEAD
 		if ( is_writable( $real_file ) ) {
+=======
+		if ( is_writeable( $real_file ) ) {
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 			/* translators: %s: Plugin file name. */
 			printf( __( 'Editing %s (inactive)' ), '<strong>' . esc_html( $file ) . '</strong>' );
 		} else {
@@ -275,7 +283,11 @@ $content = esc_textarea( $content );
 		</div>
 	<?php endif; ?>
 
+<<<<<<< HEAD
 	<?php if ( is_writable( $real_file ) ) : ?>
+=======
+	<?php if ( is_writeable( $real_file ) ) : ?>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 		<div class="editor-notices">
 		<?php if ( in_array( $plugin, (array) get_option( 'active_plugins', array() ), true ) ) { ?>
 			<div class="notice notice-warning inline active-plugin-edit-warning">

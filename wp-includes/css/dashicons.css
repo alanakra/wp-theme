@@ -24,7 +24,11 @@
 	line-height: 1;
 	font-weight: 400;
 	font-style: normal;
+<<<<<<< HEAD
 	speak: never;
+=======
+	speak: none;
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 	text-decoration: inherit;
 	text-transform: none;
 	text-rendering: auto;

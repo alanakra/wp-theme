@@ -423,7 +423,11 @@ if ( isset( $_GET['updated'] ) ) {
 			<h2><?php _e( 'Language Settings' ); ?></h2>
 			<table class="form-table" role="presentation">
 				<tr>
+<<<<<<< HEAD
 					<th><label for="WPLANG"><?php _e( 'Default Language' ); ?><span class="dashicons dashicons-translation" aria-hidden="true"></span></label></th>
+=======
+					<th><label for="WPLANG"><?php _e( 'Default Language' ); ?></label></th>
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
 					<td>
 						<?php
 						$lang = get_site_option( 'WPLANG' );

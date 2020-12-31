@@ -141,9 +141,13 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
             ParagonIE_Sodium_Compat::memzero($nonce);
             ParagonIE_Sodium_Compat::memzero($ephKeypair);
         } catch (SodiumException $ex) {
+<<<<<<< HEAD
             if (isset($ephKeypair)) {
                 unset($ephKeypair);
             }
+=======
+            unset($ephKeypair);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         }
         return $res;
     }
@@ -243,7 +247,10 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
             ParagonIE_Sodium_Compat::memzero($nonce);
             ParagonIE_Sodium_Compat::memzero($ephKeypair);
         } catch (SodiumException $ex) {
+<<<<<<< HEAD
             /** @psalm-suppress PossiblyUndefinedVariable */
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             unset($ephKeypair);
         }
         return $res;
@@ -331,9 +338,13 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
             ParagonIE_Sodium_Compat::memzero($nonce);
             ParagonIE_Sodium_Compat::memzero($ephKeypair);
         } catch (SodiumException $ex) {
+<<<<<<< HEAD
             if (isset($ephKeypair)) {
                 unset($ephKeypair);
             }
+=======
+            unset($ephKeypair);
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
         }
         return $res;
     }
@@ -542,7 +553,10 @@ class ParagonIE_Sodium_File extends ParagonIE_Sodium_Core_Util
         try {
             ParagonIE_Sodium_Compat::memzero($key);
         } catch (SodiumException $ex) {
+<<<<<<< HEAD
             /** @psalm-suppress PossiblyUndefinedVariable */
+=======
+>>>>>>> 6934e53e1a72c39bcb6fc267fd6ae3b19795cc89
             unset($key);
         }
         return $res;
