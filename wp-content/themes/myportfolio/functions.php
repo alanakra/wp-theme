@@ -1,4 +1,5 @@
 <?php
+// Support thumbnails for posts and tags
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
 
@@ -7,6 +8,7 @@ add_action('wp_enqueue_scripts','add_specific_style');
 add_action('wp_enqueue_scripts','add_script');
 add_action( 'init', 'create_custom_post_type' );
 
+// Add global stylesheet
 function add_global_style(){
     $stylesheet_url = get_theme_file_uri('./style.css');
     wp_enqueue_style('global_style', esc_url( $stylesheet_url), array(), null, 'all');
@@ -62,10 +64,10 @@ function add_script(){
     }
 
     $script_url = get_theme_file_uri('assets/script/cursor.js');
-    wp_enqueue_script('CURSOR_script', esc_url( $script_url), array(), null, true);
+    wp_enqueue_script('cursor_script', esc_url( $script_url), array(), null, true);
 }
 
-// Create Custom Post Type
+// Create Custom Post Type for Projects
 function create_custom_post_type() {
 
 	$labels = array(
