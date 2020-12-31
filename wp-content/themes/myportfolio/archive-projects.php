@@ -9,7 +9,7 @@
 		      <article class="projet">
 		        <a href="<?php the_permalink(); ?>">
         	   <?php the_post_thumbnail(); ?>   
-		   	      <h2><?php the_title(); ?></h2>
+		   	      <h2 class="project-link"><?php the_title(); ?></h2>
           </a>            
 		      </article>
 

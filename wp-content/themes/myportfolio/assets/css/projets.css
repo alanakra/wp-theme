@@ -19,11 +19,12 @@
 .projet {
   font-family: 'Lato', sans-serif;
   margin-bottom: 0.9rem;
-  z-index: 15;
 }
 
-.projet h2 {
+.project-link {
   text-transform: uppercase;
+  position: relative;
+  z-index: 15;
 }
 
 .projet img {
