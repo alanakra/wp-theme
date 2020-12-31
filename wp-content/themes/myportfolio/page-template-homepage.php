@@ -2,46 +2,31 @@
 get_header();
 ?>
 
-<script>
-  // I call my JS function once the page is fully loaded
-  window.addEventListener('load', hook(description_list, description_list_2));
-
-  // Variable declaration
-  let description_list = [];
-  let description_list_2 = [];
-  console.log(typeof(description_list))
-  console.log(typeof(description_list_2))
-</script>
 
 <?php
 
-// The list_name param contains the name of the repeater field
- function showSkill($list_name){
-          if( have_rows($list_name) ):
-            $skill = array();
-  
-            while( have_rows($list_name) ) : the_row();
-              $sub_value = get_sub_field('quality');
-              echo($list_name);
-              echo($sub_value);
-              array_push($skill,$sub_value); ?>
+function showSkill( $list_name ){
+  $skill = array();
 
-<script>
-    // I use the JS push() method to add each quality in his specific array
-    <?php echo($list_name)?>.push("<?php echo($sub_value) ?>");
-</script>
+  if( have_rows( $list_name ) ):
 
-    <?php
-            endwhile;
+    while( have_rows( $list_name ) ) : the_row();
 
-              print_r($skill);
-           else :
+      $sub_value = get_sub_field( 'quality' );
+      array_push( $skill, $sub_value ); 
 
-          endif;
- }
+    endwhile;
 
-  showSkill('description_list');
-  showSkill('description_list_2');
+    print_r( $skill );
+
+  endif;
+
+  // You need to return the array
+  return $skill;
+}
+
+$description_list = json_encode( showSkill( 'description_list' ) , JSON_UNESCAPED_UNICODE);
+$description_list_2 = json_encode( showSkill( 'description_list_2' ) , JSON_UNESCAPED_UNICODE);
 ?>
 
 <div class="supertitre">
@@ -54,14 +39,30 @@ get_header();
 <?php endif; ?>
 
 <?php if(get_field('content')): ?>
-  <h2 class="accroche"><?php the_field('content') ?> <?php showSkill('description_list') ?> <?php showSkill('description_list_2') ?></h2>
+  <h2 class="accroche"><?php the_field('content') ?></h2>
 <?php endif; ?>
-
-
 
 
 <?php if(get_field('know_more')): ?>
   <a class="know-more" href="<?php the_field('know_more') ?>">En savoir plus</a>
 <?php endif; ?>
 </div>
+
+
+<script>
+
+let description_list = <?php echo $description_list; ?>;
+
+// 1. Parse JSON String to Object
+description_list = JSON.parse(description_list);
+console.log(typeof(description_list));
+
+// 2. Convert Object to Array
+description_list = Object.values(description_list);
+
+// 3. Do the same for description_list_2, or convert this process into a function
+let description_list_2 = Object.values(JSON.parse(<?php echo $description_list_2?>));
+
+</script>
+
 <?php get_footer() ?>
